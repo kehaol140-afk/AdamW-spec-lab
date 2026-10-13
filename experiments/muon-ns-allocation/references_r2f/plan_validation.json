@@ -1,0 +1,13 @@
+{
+  "status": "PLAN_ARITHMETIC_AND_PACKAGE_CHECK_ONLY",
+  "new_training_executed": false,
+  "old_training_rerun": false,
+  "main_runs": 10,
+  "conditional_runs": 2,
+  "main_updates": 2560,
+  "max_updates": 3072,
+  "max_global_step": 2048,
+  "group_formula_checked_on_synthetic_rational_values": true,
+  "contrast_identity_checked": true,
+  "scope": "Does not validate server assets, installed optimizer, or future experiment performance."
+}

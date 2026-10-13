@@ -1,0 +1,8 @@
+{
+  "phase": 1,
+  "n_states": 4,
+  "n_matrix_rows": 116,
+  "n_pairs": 6,
+  "n_pair_rows": 174,
+  "wall_seconds": 1.9205270040547475
+}

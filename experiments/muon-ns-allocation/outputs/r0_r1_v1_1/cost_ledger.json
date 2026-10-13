@@ -1,0 +1,27 @@
+{
+ "gpu_seconds": {
+  "r0_gate_runs": 240,
+  "r1_run_1_typo_fail": 130,
+  "r1_run_final": 111,
+  "misc_verify": 60
+ },
+ "gpu_seconds_total_approx": 541,
+ "budget_gpu_seconds": 7200,
+ "logical_points": {
+  "calibration_rows": 337,
+  "check_rows": 52,
+  "caps": {
+   "calibration": 416,
+   "check": 72
+  }
+ },
+ "failed_attempts": [
+  "R0 data slice used old probe window (fixed to [s+8:s+16), gate re-run)",
+  "run_r1.py final write typo (open 'w','w') \u2014 full re-run, same config"
+ ],
+ "output_bytes": 92257,
+ "output_budget": 2147483648,
+ "parent_training": 0,
+ "confirm_or_P2_endpoint_access": 0,
+ "note": "calibration rows 337 = 2*4*(20 init + 22 ext fill-in) - 3 dedup + 1 native_repeat; check 52 = 4*(6+7) after role dedup; both under caps"
+}

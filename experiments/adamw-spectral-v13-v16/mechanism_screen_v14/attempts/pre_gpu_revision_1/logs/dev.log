@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "D:\pytorch\anaconda\envs\py39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "D:\pytorch\anaconda\envs\py39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "E:\��ģ��Ԥѵ��\adamw_spectral_pilot\mechanism_screen_v14\screen.py", line 616, in <module>
+    main()
+  File "E:\��ģ��Ԥѵ��\adamw_spectral_pilot\mechanism_screen_v14\screen.py", line 608, in main
+    elif a.phase=="dev": run_phase("dev")
+  File "E:\��ģ��Ԥѵ��\adamw_spectral_pilot\mechanism_screen_v14\screen.py", line 409, in run_phase
+    resource(l, "before_cuda_model_init", admission=True)
+  File "E:\��ģ��Ԥѵ��\adamw_spectral_pilot\mechanism_screen_v14\screen.py", line 257, in resource
+    raise RuntimeError("RESOURCE_BLOCKED:" + reason)
+RuntimeError: RESOURCE_BLOCKED:RAM_BELOW_REQUIRED

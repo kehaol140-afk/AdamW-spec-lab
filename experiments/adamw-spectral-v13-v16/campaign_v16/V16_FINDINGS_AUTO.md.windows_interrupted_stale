@@ -1,0 +1,6 @@
+# V16 findings
+
+终态：**STOP_RESOURCE**（自动生成骨架，最终人工判读见 V16_FINDINGS.md）
+
+route: null
+预算：尝试 7939 / 120000；token-forwards 19171782 / 400000000；墙钟 7.77h；设备任务 0.03h

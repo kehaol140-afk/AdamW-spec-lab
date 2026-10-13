@@ -1,0 +1,10 @@
+{
+ "run_id": "s1536_N_to_N",
+ "recipe": "N",
+ "start_step": 1792,
+ "n_steps": 256,
+ "source_sha": "cab1370ea2e98a6d8ffe5bd42b7de684976a900649d6ba10a09a8e967e8e400c",
+ "final_sha": "e5361a5f8c07d044b3623e38ebbb9d3ab200100286406b0532c4706782ee8579",
+ "final_loss": 2.211354911327362,
+ "wall_s": 72.47213888168335
+}

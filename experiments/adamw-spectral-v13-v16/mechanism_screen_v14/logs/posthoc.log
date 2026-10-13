@@ -1,0 +1,1 @@
+{"phase_counts": {"dev": {"rows": 16384, "token_forward_equivalents": 2961280, "unique_docs": 128}, "confirm": {"rows": 2560, "token_forward_equivalents": 432460, "unique_docs": 128}}, "moment_max_abs": 1.2590433573489435e-07}

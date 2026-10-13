@@ -1,0 +1,10 @@
+{
+ "run_id": "s1536_L256",
+ "recipe": "L",
+ "start_step": 1536,
+ "n_steps": 256,
+ "source_sha": "014480c7f138b486d3fa6ae3cf6f8e81653790d5372e8d299487ef74def92e6a",
+ "final_sha": "b18250c93ec445bcedbb7478a7d00d8324acb00aed850c269274cb485a14b22c",
+ "final_loss": 2.4346083402633667,
+ "wall_s": 73.53590297698975
+}

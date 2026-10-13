@@ -1,0 +1,78 @@
+"""Causal test: does an intervening optimizer.step() change subsequent gradient bytes?
+h0 (no step) -> one step -> h1 (no step). 1 GPU opt call, counted in the real ledger."""
+import os, sys
+os.environ["USE_TF"] = "0"
+sys.path.insert(0, r"E:\大模型预训练\adamw_spectral_pilot")
+
+import numpy as np
+import torch
+
+from replay_audit_v12.core import HERE, ROOT, read_json, sha_file, verify_parent
+from replay_audit_v12.replay import Ledger, resource_gate
+
+cfg = read_json(ROOT / "config" / "local_v1_lowmem.json")
+binding = read_json(ROOT / "bindings.local.json")
+child_cfg = read_json(HERE / "config.json")
+data = read_json(ROOT / "artifacts" / "data_manifest.json")
+manifest = read_json(HERE / "evaluation_manifest.json")
+window = manifest["train_build_windows"][0]
+checkpoint = ROOT / "artifacts" / "checkpoints" / "seed3407_lr0.003" / "step256.pt"
+
+torch.set_num_threads(cfg["runtime"]["cpu_threads"])
+torch.backends.cuda.matmul.allow_tf32 = False
+torch.backends.cudnn.allow_tf32 = False
+
+ledger = Ledger(sha_file(HERE / "evaluation_manifest.json"), verify_parent(deep_checkpoints=False)["child_source_hash"])
+free, _ = torch.cuda.mem_get_info(0)
+vram_limit = min(cfg["runtime"]["vram_soft_limit_gib"] * 2 ** 30,
+                 free - cfg["runtime"]["vram_free_reserve_gib"] * 2 ** 30)
+from pilot_core import load_checkpoint, model_and_optimizer, loss_sum_count, schedule_lr, training_batch
+model, optimizer, aliases, _ = model_and_optimizer(cfg, binding, child_cfg["peak_lr"], "cuda:0")
+mem = np.memmap(ROOT / "artifacts" / "train_tokens.u32", dtype=np.uint32, mode="r")
+
+import hashlib
+
+def grads_only():
+    load_checkpoint(checkpoint, model, optimizer,
+                    config_hash=sha_file(ROOT / "config" / "local_v1_lowmem.json"),
+                    data_hash=data["data_hash"], aliases=aliases)
+    eta = schedule_lr(child_cfg["peak_lr"], child_cfg["checkpoint_step"] + 1, cfg)
+    for group in optimizer.param_groups:
+        group["lr"] = eta
+    cursor, valid_total = window["start_token"], 0
+    model.train(); optimizer.zero_grad(set_to_none=True)
+    for _ in range(cfg["runtime"]["accumulation_steps"]):
+        ids, cursor = training_batch(mem, cursor, cfg["runtime"]["micro_batch_size"],
+                                     cfg["runtime"]["sequence_length"], "cuda:0")
+        lengths = torch.full((ids.shape[0],), ids.shape[1], device="cuda:0", dtype=torch.long)
+        with torch.autocast(device_type="cuda", dtype=torch.bfloat16, enabled=True):
+            logits = model(ids[:, :-1], use_cache=False).logits
+            loss_sum, count = loss_sum_count(logits, ids, lengths)
+        loss_sum.backward()
+        ledger.forward(count); ledger.backward()
+        valid_total += count
+    for parameter in model.parameters():
+        if parameter.grad is not None:
+            parameter.grad.div_(valid_total)
+    torch.nn.utils.clip_grad_norm_(model.parameters(), cfg["baseline"]["global_grad_clip_norm"])
+    named = dict(model.named_parameters())
+    digest = hashlib.sha256()
+    for name, parameter in named.items():
+        if parameter.grad is None:
+            continue
+        digest.update(name.encode("utf-8"))
+        digest.update(parameter.grad.detach().cpu().contiguous().numpy().tobytes())
+    return digest.hexdigest()
+
+h0 = grads_only()
+print("h0 (no step)              :", h0, flush=True)
+# one isolated optimizer step on the current (already built) gradients
+resource_gate(cfg, "diag_before_step", ledger, vram_limit=vram_limit)
+ledger.begin_optimizer()
+optimizer.step()
+ledger.complete_optimizer()
+torch.cuda.synchronize()
+h1 = grads_only()
+print("h1 (after one step)       :", h1, flush=True)
+print("reference (3x identical)  : 0b949b26ac1a4e92beb4613792ea6d9cd6663528952e2e4d13fe61d4be6c76e5")
+print("h0 == h1:", h0 == h1)

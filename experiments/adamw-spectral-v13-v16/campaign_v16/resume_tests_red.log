@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "D:\pytorch\anaconda\envs\py39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "D:\pytorch\anaconda\envs\py39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "D:\pytorch\anaconda\envs\py39\lib\unittest\__main__.py", line 18, in <module>
+    main(module=None)
+  File "D:\pytorch\anaconda\envs\py39\lib\unittest\main.py", line 100, in __init__
+    self.parseArgs(argv)
+  File "D:\pytorch\anaconda\envs\py39\lib\unittest\main.py", line 147, in parseArgs
+    self.createTests()
+  File "D:\pytorch\anaconda\envs\py39\lib\unittest\main.py", line 158, in createTests
+    self.test = self.testLoader.loadTestsFromNames(self.testNames,
+  File "D:\pytorch\anaconda\envs\py39\lib\unittest\loader.py", line 220, in loadTestsFromNames
+    suites = [self.loadTestsFromName(name, module) for name in names]
+  File "D:\pytorch\anaconda\envs\py39\lib\unittest\loader.py", line 220, in <listcomp>
+    suites = [self.loadTestsFromName(name, module) for name in names]
+  File "D:\pytorch\anaconda\envs\py39\lib\unittest\loader.py", line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File "E:\大模型预训练\adamw_spectral_pilot\campaign_v16\test_resume_driver.py", line 4, in <module>
+    from campaign_v16 import tools_resume_driver as driver
+  File "E:\大模型预训练\adamw_spectral_pilot\campaign_v16\tools_resume_driver.py", line 6, in <module>
+    BUDGET_S = int(sys.argv[1]) if len(sys.argv) > 1 else 2800
+ValueError: invalid literal for int() with base 10: 'campaign_v16.test_resume_driver'

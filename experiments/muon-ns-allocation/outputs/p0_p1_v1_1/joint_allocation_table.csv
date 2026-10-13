@@ -1,0 +1,10 @@
+state,scheme,pair,B_chk_mean,B_chk_sign_same,sum_single_group_cal,interaction_residual_cal
+512,geometry,geometry|down3|up7,-3.762338675705745e-05,0,,
+512,fixed_random,fixed_random|q3|o7,-1.1429132199758385e-05,1,,
+512,no_op_locked,-,0.0,0,,
+1536,target,q3|o7,-1.1668485755400582e-06,0,1.3314041420464662e-06,2.6218218335918366
+1536,gain,q3|o7,-1.017252604262886e-06,1,,
+1536,direction,q3|o7,-5.684646905423918e-07,2,,
+1536,gamma,q3|o7,-1.047171798496116e-06,1,,
+1536,geometry,geometry|down3|gate7,-1.2266869637844735e-06,1,,
+1536,fixed_random,fixed_random|up3|gate7,-1.6605152802773304e-06,0,,

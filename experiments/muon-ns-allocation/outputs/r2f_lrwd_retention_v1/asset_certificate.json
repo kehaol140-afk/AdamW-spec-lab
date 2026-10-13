@@ -1,0 +1,199 @@
+{
+ "states": {
+  "parent_512": {
+   "path": "/home/b205/projects/training_dynamics_lab/muon_spectral_allocation/outputs/p0_p1_v1_1/parent/parent_state_step512.pt",
+   "bytes": 266545037,
+   "sha256": "7563daec7f080dff5a5fada29ab2407425bd60df46622edde4a68eb890860131",
+   "cursor": {
+    "step": 512,
+    "run": "parent_seed3101"
+   },
+   "model_content_hash": "f1268ee4c75a8dc4d5abf3ba86dde8d46ca02c0516b94ff1d5e26a91d4bda758",
+   "n_optimizer_states": 2,
+   "rng_keys": [
+    "python_random",
+    "numpy_random",
+    "torch_cpu",
+    "torch_cuda_all"
+   ],
+   "opt0_n_groups": 1,
+   "opt0_n_params": 56,
+   "opt0_state_entries": 56,
+   "opt0_saved_lr": 0.008798733423234218,
+   "opt0_saved_wd": 0.02,
+   "opt1_n_groups": 1,
+   "opt1_n_params": 34,
+   "opt1_state_entries": 34,
+   "opt1_saved_lr": 0.008798733423234218,
+   "opt1_saved_wd": 0.02
+  },
+  "parent_1536": {
+   "path": "/home/b205/projects/training_dynamics_lab/muon_spectral_allocation/outputs/p0_p1_v1_1/parent/parent_state_step1536.pt",
+   "bytes": 266545037,
+   "sha256": "014480c7f138b486d3fa6ae3cf6f8e81653790d5372e8d299487ef74def92e6a",
+   "cursor": {
+    "step": 1536,
+    "run": "parent_seed3101"
+   },
+   "model_content_hash": "14b501623ffb2493623dc51f6410375eff7f9f994aad75c98b515948281347aa",
+   "n_optimizer_states": 2,
+   "rng_keys": [
+    "python_random",
+    "numpy_random",
+    "torch_cpu",
+    "torch_cuda_all"
+   ],
+   "opt0_n_groups": 1,
+   "opt0_n_params": 56,
+   "opt0_state_entries": 56,
+   "opt0_saved_lr": 0.002357934318612673,
+   "opt0_saved_wd": 0.02,
+   "opt1_n_groups": 1,
+   "opt1_n_params": 34,
+   "opt1_state_entries": 34,
+   "opt1_saved_lr": 0.002357934318612673,
+   "opt1_saved_wd": 0.02
+  },
+  "old_s512_N_end768": {
+   "path": "/home/b205/projects/training_dynamics_lab/muon_spectral_allocation/outputs/r2_amplitude_continuation_v1/s512_N_step256_full.pt",
+   "bytes": 253448267,
+   "sha256": "4b0af2f753f2b1ddfe0e530f88d4b10b06ac70cafff76d6bba3999ee9ad7bcd0",
+   "cursor": {
+    "step": 768,
+    "run_id": "s512_N"
+   },
+   "model_content_hash": "8c8770afbe30a83fdd36a2a9c253026e3ff600d5de85e2999ad64ebaedf42f2e",
+   "n_optimizer_states": 2,
+   "rng_keys": [
+    "python_random",
+    "numpy_random",
+    "torch_cpu",
+    "torch_cuda_all"
+   ],
+   "opt0_n_groups": 1,
+   "opt0_n_params": 56,
+   "opt0_state_entries": 56,
+   "opt0_saved_lr": 0.007350791964087753,
+   "opt0_saved_wd": 0.02,
+   "opt1_n_groups": 1,
+   "opt1_n_params": 34,
+   "opt1_state_entries": 34,
+   "opt1_saved_lr": 0.007350791964087753,
+   "opt1_saved_wd": 0.02
+  },
+  "old_s512_AH_end768": {
+   "path": "/home/b205/projects/training_dynamics_lab/muon_spectral_allocation/outputs/r2_amplitude_continuation_v1/s512_AH_step256_full.pt",
+   "bytes": 253448523,
+   "sha256": "f50174b9948389b6227672eebd6d89342cc3bead9e84c5fad36968b5e61fc7b1",
+   "cursor": {
+    "step": 768,
+    "run_id": "s512_AH"
+   },
+   "model_content_hash": "f089ddcd00a58cedeeaaedab5e3a2490b7f50eedc436b9d17b1ce3f2f845a7b1",
+   "n_optimizer_states": 2,
+   "rng_keys": [
+    "python_random",
+    "numpy_random",
+    "torch_cpu",
+    "torch_cuda_all"
+   ],
+   "opt0_n_groups": 1,
+   "opt0_n_params": 56,
+   "opt0_state_entries": 56,
+   "opt0_saved_lr": 0.0036753959820438765,
+   "opt0_saved_wd": 0.04,
+   "opt1_n_groups": 1,
+   "opt1_n_params": 34,
+   "opt1_state_entries": 34,
+   "opt1_saved_lr": 0.0036753959820438765,
+   "opt1_saved_wd": 0.04
+  },
+  "old_s1536_N_end1792": {
+   "path": "/home/b205/projects/training_dynamics_lab/muon_spectral_allocation/outputs/r2_amplitude_continuation_v1/s1536_N_step256_full.pt",
+   "bytes": 253448523,
+   "sha256": "cab1370ea2e98a6d8ffe5bd42b7de684976a900649d6ba10a09a8e967e8e400c",
+   "cursor": {
+    "step": 1792,
+    "run_id": "s1536_N"
+   },
+   "model_content_hash": "9fb5e1267571c2082912fc3d3e13c19569b3e884cdb7169386d9837513047804",
+   "n_optimizer_states": 2,
+   "rng_keys": [
+    "python_random",
+    "numpy_random",
+    "torch_cpu",
+    "torch_cuda_all"
+   ],
+   "opt0_n_groups": 1,
+   "opt0_n_params": 56,
+   "opt0_state_entries": 56,
+   "opt0_saved_lr": 0.0013533570465831652,
+   "opt0_saved_wd": 0.02,
+   "opt1_n_groups": 1,
+   "opt1_n_params": 34,
+   "opt1_state_entries": 34,
+   "opt1_saved_lr": 0.0013533570465831652,
+   "opt1_saved_wd": 0.02
+  },
+  "old_s1536_AH_end1792": {
+   "path": "/home/b205/projects/training_dynamics_lab/muon_spectral_allocation/outputs/r2_amplitude_continuation_v1/s1536_AH_step256_full.pt",
+   "bytes": 253448779,
+   "sha256": "281a9b7a00792fec5a8a64660902c2e29ce75bc158cda80e2f802c8f2cc035ff",
+   "cursor": {
+    "step": 1792,
+    "run_id": "s1536_AH"
+   },
+   "model_content_hash": "ef51c772f00b256ad502beaebb8bc8f7ee4079be00bf39bdf0552d9337a6eabc",
+   "n_optimizer_states": 2,
+   "rng_keys": [
+    "python_random",
+    "numpy_random",
+    "torch_cpu",
+    "torch_cuda_all"
+   ],
+   "opt0_n_groups": 1,
+   "opt0_n_params": 56,
+   "opt0_state_entries": 56,
+   "opt0_saved_lr": 0.0006766785232915826,
+   "opt0_saved_wd": 0.04,
+   "opt1_n_groups": 1,
+   "opt1_n_params": 34,
+   "opt1_state_entries": 34,
+   "opt1_saved_lr": 0.0006766785232915826,
+   "opt1_saved_wd": 0.04
+  }
+ },
+ "endpoint_reuse_checks": [
+  {
+   "state": "s512_AH",
+   "old_V": 2.8518788057215074,
+   "recomputed_V": 2.8518788057215074,
+   "abs_diff": 0.0,
+   "within_1e-7": true
+  },
+  {
+   "state": "s512_N",
+   "old_V": 2.924852767645144,
+   "recomputed_V": 2.924852767645144,
+   "abs_diff": 0.0,
+   "within_1e-7": true
+  },
+  {
+   "state": "s1536_AH",
+   "old_V": 2.526469301709942,
+   "recomputed_V": 2.526469301709942,
+   "abs_diff": 0.0,
+   "within_1e-7": true
+  },
+  {
+   "state": "s1536_N",
+   "old_V": 2.53304796405867,
+   "recomputed_V": 2.53304796405867,
+   "abs_diff": 0.0,
+   "within_1e-7": true
+  }
+ ],
+ "n_repeat_model_hash_equal": true,
+ "reuse_gate_pass": true,
+ "wall_seconds": 42.99569582939148
+}

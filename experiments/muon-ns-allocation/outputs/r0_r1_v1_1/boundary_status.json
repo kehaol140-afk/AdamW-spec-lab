@@ -1,0 +1,17 @@
+{
+ "512": {
+  "G_touches_a": false,
+  "A_touches_a": false,
+  "A_touches_b": false,
+  "S_touches_a": false,
+  "S_touches_b": false
+ },
+ "1536": {
+  "G_touches_a": false,
+  "A_touches_a": false,
+  "A_touches_b": false,
+  "S_touches_a": false,
+  "S_touches_b": false
+ },
+ "AMPLITUDE_RANGE_UNRESOLVED": false
+}

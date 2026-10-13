@@ -1,0 +1,152 @@
+{
+  "schema_version": "r0_r1_target_value_v1.1",
+  "status": "EXECUTION_CONTRACT_TEMPLATE_NOT_SERVER_BOUND",
+  "design_date": "2026-09-29",
+  "study": "有限NS更新的目标价值：幅度、等范数结构与局部目标",
+  "authorization": {
+    "execute": [
+      "R0",
+      "R1"
+    ],
+    "do_not_execute": [
+      "R2",
+      "new_parent_training",
+      "full_T2",
+      "old_M2",
+      "old_T3_mini",
+      "AMO_training",
+      "OrScale_training"
+    ]
+  },
+  "asset_binding": {
+    "parent_seed": 3101,
+    "checkpoint_steps": [
+      512,
+      1536
+    ],
+    "checkpoint_paths": "RESOLVE_EXISTING_ONLY",
+    "checkpoint_sha256": "COMPUTE_BEFORE_NEW_RESULTS",
+    "installation_source_sha256": "COMPUTE_BEFORE_NEW_RESULTS"
+  },
+  "recipe_policy": {
+    "origin": "existing_frozen_parent",
+    "next_update_lr": "derive_from_original_scheduler_after_restore_and_write_all_groups",
+    "scaling": "original",
+    "primary_ns_steps": 5,
+    "diagnostic_ns_steps": 3,
+    "ns_coefficients": [
+      3.4445,
+      -4.775,
+      2.0315
+    ],
+    "change_aux_update": false,
+    "scale_weight_decay_with_amplitude": false,
+    "change_forward_precision": false
+  },
+  "probe": {
+    "operator": "all_layer_attention_output_projection",
+    "global_amplitude": "a",
+    "operator_relative_amplitude": "b",
+    "shape_families": [
+      "NS5",
+      "NS3_MATCHED"
+    ],
+    "normalization": "one_Frobenius_norm_ratio_for_whole_O_group_on_actual_LR_scaled_Muon_data_updates",
+    "zero_norm_policy": "both_zero_degenerate_otherwise_unresolved"
+  },
+  "data": {
+    "batches_per_state": 8,
+    "calibration_batches": 4,
+    "check_batches": 4,
+    "scan_start_min": {
+      "512": 520,
+      "1536": 1544
+    },
+    "index_convention": "record_actual_before_selection",
+    "exclude_old_probe_packed_ids": true,
+    "exclude_within_round_overlap": true,
+    "target_weights": {
+      "A": 0.5,
+      "B": 0.5
+    },
+    "select_pool": "existing_Q_select_with_exposure_label",
+    "check_pool": "existing_Q_P1_check_with_exposure_label",
+    "forbidden_pools": [
+      "Q_P2_endpoint",
+      "original_confirm"
+    ]
+  },
+  "grid": {
+    "base_a": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "base_b": [
+      0.75,
+      1.0,
+      1.25
+    ],
+    "extension_rounds": 1,
+    "extension_a": {
+      "lower": 0.25,
+      "upper": 1.5
+    },
+    "extension_b": {
+      "lower": 0.5,
+      "upper": 1.5
+    },
+    "trigger": "near_best_touches_initial_boundary_in_any_state_G_A_or_S",
+    "extension_scope": "union_triggers_then_complete_identical_final_grid_all_states_shapes",
+    "add_more_after_extension": false,
+    "near_best_tolerance": 1e-06
+  },
+  "tie_break": [
+    "abs_log_a_plus_abs_log_b",
+    "abs_log_b",
+    "abs_log_a",
+    "a",
+    "b",
+    "candidate_id"
+  ],
+  "check_roles": [
+    "N",
+    "G",
+    "A",
+    "S_at_A",
+    "S",
+    "A_at_S",
+    "G_at_A",
+    "NO_MUON_DATA_UPDATE",
+    "PRE_STATE"
+  ],
+  "metrics": {
+    "benefit_sign": "reference_minus_candidate",
+    "delta_practical_step": 1e-05,
+    "numeric_resolution_limit": 1e-06,
+    "intended_O_norm_relative_tolerance": 1e-06,
+    "realized_O_delta_norm_relative_tolerance": 0.0001,
+    "local_signal_min_positive_pairs": 3,
+    "pairs_per_state": 4,
+    "primary_confirmatory_p_values": false,
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 31010408,
+    "bootstrap_unit": "paired_gradient_batch_conditional_on_checkpoint_and_fixed_eval_pool",
+    "repeat_is_sampling_error": false
+  },
+  "budget": {
+    "r0_gpu_minutes_max": 15,
+    "cpu_numeric_minutes_max": 30,
+    "r0_r1_gpu_hours_max": 2,
+    "new_output_gib_max": 2,
+    "review_bundle_mib_target_max": 10,
+    "base_calibration_points_max": 160,
+    "final_calibration_points_max": 416,
+    "check_points_max": 72,
+    "r1_logical_points_max": 488,
+    "r0_and_repeats_count_separately": true,
+    "charge_failed_attempts": true
+  },
+  "r2_policy": "separate_review_and_authorization_development_only_same_parent_seed_no_automatic_run",
+  "note": "Template does not certify source availability, R0 correctness, fully tuned LR, equal wallclock efficiency, or algorithm novelty."
+}

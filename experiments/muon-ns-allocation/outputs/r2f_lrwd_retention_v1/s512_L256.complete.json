@@ -1,0 +1,10 @@
+{
+ "run_id": "s512_L256",
+ "recipe": "L",
+ "start_step": 512,
+ "n_steps": 256,
+ "source_sha": "7563daec7f080dff5a5fada29ab2407425bd60df46622edde4a68eb890860131",
+ "final_sha": "6335a4b521b4804253cf41913e0b1a551190aada8c6e189a8aead5a963d7d137",
+ "final_loss": 2.554312229156494,
+ "wall_s": 74.51265335083008
+}

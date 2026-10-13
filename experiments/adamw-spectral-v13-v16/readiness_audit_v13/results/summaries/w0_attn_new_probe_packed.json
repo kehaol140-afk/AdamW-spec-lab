@@ -1,0 +1,29 @@
+{
+  "tag": "w0",
+  "window_id": 0,
+  "target": "model.layers.1.self_attn.o_proj.weight",
+  "view": "new_probe_packed",
+  "identity": {
+    "F11_actual_max_abs": 1.1641532182693481e-10,
+    "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+    "rho_s_one_max_abs": 7.450580596923828e-09,
+    "formula_tolerance": 2.3740507125854495e-06
+  },
+  "nll": {
+    "F00": 5.978055127256491,
+    "F10": 5.978144107454576,
+    "F01": 5.977477541592075,
+    "F11": 5.977619781482685
+  },
+  "I_before": -8.898019808523117e-05,
+  "I_after": -0.0001422398906099076,
+  "interaction": 5.325969252467644e-05,
+  "documents": 105,
+  "target_tokens": 26638,
+  "raw_paths": {
+    "F00": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_packed_F00.jsonl",
+    "F10": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_packed_F10.jsonl",
+    "F01": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_packed_F01.jsonl",
+    "F11": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_packed_F11.jsonl"
+  }
+}

@@ -1,0 +1,21 @@
+{
+ "gpus": "NVIDIA GeForce RTX 5090, 32607 MiB, 591.44\nNVIDIA GeForce RTX 5090, 32607 MiB, 591.44",
+ "torch": "2.11.0",
+ "cuda": "13.0",
+ "cuda_available": true,
+ "device_count": 2,
+ "bf16_support": true,
+ "gpu_capability": [
+  [
+   12,
+   0
+  ],
+  [
+   12,
+   0
+  ]
+ ],
+ "triton": "3.6.0",
+ "flash_attn": "NOT_INSTALLED",
+ "disk_free_gb": 170.5
+}

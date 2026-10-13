@@ -1,0 +1,38 @@
+{
+  "legacy": {
+    "F00": {
+      "documents": 8,
+      "loss_sum_max_abs": 0.0
+    },
+    "F10": {
+      "documents": 8,
+      "loss_sum_max_abs": 0.0
+    },
+    "F01": {
+      "documents": 8,
+      "loss_sum_max_abs": 0.0
+    },
+    "F11": {
+      "documents": 8,
+      "loss_sum_max_abs": 0.0
+    }
+  },
+  "natural_prefix": {
+    "F00": {
+      "documents": 8,
+      "loss_sum_max_abs": 0.0
+    },
+    "F10": {
+      "documents": 8,
+      "loss_sum_max_abs": 0.0
+    },
+    "F01": {
+      "documents": 8,
+      "loss_sum_max_abs": 0.0
+    },
+    "F11": {
+      "documents": 8,
+      "loss_sum_max_abs": 0.0
+    }
+  }
+}

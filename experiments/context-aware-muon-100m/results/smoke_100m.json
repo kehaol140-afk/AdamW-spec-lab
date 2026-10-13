@@ -1,0 +1,85 @@
+{
+ "device": "NVIDIA GeForce RTX 5090",
+ "steps": 30,
+ "tokens_per_step": 8192,
+ "seed": 3471,
+ "paths": {
+  "adamw": {
+   "wall_s": 9.605112343793735,
+   "s_per_step": 0.32017041145979114,
+   "opt_step_seconds_total": 0.31253239791840315,
+   "ns_seconds_native_total": 0.0,
+   "ns_seconds_mix_total": 0.0,
+   "vram_peak_gib": 3.3515625,
+   "loss_first3": [
+    8.935228824615479,
+    8.766796827316284,
+    8.410464763641357
+   ],
+   "loss_last3": [
+    7.346560835838318,
+    7.2733741998672485,
+    7.207050323486328
+   ],
+   "tokens_consumed": 246720,
+   "init_fingerprint": "33f93a0f546149a0",
+   "final_fingerprint": "73d92ebaa70d8300",
+   "cos_O_g_last": null,
+   "cos_O_Onat_last": null,
+   "norm_rel_err_max_last": null
+  },
+  "muon_native": {
+   "wall_s": 8.481829990865663,
+   "s_per_step": 0.28272766636218877,
+   "opt_step_seconds_total": 1.5627470966428518,
+   "ns_seconds_native_total": 1.3432514003943652,
+   "ns_seconds_mix_total": 0.0,
+   "vram_peak_gib": 3.01953125,
+   "loss_first3": [
+    8.921852111816406,
+    8.819389581680298,
+    8.58855676651001
+   ],
+   "loss_last3": [
+    7.333757519721985,
+    7.299069404602051,
+    7.222730994224548
+   ],
+   "tokens_consumed": 246720,
+   "init_fingerprint": "33f93a0f546149a0",
+   "final_fingerprint": "f3714abcb1c3a303",
+   "cos_O_g_last": null,
+   "cos_O_Onat_last": null,
+   "norm_rel_err_max_last": null
+  },
+  "group_A": {
+   "wall_s": 10.347092160023749,
+   "s_per_step": 0.3449030720007916,
+   "opt_step_seconds_total": 3.513203184120357,
+   "ns_seconds_native_total": 0.6543692983686924,
+   "ns_seconds_mix_total": 1.1200855921488255,
+   "vram_peak_gib": 2.98046875,
+   "loss_first3": [
+    8.902320623397827,
+    8.829787015914917,
+    8.604990005493164
+   ],
+   "loss_last3": [
+    7.18391740322113,
+    7.199367165565491,
+    7.258210778236389
+   ],
+   "tokens_consumed": 246720,
+   "init_fingerprint": "33f93a0f546149a0",
+   "final_fingerprint": "c447e6e9ec3557b5",
+   "cos_O_g_last": 0.18374130917620546,
+   "cos_O_Onat_last": 0.42421755251520793,
+   "norm_rel_err_max_last": 1.4486690948384682e-16
+  }
+ },
+ "throughput_tok_s": {
+  "adamw": 25686.32111413211,
+  "muon_native": 29088.06239522605,
+  "group_A": 23844.380255276832
+ }
+}

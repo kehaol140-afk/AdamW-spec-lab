@@ -1,0 +1,26 @@
+{
+  "protocol_id": "ADAMW_SPECTRAL_CAMPAIGN_V16_20261002",
+  "verdict": "STOP_RESOURCE",
+  "route": {},
+  "holdout_nll": {},
+  "stats": {},
+  "budget": {
+    "manifest_sha256": "cd7c47aa1a75f0aae6937a16c3baf624342416945512224a7b5d898f95b6f0d9",
+    "wall_started_at": 1790957002.0275593,
+    "optimizer_step_attempts": 7939,
+    "optimizer_step_completions": 7939,
+    "token_forward_equivalents": 19171782,
+    "forward_calls": 48140,
+    "backward_attempts": 31756,
+    "train_effective_tokens": 16259072,
+    "train_seconds": 2657.828758499969,
+    "direction_seconds": 416.4697665999927,
+    "eval_seconds": 2077.679811000002,
+    "device_task_seconds": 109.8479411000166,
+    "pause_seconds": 14700.0,
+    "anchor_svds": 0,
+    "last_phase": "a1_P_a4_b1"
+  },
+  "wall_hours": 7.772038647996054,
+  "device_task_hours": 0.030513316972226832
+}

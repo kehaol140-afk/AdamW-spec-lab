@@ -1,0 +1,22 @@
+{
+  "protocol_id": "ADAMW_A_SPECTRAL_REPLAY_AUDIT_V1_2_20261002",
+  "parent_protocol_id": "ADAMW_A_SPECTRAL_LOCAL_V1_1_LOWMEM_20261002",
+  "seed": 3407,
+  "peak_lr": 0.003,
+  "checkpoint_step": 256,
+  "targets": [
+    "model.layers.1.mlp.down_proj.weight",
+    "model.layers.1.self_attn.o_proj.weight"
+  ],
+  "primary_target": "model.layers.1.mlp.down_proj.weight",
+  "new_probe_select_documents": 128,
+  "build_window_count": 4,
+  "max_gpu_optimizer_calls": 8,
+  "max_eval_token_forward_equivalents": 5000000,
+  "finite_difference_unit_step": 0.001,
+  "finite_difference_abs_tolerance": 0.005,
+  "finite_difference_relative_tolerance": 0.1,
+  "views": ["legacy", "natural_prefix", "new_probe_prefix", "new_probe_packed"],
+  "packed_view_is_descriptive_only": true,
+  "formal_pretraining_steps": 0
+}

@@ -1,0 +1,15 @@
+{
+ "native_S_H256": 5.4342579979411,
+ "native_F_H256": 5.43148785757447,
+ "native_P_H256": 5.4314460957419985,
+ "a2_Fdir_qS_H256": 5.431599980646473,
+ "a2_Pdir_qS_H256": 5.431691474654476,
+ "a2_Sdir_qF_H256": 5.434424760699771,
+ "a2_Sdir_qP_H256": 5.434422239492772,
+ "reference": {
+  "Fdir_qS_minus_nativeS": -0.00266,
+  "Pdir_qS_minus_nativeS": -0.00257,
+  "Sdir_qF_minus_nativeF": 0.00294,
+  "Sdir_qP_minus_nativeP": 0.00298
+ }
+}

@@ -1,0 +1,233 @@
+{
+  "experiment": "r2f_lrwd_retention_v1",
+  "status": "PROSPECTIVE_NOT_EXECUTED",
+  "date": "2026-09-29",
+  "parent_seed": 3101,
+  "origins": [
+    512,
+    1536
+  ],
+  "original_schedule_total_steps": 2048,
+  "recipes": {
+    "N": {
+      "data_multiplier": 1.0,
+      "decay_product_multiplier": 1.0,
+      "lr_multiplier": 1.0,
+      "configured_wd_multiplier": 1.0
+    },
+    "AH": {
+      "data_multiplier": 0.5,
+      "decay_product_multiplier": 1.0,
+      "lr_multiplier": 0.5,
+      "configured_wd_multiplier": 2.0
+    },
+    "L": {
+      "data_multiplier": 0.5,
+      "decay_product_multiplier": 0.5,
+      "lr_multiplier": 0.5,
+      "configured_wd_multiplier": 1.0
+    },
+    "D": {
+      "data_multiplier": 1.0,
+      "decay_product_multiplier": 0.5,
+      "lr_multiplier": 1.0,
+      "configured_wd_multiplier": 0.5
+    }
+  },
+  "runs": [
+    {
+      "run_id": "s512_L256",
+      "origin": 512,
+      "source": "original_parent",
+      "source_global_step": 512,
+      "recipe": "L",
+      "updates": 256,
+      "global_first": 513,
+      "global_last": 768,
+      "conditional": false
+    },
+    {
+      "run_id": "s1536_L256",
+      "origin": 1536,
+      "source": "original_parent",
+      "source_global_step": 1536,
+      "recipe": "L",
+      "updates": 256,
+      "global_first": 1537,
+      "global_last": 1792,
+      "conditional": false
+    },
+    {
+      "run_id": "s512_N_to_N",
+      "origin": 512,
+      "source": "R2_s512_N_end256",
+      "source_global_step": 768,
+      "prefix_recipe": "N",
+      "recipe": "N",
+      "updates": 256,
+      "global_first": 769,
+      "global_last": 1024,
+      "conditional": false
+    },
+    {
+      "run_id": "s512_N_to_AH",
+      "origin": 512,
+      "source": "R2_s512_N_end256",
+      "source_global_step": 768,
+      "prefix_recipe": "N",
+      "recipe": "AH",
+      "updates": 256,
+      "global_first": 769,
+      "global_last": 1024,
+      "conditional": false
+    },
+    {
+      "run_id": "s512_AH_to_N",
+      "origin": 512,
+      "source": "R2_s512_AH_end256",
+      "source_global_step": 768,
+      "prefix_recipe": "AH",
+      "recipe": "N",
+      "updates": 256,
+      "global_first": 769,
+      "global_last": 1024,
+      "conditional": false
+    },
+    {
+      "run_id": "s512_AH_to_AH",
+      "origin": 512,
+      "source": "R2_s512_AH_end256",
+      "source_global_step": 768,
+      "prefix_recipe": "AH",
+      "recipe": "AH",
+      "updates": 256,
+      "global_first": 769,
+      "global_last": 1024,
+      "conditional": false
+    },
+    {
+      "run_id": "s1536_N_to_N",
+      "origin": 1536,
+      "source": "R2_s1536_N_end256",
+      "source_global_step": 1792,
+      "prefix_recipe": "N",
+      "recipe": "N",
+      "updates": 256,
+      "global_first": 1793,
+      "global_last": 2048,
+      "conditional": false
+    },
+    {
+      "run_id": "s1536_N_to_AH",
+      "origin": 1536,
+      "source": "R2_s1536_N_end256",
+      "source_global_step": 1792,
+      "prefix_recipe": "N",
+      "recipe": "AH",
+      "updates": 256,
+      "global_first": 1793,
+      "global_last": 2048,
+      "conditional": false
+    },
+    {
+      "run_id": "s1536_AH_to_N",
+      "origin": 1536,
+      "source": "R2_s1536_AH_end256",
+      "source_global_step": 1792,
+      "prefix_recipe": "AH",
+      "recipe": "N",
+      "updates": 256,
+      "global_first": 1793,
+      "global_last": 2048,
+      "conditional": false
+    },
+    {
+      "run_id": "s1536_AH_to_AH",
+      "origin": 1536,
+      "source": "R2_s1536_AH_end256",
+      "source_global_step": 1792,
+      "prefix_recipe": "AH",
+      "recipe": "AH",
+      "updates": 256,
+      "global_first": 1793,
+      "global_last": 2048,
+      "conditional": false
+    },
+    {
+      "run_id": "s512_D256",
+      "origin": 512,
+      "source": "original_parent",
+      "source_global_step": 512,
+      "recipe": "D",
+      "updates": 256,
+      "global_first": 513,
+      "global_last": 768,
+      "conditional": true
+    },
+    {
+      "run_id": "s1536_D256",
+      "origin": 1536,
+      "source": "original_parent",
+      "source_global_step": 1536,
+      "recipe": "D",
+      "updates": 256,
+      "global_first": 1537,
+      "global_last": 1792,
+      "conditional": true
+    }
+  ],
+  "conditional_D": {
+    "criterion": "for both origins, V_L(256)-V_AH(256) > practical_margin",
+    "practical_margin_nats_per_valid_target": 0.001,
+    "decision_after": "both L endpoints; before crossover readout",
+    "run_order_priority": "L then eight crossovers then triggered D",
+    "statistical_significance_claim": false
+  },
+  "evaluation": {
+    "pool": "existing Q_P2_endpoint",
+    "pool_role": "historically_exposed_development",
+    "domain_weights": {
+      "A": 0.5,
+      "B": 0.5
+    },
+    "fixed_snapshot_local_steps": [
+      1,
+      16,
+      64,
+      256
+    ],
+    "primary_local_step": 256,
+    "old_confirm_access": false,
+    "group_bootstrap_only_if_mapping_available": true,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 3101512,
+    "old_endpoint_identity_absolute_tolerance": 1e-07
+  },
+  "limits": {
+    "main_updates": 2560,
+    "optional_D_updates": 512,
+    "max_branch_updates": 3072,
+    "gpu_seconds_total": 10800,
+    "cpu_numerical_seconds": 1800,
+    "new_output_bytes": 10737418240,
+    "review_bundle_target_bytes": 15728640,
+    "preflight_failure_cost_included": true
+  },
+  "expected_accounting": {
+    "targets_per_full_update": 32640,
+    "main_valid_targets": 83558400,
+    "max_branch_valid_targets": 100270080,
+    "independent_training_seeds": 1,
+    "main_new_runs": 10,
+    "conditional_new_runs": 2
+  },
+  "source_requirements": [
+    "immutable base_group_manifest",
+    "full_state parent512/1536",
+    "full_state oldR2 N/AH 768/1792",
+    "exact data cursor and stream",
+    "target identity",
+    "per-run durable logs"
+  ],
+  "server_paths": "Resolve from actual mounted/server assets; never infer from filenames only"
+}

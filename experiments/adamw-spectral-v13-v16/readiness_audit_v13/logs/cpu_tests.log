@@ -1,0 +1,13 @@
+test_budget_counts_attempted_before_failure_and_resume (readiness_audit_v13.tests_v13.ReadinessCpuTests) ... ok
+test_compare_tensors_stages (readiness_audit_v13.tests_v13.ReadinessCpuTests) ... ok
+test_digest_order_and_changes (readiness_audit_v13.tests_v13.ReadinessCpuTests) ... ok
+test_four_state_tied_and_none_semantics (readiness_audit_v13.tests_v13.ReadinessCpuTests) ... ok
+test_one_shift_mask_and_token_weight (readiness_audit_v13.tests_v13.ReadinessCpuTests) ... ok
+test_optimizer_logical_names_aliases_and_groups (readiness_audit_v13.tests_v13.ReadinessCpuTests) ... ok
+test_paired_label_effect_uses_same_docs_and_weights (readiness_audit_v13.tests_v13.ReadinessCpuTests) ... ok
+test_state_isolation_exception_restores_submodule_modes_and_nonpersistent_buffers (readiness_audit_v13.tests_v13.ReadinessCpuTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.869s
+
+OK

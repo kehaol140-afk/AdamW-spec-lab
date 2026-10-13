@@ -1,0 +1,15 @@
+{
+ "gpu_seconds": {
+  "preflight": 20,
+  "two_branches": 273,
+  "analysis": 45
+ },
+ "gpu_seconds_total": 338,
+ "budget_gpu_seconds": 3600,
+ "main_updates": 512,
+ "failed_attempts": [],
+ "output_bytes": 507141904,
+ "output_budget": 2147483648,
+ "confirm_access": 0,
+ "ci": "CI_UNAVAILABLE (no document-level group losses exported)"
+}

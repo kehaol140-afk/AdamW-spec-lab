@@ -1,0 +1,17 @@
+{
+  "manifest_sha256": "16fd87de2e9f6e7824af53a830771802860b5252cd84c4641c930493a7b127c8",
+  "wall_started_at": 1790957002.0275593,
+  "optimizer_step_attempts": 7938,
+  "optimizer_step_completions": 7938,
+  "token_forward_equivalents": 19169734,
+  "forward_calls": 48136,
+  "backward_attempts": 31752,
+  "train_effective_tokens": 16257024,
+  "train_seconds": 2656.474476599969,
+  "direction_seconds": 416.3579950999927,
+  "eval_seconds": 2077.679811000002,
+  "device_task_seconds": 109.7986411000166,
+  "pause_seconds": 11700.0,
+  "anchor_svds": 0,
+  "last_phase": "a1_P_a4_b1"
+}

@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "D:\pytorch\anaconda\envs\py39\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "D:\pytorch\anaconda\envs\py39\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "E:\��ģ��Ԥѵ��\adamw_spectral_pilot\mechanism_screen_v14\screen.py", line 623, in <module>
+    main()
+  File "E:\��ģ��Ԥѵ��\adamw_spectral_pilot\mechanism_screen_v14\screen.py", line 615, in main
+    elif a.phase=="dev": run_phase("dev")
+  File "E:\��ģ��Ԥѵ��\adamw_spectral_pilot\mechanism_screen_v14\screen.py", line 454, in run_phase
+    output = evaluate_unit(model, frozen, c, ds, rows, phase, l, vram_limit)
+  File "E:\��ģ��Ԥѵ��\adamw_spectral_pilot\mechanism_screen_v14\screen.py", line 363, in evaluate_unit
+    count_forward(l, row["token_count"])
+  File "E:\��ģ��Ԥѵ��\adamw_spectral_pilot\mechanism_screen_v14\screen.py", line 266, in count_forward
+    write(HERE / "budget_ledger.json", l)
+  File "E:\��ģ��Ԥѵ��\adamw_spectral_pilot\mechanism_screen_v14\screen.py", line 42, in write
+    os.replace(temp, path)
+PermissionError: [WinError 5] �ܾ����ʡ�: 'E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\mechanism_screen_v14\\budget_ledger.json.tmp' -> 'E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\mechanism_screen_v14\\budget_ledger.json'

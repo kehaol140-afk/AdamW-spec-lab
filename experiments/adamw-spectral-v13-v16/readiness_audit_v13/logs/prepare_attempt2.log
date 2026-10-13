@@ -1,0 +1,9 @@
+{
+  "parent": "VERIFIED",
+  "v12": "VERIFIED",
+  "old_gate": "BASELINE_TUNING_UNRESOLVED",
+  "v12_lr_rows": 192,
+  "v12_four_state_rows": 0,
+  "history_known_minimum_token_forwards": 52248,
+  "run_manifest_sha256": "1ab6511ec50590e8a3d354ae8eb2fac530bb6f52b21b2828cad216aa753205ae"
+}

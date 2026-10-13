@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "native_parity_max_abs": 0.0,
+  "parity_tolerance": 1.34706271648407e-05,
+  "resume_max_abs": 0.0,
+  "one_shot_families": [
+    "F",
+    "S"
+  ],
+  "eval_repeat_nll": [
+    6.060429460841917,
+    6.060429460841917
+  ],
+  "eval_repeat_spread": 0.0,
+  "smoke_step_attempts": 10,
+  "optimizer_step_attempts_total": 31
+}

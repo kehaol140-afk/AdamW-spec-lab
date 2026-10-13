@@ -1,0 +1,11 @@
+requirement_id,clause,implementation_evidence,status,impact
+R1,父seed3101/2048时钟/三完整状态/计数器;两恢复点非两seed,"scripts/run_parent.py:20-95; outputs parent_summary.json (targets 66,846,720 asserted)",VERIFIED,无
+R2,2状态x(4校准+4检查)batch;每探针恢复相同完整状态,src/p1_engine.py evaluate_batch (load_anchor per batch); manifests [s:s+8),VERIFIED,无
+R3,7组56主矩阵;tied/aux不重不漏,src/recipe_registry.py GROUP_PATTERNS; routing 对齐,VERIFIED,无
+R4,K3/5/7原系数/original scaling/原生路径/实际LR(lr_at(s+1)),src/group_probe.py ns_out=安装_zeropower; recipe_registry.lr_at,VERIFIED,无
+R5,每batch一次全参累积梯度+global clip;候选同G/M/H,src/group_probe.py collect_G; p1_engine compute_H/ns_cache,VERIFIED,无
+R6,m/v/momentum/step/参数/RNG/G/H无跨候选污染,state_restore.load_anchor clone 修复(16:12)+断言+grad-hash; 复现19点bit级一致,VERIFIED_AFTER_FIX,"修复前仅一次断言崩溃运行,无落盘产物;全部最终产物在修复后(mtime物证)"
+R7,"raw/gain/direction/gamma_const定义(含lr/shape,排除WD);aux/WD原生",src/group_probe.py u_of/tri_probe; joint gamma_const,VERIFIED,"报告括注'gamma≈0.98-1.02'有误,实测0.75-1.03(方向不变,已更正)"
+R8,同预算池先于检查;联合/几何/随机/no-op/并列规则,cost_pool.json(16:19)<selection_lock(16:25)<check_rows(16:26) mtime链,VERIFIED,第一次lock(缺geometry/random进检查侧)被第二次覆盖;锁定结果两版一致(会话记录)
+R9,Q组级划分/历史暴露/访问证据(P2endpoint与confirm零访问),build_q_sets sha256规则; access_guard异常保护; 运行日志无违例,VERIFIED,无
+R10,全部primary/controls/cost/coefficients/gamma先于Q_P1_check锁定,selection_lock.json mtime 16:25:21 < check_rows.csv 16:26:35,VERIFIED,无

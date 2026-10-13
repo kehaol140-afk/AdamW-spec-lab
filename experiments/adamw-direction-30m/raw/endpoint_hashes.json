@@ -1,0 +1,84 @@
+{
+ "generated": "2026-10-12",
+ "protocol": "ADAMW_DIRECTION_SCALE30M_T1_20261011",
+ "endpoints": {
+  "s30_F2_lr0.001_L1_endpoint.pt": {
+   "sha256": "3f934bd0a651d56e440d86105a2dde992d2a00b8c94e81f0fa2dd27490c19481",
+   "param_fingerprint": "da77eed7854cba6d",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140853
+  },
+  "s30_M_lr0.005_endpoint.pt": {
+   "sha256": "80a357d33259e42451bef23aabd7f35ced918a16c1e583638a20f87fb5ccf3a5",
+   "param_fingerprint": "e7c200498a446fb3",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140469
+  },
+  "s30_M_lr0.01_endpoint.pt": {
+   "sha256": "284689bd3c5b4e1d30f604f06cd2c33ab1fe35ecf4d70960e409e1f049274e5d",
+   "param_fingerprint": "33c2a26fd5f52144",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140309
+  },
+  "s30_M_lr0.02_endpoint.pt": {
+   "sha256": "5d872ea5d21e7b69e514663da0e572c9f8557296faa2fe7edaa45fb4461137a6",
+   "param_fingerprint": "350b16e600b535e2",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140309
+  },
+  "s30_P2_lr0.001_L1_endpoint.pt": {
+   "sha256": "bf53881cf436a25c5186a28878e513aee804ba35ce945238ddb016880b54c4fc",
+   "param_fingerprint": "54649c27aeeccfb4",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140853
+  },
+  "s30_P2_lr0.001_L2_endpoint.pt": {
+   "sha256": "e2d0423e1e4bbef7921f26351202a3c06617ad03e4f0e578d16ac2fb525488f6",
+   "param_fingerprint": "c59dce9d23a0f2dc",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140853
+  },
+  "s30_S1_lr0.0003_L1_endpoint.pt": {
+   "sha256": "c88669cedd7c694bfe460d6d0e405cff1b991be6bcdf4674a55d381cbfbc63b2",
+   "param_fingerprint": "310f51258d9b18ac",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140949
+  },
+  "s30_S1_lr0.001_L1_endpoint.pt": {
+   "sha256": "d8424fd2da5d444292a8d9794cf3d4f18ae32f0957236059875f01e95e0007d9",
+   "param_fingerprint": "9183c02ad641e186",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140853
+  },
+  "s30_S1_lr0.003_L1_endpoint.pt": {
+   "sha256": "d74d867f721565b0e3f4a47fb76e4ef91bf87a867c518fc42423649c65c95479",
+   "param_fingerprint": "2c964be8a7b5d4d9",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140853
+  },
+  "s30_S2_lr0.001_L1_endpoint.pt": {
+   "sha256": "413e99707991f0843d09acc58b0b60d931321c9143e5f16ade809326262ed450",
+   "param_fingerprint": "4803e1d48face5bb",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140853
+  },
+  "s30_S2_lr0.001_L2_endpoint.pt": {
+   "sha256": "f131de56045789dc1417731ebc260e28aad1d7ef122c6aed7338464fc62ebd10",
+   "param_fingerprint": "420d110742010660",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140853
+  },
+  "s30_S4_lr0.001_L1_endpoint.pt": {
+   "sha256": "05b0c34c314bf070464c21f2cf09a8618185e3caabcb0b81efd833e94af01a5b",
+   "param_fingerprint": "ee43bdc411eeb85d",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140853
+  },
+  "s30_S8_lr0.001_L1_endpoint.pt": {
+   "sha256": "789714d5febc38ca55ff37d16a016909ae8f201598c7817e929c5b326e490d4a",
+   "param_fingerprint": "975ea4ffcb9df71b",
+   "init_fingerprint": "31066e18b1d53096",
+   "bytes": 120140853
+  }
+ }
+}

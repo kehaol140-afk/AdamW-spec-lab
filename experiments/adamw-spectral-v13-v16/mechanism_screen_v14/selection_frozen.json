@@ -1,0 +1,14 @@
+{
+  "manifest_sha256": "74caaaa5e45b547b82f3cce7c576c82a1ebf754d2f8a2d412a9b3403dcaa6755",
+  "dev_raw_sha256": "fc5fe6763cd3f3ea1f8910a24f657fe3e8af9b35357ecdc8082d69b36a62cabe",
+  "dev_scores_sha256": "b6018479c6a13a263c7c2541421c88bbbb61bf0d7ac5949248765d6a7852bfa9",
+  "selected": {
+    "scalar": "scalar_g0.5_s2",
+    "spectral": "spectral_r0_g0.5_s2",
+    "fresh_gradient": "fresh_gradient_g0.5_s2",
+    "fresh_preconditioned": "fresh_preconditioned_g0.5_s2"
+  },
+  "ordinary_adamw": "scalar_g1_s1",
+  "created_at": 1790927411.6042147,
+  "confirmation_opened": false
+}

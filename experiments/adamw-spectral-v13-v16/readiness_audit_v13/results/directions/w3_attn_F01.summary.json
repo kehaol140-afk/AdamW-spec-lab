@@ -1,0 +1,44 @@
+{
+  "tag": "w3",
+  "target": "model.layers.1.self_attn.o_proj.weight",
+  "baseline": "F01",
+  "token_count": 23135,
+  "documents": 128,
+  "mean_gradient_norm": 0.006756951570006083,
+  "directions": {
+    "A": {
+      "token_weighted_dot": -0.10267163262901571,
+      "cosine": -0.26677830146115294,
+      "A_norm_matched_dot": -0.10267163262901571,
+      "direction_norm": 56.95726916019369
+    },
+    "M_plus": {
+      "token_weighted_dot": -5.057883589626282e-06,
+      "cosine": -0.3352198989985254,
+      "A_norm_matched_dot": -0.12901189538806657,
+      "direction_norm": 0.0022329974777032698
+    },
+    "current_clipped_gradient": {
+      "token_weighted_dot": -4.721959589558219e-06,
+      "cosine": -0.08337807517440131,
+      "A_norm_matched_dot": -0.03208867833978296,
+      "direction_norm": 0.008381458421507688
+    },
+    "A_head_rank1": {
+      "token_weighted_dot": -0.10613498272683783,
+      "cosine": -0.38996391596997637,
+      "A_norm_matched_dot": -0.1500805414074201,
+      "direction_norm": 40.27943077626806
+    },
+    "A_rest": {
+      "token_weighted_dot": 0.0034633500978221024,
+      "cosine": 0.012728012783683464,
+      "A_norm_matched_dot": 0.004898471297951703,
+      "direction_norm": 40.27031122957119
+    }
+  },
+  "source": "independent_new_probe_prefix",
+  "generation_precision": "torch.bfloat16",
+  "evaluation_precision": "fp32_no_tf32",
+  "raw_sha256": "60cb4758432e6089d0d499597315ce784ed3b59162a0b552f47d30f73b378747"
+}

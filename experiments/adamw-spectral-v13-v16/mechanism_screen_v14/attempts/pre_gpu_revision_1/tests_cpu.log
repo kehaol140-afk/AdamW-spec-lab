@@ -1,0 +1,10 @@
+test_candidate_grid_is_fixed (mechanism_screen_v14.test_screen.ScreenUnitTests) ... ok
+test_frozen_state_formula_and_spectral_identity (mechanism_screen_v14.test_screen.ScreenUnitTests) ... ok
+test_tie_prefers_simple_original_controls (mechanism_screen_v14.test_screen.ScreenUnitTests) ... ok
+test_token_weighting_differs_from_document_mean (mechanism_screen_v14.test_screen.ScreenUnitTests) ... ok
+test_zero_norm_fallback_and_match (mechanism_screen_v14.test_screen.ScreenUnitTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.068s
+
+OK

@@ -1,0 +1,52 @@
+{
+ "status": "MINTING_BLOCKED_ON_CORPUS",
+ "created": "2026-10-11",
+ "partition_ledger": {
+  "file": "adamw_spectral_pilot/artifacts/doc_roles.jsonl",
+  "sha256": "77141b21f319f1465bd63cab79b26e1e146b1b434f8e4ba425786634bc0d9647",
+  "bound_by": "artifacts/data_manifest.json doc_assignments_sha256 (VERIFIED match)"
+ },
+ "frozen_eval_sets": {
+  "development": 256,
+  "screen": 256,
+  "final_holdout": 1024,
+  "sha_source": "campaign_v16/eval_sets.json (digest sealed in data_manifest)"
+ },
+ "old_final_holdout_status": {
+  "identity": "1024 docs = 220 final_holdout_reserved + 804 legacy docs OUTSIDE current partition ledger",
+  "opened": "2026-10-10 during V16 C finalize (one-shot)",
+  "rule": "BURNED for any new selection; must NOT be reused as independent eval"
+ },
+ "untouched_pool": {
+  "branch_eval_reserved": 202,
+  "probe_confirm": 850,
+  "probe_select": 16,
+  "TOTAL": 1068,
+  "id_list": "splits/holdout_v2_candidate_ids.txt",
+  "id_list_sha256": "ab8bf85958f209aad64514bfa5fc5e814a6c88d353b216f8e3bc8e3b75a60f31"
+ },
+ "dev_layer1": {
+  "policy": "REUSE old development(256) as primary dev-grade split + old screen(256) as secondary",
+  "disclosure": "both were used by V16 B for dev selection/screen — dev-grade burned, acceptable for layer-1 comparisons, NOT for final claims"
+ },
+ "holdout_v2_plan": {
+  "size_max": 1024,
+  "target": 1024,
+  "source": "untouched pool only",
+  "minting_rule": "lexicographic natural prefix of holdout_v2_candidate_ids.txt after corpus-level re-verification",
+  "seal": "hash-sealed manifest + write_seal; opened once after layer-2 endpoints locked"
+ },
+ "GAP_1_corpus": {
+  "blocking": true,
+  "detail": "raw corpus pretrain_t2t_mini.jsonl (44MB, fingerprint 4403b6717352fcefe2b8ce50b47a29248085ac811eff6121e6114cf26e9c3d31) NOT on server (excluded from migration by design); token ids for the 1068 candidate docs CANNOT be produced without it; tokenizer IS present (71f32c68...)",
+  "remedy": "user uploads corpus to adamw_direction_validation/_incoming/, verify sha, re-tokenize candidates, verify doc_id = SHA256(normalized text) matches ledger"
+ },
+ "GAP_2_cross_ledger_identity": {
+  "detail": "886 ids inside frozen eval_sets (82 in screen, 804 in holdout) are ABSENT from the current partition ledger — eval_sets predates the current scan; same-content docs may appear under different ids across ledger generations",
+  "remedy": "on corpus arrival, re-hash all 1536 frozen eval docs + 5109 train docs under current normalization; drop any candidate whose CONTENT matches a burned doc (even under a different id); then mint"
+ },
+ "GAP_3_capacity": {
+  "detail": "untouched pool = 1068 ids; after GAP_2 decontamination it may shrink; holdout_v2 target=min(1024, clean pool); if clean pool <512, report before proceeding"
+ },
+ "v16_holdout_reuse": "FORBIDDEN for selection (opened); its RESULT values may be cited as historical V16 evidence only"
+}

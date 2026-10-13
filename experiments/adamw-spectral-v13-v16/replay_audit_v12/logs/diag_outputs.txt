@@ -1,0 +1,20 @@
+﻿diagA output (3x load+grad builds, no optimizer.step):
+attempt 0: sha256=0b949b26ac1a4e92beb4613792ea6d9cd6663528952e2e4d13fe61d4be6c76e5
+attempt 1: sha256=0b949b26ac1a4e92beb4613792ea6d9cd6663528952e2e4d13fe61d4be6c76e5
+attempt 2: sha256=0b949b26ac1a4e92beb4613792ea6d9cd6663528952e2e4d13fe61d4be6c76e5
+names identical: True / params with byte differences: 0 / elements differing: 0
+
+diagB output (real build_update x2, each with optimizer.step, real Ledger):
+gradient_sha256 first : 8a68694a78a839c3189851026dac43305d86e9540d976c57650aa5f31c846fe6
+gradient_sha256 repeat: b2b40a53e35564699de6be0da4c71e4774027a577f9f3c91fc0ffe773a804673
+optimizer_sha256 first : 9c89ce7af4030fee092b8249357cfd9e103c524fe23e51c56dbc4c06d1719e5e
+optimizer_sha256 repeat: c35054354ab34b9b59561c419ebca5530c18ca76768dbf3595ddb98690b05381
+repeat_error: 8.191913366317749e-06 / parity first/repeat: 2.98e-08 2.98e-08
+
+diagC output (h0 -> 1 isolated step -> h1):
+h0 (no step)              : 8d3a0dcbc65e95645918006235a0876b5338fc1322ca0c92e7f045ccecde018d
+h1 (after one step)       : 8d3a0dcbc65e95645918006235a0876b5338fc1322ca0c92e7f045ccecde018d
+h0 == h1: True  (both differ from diagA cross-process reference 0b949b26)
+
+diagD output (pure repeated load, CPU, zero GPU cost):
+digest after load #1 == digest after load #2 = a33d5c2aab30b609ae1cf4f09414f71ff03790558e34404d93c26508b131083b

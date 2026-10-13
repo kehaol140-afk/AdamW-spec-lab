@@ -1,0 +1,37 @@
+{
+  "invalid_state_origin_files": [
+    "raw\\eval\\H0_step128__H0__confirm.jsonl",
+    "raw\\eval\\H0_step128__H0__dev.jsonl",
+    "raw\\eval\\H0_step256__H0__confirm.jsonl",
+    "raw\\eval\\H0_step256__H0__dev.jsonl"
+  ],
+  "correction": "V15 H0_step256/H0_step128 rows were evaluated before the intended checkpoint was loaded (random init / stale branch state). They are marked INVALID_STATE_ORIGIN; corrected zero-training evaluations above. V15 S/F/P H1/H64 comparisons are unaffected (they loaded their own snapshots/endpoints).",
+  "corrected": {
+    "256": {
+      "dev": 5.997226059655791,
+      "confirm": 6.0640463392326245,
+      "state_id": "parent_step256",
+      "loaded_checkpoint_sha": "ed09a2c80f40aae1a8829a718913a4a40257cdc24fc0e7a2d29bc53a74383000",
+      "global_step": 256,
+      "param_fingerprint": "7110882d4983f68d"
+    },
+    "128": {
+      "dev": 6.544758293658063,
+      "confirm": 6.61125993982682,
+      "state_id": "parent_step128",
+      "loaded_checkpoint_sha": "6c839349663e56fa71da111cd388dd7152adcfb7907f9c9a5809752c4192d8f5",
+      "global_step": 128,
+      "param_fingerprint": "c69e5dcc68134e35"
+    }
+  },
+  "v15_ledger_note": {
+    "reported_backwards": 6800,
+    "current_backwards": 6800,
+    "gpu_seconds_was_unused_field": true,
+    "actual_timings_fields": [
+      "train_seconds",
+      "direction_seconds",
+      "eval_seconds"
+    ]
+  }
+}

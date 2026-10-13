@@ -1,0 +1,43 @@
+{
+  "protocol_id": "CONTEXT_AWARE_MUON_100M_PILOT_V0",
+  "status": "DRAFT_NOT_FROZEN (candidates + rules skeleton; freeze requires smoke re-run under final code hash, seed conflict re-check, and user authorization; 30M line results may adjust Muon-family grids)",
+  "model": "MiniMind 100,784,000 = h768/13L/12Q-6KV/head64/FFN2432/vocab6400/tied/seq256 (minimind_base code, G1b-verified structure)",
+  "seed_block": {"pilot": 3471, "confirm_reserved": [3472, 3473, 3474], "conflict_check": "vs 2030-2044, 3101, 3407-3413, 3421-3424, 3451-3454 (passed 2026-10-12)"},
+  "budgets": {
+    "pilot": {"tokens_per_run": 33554432, "steps": 4096, "tokens_per_step": 8192, "micro": 8, "accum": 4, "seq": 256},
+    "confirm": {"tokens_per_run_range": [100663296, 301989888], "only_for": "methods passing pilot gate; max 3 methods x 3 seeds"}
+  },
+  "schedule": {"warmup": 128, "type": "linear_then_cosine_to_0.1_peak"},
+  "precision": "bf16 autocast (cuda), fp32 master params/optimizer states",
+  "data": {
+    "corpus": "pretrain_t2t_mini.jsonl (sha 6dd6716c..., ~320M unique tokens measured)",
+    "tokenizer": "minimind BPE 71f32c68...",
+    "packing": "[BOS]+enc+[EOS] concat; (seq+1)-windows stride seq; FROZEN-PILOT MUST re-vendor V16 doc-partition rule (normalize->sha256->train role) before freeze (gap G-3)",
+    "eval": "development 256 docs (V16 ledger, dev-grade disclosed) for pilot; confirm uses sealed option chosen at freeze (coordinate holdout_v2 one-shot / mint holdout_v3 / dev-only downgrade)"
+  },
+  "pilot_matrix_draft": {
+    "B_adamw": {"arm": "tuned AdamW", "lr_grid": [0.0003, 0.001, 0.003], "runs": 3},
+    "B_muon": {"arm": "tuned Muon original", "lr_grid": [0.005, 0.01, 0.02], "runs": 3},
+    "B_muon_rms": {"arm": "tuned Muon match_rms_adamw", "lr_grid": [0.001, 0.003, 0.01], "runs": 3},
+    "B_lowmu": {"arm": "low-momentum Muon", "momentum": [0.9, 0.8], "lr": "at best B_muon lr", "runs": 2},
+    "C_A": {"arm": "Group-Muon-A (FFN39 mix, lam grid)", "lam_grid": [0.65, 0.85], "norm_match": true, "lr": "at best B_muon lr", "runs": 2},
+    "C_A_nat": {"arm": "Group-Muon-A natural-norm variant", "lam": "best of C_A", "norm_match": false, "runs": 1},
+    "C_B": {"arm": "Group-Muon-B (FFN39+VO26 mix)", "lam": "best of C_A", "norm_match": true, "runs": 1},
+    "total_runs": 15
+  },
+  "metrics": [
+    "same-token-budget endpoint NLL (primary; dev pool, token-weighted)",
+    "improvement vs best tuned Muon (paired, per-doc bootstrap)",
+    "improvement vs each available strong baseline (NorMuon/SAMuon-lite: SOURCE_BLOCKED, no comparison claimed)",
+    "tokens-to-common-loss-threshold (threshold = best-Muon endpoint NLL, preregistered)",
+    "true wall-clock + optimizer extra seconds (NS5 native/mix split, fp64 diagnostics split)",
+    "VRAM + optimizer state memory",
+    "per-group update norms + gradient-consistency angles cos(O,g), cos(O,O_native)"
+  ],
+  "gates_draft": {
+    "pilot_pass": "C_A or C_B beats best B_muon by >= 1e-3 NLL with CI95 entirely below 0 AND survives the low-momentum control (gain not reproduced by momentum 0.9/0.8 arms)",
+    "pilot_fail": "no candidate beats best tuned Muon OR gain explained by momentum reduction -> close line at pilot scale",
+    "short_budget_clause": "32M tokens = 0.33 tok/param transient regime; pilot gains do NOT claim full-pretraining endpoint benefits; confirm layer (100-300M tokens) is the decisive test"
+  },
+  "explicit_non_goals": ["no dynamic spectral exponent", "no gating networks", "no per-step SVD (source-scan enforced)", "no MoE GPU runs", "no modification of historical projects"]
+}

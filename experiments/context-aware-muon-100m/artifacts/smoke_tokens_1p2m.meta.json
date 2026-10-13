@@ -1,0 +1,7 @@
+{
+ "tokens": 1200000,
+ "docs": 5789,
+ "sha256": "7814396c973f8b22130d85fae5223ba81b809ea724ba9c539735e13ede2ba437",
+ "corpus": "/home/b205/minimind-master/dataset/pretrain_t2t_mini.jsonl",
+ "packing": "[BOS]+enc+[EOS] concatenated, corpus order (smoke variant)"
+}

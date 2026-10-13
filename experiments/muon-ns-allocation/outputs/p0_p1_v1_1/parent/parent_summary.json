@@ -1,0 +1,10 @@
+{
+ "parent_seed": 3101,
+ "final_loss": 2.211354911327362,
+ "targets_total": 66846720,
+ "slots_total": 67108864,
+ "targets_per_step_check": 32640.0,
+ "wall_seconds": 621.5442764759064,
+ "loss_first20": 7.541189152002334,
+ "loss_last20": 2.291708841919899
+}

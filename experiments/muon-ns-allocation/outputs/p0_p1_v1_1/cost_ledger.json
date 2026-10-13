@@ -1,0 +1,30 @@
+{
+ "gpu_seconds_by_stage": {
+  "parent": 950,
+  "cal_attempt1_partial": 90,
+  "cal_full": 95,
+  "cost_embedded_failed": 30,
+  "cost_standalone": 28,
+  "joint_1": 27,
+  "joint_2": 27,
+  "check_1": 67,
+  "check_2": 67,
+  "check_3": 71,
+  "misc_alias_tests": 60
+ },
+ "gpu_seconds_total": 1512,
+ "budget_gpu_seconds": 10800,
+ "failed_attempts": [
+  "calibration CSV field mismatch (eval done, rewrite)",
+  "cost benchmark unpack bug (in-script, moved standalone)",
+  "check rerun after native-label scheme fix",
+  "joint lock rerun to add geometry/fixed_random to check side"
+ ],
+ "output_bytes": 799834078,
+ "output_budget": 4294967296,
+ "parent_trajectories": 1,
+ "diagnostic_train_batches": 16,
+ "model_updates": "parent 2048 real; probes are one-step parameter points, not trajectories",
+ "confirm_access": 0,
+ "P2_endpoint_access": 0
+}

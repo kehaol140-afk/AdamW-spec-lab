@@ -1,0 +1,47 @@
+{
+  "protocol_id": "ADAMW_A_SPECTRAL_MECHANISM_SCREEN_V14_20261002",
+  "source_hash": "329ab91a7c694e34267f5f2720ec20a79d429eb2c8b2f9c7e178ad3f6abed6f6",
+  "config_sha256": "5a075593c669904e38f33ad641e709440011e62b7c8a84ce3464adbe2ab38744",
+  "parent_dependencies_sha256": "a29b6751e42376a7aa69a74d5c5a55bc6a6a8259d53c81635ebfcc84feab7bb7",
+  "candidate_list_sha256": "29bd34318ba4c001b9aebf043100fe7c7b219a9d70a6a68cc203755dac3532c6",
+  "confirm_views_sha256": "df29b531dd59e01fbcf858845a0037080a7c06ab6eede13437964c22b05520ef",
+  "confirm_documents_sha256": "d1c6eeeaeeeea20627f15cb66a29e317625db1aa33703edd7fa87da2b0bbce7f",
+  "confirm_ids_sha256": "f0a36b46d316d960a2a6b766c6c11f2b16e0ddb8edaa8229345636c53107ad12",
+  "confirm_available_before_selection": 786,
+  "confirm_selection_rule": "first 128 lexicographic unused probe_confirm SHA doc IDs in consumed parent prefix",
+  "confirm_seal": "dev and select phases must not open confirm_views.jsonl",
+  "windows": [
+    {
+      "window_id": 0,
+      "start_token": 0,
+      "end_token_exclusive": 2049,
+      "target_tokens": 2048
+    },
+    {
+      "window_id": 1,
+      "start_token": 350208,
+      "end_token_exclusive": 352257,
+      "target_tokens": 2048
+    },
+    {
+      "window_id": 2,
+      "start_token": 700416,
+      "end_token_exclusive": 702465,
+      "target_tokens": 2048
+    },
+    {
+      "window_id": 3,
+      "start_token": 1050880,
+      "end_token_exclusive": 1052929,
+      "target_tokens": 2048
+    }
+  ],
+  "selection_rule": "per candidate mean across 4 windows of each window token-weighted NLL; ties by gamma=1, s near 1, rho near 0.5, ID",
+  "budget": 5000000,
+  "formal_steps": 0,
+  "optimizer_steps": 0,
+  "previous_manifest_sha256": "953735d26943fcf38e0a0f5bbe16d662249c06f0364e428faeb35569f20e7c62",
+  "previous_attempt_archive": "attempts/atomic_retry_2",
+  "patch_scope": "Retry Windows atomic JSON replacement; prior 197335 token forwards and raw rows retained",
+  "prepatch_raw_sha256": "2de27bd31599d0b71545f121fe8f2424e344fab4c63c2ea614aceb18776507f8"
+}

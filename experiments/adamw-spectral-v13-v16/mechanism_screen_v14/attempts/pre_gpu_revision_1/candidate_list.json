@@ -1,0 +1,226 @@
+[
+  {
+    "id": "scalar_g0.5_s0",
+    "family": "scalar",
+    "gamma": 0.5,
+    "s": 0.0,
+    "rho": null
+  },
+  {
+    "id": "scalar_g0.5_s0.5",
+    "family": "scalar",
+    "gamma": 0.5,
+    "s": 0.5,
+    "rho": null
+  },
+  {
+    "id": "scalar_g0.5_s1",
+    "family": "scalar",
+    "gamma": 0.5,
+    "s": 1.0,
+    "rho": null
+  },
+  {
+    "id": "scalar_g0.5_s2",
+    "family": "scalar",
+    "gamma": 0.5,
+    "s": 2.0,
+    "rho": null
+  },
+  {
+    "id": "spectral_r0_g0.5_s0.5",
+    "family": "spectral",
+    "gamma": 0.5,
+    "s": 0.5,
+    "rho": 0.0
+  },
+  {
+    "id": "spectral_r0_g0.5_s1",
+    "family": "spectral",
+    "gamma": 0.5,
+    "s": 1.0,
+    "rho": 0.0
+  },
+  {
+    "id": "spectral_r0_g0.5_s2",
+    "family": "spectral",
+    "gamma": 0.5,
+    "s": 2.0,
+    "rho": 0.0
+  },
+  {
+    "id": "spectral_r0.5_g0.5_s0.5",
+    "family": "spectral",
+    "gamma": 0.5,
+    "s": 0.5,
+    "rho": 0.5
+  },
+  {
+    "id": "spectral_r0.5_g0.5_s1",
+    "family": "spectral",
+    "gamma": 0.5,
+    "s": 1.0,
+    "rho": 0.5
+  },
+  {
+    "id": "spectral_r0.5_g0.5_s2",
+    "family": "spectral",
+    "gamma": 0.5,
+    "s": 2.0,
+    "rho": 0.5
+  },
+  {
+    "id": "fresh_gradient_g0.5_s0.5",
+    "family": "fresh_gradient",
+    "gamma": 0.5,
+    "s": 0.5,
+    "rho": null
+  },
+  {
+    "id": "fresh_gradient_g0.5_s1",
+    "family": "fresh_gradient",
+    "gamma": 0.5,
+    "s": 1.0,
+    "rho": null
+  },
+  {
+    "id": "fresh_gradient_g0.5_s2",
+    "family": "fresh_gradient",
+    "gamma": 0.5,
+    "s": 2.0,
+    "rho": null
+  },
+  {
+    "id": "fresh_preconditioned_g0.5_s0.5",
+    "family": "fresh_preconditioned",
+    "gamma": 0.5,
+    "s": 0.5,
+    "rho": null
+  },
+  {
+    "id": "fresh_preconditioned_g0.5_s1",
+    "family": "fresh_preconditioned",
+    "gamma": 0.5,
+    "s": 1.0,
+    "rho": null
+  },
+  {
+    "id": "fresh_preconditioned_g0.5_s2",
+    "family": "fresh_preconditioned",
+    "gamma": 0.5,
+    "s": 2.0,
+    "rho": null
+  },
+  {
+    "id": "scalar_g1_s0",
+    "family": "scalar",
+    "gamma": 1.0,
+    "s": 0.0,
+    "rho": null
+  },
+  {
+    "id": "scalar_g1_s0.5",
+    "family": "scalar",
+    "gamma": 1.0,
+    "s": 0.5,
+    "rho": null
+  },
+  {
+    "id": "scalar_g1_s1",
+    "family": "scalar",
+    "gamma": 1.0,
+    "s": 1.0,
+    "rho": null
+  },
+  {
+    "id": "scalar_g1_s2",
+    "family": "scalar",
+    "gamma": 1.0,
+    "s": 2.0,
+    "rho": null
+  },
+  {
+    "id": "spectral_r0_g1_s0.5",
+    "family": "spectral",
+    "gamma": 1.0,
+    "s": 0.5,
+    "rho": 0.0
+  },
+  {
+    "id": "spectral_r0_g1_s1",
+    "family": "spectral",
+    "gamma": 1.0,
+    "s": 1.0,
+    "rho": 0.0
+  },
+  {
+    "id": "spectral_r0_g1_s2",
+    "family": "spectral",
+    "gamma": 1.0,
+    "s": 2.0,
+    "rho": 0.0
+  },
+  {
+    "id": "spectral_r0.5_g1_s0.5",
+    "family": "spectral",
+    "gamma": 1.0,
+    "s": 0.5,
+    "rho": 0.5
+  },
+  {
+    "id": "spectral_r0.5_g1_s1",
+    "family": "spectral",
+    "gamma": 1.0,
+    "s": 1.0,
+    "rho": 0.5
+  },
+  {
+    "id": "spectral_r0.5_g1_s2",
+    "family": "spectral",
+    "gamma": 1.0,
+    "s": 2.0,
+    "rho": 0.5
+  },
+  {
+    "id": "fresh_gradient_g1_s0.5",
+    "family": "fresh_gradient",
+    "gamma": 1.0,
+    "s": 0.5,
+    "rho": null
+  },
+  {
+    "id": "fresh_gradient_g1_s1",
+    "family": "fresh_gradient",
+    "gamma": 1.0,
+    "s": 1.0,
+    "rho": null
+  },
+  {
+    "id": "fresh_gradient_g1_s2",
+    "family": "fresh_gradient",
+    "gamma": 1.0,
+    "s": 2.0,
+    "rho": null
+  },
+  {
+    "id": "fresh_preconditioned_g1_s0.5",
+    "family": "fresh_preconditioned",
+    "gamma": 1.0,
+    "s": 0.5,
+    "rho": null
+  },
+  {
+    "id": "fresh_preconditioned_g1_s1",
+    "family": "fresh_preconditioned",
+    "gamma": 1.0,
+    "s": 1.0,
+    "rho": null
+  },
+  {
+    "id": "fresh_preconditioned_g1_s2",
+    "family": "fresh_preconditioned",
+    "gamma": 1.0,
+    "s": 2.0,
+    "rho": null
+  }
+]

@@ -1,0 +1,9 @@
+test_controller_import_is_light (campaign_v16.test_resume_driver.ResumeDriverTests) ... ok
+test_cumulative_pause_cannot_be_reset_by_episode (campaign_v16.test_resume_driver.ResumeDriverTests) ... ok
+test_original_wall_deadline_blocks_worker (campaign_v16.test_resume_driver.ResumeDriverTests) ... ok
+test_ram_needs_three_consecutive_ten_second_samples (campaign_v16.test_resume_driver.ResumeDriverTests) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

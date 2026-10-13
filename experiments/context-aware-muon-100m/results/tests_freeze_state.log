@@ -1,0 +1,33 @@
+test_model::test_100m_param_count_and_tie PASS
+test_model::test_30m_param_count PASS
+test_model::test_init_determinism PASS
+test_routing::test_group_sizes PASS
+test_routing::test_muon_route_all_2d_and_shapes_preserved PASS
+test_routing::test_routing_counts_30m PASS
+test_routing::test_routing_counts_and_disjoint_100m PASS
+test_ns5::test_2d_only_and_coeff_count PASS
+test_ns5::test_adjust_lr_modes PASS
+test_ns5::test_homogeneity_positive_scale PASS
+test_ns5::test_lam_anchor PASS
+test_ns5::test_no_svd_in_project_sources PASS
+test_ns5::test_output_flattens_spectrum PASS
+test_group_muon::test_determinism_repeat_run PASS
+test_group_muon::test_lam_anchor_direction_and_norm_match PASS
+test_group_muon::test_lam_one_follows_pure_gradient_direction PASS
+test_group_muon::test_low_momentum_group_differs PASS
+test_group_muon::test_mix_family_has_no_low_momentum_equivalent PASS
+test_group_muon::test_momentum_buffer_is_ema_not_classic PASS
+test_group_muon::test_momentum_state_independent_of_lam PASS
+test_group_muon::test_native_bitwise_vs_torch_muon PASS
+test_group_muon::test_norm_match_precision_fp64 PASS
+test_group_muon::test_ns5_perturbation_floor_measured PASS
+test_group_muon::test_state_roundtrip_bit_replay PASS
+test_group_muon::test_stats_ranges_and_ns_cost_accounting PASS
+ALL 25 TESTS PASS (freeze-state rerun)
+B_adamw_lr1e-3: muon=None aux=None adamw=145
+B_muon_lr1e-2: muon=91 aux=54 adamw=None
+B_muon_rms_lr3e-3: muon=91 aux=54 adamw=None
+B_lowmu_0p9: muon=91 aux=54 adamw=None
+C_A_lam0p65: muon=91 aux=54 adamw=None
+C_A_nat: muon=91 aux=54 adamw=None
+C_B: muon=91 aux=54 adamw=None

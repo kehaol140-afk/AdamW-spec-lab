@@ -1,0 +1,15 @@
+{
+  "postprocess_source_sha256": "d02c606fad7c236e55377ab4347d723cd19b9bf19f7dbb96f3c76ff403888cc6",
+  "patch_regression_source_sha256": "f59bac62413446bcd5d4226f4cdcb7ff0222260cff1d522b857853196ed89b82",
+  "patch_regression_log_sha256": "44f5023b41625de1a137481d338e87dff1bff5fbd34ab294eb24d06340902b4f",
+  "measurement_run_manifest_sha256": "1ab6511ec50590e8a3d354ae8eb2fac530bb6f52b21b2828cad216aa753205ae",
+  "measurement_source_hash": "1254f1bfe3aee7fe41a4e62a56eca79c2ab0f9da86f7fc9a5258a7310e61438f",
+  "outputs": {
+    "document_bootstrap.json": "1a3d0a206dcb416c9a85643f908a343a6c55668ebabcf01a0c92c4797c924020",
+    "same_frozen_repeatability.json": "c09b11e2e8f2fea424fe9e37aaa39375cc0b169a9d46fddd4fb35ee8a062c38d",
+    "direction_document_bootstrap.json": "6425d12600c9e1b1d53e20d0f43af1c005745e07b09d696a8389676294c104b0",
+    "resource_timing_summary.json": "edaf643a13d836d64c06a7a26d35ca4a07298c13504e23a573ebda3bdfc471f5",
+    "finite_difference_resolution.json": "ac585cb748555ee109c37e899018f31601f839deee577563c29d73bb746064f6"
+  },
+  "patch_sha256": "dfc9009f79c67f94ffbb4d0682ac739947bf80b79040dc26a421432642620271"
+}

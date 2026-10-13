@@ -1,0 +1,53 @@
+{
+  "format": "hyperball_reproduction_public_recipe_v1",
+  "date_frozen": "2026-09-30",
+  "authority": "run-fact = capture-full log embedded scripts (README: rip script before '==='); paper > PR text > README only where log absent",
+  "common_benchmark": {
+    "model": "GPT-2-class: 12 layers, model_dim=768, 6 heads x 128 head_dim (attn), MLP hdim=4*768, RMSNorm (gain), RoPE, relu().square() activation, logit soft-cap 15, vocab 50304",
+    "dataset": "FineWeb-10B (data/fineweb10B/fineweb_train_*.bin, pre-tokenized GPT-2 tokens, magic 20240520)",
+    "batch_size_tokens": 524288, "seq_len": 1024, "mbs": 64,
+    "val_tokens": 10485760, "val_freq": "every 125 steps (+25 near end for #36)",
+    "target_val_loss": 3.28, "precision": "params fp32 + compiled fwd (bf16 embed/NS internals)",
+    "dist": "torchrun NCCL, world_size 1/2/4/8 (assert 8%ws==0), grad all-reduce SUM; H100x8 in public runs",
+    "ns": "steps=12, coeff=(2.0,-1.5,0.5), bf16, norm+1e-7, same for ALL three recipes",
+    "muon_momentum": 0.95, "nesterov": true, "shape_scaling": "sqrt(max(1, rows/cols))"
+  },
+  "recipes": {
+    "muonh_original_5": {
+      "source": "logs/MuonH_3325_capture_full.txt (embedded script; hardware: H100x8, torch 2.10.0+cu128)",
+      "steps": 3325, "final_val_loss_single_log": 3.27528, "published": "3.2782 (n=10)",
+      "matrix_optimizer": "MuonH per shape-class (qkv / mlp.fc / attn.proj / mlp.proj as 4 separate optimizer instances, same hypers, for compile-cache)",
+      "matrix_lr": 0.018, "matrix_wd": "NONE (hyperball replaces decay)",
+      "hyperball": "per-matrix: p_norm=||W||; step=lr*update*p_norm/clamp(||update||,1e-10); renorm to p_norm; eps=1e-10",
+      "init": "PyTorch default Kaiming-uniform (nn.Linear) then multipliers: attn.proj x1.25, mlp.proj x3.0, mlp.fc x1.5; head proj.weight=0, all proj biases=0, embed=default",
+      "aux_optimizer": "AdamW fused: embed lr=0.3, head lr=1/320, 1D lr=0.01, betas=(0.8,0.95), eps=1e-10, wd=0",
+      "schedule": "linear-to-zero cooldown, NO warmup: matrix cooldown_frac=1.0, aux cooldown_frac=0.4",
+      "seeds": "5 seeds in PR267 (3.27843/3.27950/3.27958/3.27981/3.27982); README n=10"
+    },
+    "tuned_muon_36": {
+      "source": "logs/TunedMuon_3250.txt (== master snapshot; hardware: H100x8, torch 2.10.0+cu128); PR323",
+      "steps": 3250, "final_val_loss_single_log": 3.27722, "published": "3.2787 (n=10)",
+      "matrix_optimizer": "single Muon over all blocks 2D weights",
+      "matrix_lr": 0.025, "matrix_wd": 0.05,
+      "hyperball": "NONE",
+      "init": "proj weights zero; embed normal_(); other weights normal_(std=0.33^0.5/fan_in^0.5); biases zero; gains ~N(1,0)",
+      "aux_optimizer": "AdamW fused: embed lr=0.7, head lr=0.004, 1D lr=0.015, betas=(0.8,0.95), eps=1e-10, wd=0.001",
+      "schedule": "cooldown_frac=0.7 all groups, NO warmup",
+      "seeds": "n=10 (README)"
+    },
+    "tuned_aux_muonh_37": {
+      "source": "logs/TunedAux_MuonH_3250.txt (hardware: H100x8, torch 2.11.0+cu130); PR324",
+      "steps": 3250, "final_val_loss_single_log": 3.27827, "published": "3.2786 (n=10)",
+      "matrix_optimizer": "single MuonH over all blocks 2D weights (not per-shape split)",
+      "matrix_lr": 0.018, "matrix_wd": "NONE",
+      "hyperball": "identical scale_invariant_update_ as #5",
+      "init": "normal_(std=0.33^0.5/fan_in^0.5) base then SAME multipliers x1.25/x3.0/x1.5; embed normal_; biases zero; gains N(1,0)  [NOTE: base init differs from #5 — #5 keeps nn.Linear Kaiming-uniform default, #37 re-draws normal]",
+      "aux_optimizer": "AdamW fused: embed lr=0.910, head lr=0.0064, 1D lr=0.0195, betas=(0.8,0.95), eps=1e-10, wd=0.001 (grafted from #36, retuned ~x1.3)",
+      "schedule": "matrix cooldown_frac=1.0, aux cooldown_frac=0.85, NO warmup",
+      "seeds": "n=10 (README)"
+    }
+  },
+  "conflicts": [
+    {"field": "init std", "paper": "1/sqrt(d_in) for constrained matrices", "run_code": "#5 Kaiming-uniform default x multipliers; #37 normal_(0.33^0.5/sqrt(fan_in)) x multipliers", "resolution": "run code is authoritative; note #5 vs #37 init DIFFER (Kaiming-uniform vs normal redraw)"}
+  ]
+}

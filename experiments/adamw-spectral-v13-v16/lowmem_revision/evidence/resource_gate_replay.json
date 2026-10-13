@@ -1,0 +1,47 @@
+{
+  "method": "Executed the uploaded resource_check AST unchanged, with mocked RAM samples and mocked CUDA availability/free memory. No CUDA initialization or real training.",
+  "cases": [
+    {
+      "ram_available_bytes": 2100858880,
+      "ram_available_gib": 1.9565773010253906,
+      "deficit_to_old_threshold_mib": 44.46484375,
+      "old_2_gib": {
+        "outcome": "RESOURCE_BLOCKED",
+        "error": "RESOURCE_BLOCKED: available RAM=2100858880"
+      },
+      "proposed_1_gib": {
+        "outcome": "CHECK_ALLOWED",
+        "process_vram_limit": 4831838208.0
+      }
+    },
+    {
+      "ram_available_bytes": 2045362176,
+      "ram_available_gib": 1.9048919677734375,
+      "deficit_to_old_threshold_mib": 97.390625,
+      "old_2_gib": {
+        "outcome": "RESOURCE_BLOCKED",
+        "error": "RESOURCE_BLOCKED: available RAM=2045362176"
+      },
+      "proposed_1_gib": {
+        "outcome": "CHECK_ALLOWED",
+        "process_vram_limit": 4831838208.0
+      }
+    },
+    {
+      "ram_available_bytes": 1907736576,
+      "ram_available_gib": 1.7767181396484375,
+      "deficit_to_old_threshold_mib": 228.640625,
+      "old_2_gib": {
+        "outcome": "RESOURCE_BLOCKED",
+        "error": "RESOURCE_BLOCKED: available RAM=1907736576"
+      },
+      "proposed_1_gib": {
+        "outcome": "CHECK_ALLOWED",
+        "process_vram_limit": 4831838208.0
+      }
+    }
+  ],
+  "main_tensor_storage_bytes": 74489856,
+  "main_tensor_storage_mib": 71.0390625,
+  "all_54_primary_direction_matrices_mib": 81.0
+}

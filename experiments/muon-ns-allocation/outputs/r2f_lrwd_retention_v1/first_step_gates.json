@@ -1,0 +1,12 @@
+{
+ "512": {
+  "N_vs_reference_maxdiff": 0.0,
+  "L_data_delta_ratio": 0.5013336615021312,
+  "D_data_delta_ratio": 1.001265428937082
+ },
+ "1536": {
+  "N_vs_reference_maxdiff": 0.0,
+  "L_data_delta_ratio": 0.5006009259364136,
+  "D_data_delta_ratio": 1.000501503411815
+ }
+}

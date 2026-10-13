@@ -1,0 +1,28 @@
+{
+  "manifest_sha256": "cd7c47aa1a75f0aae6937a16c3baf624342416945512224a7b5d898f95b6f0d9",
+  "wall_started_at": 1791566297.2339327,
+  "optimizer_step_attempts": 79882,
+  "optimizer_step_completions": 79882,
+  "token_forward_equivalents": 174864936,
+  "forward_calls": 383016,
+  "backward_attempts": 319528,
+  "train_effective_tokens": 163598336,
+  "train_seconds": 10299.558829852182,
+  "direction_seconds": 1505.4246848667324,
+  "eval_seconds": 10158.25807839189,
+  "device_task_seconds": 437.2281071613556,
+  "pause_seconds": 0.0,
+  "anchor_svds": 36,
+  "last_phase": "cfinal",
+  "pause_seconds_windows_session": 14700.0,
+  "budget_amendment": {
+    "authorized": "user migration decision 2026-10-10 (SERVER_MIGRATION_PLAN.md #3)",
+    "fields": [
+      "wall_started_at",
+      "pause_seconds",
+      "STATE.stop"
+    ],
+    "scientific_counters_unchanged": true,
+    "amended_at": 1791566297.2339342
+  }
+}

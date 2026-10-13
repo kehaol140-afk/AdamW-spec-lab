@@ -1,0 +1,7 @@
+test_atomic_write_retries_transient_windows_sharing_error (readiness_audit_v13.tests_patch.PatchRegressionTests) ... ok
+test_cumulative_ledger_and_explicit_previous_source (readiness_audit_v13.tests_patch.PatchRegressionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.022s
+
+OK

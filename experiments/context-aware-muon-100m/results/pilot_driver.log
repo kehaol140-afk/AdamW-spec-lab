@@ -1,0 +1,80 @@
+
+DRIVER START 2026-10-12 14:06:06 pid=1276270
+RUN B_adamw_lr3e-4 (cumulative 0.00h)
+  exit=1 wall=0.1m
+  stderr: Traceback (most recent call last):
+  File "/home/b205/projects/training_dynamics_lab/context_aware_muon/scripts/run_pilot_arm.py", line 197, in <module>
+    main()
+  File "/home/b205/projects/training_dynamics_lab/context_aware_muon/scripts/run_pilot_arm.py", line 127, in main
+    metrics = out_dir.open("metrics.jsonl", "w")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/b205/miniforge3/envs/fr_minimind/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'str' object cannot be interpreted as an integer
+ABORT driver on arm failure B_adamw_lr3e-4 (safe stop, no re-count)
+
+DRIVER START 2026-10-12 14:08:29 pid=1277341
+RUN B_adamw_lr3e-4 (cumulative 0.00h)
+  exit=0 wall=15.5m
+  stdout: {"arm_id": "B_adamw_lr3e-4", "peak_lr": 0.0003, "wall_s": 917.981039011851, "dev_nll_by_horizon": {"1024": 6.0860373532874315, "2048": 6.261477517169309, "4096": 6.284613624373084}}
+  cumulative=0.25h
+RUN B_adamw_lr1e-3 (cumulative 0.25h)
+  exit=0 wall=15.6m
+  stdout: {"arm_id": "B_adamw_lr1e-3", "peak_lr": 0.001, "wall_s": 925.9695770270191, "dev_nll_by_horizon": {"1024": 6.188898120525252, "2048": 6.280227825231072, "4096": 6.461258178872016}}
+  cumulative=0.51h
+RUN B_adamw_lr3e-3 (cumulative 0.51h)
+  exit=0 wall=14.9m
+  stdout: {"arm_id": "B_adamw_lr3e-3", "peak_lr": 0.003, "wall_s": 886.9024621180724, "dev_nll_by_horizon": {"1024": 6.218025095436057, "2048": 6.433878174901978, "4096": 6.563847316173976}}
+  cumulative=0.76h
+RUN B_muon_lr5e-3 (cumulative 0.76h)
+  exit=0 wall=17.9m
+  stdout: {"arm_id": "B_muon_lr5e-3", "peak_lr": 0.005, "wall_s": 1065.4063926099334, "dev_nll_by_horizon": {"1024": 6.185953832642702, "2048": 6.426662072407589, "4096": 6.522696352393019}}
+  cumulative=1.05h
+RUN B_muon_lr1e-2 (cumulative 1.05h)
+  exit=0 wall=17.6m
+  stdout: {"arm_id": "B_muon_lr1e-2", "peak_lr": 0.01, "wall_s": 1047.7023860390764, "dev_nll_by_horizon": {"1024": 6.278888984111369, "2048": 6.475657640049844, "4096": 6.5646329558863075}}
+  cumulative=1.35h
+RUN B_muon_lr2e-2 (cumulative 1.35h)
+  exit=0 wall=18.0m
+  stdout: {"arm_id": "B_muon_lr2e-2", "peak_lr": 0.02, "wall_s": 1069.801355394069, "dev_nll_by_horizon": {"1024": 6.304203588663155, "2048": 6.58964645389098, "4096": 6.598916838733815}}
+  cumulative=1.64h
+RUN B_muon_rms_lr1e-3 (cumulative 1.64h)
+  exit=0 wall=17.3m
+  stdout: {"arm_id": "B_muon_rms_lr1e-3", "peak_lr": 0.001, "wall_s": 1030.549621019978, "dev_nll_by_horizon": {"1024": 6.145316090362528, "2048": 6.361541123198289, "4096": 6.4231062809189305}}
+  cumulative=1.93h
+RUN B_muon_rms_lr3e-3 (cumulative 1.93h)
+  exit=0 wall=18.5m
+  stdout: {"arm_id": "B_muon_rms_lr3e-3", "peak_lr": 0.003, "wall_s": 1100.8573248030152, "dev_nll_by_horizon": {"1024": 6.25621560379676, "2048": 6.479386409560691, "4096": 6.5292539614595}}
+  cumulative=2.23h
+RUN B_muon_rms_lr1e-2 (cumulative 2.23h)
+  exit=0 wall=17.5m
+  stdout: {"arm_id": "B_muon_rms_lr1e-2", "peak_lr": 0.01, "wall_s": 1041.8586614201777, "dev_nll_by_horizon": {"1024": 6.280675777236472, "2048": 6.3262454792775245, "4096": 6.568472790723322}}
+  cumulative=2.52h
+SELECTION B_muon_best_lr -> 0.005
+RUN B_lowmu_0p9 (cumulative 2.52h)
+  exit=0 wall=17.7m
+  stdout: {"arm_id": "B_lowmu_0p9", "peak_lr": 0.005, "wall_s": 1053.9555721008219, "dev_nll_by_horizon": {"1024": 6.154311056244051, "2048": 6.527429075054423, "4096": 6.5502608212633975}}
+  cumulative=2.82h
+RUN B_lowmu_0p8 (cumulative 2.82h)
+  exit=0 wall=17.3m
+  stdout: {"arm_id": "B_lowmu_0p8", "peak_lr": 0.005, "wall_s": 1028.9603086852003, "dev_nll_by_horizon": {"1024": 6.128792885620305, "2048": 6.56538541821928, "4096": 6.584097763876981}}
+  cumulative=3.10h
+RUN C_A_lam0p65 (cumulative 3.10h)
+  exit=0 wall=20.9m
+  stdout: {"arm_id": "C_A_lam0p65", "peak_lr": 0.005, "wall_s": 1244.6265261620283, "dev_nll_by_horizon": {"1024": 6.196824506059541, "2048": 6.5279822663944165, "4096": 6.5667222059294765}}
+  cumulative=3.45h
+RUN C_A_lam0p85 (cumulative 3.45h)
+  exit=0 wall=22.2m
+  stdout: {"arm_id": "C_A_lam0p85", "peak_lr": 0.005, "wall_s": 1320.4882236099802, "dev_nll_by_horizon": {"1024": 6.174425912810494, "2048": 6.5858779994477175, "4096": 6.559775891711955}}
+  cumulative=3.82h
+SELECTION C_A_best_lam -> 0.85
+RUN C_A_nat (cumulative 3.82h)
+  exit=0 wall=21.0m
+  stdout: {"arm_id": "C_A_nat", "peak_lr": 0.005, "wall_s": 1245.6864892470185, "dev_nll_by_horizon": {"1024": 6.1781391923181666, "2048": 6.557603741510113, "4096": 6.567352080822306}}
+  cumulative=4.16h
+RUN C_B (cumulative 4.16h)
+  exit=0 wall=23.7m
+  stdout: {"arm_id": "C_B", "peak_lr": 0.005, "wall_s": 1411.9525425720494, "dev_nll_by_horizon": {"1024": 6.189119552165984, "2048": 6.6520630272084444, "4096": 6.659515909732293}}
+  cumulative=4.55h
+DRIVER DONE 2026-10-12 18:44:17 cumulative=4.55h

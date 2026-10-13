@@ -1,0 +1,21 @@
+[113s] step 1: loss=8.8733 lr=0.000313
+[122s] step 32: loss=6.3428 lr=0.010000
+[186s] step 256: loss=3.7754 lr=0.009729
+[251s] step 512: loss=2.9345 lr=0.008799
+saved state at step 512: 7abd22ec189f5833...
+[389s] step 1024: loss=2.8177 lr=0.005612
+[528s] step 1536: loss=2.3640 lr=0.002358
+saved state at step 1536: d0f032c88158fdea...
+[621s] step 2048: loss=2.2114 lr=0.001000
+saved state at step 2048: 6973adc0c2e57a1c...
+{
+ "parent_seed": 3101,
+ "final_loss": 2.211354911327362,
+ "targets_total": 66846720,
+ "slots_total": 67108864,
+ "targets_per_step_check": 32640.0,
+ "wall_seconds": 621.5442764759064,
+ "loss_first20": 7.541189152002334,
+ "loss_last20": 2.291708841919899
+}
+counter checks passed (32640 targets / 32768 slots per update)

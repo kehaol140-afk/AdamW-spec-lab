@@ -1,0 +1,8 @@
+{"window": 0, "candidate_id": "scalar_g1_s0", "v13_state": "F01", "delta_nll": 0.0, "max_doc_nll_abs": 0.0, "v13_sha256": "d0f1990689da7d4aee0fdfff9f65b0104c7201b924a2ba2340e8af9aeb2e7e6c"}
+{"window": 0, "candidate_id": "scalar_g1_s1", "v13_state": "F11", "delta_nll": -2.5063063624486404e-08, "max_doc_nll_abs": 9.5367431640625e-07, "v13_sha256": "260c4759d1e7b128e21dec1e0e1c975dd0a9b1430107aeeb29e10ec3f4d508f1"}
+{"window": 1, "candidate_id": "scalar_g1_s0", "v13_state": "F01", "delta_nll": 0.0, "max_doc_nll_abs": 0.0, "v13_sha256": "8b31f53910f66cc83d456fa4330e6bc8884145ee6476b4e18fc5c94412343941"}
+{"window": 1, "candidate_id": "scalar_g1_s1", "v13_state": "F11", "delta_nll": 1.1871977179112037e-08, "max_doc_nll_abs": 7.266090022994831e-07, "v13_sha256": "081148af3cb3926b6dddc0d6760bd185c5dda24ddca88c46d712f7edec17857f"}
+{"window": 2, "candidate_id": "scalar_g1_s0", "v13_state": "F01", "delta_nll": 0.0, "max_doc_nll_abs": 0.0, "v13_sha256": "d3b70a7718d6f31a8db8b01c2c1b01b9bc885b82080937e30ae5d0bf3f309cf4"}
+{"window": 2, "candidate_id": "scalar_g1_s1", "v13_state": "F11", "delta_nll": -1.0552868801028126e-08, "max_doc_nll_abs": 7.725969144445344e-07, "v13_sha256": "d3bcfb2549c712cba8f7bddcedc549fe50e8b48e2537183496bbf3a43c2127ec"}
+{"window": 3, "candidate_id": "scalar_g1_s0", "v13_state": "F01", "delta_nll": 0.0, "max_doc_nll_abs": 0.0, "v13_sha256": "7dccf832e4df8ebeeb633c4c3f87fe33db2fe12ef3135c0c27bd8658969defd1"}
+{"window": 3, "candidate_id": "scalar_g1_s1", "v13_state": "F11", "delta_nll": -2.3743956134580912e-08, "max_doc_nll_abs": 5.474005044803221e-07, "v13_sha256": "e2629c1fbe85c78756c5003c568dcc73229619261d256010f14fcb43af5bb904"}

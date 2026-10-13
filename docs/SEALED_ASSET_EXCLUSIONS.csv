@@ -1,0 +1,4 @@
+path,role,size_bytes,sha256_commitment,handling,backup_requirement
+adamw_direction_validation/splits/holdout_v2.jsonl,"sealed eval set (MINTED_SEALED, layer-2 one-shot)",1211172,3e0f76536bfeab99c629dfbb4c01f361e9b37daac34f9d39910c61aed17801f1,exclude content/ids; keep size+count+commitment hash only,server original + independent backup required
+adamw_direction_validation/splits/holdout_v2_candidate_ids.txt,future-set candidate id list (1068),69420,ab8bf85958f209aad64514bfa5fc5e814a6c88d353b216f8e3bc8e3b75a60f31,membership info could enable indirect reconstruction,server only
+adamw_direction_validation/splits/holdout_v2_reserve_ids.txt,reserve id list (44),2860,9de8ca087b5e06eb560b857a71abc6b7c87d2fbbc487d32e29b1eeaef84188d6,same,server only

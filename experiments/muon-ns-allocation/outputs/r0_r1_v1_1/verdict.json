@@ -1,0 +1,7 @@
+{
+ "AMPLITUDE_RANGE_UNRESOLVED": false,
+ "GLOBAL_ONLY_LOCAL_SIGNAL": true,
+ "GROUP_INCREMENT_LOCAL_SIGNAL": false,
+ "MATCHED_STRUCTURE_LOCAL_SIGNAL": false,
+ "structure_equal_search_signal": false
+}

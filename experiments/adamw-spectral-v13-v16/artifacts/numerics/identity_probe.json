@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "seed": 3407,
+  "step": 256,
+  "role": "ffn_down_projection",
+  "repeat_spreads": [
+    0.0,
+    0.0
+  ],
+  "epsilon_null": 0.0,
+  "meaning": "same model, same state, same data, three repeated FP32 evaluations"
+}

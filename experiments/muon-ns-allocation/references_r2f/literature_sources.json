@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Understanding Short-Horizon Bias in Stochastic Meta-Optimization",
+    "url": "https://arxiv.org/abs/1803.02021",
+    "checked": "2026-09-29",
+    "role": "prior short-horizon bias, not new finding"
+  },
+  {
+    "title": "Scale Weight Decay and Train Better",
+    "url": "https://arxiv.org/html/2607.23777v1",
+    "checked": "2026-09-29",
+    "role": "LR-dependent WD, differs from fixed AH"
+  },
+  {
+    "title": "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+    "url": "https://arxiv.org/abs/2609.04577",
+    "checked": "2026-09-29",
+    "role": "training horizon and configuration, no guarantee for local MiniMind setting"
+  },
+  {
+    "title": "Effective Learning Rate Governs Loss Dynamics in Language Model Pretraining",
+    "url": "https://arxiv.org/html/2608.24814v1",
+    "checked": "2026-09-29",
+    "role": "norm/ELR competing explanation; not a new method in current protocol"
+  },
+  {
+    "title": "PyTorch 2.11.0 Muon implementation",
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.11.0/torch/optim/_muon.py",
+    "checked": "2026-09-29",
+    "role": "validate decoupled update; installed source remains binding"
+  },
+  {
+    "title": "PyTorch 2.11.0 AdamW implementation",
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.11.0/torch/optim/adamw.py",
+    "checked": "2026-09-29",
+    "role": "group-specific LR/WD; installed source remains binding"
+  }
+]

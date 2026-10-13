@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "window_id": 0,
+  "source_hash": "1254f1bfe3aee7fe41a4e62a56eca79c2ab0f9da86f7fc9a5258a7310e61438f",
+  "budget": {
+    "run_manifest_sha256": "1ab6511ec50590e8a3d354ae8eb2fac530bb6f52b21b2828cad216aa753205ae",
+    "token_forward_equivalents": 1063810,
+    "forward_attempts": 5556,
+    "backward_attempts": 556,
+    "gpu_optimizer_step_attempts": 3,
+    "gpu_optimizer_steps_completed": 3,
+    "elapsed_seconds": 0.0,
+    "attempts": [
+      {
+        "attempt_id": 1,
+        "source_hash": "bf2e5f86226af7b6eb910dfc54a505a2f6530c130fe09882c471a18d6282b79a",
+        "run_manifest_sha256": "b2aa63866af7eb5cd628b0d97f59f9a7d933617a6e75e1c2f131208f17a7fb29",
+        "budget_snapshot_sha256": "dbe35d5c4b16f294f4d34c8a17219bc4c50f92f020931d5bbe2b83f9de85b250",
+        "archive": "attempts\\attempt1_before_atomic_retry",
+        "reason": "WinError 5 during child budget atomic replacement; failed forward was not executed"
+      }
+    ]
+  }
+}

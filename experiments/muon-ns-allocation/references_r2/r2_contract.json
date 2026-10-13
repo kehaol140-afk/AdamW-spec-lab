@@ -1,0 +1,116 @@
+{
+  "version": "r2_data_update_scaling_development_v1",
+  "status": "execution_spec_not_server_run",
+  "scope": "R1_minimal_erratum_then_six_fixed_continuation_runs",
+  "parent_seed": 3101,
+  "anchor_steps": [
+    512,
+    1536
+  ],
+  "arms": {
+    "N": {
+      "muon_data_scale": 1.0,
+      "aux_data_scale": 1.0
+    },
+    "MH": {
+      "muon_data_scale": 0.5,
+      "aux_data_scale": 1.0
+    },
+    "AH": {
+      "muon_data_scale": 0.5,
+      "aux_data_scale": 0.5
+    }
+  },
+  "steps_per_run": 256,
+  "primary_total_updates": 1536,
+  "native_repeat": {
+    "anchor_step": 512,
+    "arm": "N",
+    "max_runs": 1,
+    "updates": 256,
+    "purpose": "numerical_reproducibility_not_independent_seed"
+  },
+  "main_and_repeat_max_updates": 1792,
+  "schedule": "original_parent_clock_next_update_s_plus_1_to_s_plus_256_no_restart_or_remap",
+  "weight_decay": "per_group_original_base_lr_times_original_wd_preserved_for_data_only_scaling",
+  "gradient_policy": "recompute_current_state_forward_backward_all_unique_parameter_global_clip_unchanged",
+  "optimizer_state_policy": "native_updates_from_unscaled_clipped_gradients_including_aux_step_no_reset",
+  "model": "existing_parent_model_and_tokenizer_unchanged",
+  "precision": "existing_parent_production_precision_unchanged",
+  "main_ns_steps": 5,
+  "train_stream": "original_parent_next_256_full_batches_same_manifest_per_anchor_across_arms",
+  "expected_targets_per_update": 32640,
+  "expected_targets_per_run": 8355840,
+  "expected_main_total_targets": 50135040,
+  "expected_main_and_repeat_total_targets": 58490880,
+  "primary_eval_pool": "existing_Q_P2_endpoint",
+  "original_confirm": "forbidden",
+  "primary_eval_at_relative_steps": [
+    0,
+    1,
+    256
+  ],
+  "primary_eval_timing": "after_all_requested_training_runs_finished_or_declared_budget_stop_no_arm_selection",
+  "monitor_pool": "existing_Q_select",
+  "monitor_steps": [
+    64,
+    128,
+    256
+  ],
+  "snapshots": {
+    "1": "model_state_only",
+    "256": "full_state"
+  },
+  "fixed_comparisons": [
+    [
+      "N",
+      "MH"
+    ],
+    [
+      "N",
+      "AH"
+    ],
+    [
+      "AH",
+      "MH"
+    ]
+  ],
+  "gain_sign": "V_reference_minus_V_candidate",
+  "terminal_gain_reference_nats": 0.001,
+  "terminal_gain_reference_role": "descriptive_resource_screen_not_significance_or_auto_go",
+  "statistics": "per_anchor_per_domain_paired_point_effects_no_seed_level_p_values",
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 3101256,
+    "unit": "document_thread_translation_cluster_when_ids_available",
+    "role": "conditional_evaluation_uncertainty_not_training_variability"
+  },
+  "repair": {
+    "expanded_calibration_points_expected": 176,
+    "max_new_missing_check_points": 72,
+    "original_inputs_only": true,
+    "max_gpu_minutes": 30
+  },
+  "budget": {
+    "cpu_numeric_minutes": 30,
+    "gpu_hours_total": 2,
+    "new_outputs_gib": 4,
+    "review_zip_mib_target": 15
+  },
+  "forbidden": [
+    "new_parent_training",
+    "new_seed_training",
+    "new_lr_grid",
+    "new_amplitude_grid",
+    "O_group_specific_rule",
+    "NS3",
+    "new_NS_coefficients",
+    "new_optimizer",
+    "long_frozen_gradient_replay",
+    "HVP_or_hypergradient",
+    "AMO_OrScale_SAMuon_DynMuon_training",
+    "changing_data_or_eval_weights",
+    "using_endpoint_for_selection"
+  ],
+  "asset_paths": "resolve_existing_and_hash_before_execution_no_invented_paths"
+}

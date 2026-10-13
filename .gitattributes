@@ -1,0 +1,3 @@
+# Research archive: preserve archived source and evidence byte-for-byte.
+# Prevent core.autocrlf from rewriting bytes on Windows checkout.
+* -text

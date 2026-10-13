@@ -1,0 +1,33 @@
+{
+  "proposal_id": "CONTEXT_AWARE_MUON_100M_PILOT_AMENDMENT_V1_1_PROPOSAL",
+  "date": "2026-10-12",
+  "status": "PROPOSAL_ONLY — NOT part of frozen v1.0 queue (configs/pilot_arms_v1.json unchanged, CODE_FREEZE_V1 intact); adopt only with explicit user authorization at pilot gate",
+  "trigger": "Parallel audit audits/context_muon_baselines_20261012 (read-only by this project) upgraded external-baseline availability AFTER our v1.0 freeze:",
+  "baseline_status_changes": {
+    "normuon": {
+      "old": "SOURCE_BLOCKED",
+      "new": "ADAPTED_FROM_LOCAL_MIRROR (author-contributed form in modded-nanogpt PR #276 by @lliu606, paper arXiv:2510.05491; staging adapter 18/18 CPU tests)",
+      "faithful_arm_gate": "ADAPTED label until official-repo upload + line-diff (their B-1) + Q1 lr^2-cautious-wd ruling",
+      "controlled_arm_gate": "ns5+VR arm makes no official-identity claim -> usable NOW"
+    },
+    "moonlight_lineage_mirror": {
+      "old": "optimizer-level only (match_rms_adamw)",
+      "new": "toy_train-semantics local mirror (llamafactory/axolotl dual provenance) instantiable; full MuonClip still SOURCE_BLOCKED"
+    },
+    "samuon_lite": "SOURCE_BLOCKED (unchanged)",
+    "microsoft_dion": "SOURCE_BLOCKED (unchanged)"
+  },
+  "proposed_addon_arms": {
+    "minimal": [
+      {"arm_id": "B_normuon_ns5vr", "kind": "normuon_ns5vr (controlled: NS5 + variance reduction + cautious wd; no PE, no official-identity claim)", "lr": "@B_muon_best", "runs": 1, "cost_min": 22, "purpose": "isolate VR+cautious vs tuned Muon; first external strong-baseline row in metric 3"}
+    ],
+    "full": [
+      {"arm_id": "B_normuon_faithful x3 LR", "note": "ADAPTED label; only after B-1 upload gate", "runs": 3},
+      {"arm_id": "B_normuon_ns5vr", "runs": 1},
+      {"arm_id": "B_moonlight_mirror x3 LR (toy_train lineage)", "note": "decomposes momentum-lineage factor (full-grad vs Keller-lerp)", "runs": 3}
+    ]
+  },
+  "addon_budget": {"minimal": "+~0.35 GPU-h (incl. ~10 min throughput smoke, their B-2)", "full": "+2.6-3.4 GPU-h on top of v1.0 4.9-5.5"},
+  "integration_path": "vendor staging/{adapter,vendor} into this project with sha registration per LEGACY_PROVENANCE discipline + rerun their 18 CPU tests inside this repo + NorMuon path in a 30-step smoke before any pilot slot; no silent edits to frozen files",
+  "decision_owner": "user at pilot authorization"
+}

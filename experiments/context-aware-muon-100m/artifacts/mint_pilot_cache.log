@@ -1,0 +1,25 @@
+{
+ "status": "MINTED",
+ "tokens": 33685504,
+ "target": 33685504,
+ "train_documents_consumed": 232327,
+ "scanned_bytes": 168885478,
+ "sha256": "f92715b4a66c2db140ab6785d8a055ccb808fd5c0fb854cb89cd11a0613a0d8e",
+ "v16_prefix_match_8p5m": true,
+ "s30m_prefix_match_17m": true,
+ "corpus": "/home/b205/minimind-master/dataset/pretrain_t2t_mini.jsonl",
+ "corpus_sha256": "6dd6716c84ab36897bdbfc7f88e04f4441c48c1ab7ecee88ce0b0e7d4685560c",
+ "tokenizer_dir": "/home/b205/projects/training_dynamics_lab/adamw_spectral_pilot/minimind_repo/model",
+ "tokenizer_sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668",
+ "packing": "per train doc [BOS]+encode(text)+[EOS]; concatenated; V16 prepare() rules (cuts 70/76/82/94/97/100)",
+ "roles": {
+  "train": 232327,
+  "lr_select": 19819,
+  "probe_select": 19730,
+  "probe_confirm": 39357,
+  "branch_eval_reserved": 9795,
+  "final_holdout_reserved": 10030
+ },
+ "no_wrap_check": "size == 4096 steps x 8224 window tokens; pilot consumes exactly, no wrap",
+ "mint_seconds": 64.3
+}

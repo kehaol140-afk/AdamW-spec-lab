@@ -1,0 +1,36 @@
+{
+ "runs": [
+  {
+   "run_id": "s512_AH_to_N_corrected",
+   "file": "s512_AH_to_N_corrected_step256_full.pt",
+   "sha": "d89d529ff43f1452886ba8da2e51613008b79b5eed7517c63cab05288d255a86",
+   "role": "corrected_AH_source_crossover"
+  },
+  {
+   "run_id": "s512_AH_to_AH_corrected",
+   "file": "s512_AH_to_AH_corrected_step256_full.pt",
+   "sha": "8157aebdfd9a78491484807665324d898a7db46b7c5f49b10de999edfcb03626",
+   "role": "corrected_AH_source_crossover"
+  },
+  {
+   "run_id": "s1536_AH_to_N_corrected",
+   "file": "s1536_AH_to_N_corrected_step256_full.pt",
+   "sha": "3eb866b284a456b770424a2cd12cbc89797cbe45aa870a62704df724adafc0d4",
+   "role": "corrected_AH_source_crossover"
+  },
+  {
+   "run_id": "s1536_AH_to_AH_corrected",
+   "file": "s1536_AH_to_AH_corrected_step256_full.pt",
+   "sha": "57e8a09795daf49aca47e7c9b1d4f0614dfd9f7ec730df9c806e3d605e960176",
+   "role": "corrected_AH_source_crossover"
+  }
+ ],
+ "reused_unchanged": [
+  "s512_N_to_N",
+  "s512_N_to_AH",
+  "s1536_N_to_N",
+  "s1536_N_to_AH"
+ ],
+ "target": "Q_P2_endpoint (developmental, historically exposed)",
+ "locked_before_evaluation": true
+}

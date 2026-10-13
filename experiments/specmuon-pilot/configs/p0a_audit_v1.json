@@ -1,0 +1,22 @@
+{
+  "version": "p0a_audit_v1",
+  "frozen_at": "2026-10-10",
+  "threads": 8,
+  "canonical_run": "m1_muon_lr1.0_wd0.01_p0.5_s2030",
+  "runs": [
+    "m1_muon_lr0.5_wd0.01_p0.5_s2030",
+    "m1_muon_lr1.0_wd0.01_p0.5_s2030",
+    "m1_muon_lr2.0_wd0.01_p0.5_s2030",
+    "m1_muon_lr0.5_wd0.02_p0.5_s2030",
+    "m1_muon_lr1.0_wd0.02_p0.5_s2030",
+    "m1_muon_lr2.0_wd0.02_p0.5_s2030"
+  ],
+  "ks_energy": [1, 8],
+  "pe_max_cycles": 40,
+  "pe_defect_tol": 1e-4,
+  "out_dir": "results/p0a",
+  "tolerances": {
+    "norm_match_rel": 1e-6,
+    "pe_oracle_gap": 1e-3
+  }
+}

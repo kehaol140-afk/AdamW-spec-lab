@@ -1,0 +1,29 @@
+{
+  "tag": "w0_full_repeat",
+  "window_id": 0,
+  "target": "model.layers.1.mlp.down_proj.weight",
+  "view": "natural_prefix",
+  "identity": {
+    "F11_actual_max_abs": 1.1641532182693481e-10,
+    "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+    "rho_s_one_max_abs": 7.450580596923828e-09,
+    "formula_tolerance": 2.3740507125854495e-06
+  },
+  "nll": {
+    "F00": 6.15710737307329,
+    "F10": 6.157043807855451,
+    "F01": 6.1540156811483815,
+    "F11": 6.154038053414033
+  },
+  "I_before": 6.356521783956737e-05,
+  "I_after": -2.237226565160455e-05,
+  "interaction": 8.593748349117192e-05,
+  "documents": 80,
+  "target_tokens": 14788,
+  "raw_paths": {
+    "F00": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_full_repeat_ffn_natural_prefix_F00.jsonl",
+    "F10": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_full_repeat_ffn_natural_prefix_F10.jsonl",
+    "F01": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_full_repeat_ffn_natural_prefix_F01.jsonl",
+    "F11": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_full_repeat_ffn_natural_prefix_F11.jsonl"
+  }
+}

@@ -1,0 +1,188 @@
+test_a0_keeps_decay_drops_data_and_advances_moments (direction_horizon_v15.test_v15.V15CpuTests.test_a0_keeps_decay_drops_data_and_advances_moments) ... FAIL
+test_a_and_b_semantics_against_manual_formula (direction_horizon_v15.test_v15.V15CpuTests.test_a_and_b_semantics_against_manual_formula) ... FAIL
+test_atomic_write_retries_then_succeeds (direction_horizon_v15.test_v15.V15CpuTests.test_atomic_write_retries_then_succeeds) ... ok
+test_budget_attempt_counted_before_failure (direction_horizon_v15.test_v15.V15CpuTests.test_budget_attempt_counted_before_failure) ... ok
+test_budget_cap_enforced (direction_horizon_v15.test_v15.V15CpuTests.test_budget_cap_enforced) ... ok
+test_directions_evolve_naturally (direction_horizon_v15.test_v15.V15CpuTests.test_directions_evolve_naturally) ... FAIL
+test_eval_does_not_mutate_state (direction_horizon_v15.test_v15.V15CpuTests.test_eval_does_not_mutate_state) ... FAIL
+test_f_and_p_norm_match_and_clip_timing (direction_horizon_v15.test_v15.V15CpuTests.test_f_and_p_norm_match_and_clip_timing) ... FAIL
+test_identity_branch_matches_native_adamw_bitwise (direction_horizon_v15.test_v15.V15CpuTests.test_identity_branch_matches_native_adamw_bitwise) ... FAIL
+test_ledger_helpers_read_modify_write_fresh_file (direction_horizon_v15.test_v15.V15CpuTests.test_ledger_helpers_read_modify_write_fresh_file)
+Regression for the attempt-4 accounting race: helpers must always mutate the ... ok
+test_one_shot_family_schedule (direction_horizon_v15.test_v15.V15CpuTests.test_one_shot_family_schedule) ... ok
+test_save_load_branch_state_roundtrip_cpu (direction_horizon_v15.test_v15.V15CpuTests.test_save_load_branch_state_roundtrip_cpu) ... FAIL
+test_shared_parameter_single_update (direction_horizon_v15.test_v15.V15CpuTests.test_shared_parameter_single_update) ... FAIL
+test_tie_break_prefers_identity_then_closeness (direction_horizon_v15.test_v15.V15CpuTests.test_tie_break_prefers_identity_then_closeness) ... ok
+test_zero_norm_fallback (direction_horizon_v15.test_v15.V15CpuTests.test_zero_norm_fallback) ... ok
+
+======================================================================
+FAIL: test_a0_keeps_decay_drops_data_and_advances_moments (direction_horizon_v15.test_v15.V15CpuTests.test_a0_keeps_decay_drops_data_and_advances_moments)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 157, in test_a0_keeps_decay_drops_data_and_advances_moments
+    h.step("S", 0.0, 1.0)
+    ~~~~~~^^^^^^^^^^^^^^^
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 119, in step
+    meta = v15.apply_step(self.model, self.opt, family, a, b,
+                          "test", self.eta, timing,
+                          target_name=self.target_name)
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/train.py", line 464, in apply_step
+    torch.cuda.synchronize()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 1106, in synchronize
+    _lazy_init()
+    ~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 417, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+
+======================================================================
+FAIL: test_a_and_b_semantics_against_manual_formula (direction_horizon_v15.test_v15.V15CpuTests.test_a_and_b_semantics_against_manual_formula)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 182, in test_a_and_b_semantics_against_manual_formula
+    h.step(family, a, b)
+    ~~~~~~^^^^^^^^^^^^^^
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 119, in step
+    meta = v15.apply_step(self.model, self.opt, family, a, b,
+                          "test", self.eta, timing,
+                          target_name=self.target_name)
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/train.py", line 464, in apply_step
+    torch.cuda.synchronize()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 1106, in synchronize
+    _lazy_init()
+    ~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 417, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+
+======================================================================
+FAIL: test_directions_evolve_naturally (direction_horizon_v15.test_v15.V15CpuTests.test_directions_evolve_naturally)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 243, in test_directions_evolve_naturally
+    meta1 = h.step("F", 1.0, 1.0)
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 119, in step
+    meta = v15.apply_step(self.model, self.opt, family, a, b,
+                          "test", self.eta, timing,
+                          target_name=self.target_name)
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/train.py", line 464, in apply_step
+    torch.cuda.synchronize()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 1106, in synchronize
+    _lazy_init()
+    ~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 417, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+
+======================================================================
+FAIL: test_eval_does_not_mutate_state (direction_horizon_v15.test_v15.V15CpuTests.test_eval_does_not_mutate_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 263, in test_eval_does_not_mutate_state
+    h.step("S", 1.0, 1.0)
+    ~~~~~~^^^^^^^^^^^^^^^
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 119, in step
+    meta = v15.apply_step(self.model, self.opt, family, a, b,
+                          "test", self.eta, timing,
+                          target_name=self.target_name)
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/train.py", line 464, in apply_step
+    torch.cuda.synchronize()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 1106, in synchronize
+    _lazy_init()
+    ~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 417, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+
+======================================================================
+FAIL: test_f_and_p_norm_match_and_clip_timing (direction_horizon_v15.test_v15.V15CpuTests.test_f_and_p_norm_match_and_clip_timing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 204, in test_f_and_p_norm_match_and_clip_timing
+    h.step("S", 1.0, 1.0)  # populate moments
+    ~~~~~~^^^^^^^^^^^^^^^
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 119, in step
+    meta = v15.apply_step(self.model, self.opt, family, a, b,
+                          "test", self.eta, timing,
+                          target_name=self.target_name)
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/train.py", line 464, in apply_step
+    torch.cuda.synchronize()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 1106, in synchronize
+    _lazy_init()
+    ~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 417, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+
+======================================================================
+FAIL: test_identity_branch_matches_native_adamw_bitwise (direction_horizon_v15.test_v15.V15CpuTests.test_identity_branch_matches_native_adamw_bitwise)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 144, in test_identity_branch_matches_native_adamw_bitwise
+    branch.step("S", 1.0, 1.0)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 119, in step
+    meta = v15.apply_step(self.model, self.opt, family, a, b,
+                          "test", self.eta, timing,
+                          target_name=self.target_name)
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/train.py", line 464, in apply_step
+    torch.cuda.synchronize()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 1106, in synchronize
+    _lazy_init()
+    ~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 417, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+
+======================================================================
+FAIL: test_save_load_branch_state_roundtrip_cpu (direction_horizon_v15.test_v15.V15CpuTests.test_save_load_branch_state_roundtrip_cpu)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 380, in test_save_load_branch_state_roundtrip_cpu
+    h.step("S", 0.5, 0.5)
+    ~~~~~~^^^^^^^^^^^^^^^
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 119, in step
+    meta = v15.apply_step(self.model, self.opt, family, a, b,
+                          "test", self.eta, timing,
+                          target_name=self.target_name)
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/train.py", line 464, in apply_step
+    torch.cuda.synchronize()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 1106, in synchronize
+    _lazy_init()
+    ~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 417, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+
+======================================================================
+FAIL: test_shared_parameter_single_update (direction_horizon_v15.test_v15.V15CpuTests.test_shared_parameter_single_update)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 257, in test_shared_parameter_single_update
+    h.step("S", 1.0, 1.0)
+    ~~~~~~^^^^^^^^^^^^^^^
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/test_v15.py", line 119, in step
+    meta = v15.apply_step(self.model, self.opt, family, a, b,
+                          "test", self.eta, timing,
+                          target_name=self.target_name)
+  File "/mnt/data/v15_cpu_review/direction_horizon_v15/train.py", line 464, in apply_step
+    torch.cuda.synchronize()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 1106, in synchronize
+    _lazy_init()
+    ~~~~~~~~~~^^
+  File "/opt/pyvenv/lib/python3.13/site-packages/torch/cuda/__init__.py", line 417, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.833s
+
+FAILED (failures=8)

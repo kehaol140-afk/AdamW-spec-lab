@@ -1,0 +1,10 @@
+{
+ "run_id": "s512_AH_to_AH",
+ "recipe": "AH",
+ "start_step": 768,
+ "n_steps": 256,
+ "source_sha": "f50174b9948389b6227672eebd6d89342cc3bead9e84c5fad36968b5e61fc7b1",
+ "final_sha": "fc0fb5aafd858182032c0d99b39c1709e0488934a0fe0bf5916b91131b07991c",
+ "final_loss": 2.785693645477295,
+ "wall_s": 74.6627995967865
+}

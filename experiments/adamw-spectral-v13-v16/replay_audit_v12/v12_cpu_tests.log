@@ -1,0 +1,15 @@
+test_four_states_and_interaction (replay_audit_v12.test_v12.V12CpuTests) ... ok
+test_four_states_match_real_cpu_adamw_and_none_gradient (replay_audit_v12.test_v12.V12CpuTests) ... ok
+test_isolated_state_restores_everything (replay_audit_v12.test_v12.V12CpuTests) ... ok
+test_long_document_has_no_artificial_eos (replay_audit_v12.test_v12.V12CpuTests) ... ok
+test_one_shift_and_count (replay_audit_v12.test_v12.V12CpuTests) ... ok
+test_packed_sources_clustered (replay_audit_v12.test_v12.V12CpuTests) ... ok
+test_parent_gate_recalculation (replay_audit_v12.test_v12.V12CpuTests) ... ok
+test_short_document_keeps_real_eos (replay_audit_v12.test_v12.V12CpuTests) ... ok
+test_token_weighted_is_not_document_mean (replay_audit_v12.test_v12.V12CpuTests) ... ok
+test_windows_do_not_overlap (replay_audit_v12.test_v12.V12CpuTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 4.896s
+
+OK

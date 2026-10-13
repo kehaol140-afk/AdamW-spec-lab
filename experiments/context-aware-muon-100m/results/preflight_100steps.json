@@ -1,0 +1,194 @@
+{
+ "device": "NVIDIA GeForce RTX 5090",
+ "steps": 100,
+ "ckpt_step": 50,
+ "tokens_per_step": 8192,
+ "peak_lr": 0.01,
+ "schedule": "warmup8+cosine->0.1xpeak over T=100 (DIAGNOSTIC schedule, disclosed)",
+ "seed": 3471,
+ "cache_sha_from_manifest": "f92715b4a66c2db140ab6785d8a055ccb808fd5c0fb854cb89cd11a0613a0d8e",
+ "paths": {
+  "muon_native": {
+   "init_fingerprint": "33f93a0f546149a0",
+   "wall_s": 28.850039975950494,
+   "losses_first3": [
+    8.953523397445679,
+    8.809010982513428,
+    8.526370763778687
+   ],
+   "losses_last3": [
+    6.2805095911026,
+    6.3118157386779785,
+    6.449108600616455
+   ],
+   "loss_all_finite": true,
+   "s_per_step_steady_mean": 0.2510369134834036,
+   "s_per_step_first10_mean": 0.5338386252522469,
+   "opt_seconds_total": 5.044602848822251,
+   "ns_seconds_native": 4.13410513731651,
+   "ns_seconds_mix": 0.0,
+   "cos_O_g_mean_over_run": null,
+   "cos_O_Onat_mean_over_run": null,
+   "norm_rel_err_max": null,
+   "cursor_end": 822400,
+   "ckpt": {
+    "path": "/home/b205/projects/training_dynamics_lab/context_aware_muon/artifacts/preflight/ckpt50_muon_native.pt",
+    "step": 50,
+    "cursor": 411200
+   },
+   "tokens_consumed": 822400,
+   "throughput_tok_s": 28395.107968061337,
+   "vram_peak_gib": 3.76953125,
+   "dev_nll_step100": {
+    "dev_nll_token_weighted": 6.368097780897561,
+    "tokens": 45470,
+    "docs": 256
+   },
+   "final_hashes": {
+    "param_fingerprint": "bfdae0b98e0ee1a4",
+    "momentum_sum": -375123.5625
+   },
+   "replay_check": {
+    "ckpt_step": 50,
+    "cursor_match": true,
+    "replay_final_param_fingerprint": "bfdae0b98e0ee1a4",
+    "bitwise_identical": true,
+    "max_abs_param_diff": 0.0,
+    "replay_losses_last3": [
+     6.2805095911026,
+     6.3118157386779785,
+     6.449108600616455
+    ]
+   }
+  },
+  "group_A_l065": {
+   "init_fingerprint": "33f93a0f546149a0",
+   "wall_s": 31.66238415800035,
+   "losses_first3": [
+    8.953523397445679,
+    8.808624267578125,
+    8.52616810798645
+   ],
+   "losses_last3": [
+    6.285136580467224,
+    6.288916230201721,
+    6.429929614067078
+   ],
+   "loss_all_finite": true,
+   "s_per_step_steady_mean": 0.30850247817579657,
+   "s_per_step_first10_mean": 0.30142084187828005,
+   "opt_seconds_total": 10.492772076278925,
+   "ns_seconds_native": 2.0070464853197336,
+   "ns_seconds_mix": 3.34673186019063,
+   "cos_O_g_mean_over_run": 0.18201878844101202,
+   "cos_O_Onat_mean_over_run": 0.5162785242275728,
+   "norm_rel_err_max": 1.8658683135732745e-16,
+   "cursor_end": 822400,
+   "ckpt": {
+    "path": "/home/b205/projects/training_dynamics_lab/context_aware_muon/artifacts/preflight/ckpt50_group_A_l065.pt",
+    "step": 50,
+    "cursor": 411200
+   },
+   "tokens_consumed": 822400,
+   "throughput_tok_s": 25872.972670411087,
+   "vram_peak_gib": 3.798828125,
+   "dev_nll_step100": {
+    "dev_nll_token_weighted": 6.354287872750706,
+    "tokens": 45470,
+    "docs": 256
+   },
+   "final_hashes": {
+    "param_fingerprint": "776363005bb53130",
+    "momentum_sum": 325898.28125
+   },
+   "replay_check": {
+    "ckpt_step": 50,
+    "cursor_match": true,
+    "replay_final_param_fingerprint": "776363005bb53130",
+    "bitwise_identical": true,
+    "max_abs_param_diff": 0.0,
+    "replay_losses_last3": [
+     6.285136580467224,
+     6.288916230201721,
+     6.429929614067078
+    ]
+   }
+  },
+  "group_A_l085": {
+   "init_fingerprint": "33f93a0f546149a0",
+   "wall_s": 31.087011539842933,
+   "losses_first3": [
+    8.953523397445679,
+    8.808681964874268,
+    8.52629041671753
+   ],
+   "losses_last3": [
+    6.309746026992798,
+    6.311558961868286,
+    6.455799460411072
+   ],
+   "loss_all_finite": true,
+   "s_per_step_steady_mean": 0.31148136044697217,
+   "s_per_step_first10_mean": 0.30525829007383437,
+   "opt_seconds_total": 10.584583262447268,
+   "ns_seconds_native": 2.03403225610964,
+   "ns_seconds_mix": 3.3999807306099683,
+   "cos_O_g_mean_over_run": 0.1890503266604447,
+   "cos_O_Onat_mean_over_run": 0.38462628627888634,
+   "norm_rel_err_max": 1.8572983157156152e-16,
+   "cursor_end": 822400,
+   "ckpt": null,
+   "tokens_consumed": 822400,
+   "throughput_tok_s": 26351.84147405309,
+   "vram_peak_gib": 3.798828125,
+   "dev_nll_step100": {
+    "dev_nll_token_weighted": 6.3769055445586975,
+    "tokens": 45470,
+    "docs": 256
+   },
+   "final_hashes": {
+    "param_fingerprint": "74368f764f20f22a",
+    "momentum_sum": 263520.90625
+   },
+   "replay_check": null
+  },
+  "lowmu_0p9": {
+   "init_fingerprint": "33f93a0f546149a0",
+   "wall_s": 23.88297826098278,
+   "losses_first3": [
+    8.953523397445679,
+    8.808716058731079,
+    8.5259690284729
+   ],
+   "losses_last3": [
+    6.198458433151245,
+    6.223565340042114,
+    6.352386832237244
+   ],
+   "loss_all_finite": true,
+   "s_per_step_steady_mean": 0.23803715034025824,
+   "s_per_step_first10_mean": 0.2458594830939546,
+   "opt_seconds_total": 4.08208602364175,
+   "ns_seconds_native": 3.5372115226928145,
+   "ns_seconds_mix": 0.0,
+   "cos_O_g_mean_over_run": null,
+   "cos_O_Onat_mean_over_run": null,
+   "norm_rel_err_max": null,
+   "cursor_end": 822400,
+   "ckpt": null,
+   "tokens_consumed": 822400,
+   "throughput_tok_s": 34300.57972871471,
+   "vram_peak_gib": 3.818359375,
+   "dev_nll_step100": {
+    "dev_nll_token_weighted": 6.330230319927309,
+    "tokens": 45470,
+    "docs": 256
+   },
+   "final_hashes": {
+    "param_fingerprint": "fda4971a125803e8",
+    "momentum_sum": -408076.4375
+   },
+   "replay_check": null
+  }
+ }
+}

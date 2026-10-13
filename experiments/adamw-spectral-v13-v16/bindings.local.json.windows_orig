@@ -1,0 +1,20 @@
+{
+  "status": "READY",
+  "repo_root": "E:\\大模型预训练\\minimind-master",
+  "repo_relative_to_search_root": "minimind-master",
+  "python_executable": "D:\\pytorch\\anaconda\\envs\\py39\\python.exe",
+  "tokenizer_path": "E:\\大模型预训练\\minimind-master\\model",
+  "tokenizer_relative_to_repo": "model",
+  "source_data_path": "E:\\大模型预训练\\adamw_spectral_pilot\\data\\pretrain_t2t_mini.jsonl",
+  "source_data_relative_to_search_root": "adamw_spectral_pilot\\data\\pretrain_t2t_mini.jsonl",
+  "source_format": "jsonl_text",
+  "source_fingerprint": "4403b6717352fcefe2b8ce50b47a29248085ac811eff6121e6114cf26e9c3d31",
+  "tokenizer_fingerprint": "f9478a8852174e4952bddc4143afa8958f6feee6e54c62839f9c5cbe128783fa",
+  "repo_candidates": [
+    "E:\\大模型预训练\\minimind-master"
+  ],
+  "data_candidates": [
+    "E:\\大模型预训练\\adamw_spectral_pilot\\data\\pretrain_t2t_mini.jsonl"
+  ],
+  "search_root": "E:\\大模型预训练"
+}

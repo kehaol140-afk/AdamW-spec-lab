@@ -1,0 +1,228 @@
+{
+ "protocol_id": "ADAMW_DIRECTION_VALIDATION_V1_20261011",
+ "status": "PREREGISTERED_FROZEN_NOT_EXECUTED",
+ "parent_evidence": {
+  "v16_source_hash": "4afaa78e3633c302023c35f926cc1fd866cf9642978213410a751bb79e17aa12",
+  "v16_reports": "/home/b205/projects/training_dynamics_lab/audits/adamw_a_v16_exec_20261009_171502UTC/",
+  "vendored_math": "src/dv_core.py (deltas D1-D4 documented in module docstring)"
+ },
+ "model": "MiniMindForCausalLM h256/4L/seq256 tied-head, 4,655,616 params (identical to V16; built via V16 pilot_core + frozen tokenizer 71f32c68...)",
+ "runtime": {
+  "sequence_length": 256,
+  "micro_batch_size": 2,
+  "accumulation_steps": 4,
+  "effective_batch_size": 8,
+  "precision": "native bf16 autocast (cuda) else fp32"
+ },
+ "baseline_optimizer": "AdamW betas (0.9,0.95) eps 1e-8, matrix wd 0.1 / 1D wd 0, global grad clip 1.0 (identical to V16)",
+ "schedule": {
+  "type": "linear_warmup_then_cosine_to_0.1_peak",
+  "final_lr_ratio": 0.1,
+  "layer1_warmup": 128,
+  "layer2_warmup": 256
+ },
+ "data": {
+  "train_cache": "/home/b205/projects/training_dynamics_lab/adamw_spectral_pilot/campaign_v16/cache/train_tokens.u32",
+  "train_cache_sha256": "c91382dc2a72cdbcf79493e2f2a74ed952b74c067c6af093628a928813fcab2b",
+  "note": "scratch branches consume from cursor 0; T=4096 requires 8,388,608 <= 8.5M cache tokens (fits exactly)"
+ },
+ "target_block": "model.layers.1.mlp.down_proj.weight",
+ "layer1": {
+  "purpose": "matched-scale causal decomposition: does F/P beat S AT THE SAME (a=8, b=1)?",
+  "arms": [
+   {
+    "id": "dv_S1",
+    "family": "S",
+    "a": 1,
+    "b": 1,
+    "lr": 0.001,
+    "T": 2048,
+    "warmup": 128,
+    "seed": 3407,
+    "eval_horizons": [
+     512,
+     1024,
+     2048
+    ],
+    "replication_of": "V16 b_S1_plain_lr0.001 (bitwise validation gate)"
+   },
+   {
+    "id": "dv_S8",
+    "family": "S",
+    "a": 8,
+    "b": 1,
+    "lr": 0.001,
+    "T": 2048,
+    "warmup": 128,
+    "seed": 3407,
+    "eval_horizons": [
+     512,
+     1024,
+     2048
+    ],
+    "novel_cell": "S(a=8,b=1) NEVER run in V16 (queue-verified)"
+   },
+   {
+    "id": "dv_F8",
+    "family": "F",
+    "a": 8,
+    "b": 1,
+    "lr": 0.001,
+    "T": 2048,
+    "warmup": 128,
+    "seed": 3407,
+    "eval_horizons": [
+     512,
+     1024,
+     2048
+    ],
+    "replication_of": "V16 b_F1_a8_lr0.001"
+   },
+   {
+    "id": "dv_P8",
+    "family": "P",
+    "a": 8,
+    "b": 1,
+    "lr": 0.001,
+    "T": 2048,
+    "warmup": 128,
+    "seed": 3407,
+    "eval_horizons": [
+     512,
+     1024,
+     2048
+    ],
+    "replication_of": "V16 b_P1_a8_lr0.001"
+   },
+   {
+    "id": "dv_S4",
+    "family": "S",
+    "a": 4,
+    "b": 1,
+    "lr": 0.001,
+    "T": 2048,
+    "warmup": 128,
+    "seed": 3407,
+    "eval_horizons": [
+     512,
+     1024,
+     2048
+    ],
+    "optional_scale_midpoint": true
+   }
+  ],
+  "eval_split": "development",
+  "secondary_eval_split": "screen",
+  "primary_comparisons": [
+   {
+    "pair": [
+     "dv_F8",
+     "dv_S8"
+    ],
+    "metric": "development H2048 token-weighted NLL",
+    "gate": "F8 - S8 <= -1e-3 AND paired-bootstrap CI95 entirely below 0"
+   },
+   {
+    "pair": [
+     "dv_P8",
+     "dv_S8"
+    ],
+    "metric": "same",
+    "gate": "P8 - S8 <= -1e-3 AND CI95 below 0"
+   }
+  ],
+  "secondary_comparisons": [
+   "dv_S8 vs dv_S1 (pure a-effect)",
+   "dv_F8 vs dv_P8",
+   "dv_S4 monotonicity",
+   "dv_S1/dv_F8/dv_P8 vs V16 b_* step-log bitwise validation"
+  ],
+  "reversal_rule": "if S8 matches F8/P8 (|S8 - F8| < 1e-3 and |S8 - P8| < 1e-3 at H2048), record DIRECTION_AND_SCALE_CONFOUNDED and revise V16 attribution accordingly",
+  "gate_to_layer2": "at least one primary comparison passes"
+ },
+ "layer2": {
+  "purpose": "independent-seed long-budget confirmation on NEW holdout",
+  "arms": [
+   {
+    "name": "S1",
+    "family": "S",
+    "a": 1,
+    "b": 1,
+    "lr": 0.001,
+    "eval_horizons": [
+     512,
+     1024,
+     2048,
+     4096
+    ]
+   },
+   {
+    "name": "S8",
+    "family": "S",
+    "a": 8,
+    "b": 1,
+    "lr": 0.001,
+    "eval_horizons": [
+     512,
+     1024,
+     2048,
+     4096
+    ]
+   },
+   {
+    "name": "F8",
+    "family": "F",
+    "a": 8,
+    "b": 1,
+    "lr": 0.001,
+    "eval_horizons": [
+     512,
+     1024,
+     2048,
+     4096
+    ]
+   },
+   {
+    "name": "P8",
+    "family": "P",
+    "a": 8,
+    "b": 1,
+    "lr": 0.001,
+    "eval_horizons": [
+     512,
+     1024,
+     2048,
+     4096
+    ]
+   }
+  ],
+  "seeds": [
+   3411,
+   3412,
+   3413
+  ],
+  "T": 4096,
+  "warmup": 256,
+  "holdout": "holdout_v2 (see NEW_EVAL_SPLIT_MANIFEST.json; MINTING BLOCKED on corpus upload)",
+  "open_rule": "holdout_v2 evaluated ONCE after all 12 endpoints identity-locked; no tuning after opening",
+  "inference_unit": "training seed; report per-seed deltas + mean/std/range; doc-bootstrap = within-run evaluation error only",
+  "p_inclusion": "P8 is MANDATORY in layer 2 (V16 screen artifact dropped P from C; must not recur)",
+  "arms_note": "machine form of original textual spec 'S1 + S8 + F8 + P8 (same lr 0.001)'; semantics unchanged"
+ },
+ "statistics": {
+  "doc_bootstrap_reps": 1000,
+  "doc_bootstrap_seed": 9071,
+  "seed_level_reporting": "per-seed delta, mean, std, min/max, sign consistency"
+ },
+ "hard_budgets": {
+  "layer1_gpu_minutes_est": 70,
+  "layer2_gpu_hours_est": 5.2,
+  "no_automatic_expansion": "a-grid frozen at {1,4,8}; no grid extension without new authorization"
+ },
+ "forbidden": [
+  "reusing V16 final_holdout for any selection",
+  "treating old 3-seed C results as independent of new holdout",
+  "post-hoc tolerance changes",
+  "modifying any V16/Muon/SpecMuon file"
+ ]
+}

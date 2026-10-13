@@ -1,0 +1,20 @@
+run_id,kind,stage,source_dir,validity,note
+B_adamw_lr3e-4,train_4096_steps_100M,v1.0-pilot,results/pilot/B_adamw_lr3e-4/,VALID,wall=918.0s tok/s=36552.4 lines=4096/0bad
+B_adamw_lr1e-3,train_4096_steps_100M,v1.0-pilot,results/pilot/B_adamw_lr1e-3/,VALID,wall=926.0s tok/s=36237.1 lines=4096/0bad
+B_adamw_lr3e-3,train_4096_steps_100M,v1.0-pilot,results/pilot/B_adamw_lr3e-3/,VALID,wall=886.9s tok/s=37833.3 lines=4096/0bad
+B_muon_lr5e-3,train_4096_steps_100M,v1.0-pilot,results/pilot/B_muon_lr5e-3/,VALID,wall=1065.4s tok/s=31494.5 lines=4096/0bad
+B_muon_lr1e-2,train_4096_steps_100M,v1.0-pilot,results/pilot/B_muon_lr1e-2/,VALID,wall=1047.7s tok/s=32026.7 lines=4096/0bad
+B_muon_lr2e-2,train_4096_steps_100M,v1.0-pilot,results/pilot/B_muon_lr2e-2/,VALID,wall=1069.8s tok/s=31365.1 lines=4096/0bad
+B_muon_rms_lr1e-3,train_4096_steps_100M,v1.0-pilot,results/pilot/B_muon_rms_lr1e-3/,VALID,wall=1030.5s tok/s=32559.7 lines=4096/0bad
+B_muon_rms_lr3e-3,train_4096_steps_100M,v1.0-pilot,results/pilot/B_muon_rms_lr3e-3/,VALID,wall=1100.9s tok/s=30480.3 lines=4096/0bad
+B_muon_rms_lr1e-2,train_4096_steps_100M,v1.0-pilot,results/pilot/B_muon_rms_lr1e-2/,VALID,wall=1041.9s tok/s=32206.3 lines=4096/0bad
+B_lowmu_0p9,train_4096_steps_100M,v1.0-pilot,results/pilot/B_lowmu_0p9/,VALID,wall=1054.0s tok/s=31836.7 lines=4096/0bad
+B_lowmu_0p8,train_4096_steps_100M,v1.0-pilot,results/pilot/B_lowmu_0p8/,VALID,wall=1029.0s tok/s=32610.0 lines=4096/0bad
+C_A_lam0p65,train_4096_steps_100M,v1.0-pilot,results/pilot/C_A_lam0p65/,VALID,wall=1244.6s tok/s=26959.4 lines=4096/0bad
+C_A_lam0p85,train_4096_steps_100M,v1.0-pilot,results/pilot/C_A_lam0p85/,VALID,wall=1320.5s tok/s=25410.6 lines=4096/0bad
+C_A_nat,train_4096_steps_100M,v1.0-pilot,results/pilot/C_A_nat/,VALID,wall=1245.7s tok/s=26936.5 lines=4096/0bad
+C_B,train_4096_steps_100M,v1.0-pilot,results/pilot/C_B/,VALID,wall=1412.0s tok/s=23764.6 lines=4096/0bad
+preflight_100steps,preflight,v1.0-pilot,results/preflight_100steps.json,VALID,
+smoke_100m,smoke,v1.0-pilot,results/smoke_100m.json,VALID,
+driver_session_1,driver,v1.0-pilot,results/pilot_driver.log,RESTARTED,runner path bug exit=1 at 14:06; restarted
+driver_session_2,driver,v1.0-pilot,results/pilot/DRIVER.log,RESTARTED,concurrent-driver ~90s overlap; line-level audit 0 corruption (PILOT_100M_RUNTIME.md)

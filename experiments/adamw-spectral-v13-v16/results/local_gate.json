@@ -1,0 +1,28 @@
+{
+  "protocol_id": "ADAMW_A_SPECTRAL_LOCAL_V1_1_LOWMEM_20261002",
+  "stage": "discover",
+  "verdict": "BASELINE_TUNING_UNRESOLVED",
+  "next_action": "STOP",
+  "candidate_hash": "89b48737c3a875ca81f6998bb6f4462b61e286bdfb78a68a51ee4c34c3f0f610",
+  "reasons": [
+    "NO_LOCAL_SIGNAL"
+  ],
+  "source_hash": "8cce6876b9eda43aa89ff559a4e5dd7a685f2848a7807680435b1acf3b9c0189",
+  "config_hash": "4c8a02e11be57f4faf0f51f3b4ffce372f7c10af6a1293e352a664c6c7cdb1fa",
+  "binding_hash": "d5ea8b7db0589c0a91fd965dabcbe6ce463b5eda9c6d3566769e66f543f53b53",
+  "data_hash": "fc70632eb2e76b975c0abaa86412cd3f3c35aa472d80e669733f7b65fa3ed23b",
+  "chosen_peak_lr": 0.003,
+  "primary_statistics": {
+    "status": "NO_LOCAL_SIGNAL",
+    "delta_nats_per_token": -2.1184083429659495e-06,
+    "delta_local": 1e-05,
+    "ci95_lower": -9.484275987214908e-06,
+    "ci95_upper": 5.698799896691752e-06,
+    "distinct_documents": 64,
+    "epsilon_null": 0.0
+  },
+  "method_novelty": "NOT_ESTABLISHED",
+  "end_to_end_gain": "NOT_TESTED",
+  "deployment_cost": "NOT_TESTED",
+  "nearest_neighbor_comparison": "LOCAL_DIRECTION_CONTROL_ONLY"
+}

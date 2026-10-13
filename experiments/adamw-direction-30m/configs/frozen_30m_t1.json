@@ -1,0 +1,45 @@
+{
+ "protocol_id": "ADAMW_DIRECTION_SCALE30M_T1_20261011",
+ "status": "PREREGISTERED_FROZEN",
+ "parent_protocol": "ADAMW_DIRECTION_VALIDATION_V1_20261011 (layer-1 gate PASS: F8-S8=-0.2041, P8-S8=-0.2351, CI95 all negative)",
+ "model": "MiniMind 30,025,216 h512/8L/int1664/8Q-4KV/head64 vocab6400 tied seq256 (minimind_base; M0 routing_report verified)",
+ "seed": 3421,
+ "T": 2048,
+ "warmup": 128,
+ "tokens_per_run": 16777216,
+ "eval_horizons": [512, 1024, 2048],
+ "eval_split": "development (V16 ledger 256 docs, dev-grade disclosed)",
+ "schedule": {"type": "linear_warmup_then_cosine_to_0.1_peak", "final_lr_ratio": 0.1},
+ "runtime": {"micro_batch": 8, "accum": 4, "seq": 256, "precision": "bf16 autocast cuda"},
+ "adamw": {"betas": [0.9, 0.95], "eps": 1e-8, "matrix_wd": 0.1, "one_d_wd": 0.0, "clip": 1.0,
+           "note": "V16 conventions; single optimizer, 2 param groups by ndim"},
+ "muon_reference": {"library": "torch.optim.Muon (2.11.0, sha 38e95918)", "momentum": 0.95,
+                    "nesterov": true, "ns_steps": 5, "ns_coefficients": [3.4445, -4.775, 2.0315],
+                    "eps": 1e-7, "wd": 0.02, "aux": "AdamW same lr, betas (0.9,0.95), eps 1e-8, wd 0.02",
+                    "routing": "7 matrix patterns -> 56 Muon tensors; 34 aux tensors (M0 routing_report)"},
+ "data": {"cache": "artifacts/train_tokens_s30m.u32", "tokens": 17000000,
+          "sha256": "6fe0bb53b28e15d0fad99ae216371c7a9386a1b73965d381bea95241118ada13",
+          "v16_prefix_match": true,
+          "packing": "V16 rules: [BOS]+text+[EOS] concatenated; (seq+1)-windows stride seq"},
+ "stages": {
+  "lr_grid": [0.0003, 0.001, 0.003],
+  "a_grid": [2, 4, 8],
+  "muon_lr_grid": [0.005, 0.01, 0.02],
+  "layer_index": 1,
+  "layer_depth": 2
+ },
+ "selection_rules": {
+  "lr_star": "min dev H2048 NLL; ties within 1e-4 -> smaller LR; boundary -> flag RANGE_UNRESOLVED_LR",
+  "a_star": "min dev H2048 NLL among {2,4,8}; if |NLL(a_best)-NLL(a=4)|<1e-3 (flat) -> a*=4; best at a=8 boundary -> flag (no auto-extend to 12)",
+  "winner_family": "min dev H2048 NLL between F-a* and P-a* at L-index",
+  "muon_best": "min dev H2048 NLL; best at 2e-2 boundary -> flag RANGE_UNRESOLVED_MUON (reference only)"
+ },
+ "gates": {
+  "primary": "F-a* - S-a* (same lr*/layer) dev H2048 <= -1e-3 AND paired bootstrap CI95 entirely below 0; OR P-a* same",
+  "not_absorbed": "S-a curve flat near a* while F/P advantage persists",
+  "layer": "L-depth contrast sign-consistent with L-index OR record LAYER_POSITION_CONFOUNDED",
+  "stop": "F/P vs S-a* diff <1e-3 or CI crosses 0 -> NO_DIRECTION_TRANSFER_AT_30M; grids exhausted at boundary -> RANGE_UNRESOLVED; any nonfinite/zero_norm_fallback -> stop"
+ },
+ "budget": {"authorized_gpu_hours": 2.0, "rule": "if projected 13-run total exceeds window, STOP and request authorization; no silent arm cutting"},
+ "forbidden": ["cross-model absolute NLL comparison", "post-hoc eval-set or grid changes", "touching V16/M-line/SpecMuon files", "multi-seed or holdout_v2 opening this round", "100M"]
+}

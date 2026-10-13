@@ -1,0 +1,208 @@
+{
+  "status": "SMALLEST_SCALE_ROUNDING_LIMITED",
+  "generation_mode": "parent_bf16_autocast_else_fp32",
+  "evaluation_mode": "fp32_no_tf32",
+  "rows": [
+    {
+      "path": "results\\finite_difference\\w0_ffn_F00_legacy.json",
+      "baseline": "F00",
+      "view": "legacy",
+      "autodiff": 0.00010000568020923781,
+      "scales": [
+        {
+          "h": 0.003,
+          "actual_applied_l2_plus_minus": [
+            0.0030000000720664228,
+            0.003000000066903432
+          ],
+          "nll_plus": 6.234343030533437,
+          "nll_minus": 6.23434252795667,
+          "nll_difference": 5.025767668698222e-07,
+          "central_difference": 8.37627944783037e-05,
+          "autodiff": 0.00010000568020923781,
+          "absolute_error": 1.624288573093411e-05,
+          "same_sign": true
+        },
+        {
+          "h": 0.001,
+          "actual_applied_l2_plus_minus": [
+            0.001000000164082902,
+            0.0010000001261949297
+          ],
+          "nll_plus": 6.234342946770643,
+          "nll_minus": 6.234342835086917,
+          "nll_difference": 1.1168372626713108e-07,
+          "central_difference": 5.584186313356554e-05,
+          "autodiff": 0.00010000568020923781,
+          "absolute_error": 4.4163817075672276e-05,
+          "same_sign": true
+        },
+        {
+          "h": 0.0003,
+          "actual_applied_l2_plus_minus": [
+            0.0003000006643562213,
+            0.00030000066752013365
+          ],
+          "nll_plus": 6.2343428909287795,
+          "nll_minus": 6.2343426396403965,
+          "nll_difference": 2.512883829908219e-07,
+          "central_difference": 0.00041881397165136985,
+          "autodiff": 0.00010000568020923781,
+          "absolute_error": 0.00031880829144213205,
+          "same_sign": true
+        }
+      ]
+    },
+    {
+      "path": "results\\finite_difference\\w0_ffn_F00_natural_prefix.json",
+      "baseline": "F00",
+      "view": "natural_prefix",
+      "autodiff": 0.00010733957962447785,
+      "scales": [
+        {
+          "h": 0.003,
+          "actual_applied_l2_plus_minus": [
+            0.0030000000720664228,
+            0.003000000066903432
+          ],
+          "nll_plus": 6.2312103020195995,
+          "nll_minus": 6.231209799442833,
+          "nll_difference": 5.025767668698222e-07,
+          "central_difference": 8.37627944783037e-05,
+          "autodiff": 0.00010733957962447785,
+          "absolute_error": 2.3576785146174143e-05,
+          "same_sign": true
+        },
+        {
+          "h": 0.001,
+          "actual_applied_l2_plus_minus": [
+            0.001000000164082902,
+            0.0010000001261949297
+          ],
+          "nll_plus": 6.2312102182568045,
+          "nll_minus": 6.2312102182568045,
+          "nll_difference": 0.0,
+          "central_difference": 0.0,
+          "autodiff": 0.00010733957962447785,
+          "absolute_error": 0.00010733957962447785,
+          "same_sign": null
+        },
+        {
+          "h": 0.0003,
+          "actual_applied_l2_plus_minus": [
+            0.0003000006643562213,
+            0.00030000066752013365
+          ],
+          "nll_plus": 6.231210162414942,
+          "nll_minus": 6.231209911126558,
+          "nll_difference": 2.512883838790003e-07,
+          "central_difference": 0.00041881397313166724,
+          "autodiff": 0.00010733957962447785,
+          "absolute_error": 0.0003114743935071894,
+          "same_sign": true
+        }
+      ]
+    },
+    {
+      "path": "results\\finite_difference\\w0_ffn_F01_legacy.json",
+      "baseline": "F01",
+      "view": "legacy",
+      "autodiff": -0.0003983134910813496,
+      "scales": [
+        {
+          "h": 0.003,
+          "actual_applied_l2_plus_minus": [
+            0.0030000000720664228,
+            0.003000000066903432
+          ],
+          "nll_plus": 6.237892730238235,
+          "nll_minus": 6.237895131438344,
+          "nll_difference": -2.4012001089701585e-06,
+          "central_difference": -0.0004002000181616931,
+          "autodiff": -0.0003983134910813496,
+          "absolute_error": 1.8865270803434977e-06,
+          "same_sign": true
+        },
+        {
+          "h": 0.001,
+          "actual_applied_l2_plus_minus": [
+            0.001000000164082902,
+            0.0010000001261949297
+          ],
+          "nll_plus": 6.237893539945248,
+          "nll_minus": 6.237894377573193,
+          "nll_difference": -8.37627944783037e-07,
+          "central_difference": -0.0004188139723915185,
+          "autodiff": -0.0003983134910813496,
+          "absolute_error": 2.0500481310168923e-05,
+          "same_sign": true
+        },
+        {
+          "h": 0.0003,
+          "actual_applied_l2_plus_minus": [
+            0.0003000006643562213,
+            0.00030000066752013365
+          ],
+          "nll_plus": 6.2378937633127,
+          "nll_minus": 6.237894210047604,
+          "nll_difference": -4.467349041803459e-07,
+          "central_difference": -0.0007445581736339099,
+          "autodiff": -0.0003983134910813496,
+          "absolute_error": 0.00034624468255256026,
+          "same_sign": true
+        }
+      ]
+    },
+    {
+      "path": "results\\finite_difference\\w0_ffn_F01_natural_prefix.json",
+      "baseline": "F01",
+      "view": "natural_prefix",
+      "autodiff": -0.00039085786547497304,
+      "scales": [
+        {
+          "h": 0.003,
+          "actual_applied_l2_plus_minus": [
+            0.0030000000720664228,
+            0.003000000066903432
+          ],
+          "nll_plus": 6.234851247328526,
+          "nll_minus": 6.23485376021236,
+          "nll_difference": -2.512883834349111e-06,
+          "central_difference": -0.0004188139723915185,
+          "autodiff": -0.00039085786547497304,
+          "absolute_error": 2.7956106916545483e-05,
+          "same_sign": true
+        },
+        {
+          "h": 0.001,
+          "actual_applied_l2_plus_minus": [
+            0.001000000164082902,
+            0.0010000001261949297
+          ],
+          "nll_plus": 6.234852168719264,
+          "nll_minus": 6.234852894663484,
+          "nll_difference": -7.259442194040844e-07,
+          "central_difference": -0.0003629721097020422,
+          "autodiff": -0.00039085786547497304,
+          "absolute_error": 2.7885755772930846e-05,
+          "same_sign": true
+        },
+        {
+          "h": 0.0003,
+          "actual_applied_l2_plus_minus": [
+            0.0003000006643562213,
+            0.00030000066752013365
+          ],
+          "nll_plus": 6.234852280402991,
+          "nll_minus": 6.23485283882162,
+          "nll_difference": -5.584186295592986e-07,
+          "central_difference": -0.0009306977159321643,
+          "autodiff": -0.00039085786547497304,
+          "absolute_error": 0.0005398398504571913,
+          "same_sign": true
+        }
+      ]
+    }
+  ],
+  "interpretation": "all scales retained; FP32 loss_sum rounding dominates h=0.0003; does not redefine the readout repeatability target"
+}

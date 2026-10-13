@@ -1,0 +1,92 @@
+{
+  "comparison_path": "results/compare_w0_cross_process.json",
+  "cross_effects": {
+    "legacy": {
+      "tag": "w0_cal_cross",
+      "window_id": 0,
+      "target": "model.layers.1.mlp.down_proj.weight",
+      "view": "legacy",
+      "identity": {
+        "F11_actual_max_abs": 1.1641532182693481e-10,
+        "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+        "rho_s_one_max_abs": 7.450580596923828e-09,
+        "formula_tolerance": 2.3740507125854495e-06
+      },
+      "nll": {
+        "F00": 6.234342751324122,
+        "F10": 6.2343265292629235,
+        "F01": 6.237894042522015,
+        "F11": 6.237962197515796
+      },
+      "I_before": 1.622206119833436e-05,
+      "I_after": -6.81549937810999e-05,
+      "interaction": 8.437705497943426e-05,
+      "documents": 8,
+      "target_tokens": 1093,
+      "raw_paths": {
+        "F00": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_cross_ffn_legacy_F00.jsonl",
+        "F10": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_cross_ffn_legacy_F10.jsonl",
+        "F01": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_cross_ffn_legacy_F01.jsonl",
+        "F11": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_cross_ffn_legacy_F11.jsonl"
+      }
+    },
+    "natural_prefix": {
+      "tag": "w0_cal_cross",
+      "window_id": 0,
+      "target": "model.layers.1.mlp.down_proj.weight",
+      "view": "natural_prefix",
+      "identity": {
+        "F11_actual_max_abs": 1.1641532182693481e-10,
+        "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+        "rho_s_one_max_abs": 7.450580596923828e-09,
+        "formula_tolerance": 2.3740507125854495e-06
+      },
+      "nll": {
+        "F00": 6.2312101344940105,
+        "F10": 6.2311925722281,
+        "F01": 6.234852671296031,
+        "F11": 6.234919486085102
+      },
+      "I_before": 1.7562265910875396e-05,
+      "I_after": -6.681478907033522e-05,
+      "interaction": 8.437705498121062e-05,
+      "documents": 8,
+      "target_tokens": 1093,
+      "raw_paths": {
+        "F00": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_cross_ffn_natural_prefix_F00.jsonl",
+        "F10": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_cross_ffn_natural_prefix_F10.jsonl",
+        "F01": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_cross_ffn_natural_prefix_F01.jsonl",
+        "F11": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_cross_ffn_natural_prefix_F11.jsonl"
+      }
+    }
+  },
+  "numeric_resolution": {
+    "differences": {
+      "legacy": {
+        "I_before": 0.0,
+        "I_after": 2.7920930456559745e-08,
+        "interaction": 2.7920930456559745e-08
+      },
+      "natural_prefix": {
+        "I_before": 0.0,
+        "I_after": 8.376279314603607e-08,
+        "interaction": 8.376279314603607e-08
+      }
+    },
+    "observed_max": 8.376279314603607e-08,
+    "engineering_target": 2e-06,
+    "pass": true,
+    "scope": "FFN/window0/first8_old_probe_select_paired_labels",
+    "strict_mathematical_error_bound": false
+  },
+  "budget": {
+    "run_manifest_sha256": "b2aa63866af7eb5cd628b0d97f59f9a7d933617a6e75e1c2f131208f17a7fb29",
+    "token_forward_equivalents": 32376,
+    "forward_attempts": 204,
+    "backward_attempts": 12,
+    "gpu_optimizer_step_attempts": 3,
+    "gpu_optimizer_steps_completed": 3,
+    "elapsed_seconds": 0.0,
+    "attempts": []
+  }
+}

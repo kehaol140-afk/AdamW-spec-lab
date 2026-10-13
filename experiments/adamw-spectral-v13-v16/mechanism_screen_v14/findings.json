@@ -1,0 +1,75 @@
+{
+  "protocol_id": "ADAMW_A_SPECTRAL_MECHANISM_SCREEN_V14_20261002",
+  "status": "SCALE_RANGE_UNRESOLVED",
+  "selection": {
+    "scalar": "scalar_g0.5_s2",
+    "spectral": "spectral_r0_g0.5_s2",
+    "fresh_gradient": "fresh_gradient_g0.5_s2",
+    "fresh_preconditioned": "fresh_preconditioned_g0.5_s2"
+  },
+  "confirmation_nll": {
+    "scalar_g0.5_s2": 6.095522277864492,
+    "spectral_r0_g0.5_s2": 6.095519863930131,
+    "fresh_gradient_g0.5_s2": 6.095412539910946,
+    "fresh_preconditioned_g0.5_s2": 6.095453416607081,
+    "scalar_g1_s1": 6.095812910057287
+  },
+  "paired_effects": {
+    "spectral": {
+      "scalar_minus_candidate_nll": 2.41393436084536e-06,
+      "ci95_lower": -1.769799932609395e-05,
+      "ci95_upper": 2.1620612963046954e-05
+    },
+    "fresh_gradient": {
+      "scalar_minus_candidate_nll": 0.00010973795354640714,
+      "ci95_lower": 7.88455070244387e-05,
+      "ci95_upper": 0.00014254135468554362
+    },
+    "fresh_preconditioned": {
+      "scalar_minus_candidate_nll": 6.886125741090154e-05,
+      "ci95_lower": 4.478330000374786e-05,
+      "ci95_upper": 9.464042531637237e-05
+    },
+    "ordinary_adamw": {
+      "scalar_minus_candidate_nll": -0.000290632192794682,
+      "ci95_lower": -0.0016100871010912509,
+      "ci95_upper": 0.0009385585462049478
+    }
+  },
+  "numeric_calibration_max_abs_nll": 2.5063063624486404e-08,
+  "budget": {
+    "manifest_sha256": "74caaaa5e45b547b82f3cce7c576c82a1ebf754d2f8a2d412a9b3403dcaa6755",
+    "token_forward_equivalents": 3393740,
+    "forward_attempts": 18944,
+    "backward_attempts": 0,
+    "svd_calls": 9,
+    "svd_seconds": 0.4485581999999759,
+    "optimizer_step_attempts": 0,
+    "gpu_seconds": 379.43923389999975,
+    "started_at": 1790926905.7607472,
+    "previous_manifest_sha256": "953735d26943fcf38e0a0f5bbe16d662249c06f0364e428faeb35569f20e7c62"
+  },
+  "historical_v13_budget": {
+    "run_manifest_sha256": "1ab6511ec50590e8a3d354ae8eb2fac530bb6f52b21b2828cad216aa753205ae",
+    "token_forward_equivalents": 3439912,
+    "forward_attempts": 17496,
+    "backward_attempts": 2104,
+    "gpu_optimizer_step_attempts": 6,
+    "gpu_optimizer_steps_completed": 6,
+    "elapsed_seconds": 0.0,
+    "attempts": [
+      {
+        "attempt_id": 1,
+        "source_hash": "bf2e5f86226af7b6eb910dfc54a505a2f6530c130fe09882c471a18d6282b79a",
+        "run_manifest_sha256": "b2aa63866af7eb5cd628b0d97f59f9a7d933617a6e75e1c2f131208f17a7fb29",
+        "budget_snapshot_sha256": "dbe35d5c4b16f294f4d34c8a17219bc4c50f92f020931d5bbe2b83f9de85b250",
+        "archive": "attempts\\attempt1_before_atomic_retry",
+        "reason": "WinError 5 during child budget atomic replacement; failed forward was not executed"
+      }
+    ]
+  },
+  "manifest_sha256": "74caaaa5e45b547b82f3cce7c576c82a1ebf754d2f8a2d412a9b3403dcaa6755",
+  "dev_raw_sha256": "fc5fe6763cd3f3ea1f8910a24f657fe3e8af9b35357ecdc8082d69b36a62cabe",
+  "confirm_raw_sha256": "b9902d9f14469f7cf0b755bb83d83889b76664b34b0206bf0b110b5c04130f3a",
+  "parent_dependencies_sha256": "a29b6751e42376a7aa69a74d5c5a55bc6a6a8259d53c81635ebfcc84feab7bb7"
+}

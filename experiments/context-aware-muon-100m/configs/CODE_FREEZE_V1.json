@@ -1,0 +1,28 @@
+{
+ "freeze_id": "CONTEXT_AWARE_MUON_CODE_FREEZE_V1",
+ "date": "2026-10-12",
+ "files": {
+  "configs/baseline_registry.json": "d9f412d1f6700f6171065bf3dd3bf7fa3e9e48ecd386dd45a6231362de7284e7",
+  "configs/pilot_arms_v1.json": "8149bcbbdf41ff33ee4c0e019d32f616a278baca5f09c072244f2936e54caa27",
+  "configs/pilot_draft_v0.json": "22bea59472715f4d2161f81cf001769b6e0daef6cd3b12c6dbcb96a6e3916de3",
+  "scripts/mint_pilot_cache.py": "3436f0c4af610a131a8118a9fca003b752bbea7cf3204854752c2e1a0df5d472",
+  "scripts/preflight_100steps.py": "1af57b7c9f64c36c1a4ca7efa753945aee69dfe8134a3155bef0d52e6817e295",
+  "scripts/run_pilot_arm.py": "b3e5da5bcdc9e47da8d07d101f57cdf79e5e17d6fb5f5c4704feb85abe95b372",
+  "scripts/smoke_100m.py": "292f11bed065287b6d77bd2d79874630eb2ab9714660ea56accbdb40ff06356e",
+  "src/context_aware_muon/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "src/context_aware_muon/data.py": "5701a48d1b97fcddc887b96afaa5d5da7f33c7a0415014d035682ffc15806c23",
+  "src/context_aware_muon/group_muon.py": "e8afd464ddfcfea30219a52e2ff77bb775d3d38a4cd5fe9e0fd12a164ac3257c",
+  "src/context_aware_muon/model_100m.py": "a4bc65db40d4b56ffebacdfcf9a118587b21e453aa85744f937e967f12f1205c",
+  "src/context_aware_muon/ns5.py": "7584d39009547f26fc20236c14a090af2c592f4ca8f8aaea6716e41ca0006127",
+  "src/context_aware_muon/routing.py": "7617dfe72b293bed45613126c413b033e8982a9abde25f1e5b6b5daebe7f3d2e",
+  "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "tests/test_group_muon.py": "fbd6598ca0cc2cd5d846885cd666725f6e1467e59f529b1e05843af8db446748",
+  "tests/test_model.py": "1ab55784aab16911cff952a099a4433d02cabb444a138f34c72a17626897a835",
+  "tests/test_ns5.py": "df1a7bf3de6f5d8b344dae7a16f1cf4490b391bf6d6ab24ef3f5a89a281a28ac",
+  "tests/test_routing.py": "fd1bd22bb69e19f4a1068a51716aaecd44d4d407bcc41a9a7581c6ba459a0ea8"
+ },
+ "notes": "post-preflight code state: diag_every added (tests 25/25 PASS), docs amended (EMA truth, lam0=1-mu), runner+arms frozen",
+ "amendments": {
+  "2026-10-12_runner_path_bugfix": "scripts/run_pilot_arm.py line 127 metrics path arg order (out_dir.open(name,mode) -> (out_dir/name).open(mode)); caught by pre-pilot 3-step livetest (arm ZZ_smoke_test, deleted); NO optimizer/candidate/data/threshold semantics changed; only file-plumbing fix"
+ }
+}

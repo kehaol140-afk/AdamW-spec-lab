@@ -1,0 +1,16 @@
+[82s] s512_N done: final loss=2.6309 monitor V256=2.949502
+[155s] s512_MH done: final loss=2.5869 monitor V256=2.916426
+[228s] s512_AH done: final loss=2.5556 monitor V256=2.884443
+s512 first-step verification: {"N_vs_independent_reference_maxdiff": 0.0, "MH_data_delta_ratio": {"muon": 0.49999998790471883, "aux": 1.0}, "AH_data_delta_ratio": {"muon": 0.49999998790471883, "aux": 0.5000000013479553}}
+[305s] s1536_N done: final loss=2.4383 monitor V256=2.564320
+Traceback (most recent call last):
+  File "/home/b205/projects/training_dynamics_lab/muon_spectral_allocation/scripts/run_r2_amplitude.py", line 269, in <module>
+    main()
+  File "/home/b205/projects/training_dynamics_lab/muon_spectral_allocation/scripts/run_r2_amplitude.py", line 231, in main
+    ver, ref_params = first_step_verification(payload, step, stream, q, arms_first, theta_star)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/b205/projects/training_dynamics_lab/muon_spectral_allocation/scripts/run_r2_amplitude.py", line 171, in first_step_verification
+    base = theta_star[n] * (1 - base_lr * wd)
+           ~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+s512 first-step verification: {"N_vs_independent_reference_maxdiff": 0.0, "MH_data_delta_ratio": {"muon": 0.49999998790471883, "aux": 1.0}, "AH_data_delta_ratio": {"muon": 0.49999998790471883, "aux": 0.5000000013479553}}

@@ -1,0 +1,105 @@
+run_id,kind,stage,source_dir,validity,note
+p0p1_q|K3|raw_s512_q_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_q|K3|gain_only_live_s512_q_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_q|K3|direction_only_s512_q_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_q|K7|raw_s512_q_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_q|K7|gain_only_live_s512_q_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_q|K7|direction_only_s512_q_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K3|raw_s512_k_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K3|gain_only_live_s512_k_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K3|direction_only_s512_k_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K7|raw_s512_k_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K7|gain_only_live_s512_k_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K7|direction_only_s512_k_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K3|raw_s512_v_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K3|gain_only_live_s512_v_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K3|direction_only_s512_v_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K7|raw_s512_v_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K7|gain_only_live_s512_v_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K7|direction_only_s512_v_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K3|raw_s512_o_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K3|gain_only_live_s512_o_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K3|direction_only_s512_o_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K7|raw_s512_o_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K7|gain_only_live_s512_o_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K7|direction_only_s512_o_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K3|raw_s512_gate_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K3|gain_only_live_s512_gate_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K3|direction_only_s512_gate_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K7|raw_s512_gate_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K7|gain_only_live_s512_gate_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K7|direction_only_s512_gate_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K3|raw_s512_up_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K3|gain_only_live_s512_up_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K3|direction_only_s512_up_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K7|raw_s512_up_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K7|gain_only_live_s512_up_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K7|direction_only_s512_up_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K3|raw_s512_down_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K3|gain_only_live_s512_down_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K3|direction_only_s512_down_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K7|raw_s512_down_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K7|gain_only_live_s512_down_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K7|direction_only_s512_down_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_q|K3|raw_s1536_q_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_q|K3|gain_only_live_s1536_q_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_q|K3|direction_only_s1536_q_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_q|K7|raw_s1536_q_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_q|K7|gain_only_live_s1536_q_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_q|K7|direction_only_s1536_q_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K3|raw_s1536_k_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K3|gain_only_live_s1536_k_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K3|direction_only_s1536_k_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K7|raw_s1536_k_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K7|gain_only_live_s1536_k_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_k|K7|direction_only_s1536_k_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K3|raw_s1536_v_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K3|gain_only_live_s1536_v_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K3|direction_only_s1536_v_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K7|raw_s1536_v_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K7|gain_only_live_s1536_v_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_v|K7|direction_only_s1536_v_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K3|raw_s1536_o_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K3|gain_only_live_s1536_o_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K3|direction_only_s1536_o_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K7|raw_s1536_o_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K7|gain_only_live_s1536_o_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_o|K7|direction_only_s1536_o_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K3|raw_s1536_gate_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K3|gain_only_live_s1536_gate_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K3|direction_only_s1536_gate_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K7|raw_s1536_gate_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K7|gain_only_live_s1536_gate_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_gate|K7|direction_only_s1536_gate_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K3|raw_s1536_up_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K3|gain_only_live_s1536_up_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K3|direction_only_s1536_up_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K7|raw_s1536_up_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K7|gain_only_live_s1536_up_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_up|K7|direction_only_s1536_up_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K3|raw_s1536_down_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K3|gain_only_live_s1536_down_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K3|direction_only_s1536_down_K3,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K7|raw_s1536_down_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K7|gain_only_live_s1536_down_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_down|K7|direction_only_s1536_down_K7,probe_check,P0/P1,outputs/p0_p1_v1_1/,VALID,single-group reallocation one-step check
+p0p1_amp_x_s512,amplitude_control,P0/P1,outputs/p0_p1_v1_1/,VALID,global update scaling controls
+p0p1_amp_x_s512#2,amplitude_control,P0/P1,outputs/p0_p1_v1_1/,VALID,global update scaling controls
+p0p1_amp_x_s1536,amplitude_control,P0/P1,outputs/p0_p1_v1_1/,VALID,global update scaling controls
+p0p1_amp_x_s1536#2,amplitude_control,P0/P1,outputs/p0_p1_v1_1/,VALID,global update scaling controls
+r0r1_1_global_gain_s512,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_2_group_vs_global_fair_s512,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_3_group_pure_paired_s512,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_4_matched_structure_s512,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_5_equal_search_structure_s512,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_6_reverse_matched_structure_s512,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_Z_no_data_diag_s512,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_P_pre_state_diag_s512,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_1_global_gain_s1536,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_2_group_vs_global_fair_s1536,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_3_group_pure_paired_s1536,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_4_matched_structure_s1536,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_5_equal_search_structure_s1536,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_6_reverse_matched_structure_s1536,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_Z_no_data_diag_s1536,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,
+r0r1_P_pre_state_diag_s1536,paired_run,R0/R1,outputs/r0_r1_v1_1/,VALID,

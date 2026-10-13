@@ -1,0 +1,34 @@
+{
+ "format": "public_muonh_original",
+ "inherits": "configs/public_recipes.json::muonh_original_5",
+ "benchmark_common": {
+  "model": "GPT-2-class: 12 layers, model_dim=768, 6 heads x 128 head_dim (attn), MLP hdim=4*768, RMSNorm (gain), RoPE, relu().square() activation, logit soft-cap 15, vocab 50304",
+  "dataset": "FineWeb-10B (data/fineweb10B/fineweb_train_*.bin, pre-tokenized GPT-2 tokens, magic 20240520)",
+  "batch_size_tokens": 524288,
+  "seq_len": 1024,
+  "mbs": 64,
+  "val_tokens": 10485760,
+  "val_freq": "every 125 steps (+25 near end for #36)",
+  "target_val_loss": 3.28,
+  "precision": "params fp32 + compiled fwd (bf16 embed/NS internals)",
+  "dist": "torchrun NCCL, world_size 1/2/4/8 (assert 8%ws==0), grad all-reduce SUM; H100x8 in public runs",
+  "ns": "steps=12, coeff=(2.0,-1.5,0.5), bf16, norm+1e-7, same for ALL three recipes",
+  "muon_momentum": 0.95,
+  "nesterov": true,
+  "shape_scaling": "sqrt(max(1, rows/cols))"
+ },
+ "recipe": {
+  "source": "logs/MuonH_3325_capture_full.txt (embedded script; hardware: H100x8, torch 2.10.0+cu128)",
+  "steps": 3325,
+  "final_val_loss_single_log": 3.27528,
+  "published": "3.2782 (n=10)",
+  "matrix_optimizer": "MuonH per shape-class (qkv / mlp.fc / attn.proj / mlp.proj as 4 separate optimizer instances, same hypers, for compile-cache)",
+  "matrix_lr": 0.018,
+  "matrix_wd": "NONE (hyperball replaces decay)",
+  "hyperball": "per-matrix: p_norm=||W||; step=lr*update*p_norm/clamp(||update||,1e-10); renorm to p_norm; eps=1e-10",
+  "init": "PyTorch default Kaiming-uniform (nn.Linear) then multipliers: attn.proj x1.25, mlp.proj x3.0, mlp.fc x1.5; head proj.weight=0, all proj biases=0, embed=default",
+  "aux_optimizer": "AdamW fused: embed lr=0.3, head lr=1/320, 1D lr=0.01, betas=(0.8,0.95), eps=1e-10, wd=0",
+  "schedule": "linear-to-zero cooldown, NO warmup: matrix cooldown_frac=1.0, aux cooldown_frac=0.4",
+  "seeds": "5 seeds in PR267 (3.27843/3.27950/3.27958/3.27981/3.27982); README n=10"
+ }
+}

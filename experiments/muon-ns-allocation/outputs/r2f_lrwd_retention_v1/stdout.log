@@ -1,0 +1,14 @@
+first-step gate s512: {'N_vs_reference_maxdiff': 0.0, 'L_data_delta_ratio': 0.5013336615021312, 'D_data_delta_ratio': 1.001265428937082}
+first-step gate s1536: {'N_vs_reference_maxdiff': 0.0, 'L_data_delta_ratio': 0.5006009259364136, 'D_data_delta_ratio': 1.000501503411815}
+[98s] {'run_id': 's512_L256', 'status': 'complete'}
+[172s] {'run_id': 's1536_L256', 'status': 'complete'}
+D_TRIGGER: B_decay={512: -0.0012417662377450789, 1536: -3.174426508900652e-05} required=False
+[249s] {'run_id': 's512_N_to_N', 'status': 'complete'}
+[322s] {'run_id': 's512_N_to_AH', 'status': 'complete'}
+[397s] {'run_id': 's512_AH_to_N', 'status': 'complete'}
+[472s] {'run_id': 's512_AH_to_AH', 'status': 'complete'}
+[545s] {'run_id': 's1536_N_to_N', 'status': 'complete'}
+[616s] {'run_id': 's1536_N_to_AH', 'status': 'complete'}
+[686s] {'run_id': 's1536_AH_to_N', 'status': 'complete'}
+[759s] {'run_id': 's1536_AH_to_AH', 'status': 'complete'}
+R2F runner done in 759s

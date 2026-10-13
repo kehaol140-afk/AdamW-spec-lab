@@ -1,0 +1,5 @@
+run_id,kind,stage,source_dir,validity,note
+a1_run_M_tuned_muon,train_3250_steps,a1_canonical,run_M/,VALID,124M FineWeb-10B 1.70G tok; wall 25039.9s; final checkpoint kept on server
+a1_run_H_tuned_aux_muonh,train_3250_steps,a1_canonical,run_H/,VALID,wall 25042.0s; norm constraint effective (total_muon_norm 261.928 first→last)
+a0_preflight,data_manifest,a0,outputs/a1_preflight/,VALID,2.0B train pool verified sufficient
+hyperball_public_baseline_audit,read_only_audit,a0,docs/+third_party/,VALID,SOURCE_BLOCKED discipline; A1 provenance from capture-log embedded scripts

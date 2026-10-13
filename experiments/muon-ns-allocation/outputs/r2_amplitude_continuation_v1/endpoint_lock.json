@@ -1,0 +1,53 @@
+{
+ "runs": [
+  {
+   "run_id": "s512_N",
+   "restore_step": 512,
+   "arm": "N",
+   "step1_file": "35f6f45c9809e9278ec23299426a4432a0c5e8c900b345dec123f4256ce9abb9",
+   "step256_file": "4b0af2f753f2b1ddfe0e530f88d4b10b06ac70cafff76d6bba3999ee9ad7bcd0"
+  },
+  {
+   "run_id": "s512_MH",
+   "restore_step": 512,
+   "arm": "MH",
+   "step1_file": "d671ff0d21c6ad771768f4f05161d3c70c1780a98f99a6cc66cc06c0e9c504de",
+   "step256_file": "e10024c7ae7a12c8776878c286671fe81326db1727bf6db8aadfd1150cd17fab"
+  },
+  {
+   "run_id": "s512_AH",
+   "restore_step": 512,
+   "arm": "AH",
+   "step1_file": "034582ee6ef5deecf73f41607b6ed92e2c5152cc11767cf37916566b32e1f1a9",
+   "step256_file": "f50174b9948389b6227672eebd6d89342cc3bead9e84c5fad36968b5e61fc7b1"
+  },
+  {
+   "run_id": "s1536_N",
+   "restore_step": 1536,
+   "arm": "N",
+   "step1_file": "1985dacee24cc2ee6d52e0693fe27c1da9160bdf8a202934f5efb366f8766c8b",
+   "step256_file": "cab1370ea2e98a6d8ffe5bd42b7de684976a900649d6ba10a09a8e967e8e400c"
+  },
+  {
+   "run_id": "s1536_MH",
+   "restore_step": 1536,
+   "arm": "MH",
+   "step1_file": "79d00ea5e4a01972804f52ad4cb55b348f509e8f338a2376ec2555baf3d60cb2",
+   "step256_file": "9108a0ea521ff995e1b4fe0a6865e7bacd0abd0e0e9e8b465cc36890cd8097b4"
+  },
+  {
+   "run_id": "s1536_AH",
+   "restore_step": 1536,
+   "arm": "AH",
+   "step1_file": "c373dee345422272c199437fa6580c909a48df2e226fd0a4a0707053833e0eb9",
+   "step256_file": "281a9b7a00792fec5a8a64660902c2e29ce75bc158cda80e2f802c8f2cc035ff"
+  },
+  {
+   "run_id": "s512_N_repeat",
+   "step256_file": "5fba9648eb5160fa8801c33a99597a2f09ec93ce953104db9372a221c9a02def"
+  }
+ ],
+ "target": "Q_P2_endpoint (P0P1_Q_v1 split; first access this round; old dev-pool historical exposure applies)",
+ "V_def": "0.5*(sum_A/count_A)+0.5*(sum_B/count_B)",
+ "locked_before_first_evaluation": true
+}

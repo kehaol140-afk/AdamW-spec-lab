@@ -1,0 +1,155 @@
+{
+  "protocol_id": "ADAMW_DIRECTION_HORIZON_V15_20261002",
+  "parent_gate": [
+    "BASELINE_TUNING_UNRESOLVED",
+    "STOP"
+  ],
+  "manifest_sha256": "2472baf1d36e48281d51f4ef2cfa63b3fd8ffe27baa9666ab47596dd9035e644",
+  "verdict": "BRANCH_SIGNAL_WITHIN_GRID",
+  "selection": {
+    "S": "S_a2_b1",
+    "F": "F_a2_b1",
+    "P": "P_a2_b1"
+  },
+  "effects": {
+    "F": {
+      "frozen": "F_a2_b1",
+      "delta_h64": 0.0014508921197808888,
+      "delta_h1": 0.00016033664566261763,
+      "point": 0.0014508921197808888,
+      "ci95": [
+        0.0008860623964200399,
+        0.0020296295997362713
+      ],
+      "ci97p5": [
+        0.0008147943024578331,
+        0.002110388442472077
+      ]
+    },
+    "P": {
+      "frozen": "P_a2_b1",
+      "delta_h64": 0.0009720622863120809,
+      "delta_h1": 0.00014748571287004353,
+      "point": 0.0009720622863120809,
+      "ci95": [
+        0.0004800927651987585,
+        0.0014705253171589214
+      ],
+      "ci97p5": [
+        0.00039864464481998986,
+        0.0015465281580747333
+      ]
+    }
+  },
+  "confirm_nll_h64": {
+    "S_a2_b1": 5.897104199270365,
+    "F_a2_b1": 5.895653307150584,
+    "P_a2_b1": 5.896132136984053,
+    "S_a1_b1": 5.897410794473854
+  },
+  "confirm_nll_h1": {
+    "S_a2_b1": 6.063983487215909,
+    "F_a2_b1": 6.063823150570246,
+    "P_a2_b1": 6.063836001503039,
+    "S_a1_b1": 6.063944353744797
+  },
+  "ordinary_adamw": {
+    "frozen": "S_a1_b1",
+    "delta_h64_vs_Sbest": -0.0003065952034884134
+  },
+  "h0_confirm": 8.952219389256161,
+  "one_shot": {
+    "F": {
+      "branch": "F_a2_b1_oneshot",
+      "matched_S": "S_a2_b1",
+      "h64_confirm": 5.897152746736877,
+      "h16_confirm": 6.029891259352702,
+      "matched_S_h64_confirm": 5.897104199270365,
+      "sustained_h64_confirm": 5.895653307150584,
+      "sustained_h16_dev": 5.965734127218635,
+      "one_shot_h16_dev": 5.96832403344162
+    },
+    "P": {
+      "branch": "P_a2_b1_oneshot",
+      "matched_S": "S_a2_b1",
+      "h64_confirm": 5.897153509353735,
+      "h16_confirm": 6.029898126775568,
+      "matched_S_h64_confirm": 5.897104199270365,
+      "sustained_h64_confirm": 5.896132136984053,
+      "sustained_h16_dev": 5.966401664778407,
+      "one_shot_h16_dev": 5.968317580362208
+    }
+  },
+  "aux_step128": {
+    "status": "MEASURED",
+    "nll": {
+      "S_a2_b1": {
+        "h64_confirm": 6.318419817870061,
+        "h64_dev": 6.268508219260337,
+        "h1_confirm": 6.605232598141434
+      },
+      "F_a2_b1": {
+        "h64_confirm": 6.315297474770415,
+        "h64_dev": 6.26620001923788,
+        "h1_confirm": 6.6051140428345505
+      },
+      "P_a2_b1": {
+        "h64_confirm": 6.315674337826622,
+        "h64_dev": 6.266399196726162,
+        "h1_confirm": 6.605125385308619
+      },
+      "S_a1_b1": {
+        "h64_confirm": 6.318669456820659,
+        "h64_dev": 6.268935938914084,
+        "h1_confirm": 6.605248489218585
+      }
+    },
+    "aux_delta_F_h64": 0.0031223430996458745,
+    "aux_delta_P_h64": 0.002745480043438775
+  },
+  "smoke": {
+    "status": "PASS",
+    "native_parity_max_abs": 0.0,
+    "parity_tolerance": 1.34706271648407e-05,
+    "resume_max_abs": 0.0,
+    "one_shot_families": [
+      "F",
+      "S"
+    ],
+    "eval_repeat_nll": [
+      6.060429460841917,
+      6.060429460841917
+    ],
+    "eval_repeat_spread": 0.0,
+    "smoke_step_attempts": 10,
+    "optimizer_step_attempts_total": 31
+  },
+  "numeric_resolution_actual": 0.0,
+  "scale_boundary": {
+    "S": true,
+    "F": true,
+    "P": true
+  },
+  "passed": {
+    "F": true,
+    "P": true
+  },
+  "clear_reverse_evidence_at_aux": false,
+  "budget": {
+    "manifest_sha256": "2472baf1d36e48281d51f4ef2cfa63b3fd8ffe27baa9666ab47596dd9035e644",
+    "token_forward_equivalents": 6030545,
+    "forward_attempts": 20825,
+    "backward_attempts": 6800,
+    "optimizer_step_attempts": 1698,
+    "optimizer_step_completions": 1698,
+    "gpu_seconds": 0.0,
+    "train_effective_tokens": 3430400,
+    "train_seconds": 221.57088590000004,
+    "eval_seconds": 179.61502769999987,
+    "direction_seconds": 41.003845600000275,
+    "smoke_step_attempts": 10,
+    "started_at": 1790942963.2477715,
+    "reconciled_from": "attempts/attempt5_ledger_race_fix/PATCH_NOTE.md",
+    "last_phase": "aux"
+  }
+}

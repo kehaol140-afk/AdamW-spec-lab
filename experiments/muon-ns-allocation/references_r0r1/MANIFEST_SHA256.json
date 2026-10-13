@@ -1,0 +1,30 @@
+{
+  "OPENCODE_R0_R1_TASK_CN.md": {
+    "sha256": "2eaaf79bdd61833e5b3bf040b1f5c0d547c31cafc8ea47a800ca06fc7e771bab",
+    "bytes": 4797
+  },
+  "R0_R1_EXECUTION_PROTOCOL_v1_1_CN.md": {
+    "sha256": "94f9e344cd87fa8c1bad3269d4c0c5de809b056d0f0c2868697f3a750f7c8c74",
+    "bytes": 21205
+  },
+  "README_CN.md": {
+    "sha256": "305f5bd5d6c5f46673f2653b07b2e8d60aa1e45fda14d2d42acb6ec63c1912e3",
+    "bytes": 1272
+  },
+  "r0_r1_contract.json": {
+    "sha256": "4b003a1533daad1e6bc14198400b939efea448196193d6a69a9317c6dbf0a9ba",
+    "bytes": 4136
+  },
+  "references/INDEPENDENT_REAUDIT_CN.md": {
+    "sha256": "850615e53de59d9cea6022af11c2f7848c3e0e290e861cea2711a2dd8d7d621a",
+    "bytes": 10720
+  },
+  "references/P0_P1_EXECUTION_ADDENDUM_v1_1_CN.md": {
+    "sha256": "1aa897694e15eea12df331b283bc9d59d6a68f37bf1a0de7b6f041cbe9819114",
+    "bytes": 20932
+  },
+  "references/THEORY_REANALYSIS_AND_NEXT_EXPERIMENT_DRAFT_CN.md": {
+    "sha256": "960dc3d29800fea3685f593c0b2662a5205878d6978dd19b636f7cb598111984",
+    "bytes": 14508
+  }
+}

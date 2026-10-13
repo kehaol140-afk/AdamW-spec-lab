@@ -1,0 +1,53 @@
+{
+  "analysis_manifest_sha256": "834412de648f8cb73488ef68c7e3fc12a8e2c48f706d2f5d0d67e5fe0f1100ab",
+  "bootstrap_units": 24,
+  "direction_units": 16,
+  "same_frozen": {
+    "legacy": {
+      "F00": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F10": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F01": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F11": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      }
+    },
+    "natural_prefix": {
+      "F00": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F10": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F01": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F11": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      }
+    }
+  },
+  "resources": {
+    "samples": 17532,
+    "minimum_available_ram_gib": 1.2729263305664062,
+    "maximum_rss_gib": 1.9662017822265625,
+    "maximum_cuda_reserved_gib": 0.25390625,
+    "warning_samples": 1817,
+    "blocked_samples": 0,
+    "paging": "NOT_MEASURED"
+  },
+  "bundle_sha256": "3054299b8cf60e5bff7def8d1981d3093d7617afb8d6137306fb595a9aac5685"
+}

@@ -1,0 +1,21 @@
+{
+ "arm_id": "B_muon_lr2e-2",
+ "arm": {
+  "kind": "muon",
+  "lr": 0.02
+ },
+ "peak_lr": 0.02,
+ "seed": 3471,
+ "init_fingerprint": "33f93a0f546149a0",
+ "final_fingerprint": "1250f8f681c7b07f",
+ "wall_s": 1069.801355394069,
+ "throughput_tok_s": 31365.105148553474,
+ "vram_peak_gib": 2.9921875,
+ "tokens_consumed": 33685504,
+ "dev_nll_by_horizon": {
+  "1024": 6.304203588663155,
+  "2048": 6.58964645389098,
+  "4096": 6.598916838733815
+ },
+ "steps": 4096
+}

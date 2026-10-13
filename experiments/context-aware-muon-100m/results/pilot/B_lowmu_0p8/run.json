@@ -1,0 +1,22 @@
+{
+ "arm_id": "B_lowmu_0p8",
+ "arm": {
+  "kind": "muon",
+  "momentum": 0.8,
+  "lr": "@B_muon_best"
+ },
+ "peak_lr": 0.005,
+ "seed": 3471,
+ "init_fingerprint": "33f93a0f546149a0",
+ "final_fingerprint": "677127d43ecbb6c1",
+ "wall_s": 1028.9603086852003,
+ "throughput_tok_s": 32610.035311153708,
+ "vram_peak_gib": 2.9921875,
+ "tokens_consumed": 33685504,
+ "dev_nll_by_horizon": {
+  "1024": 6.128792885620305,
+  "2048": 6.56538541821928,
+  "4096": 6.584097763876981
+ },
+ "steps": 4096
+}

@@ -1,0 +1,23 @@
+{
+  "differences": {
+    "legacy": {
+      "I_before": 0.0,
+      "I_after": 0.0,
+      "interaction": 0.0
+    },
+    "natural_prefix": {
+      "I_before": 0.0,
+      "I_after": 0.0,
+      "interaction": 0.0
+    },
+    "new_probe_prefix": {
+      "I_before": 0.0,
+      "I_after": 0.0,
+      "interaction": 0.0
+    }
+  },
+  "observed_max": 0.0,
+  "engineering_target": 2e-06,
+  "pass": true,
+  "scope": "FFN/window0/full_legacy_natural_new_probe_prefix"
+}

@@ -1,0 +1,5 @@
+torch==2.6.0
+transformers==4.49.0
+tokenizers==0.21.1
+numpy==2.0.2
+psutil==6.1.1

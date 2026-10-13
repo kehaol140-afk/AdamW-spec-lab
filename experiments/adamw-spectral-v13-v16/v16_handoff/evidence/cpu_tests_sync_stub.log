@@ -1,0 +1,23 @@
+test_a0_keeps_decay_drops_data_and_advances_moments (direction_horizon_v15.test_v15.V15CpuTests.test_a0_keeps_decay_drops_data_and_advances_moments) ... ok
+test_a_and_b_semantics_against_manual_formula (direction_horizon_v15.test_v15.V15CpuTests.test_a_and_b_semantics_against_manual_formula) ... ok
+test_atomic_write_retries_then_succeeds (direction_horizon_v15.test_v15.V15CpuTests.test_atomic_write_retries_then_succeeds) ... ok
+test_budget_attempt_counted_before_failure (direction_horizon_v15.test_v15.V15CpuTests.test_budget_attempt_counted_before_failure) ... ok
+test_budget_cap_enforced (direction_horizon_v15.test_v15.V15CpuTests.test_budget_cap_enforced) ... ok
+test_directions_evolve_naturally (direction_horizon_v15.test_v15.V15CpuTests.test_directions_evolve_naturally) ... ok
+test_eval_does_not_mutate_state (direction_horizon_v15.test_v15.V15CpuTests.test_eval_does_not_mutate_state) ... ok
+test_f_and_p_norm_match_and_clip_timing (direction_horizon_v15.test_v15.V15CpuTests.test_f_and_p_norm_match_and_clip_timing) ... ok
+test_identity_branch_matches_native_adamw_bitwise (direction_horizon_v15.test_v15.V15CpuTests.test_identity_branch_matches_native_adamw_bitwise) ... ok
+test_ledger_helpers_read_modify_write_fresh_file (direction_horizon_v15.test_v15.V15CpuTests.test_ledger_helpers_read_modify_write_fresh_file)
+Regression for the attempt-4 accounting race: helpers must always mutate the ... ok
+test_one_shot_family_schedule (direction_horizon_v15.test_v15.V15CpuTests.test_one_shot_family_schedule) ... ok
+test_save_load_branch_state_roundtrip_cpu (direction_horizon_v15.test_v15.V15CpuTests.test_save_load_branch_state_roundtrip_cpu) ... ok
+test_shared_parameter_single_update (direction_horizon_v15.test_v15.V15CpuTests.test_shared_parameter_single_update) ... ok
+test_tie_break_prefers_identity_then_closeness (direction_horizon_v15.test_v15.V15CpuTests.test_tie_break_prefers_identity_then_closeness) ... ok
+test_zero_norm_fallback (direction_horizon_v15.test_v15.V15CpuTests.test_zero_norm_fallback) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.819s
+
+OK
+CPU-only review. Explicit test harness stub: torch.cuda.synchronize no-op. No training code changes.
+torch: 2.10.0+cpu

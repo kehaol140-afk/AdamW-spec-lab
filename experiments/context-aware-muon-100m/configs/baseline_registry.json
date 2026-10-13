@@ -1,0 +1,68 @@
+{
+  "registry_version": "context_aware_muon_baselines_v0_20261012",
+  "status": "DRAFT_REGISTRY (hashes frozen; LR grids finalized only at pilot freeze)",
+  "environment": {
+    "conda_env": "fr_minimind (torch 2.11.0+cu13.0)",
+    "torch_muon_file": "/home/b205/miniforge3/envs/fr_minimind/lib/python3.11/site-packages/torch/optim/_muon.py",
+    "torch_muon_sha256": "38e95918424bd26604f786195a4aa72afb60674b4ac9ccbde777974013cb1f52",
+    "network_reachability": "arxiv.org and github.com both blocked (webfetch/curl fail, consistent with muon_spectral_allocation/docs/NEXT_RESEARCH_DECISION_CN.md records); re-verified 2026-10-11/12"
+  },
+  "baselines": {
+    "tuned_adamw": {
+      "implementation": "torch.optim.AdamW",
+      "semantics": "M-line recipe (muon_transition_experiment/configs/m1_baseline_prereg.json): betas (0.9,0.95), eps 1e-8, wd applied to all trainable params",
+      "lr_grid_candidate_100m": [0.0003, 0.001, 0.003],
+      "wd_grid": [0.01, 0.02],
+      "wd_note": "M2 legacy: best at wd 0.02 on 2/3 mixtures; pilot fixes wd 0.02 with disclosed rationale, LR grid kept",
+      "status": "READY"
+    },
+    "tuned_muon_original": {
+      "implementation": "torch.optim.Muon (adjust_lr_fn=None -> 'original' sqrt(max(1,A/B)) scaling) + aux AdamW",
+      "semantics": "momentum 0.95, nesterov, NS5 (3.4445,-4.775,2.0315), eps 1e-7; aux AdamW same lr/schedule, wd 0.02 (M-line aux_lr_rule)",
+      "nesterov_input_truth": "grad.lerp(buf, momentum) = (1-mu)*g + mu*buf  [CODE, not the docstring formula g+mu*B]",
+      "lr_grid_candidate_100m": [0.005, 0.01, 0.02],
+      "wd": 0.02,
+      "status": "READY (native-mode GroupMuon is bitwise-equal, test-verified)"
+    },
+    "tuned_muon_match_rms": {
+      "implementation": "torch.optim.Muon with adjust_lr_fn='match_rms_adamw' (0.2*sqrt(max(A,B)) scaling) + aux AdamW",
+      "semantics_source": "torch 2.11.0 built-in; in-file citation: Muon is Scalable for LLM Training (arXiv:2502.16982, MoonshotAI)",
+      "note": "this is the optimizer-level Moonlight/Moonshot contribution, authoritatively reachable WITHOUT network; full MuonClip (QK-clip + weight-norm targets, training-loop level) is NOT reachable -> SOURCE_BLOCKED",
+      "lr_grid_candidate_100m": [0.001, 0.003, 0.01],
+      "lr_note": "RMS adjustment multiplies effective lr by ~0.2*sqrt(max(A,B)) (x5.5 for 2432x768); grid shifted accordingly",
+      "status": "READY (optimizer-level); Moonlight-full: SOURCE_BLOCKED"
+    },
+    "low_momentum_muon": {
+      "implementation": "GroupMuon native mode with momentum override",
+      "momentum_grid": [0.9, 0.8],
+      "purpose": "control arm: tests whether direction-mixing gains are explained by effective momentum reduction",
+      "status": "READY (per-group momentum override implemented + tested)"
+    },
+    "normuon": {
+      "claimed_source": "zichongli5/NorMuon (github)",
+      "local_copy": "NOT_FOUND (disk search /home/b205 + site-packages 2026-10-12)",
+      "network": "BLOCKED (github webfetch transport error 2026-10-12)",
+      "status": "SOURCE_BLOCKED - no authoritative implementation obtained; NOT emulated, NOT claimed as reproduction"
+    },
+    "samuon_lite": {
+      "claimed_source": "arXiv:2608.25990 (SAMuon; second-hand description only: held-out spectral direction probing/shaping, baseline Scion)",
+      "local_copy": "NOT_FOUND",
+      "network": "BLOCKED (arxiv webfetch transport error 2026-10-11)",
+      "prior_record": "muon_spectral_allocation/docs/NEXT_RESEARCH_DECISION_CN.md (2026-09-30) - SOURCE_BLOCKED, no second-hand reconstruction allowed",
+      "status": "SOURCE_BLOCKED"
+    },
+    "microsoft_dion": {
+      "claimed_source": "microsoft/dion (github)",
+      "local_copy": "NOT_FOUND",
+      "network": "BLOCKED (github webfetch transport error 2026-10-12)",
+      "status": "SOURCE_BLOCKED"
+    }
+  },
+  "fairness_rules": {
+    "common_init": "same model-build seed across all arms (bit-identical init verified by fingerprint 33f93a0f546149a0 in smoke)",
+    "common_stream": "same token cache, cursor 0, CRN pairing within seed",
+    "common_clock": "warmup 128 + cosine to 0.1*peak at pilot T; identical across arms",
+    "no_untuned_comparisons": "every optimizer family carries its own LR grid (>=3 points + boundary rule); no candidate is ever compared only against weak/untuned Muon",
+    "boundary_rule": "best at grid edge -> RANGE_UNRESOLVED flag, single extension only with new authorization"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "field": "protocol_id",
+    "old": "ADAMW_A_SPECTRAL_LOCAL_V1_20261001",
+    "new": "ADAMW_A_SPECTRAL_LOCAL_V1_1_LOWMEM_20261002"
+  },
+  {
+    "field": "runtime.system_ram_free_reserve_gib",
+    "old": 2,
+    "new": 1.0
+  },
+  {
+    "field": "runtime.system_ram_start_min_gib",
+    "old": "ABSENT",
+    "new": 1.5
+  },
+  {
+    "field": "runtime.system_ram_warning_gib",
+    "old": "ABSENT",
+    "new": 1.5
+  }
+]

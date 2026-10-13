@@ -1,0 +1,14 @@
+{
+  "parent": "VERIFIED",
+  "old_gate": "BASELINE_TUNING_UNRESOLVED",
+  "old_next_action": "STOP",
+  "child": "PREPARED_NO_GPU_REPLAY",
+  "view_counts": {
+    "legacy": 112,
+    "natural_prefix": 112,
+    "new_probe_prefix": 128,
+    "new_probe_packed": 105
+  },
+  "legacy_genuinely_truncated_count": 30,
+  "gpu_optimizer_calls": 0
+}

@@ -1,0 +1,51 @@
+[
+ {
+  "run_id": "s1536_native_lr1.0",
+  "arm": "native_lr1.0",
+  "restore_step": 1536,
+  "wall_seconds": 49.150553472107276,
+  "gpu_peak_mib": 3339.45458984375
+ },
+ {
+  "run_id": "s1536_native_lr0.5",
+  "arm": "native_lr0.5",
+  "restore_step": 1536,
+  "wall_seconds": 45.36363151902333,
+  "gpu_peak_mib": 3337.439453125
+ },
+ {
+  "run_id": "s1536_native_lr2.0",
+  "arm": "native_lr2.0",
+  "restore_step": 1536,
+  "wall_seconds": 44.9252279039938,
+  "gpu_peak_mib": 3337.439453125
+ },
+ {
+  "run_id": "s1536_exact_polar",
+  "arm": "exact_polar",
+  "restore_step": 1536,
+  "wall_seconds": 279.92412813403644,
+  "gpu_peak_mib": 3337.439453125
+ },
+ {
+  "run_id": "s1536_head_lam0.25",
+  "arm": "head_lam0.25",
+  "restore_step": 1536,
+  "wall_seconds": 278.50189191894606,
+  "gpu_peak_mib": 3337.439453125
+ },
+ {
+  "run_id": "s1536_bulk_lam0.25",
+  "arm": "bulk_lam0.25",
+  "restore_step": 1536,
+  "wall_seconds": 251.02093517407775,
+  "gpu_peak_mib": 3337.439453125
+ },
+ {
+  "run_id": "s1536_muon_p0.5",
+  "arm": "muon_p0.5",
+  "restore_step": 1536,
+  "wall_seconds": 253.56357327196747,
+  "gpu_peak_mib": 3337.439453125
+ }
+]

@@ -1,0 +1,84 @@
+{
+ "runs": [
+  {
+   "run_id": "s512_L256",
+   "file": "s512_L256_step256_full.pt",
+   "sha": "6335a4b521b4804253cf41913e0b1a551190aada8c6e189a8aead5a963d7d137",
+   "role": "L_endpoint"
+  },
+  {
+   "run_id": "s512_N_to_N",
+   "file": "s512_N_to_N_step256_full.pt",
+   "sha": "09d79166f561ee2c0829426d8ccdd4c4957d82cc54131671113e8594ab9730ca",
+   "role": "crossover_endpoint"
+  },
+  {
+   "run_id": "s512_N_to_AH",
+   "file": "s512_N_to_AH_step256_full.pt",
+   "sha": "7935291e51794f716ef0c8591b0584bcc47c01f42acb8c67431794af2b4646bc",
+   "role": "crossover_endpoint"
+  },
+  {
+   "run_id": "s512_AH_to_N",
+   "file": "s512_AH_to_N_step256_full.pt",
+   "sha": "93033d352e3af319b6a581051097eb0fe41ecb52ec6a4d4319002154cbbd6f8b",
+   "role": "crossover_endpoint"
+  },
+  {
+   "run_id": "s512_AH_to_AH",
+   "file": "s512_AH_to_AH_step256_full.pt",
+   "sha": "fc0fb5aafd858182032c0d99b39c1709e0488934a0fe0bf5916b91131b07991c",
+   "role": "crossover_endpoint"
+  },
+  {
+   "run_id": "s1536_L256",
+   "file": "s1536_L256_step256_full.pt",
+   "sha": "b18250c93ec445bcedbb7478a7d00d8324acb00aed850c269274cb485a14b22c",
+   "role": "L_endpoint"
+  },
+  {
+   "run_id": "s1536_N_to_N",
+   "file": "s1536_N_to_N_step256_full.pt",
+   "sha": "e5361a5f8c07d044b3623e38ebbb9d3ab200100286406b0532c4706782ee8579",
+   "role": "crossover_endpoint"
+  },
+  {
+   "run_id": "s1536_N_to_AH",
+   "file": "s1536_N_to_AH_step256_full.pt",
+   "sha": "7e844cb51496a0b0a6506fa32f006a9b53b45ee5f3858806a2cd343ea291d896",
+   "role": "crossover_endpoint"
+  },
+  {
+   "run_id": "s1536_AH_to_N",
+   "file": "s1536_AH_to_N_step256_full.pt",
+   "sha": "94c2da7dfd66e6e9e0ffe1849722f990b62102d117d32b4275be88885136fc83",
+   "role": "crossover_endpoint"
+  },
+  {
+   "run_id": "s1536_AH_to_AH",
+   "file": "s1536_AH_to_AH_step256_full.pt",
+   "sha": "a147715f04e9499e147037aa864955cfd134465567abfb907dfda9b5134cfc8b",
+   "role": "crossover_endpoint"
+  }
+ ],
+ "target": "Q_P2_endpoint (developmental, historically exposed)",
+ "V_def": "0.5*(sum_A/count_A)+0.5*(sum_B/count_B)",
+ "D_TRIGGER": {
+  "tau": 0.001,
+  "B_decay": {
+   "512": -0.0012417662377450789,
+   "1536": -3.174426508900652e-05
+  },
+  "V_L": {
+   "512": 2.8506370394837623,
+   "1536": 2.526437557444853
+  },
+  "V_AH_old": {
+   "512": 2.8518788057215074,
+   "1536": 2.526469301709942
+  },
+  "D_required": false,
+  "note": "frozen after L endpoints, before any crossover result"
+ },
+ "locked_before_evaluation": true
+}

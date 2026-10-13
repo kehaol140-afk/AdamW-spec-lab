@@ -1,0 +1,27 @@
+test_checkpoint_continuous_vs_resume (isolated_parent_numerics.AdamWContractTests) ... ok
+test_eval_input_slice_matches_full_forward_prefix (isolated_parent_numerics.AdamWContractTests) ... ok
+test_local_minimind_fp32_actual_target_update (isolated_parent_numerics.AdamWContractTests) ... ok
+test_lookahead_window_257_ids_256_logits (isolated_parent_numerics.AdamWContractTests) ... ok
+test_none_gradient_vs_zero_gradient_and_fixed_decay (isolated_parent_numerics.AdamWContractTests) ... ok
+test_one_and_256_steps_fp64_against_torch (isolated_parent_numerics.AdamWContractTests) ... ok
+test_output_orthogonality_but_loss_cross_term (isolated_parent_numerics.AdamWContractTests) ... ok
+test_paired_diagonal_residual_not_just_off_diagonal (isolated_parent_numerics.AdamWContractTests) ... ok
+test_probe_restores_buffers_moments_rng_grads_mode_cursor (isolated_parent_numerics.AdamWContractTests) ... ok
+test_shared_parameter_updated_once (isolated_parent_numerics.AdamWContractTests) ... ok
+test_svd_identity_equivalence_and_decay (isolated_parent_numerics.AdamWContractTests) ... ok
+test_token_weighting_shift_and_real_eos_value (isolated_parent_numerics.AdamWContractTests) ... ok
+test_gate_does_not_change_rng (isolated_parent_resources.ResourcePolicyTests) ... ok
+test_missing_readout_blocks (isolated_parent_resources.ResourcePolicyTests) ... ok
+test_oom_propagates (isolated_parent_resources.ResourcePolicyTests) ... ok
+test_original_config_retains_2_gib_gate (isolated_parent_resources.ResourcePolicyTests) ... ok
+test_preinit_admits_1_9_gib (isolated_parent_resources.ResourcePolicyTests) ... ok
+test_runtime_blocks_0_9_gib (isolated_parent_resources.ResourcePolicyTests) ... ok
+test_runtime_warns_but_allows_1_25_gib (isolated_parent_resources.ResourcePolicyTests) ... ok
+test_sampling_before_init_does_not_query_cuda (isolated_parent_resources.ResourcePolicyTests) ... ok
+{"time": 1790877675.7901516, "kind": "resource", "phase": "during_training", "stage": "smoke", "status": "WARNING", "ram_available_bytes": 1342177280, "gpu_optimizer_updates": 0, "reason": "RAM available=1342177280, warning=1610612736"}
+test_warning_gate_preserves_training_objects (isolated_parent_resources.ResourcePolicyTests) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 17.510s
+
+OK

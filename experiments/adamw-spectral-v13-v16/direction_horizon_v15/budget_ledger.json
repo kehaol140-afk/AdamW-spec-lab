@@ -1,0 +1,17 @@
+{
+  "manifest_sha256": "2472baf1d36e48281d51f4ef2cfa63b3fd8ffe27baa9666ab47596dd9035e644",
+  "token_forward_equivalents": 6030545,
+  "forward_attempts": 20825,
+  "backward_attempts": 6800,
+  "optimizer_step_attempts": 1698,
+  "optimizer_step_completions": 1698,
+  "gpu_seconds": 0.0,
+  "train_effective_tokens": 3430400,
+  "train_seconds": 221.57088590000004,
+  "eval_seconds": 179.61502769999987,
+  "direction_seconds": 41.003845600000275,
+  "smoke_step_attempts": 10,
+  "started_at": 1790942963.2477715,
+  "reconciled_from": "attempts/attempt5_ledger_race_fix/PATCH_NOTE.md",
+  "last_phase": "aux"
+}

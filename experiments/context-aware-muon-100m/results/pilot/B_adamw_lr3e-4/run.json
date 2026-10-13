@@ -1,0 +1,21 @@
+{
+ "arm_id": "B_adamw_lr3e-4",
+ "arm": {
+  "kind": "adamw",
+  "lr": 0.0003
+ },
+ "peak_lr": 0.0003,
+ "seed": 3471,
+ "init_fingerprint": "33f93a0f546149a0",
+ "final_fingerprint": "d35c63be06f45847",
+ "wall_s": 917.981039011851,
+ "throughput_tok_s": 36552.42382361105,
+ "vram_peak_gib": 3.3515625,
+ "tokens_consumed": 33685504,
+ "dev_nll_by_horizon": {
+  "1024": 6.0860373532874315,
+  "2048": 6.261477517169309,
+  "4096": 6.284613624373084
+ },
+ "steps": 4096
+}

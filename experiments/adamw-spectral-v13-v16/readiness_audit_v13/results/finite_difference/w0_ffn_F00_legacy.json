@@ -1,0 +1,65 @@
+{
+  "baseline": "F00",
+  "target": "model.layers.1.mlp.down_proj.weight",
+  "view": "legacy",
+  "doc_ids": [
+    "0d1f778a4cdbd46d51cba4120c9415dfea29784da5bdb735a67fdb40fd1807a4",
+    "0ec208f5b36471bc3814e94fada9acbefde133a848b965fd045e2a97e3e1b404",
+    "14ce91a80a0253c58e08be2af3e350a65ebbdb53be8f375a51bb0069fe209423",
+    "30f4aefbb7410e7131a2e9bbfdcc8602ef4eac0e59bca9a137a71ec597436d51",
+    "374164cb472f8df7ac06fd5c8acc3e4f4c5a28fbd62dbbe9a975a5fdd7f249a5",
+    "3f3a3faee79d214c186ff0a70561af18ad30585031c52b0b645415dd4642d3c7",
+    "71780a36839155adbc66237b1e45f13ce27befe71ce581fd7dd5549d64752262",
+    "76628585d8456d791da43d9f7862e00c54a0a498350e4d9e90eee6be369bba32"
+  ],
+  "target_tokens": 1093,
+  "unit_direction": "A_Frobenius_unit",
+  "autodiff": 0.00010000568020923781,
+  "scales": [
+    {
+      "h": 0.003,
+      "actual_applied_l2_plus_minus": [
+        0.0030000000720664228,
+        0.003000000066903432
+      ],
+      "nll_plus": 6.234343030533437,
+      "nll_minus": 6.23434252795667,
+      "nll_difference": 5.025767668698222e-07,
+      "central_difference": 8.37627944783037e-05,
+      "autodiff": 0.00010000568020923781,
+      "absolute_error": 1.624288573093411e-05,
+      "same_sign": true
+    },
+    {
+      "h": 0.001,
+      "actual_applied_l2_plus_minus": [
+        0.001000000164082902,
+        0.0010000001261949297
+      ],
+      "nll_plus": 6.234342946770643,
+      "nll_minus": 6.234342835086917,
+      "nll_difference": 1.1168372626713108e-07,
+      "central_difference": 5.584186313356554e-05,
+      "autodiff": 0.00010000568020923781,
+      "absolute_error": 4.4163817075672276e-05,
+      "same_sign": true
+    },
+    {
+      "h": 0.0003,
+      "actual_applied_l2_plus_minus": [
+        0.0003000006643562213,
+        0.00030000066752013365
+      ],
+      "nll_plus": 6.2343428909287795,
+      "nll_minus": 6.2343426396403965,
+      "nll_difference": 2.512883829908219e-07,
+      "central_difference": 0.00041881397165136985,
+      "autodiff": 0.00010000568020923781,
+      "absolute_error": 0.00031880829144213205,
+      "same_sign": true
+    }
+  ],
+  "generation_precision": "torch.bfloat16",
+  "evaluation_precision": "fp32_no_tf32",
+  "interpretation": "all scales retained; near-zero or rounded differences may be unresolved"
+}

@@ -1,0 +1,210 @@
+{
+ "selection": {
+  "B_muon_scores": {
+   "B_muon_lr5e-3": 6.522696352393019,
+   "B_muon_lr1e-2": 6.5646329558863075,
+   "B_muon_lr2e-2": 6.598916838733815
+  },
+  "B_muon_best_lr": 0.005,
+  "B_muon_boundary": true,
+  "C_A_scores": {
+   "C_A_lam0p65": 6.5667222059294765,
+   "C_A_lam0p85": 6.559775891711955
+  },
+  "C_A_best_lam": 0.85
+ },
+ "best_muon_original": "B_muon_lr5e-3",
+ "best_anchor": "B_muon_rms_lr1e-3",
+ "lowmu_best": "B_lowmu_0p9",
+ "c_a_best": "C_A_lam0p85",
+ "contrasts": {
+  "C_A_vs_B_muon": {
+   "a": "C_A_lam0p85",
+   "b": "B_muon_lr5e-3",
+   "mean_diff": 0.03707953931893625,
+   "ci95": [
+    0.019366671102182296,
+    0.05491847884009322
+   ],
+   "ci_entirely_negative": false,
+   "gain_ge_1e-3": false
+  },
+  "C_A_vs_best_anchor": {
+   "a": "C_A_lam0p85",
+   "b": "B_muon_rms_lr1e-3",
+   "mean_diff": 0.13666961079302373,
+   "ci95": [
+    0.12030984008440819,
+    0.15371272872765615
+   ],
+   "ci_entirely_negative": false,
+   "gain_ge_1e-3": false
+  },
+  "C_A_vs_lowmu_best": {
+   "a": "C_A_lam0p85",
+   "b": "B_lowmu_0p9",
+   "mean_diff": 0.009515070448557256,
+   "ci95": [
+    -0.00632692757561728,
+    0.025744310652248827
+   ],
+   "ci_entirely_negative": false,
+   "gain_ge_1e-3": false
+  },
+  "C_B_vs_C_A": {
+   "a": "C_B",
+   "b": "C_A_lam0p85",
+   "mean_diff": 0.09974001802033793,
+   "ci95": [
+    0.08196396065550429,
+    0.11641203915191901
+   ],
+   "ci_entirely_negative": false,
+   "gain_ge_1e-3": false
+  },
+  "lowmu_best_vs_best_anchor": {
+   "a": "B_lowmu_0p9",
+   "b": "B_muon_rms_lr1e-3",
+   "mean_diff": 0.12715454034446647,
+   "ci95": [
+    0.11319804327616828,
+    0.1424269276886738
+   ],
+   "ci_entirely_negative": false,
+   "gain_ge_1e-3": false
+  },
+  "C_A_065_vs_best_anchor": {
+   "a": "C_A_lam0p65",
+   "b": "B_muon_rms_lr1e-3",
+   "mean_diff": 0.14361592501054524,
+   "ci95": [
+    0.12641371329375772,
+    0.16162939291113668
+   ],
+   "ci_entirely_negative": false,
+   "gain_ge_1e-3": false
+  },
+  "C_A_085_vs_best_anchor": {
+   "a": "C_A_lam0p85",
+   "b": "B_muon_rms_lr1e-3",
+   "mean_diff": 0.13666961079302373,
+   "ci95": [
+    0.12030984008440819,
+    0.15371272872765615
+   ],
+   "ci_entirely_negative": false,
+   "gain_ge_1e-3": false
+  },
+  "C_A_nat_vs_best_anchor": {
+   "a": "C_A_nat",
+   "b": "B_muon_rms_lr1e-3",
+   "mean_diff": 0.14424579990337466,
+   "ci95": [
+    0.1268020663465228,
+    0.16189213094970523
+   ],
+   "ci_entirely_negative": false,
+   "gain_ge_1e-3": false
+  }
+ },
+ "gate": {
+  "C_A_pass_vs_best_anchor": false,
+  "momentum_explained": false,
+  "C_B_beats_C_A": false,
+  "range_flags": [
+   "RANGE_UNRESOLVED_B_MUON (original best at grid edge)",
+   "RANGE_UNRESOLVED_B_MUON_RMS (B_muon_rms_lr1e-3 at grid edge)",
+   "RANGE_UNRESOLVED_ADAMW (B_adamw_lr3e-4 at grid edge)"
+  ]
+ },
+ "tokens_to_threshold": {
+  "C_A_lam0p85": {
+   "threshold": 6.4231062809189305,
+   "first_horizon_at_or_below": 1024,
+   "tokens_at_that_horizon": 8388608
+  },
+  "C_B": {
+   "threshold": 6.4231062809189305,
+   "first_horizon_at_or_below": 1024,
+   "tokens_at_that_horizon": 8388608
+  },
+  "B_lowmu_0p9": {
+   "threshold": 6.4231062809189305,
+   "first_horizon_at_or_below": 1024,
+   "tokens_at_that_horizon": 8388608
+  },
+  "B_muon_lr5e-3": {
+   "threshold": 6.4231062809189305,
+   "first_horizon_at_or_below": 1024,
+   "tokens_at_that_horizon": 8388608
+  },
+  "B_muon_rms_lr1e-3": {
+   "threshold": 6.4231062809189305,
+   "first_horizon_at_or_below": 1024,
+   "tokens_at_that_horizon": 8388608
+  }
+ },
+ "metrics_integrity": {
+  "B_adamw_lr3e-4": [
+   4096,
+   0
+  ],
+  "B_adamw_lr1e-3": [
+   4096,
+   0
+  ],
+  "B_adamw_lr3e-3": [
+   4096,
+   0
+  ],
+  "B_muon_lr5e-3": [
+   4096,
+   0
+  ],
+  "B_muon_lr1e-2": [
+   4096,
+   0
+  ],
+  "B_muon_lr2e-2": [
+   4096,
+   0
+  ],
+  "B_muon_rms_lr1e-3": [
+   4096,
+   0
+  ],
+  "B_muon_rms_lr3e-3": [
+   4096,
+   0
+  ],
+  "B_muon_rms_lr1e-2": [
+   4096,
+   0
+  ],
+  "B_lowmu_0p9": [
+   4096,
+   0
+  ],
+  "B_lowmu_0p8": [
+   4096,
+   0
+  ],
+  "C_A_lam0p65": [
+   4096,
+   0
+  ],
+  "C_A_lam0p85": [
+   4096,
+   0
+  ],
+  "C_A_nat": [
+   4096,
+   0
+  ],
+  "C_B": [
+   4096,
+   0
+  ]
+ },
+ "caveat": "dev-grade selection set; CIs are exploratory (same-dev selection), NOT confirmatory inference; confirm layer = decisive"
+}

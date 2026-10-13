@@ -1,0 +1,59 @@
+{
+  "protocol_id": "ADAMW_SPECTRAL_CAMPAIGN_V16_20261002",
+  "verdict": "COMPLETE_WITH_SIGNAL",
+  "route": {
+    "best_s": "b_S1_plain_lr0.001",
+    "fam_best": {
+      "F": "b_F1_a8_lr0.001",
+      "P": "b_P1_a8_lr0.001"
+    },
+    "screen": {
+      "b_P1_a8_lr0.001": 4.1261351028391475,
+      "b_P2_a8_lr0.003": 4.327433159174101
+    },
+    "recipes": [
+      "b_S1_plain_lr0.001",
+      "b_F1_a8_lr0.001"
+    ],
+    "label": "F_OR_P_SUSTAINED"
+  },
+  "holdout_nll": {
+    "c_b_S1_plain_lr0.001_s3408": 3.631139704468776,
+    "c_b_S1_plain_lr0.001_s3409": 3.5246252515406096,
+    "c_b_S1_plain_lr0.001_s3410": 3.642411151889453,
+    "c_b_F1_a8_lr0.001_s3408": 3.594863913636468,
+    "c_b_F1_a8_lr0.001_s3409": 3.4306072467303426,
+    "c_b_F1_a8_lr0.001_s3410": 3.4909167178309795
+  },
+  "stats": {},
+  "budget": {
+    "manifest_sha256": "cd7c47aa1a75f0aae6937a16c3baf624342416945512224a7b5d898f95b6f0d9",
+    "wall_started_at": 1791566297.2339327,
+    "optimizer_step_attempts": 79882,
+    "optimizer_step_completions": 79882,
+    "token_forward_equivalents": 174864936,
+    "forward_calls": 383016,
+    "backward_attempts": 319528,
+    "train_effective_tokens": 163598336,
+    "train_seconds": 10299.558829852182,
+    "direction_seconds": 1505.4246848667324,
+    "eval_seconds": 10158.25807839189,
+    "device_task_seconds": 437.2281071613556,
+    "pause_seconds": 0.0,
+    "anchor_svds": 36,
+    "last_phase": "cfinal",
+    "pause_seconds_windows_session": 14700.0,
+    "budget_amendment": {
+      "authorized": "user migration decision 2026-10-10 (SERVER_MIGRATION_PLAN.md #3)",
+      "fields": [
+        "wall_started_at",
+        "pause_seconds",
+        "STATE.stop"
+      ],
+      "scientific_counters_unchanged": true,
+      "amended_at": 1791566297.2339342
+    }
+  },
+  "wall_hours": 16.835483034186893,
+  "device_task_hours": 0.12145225198926544
+}

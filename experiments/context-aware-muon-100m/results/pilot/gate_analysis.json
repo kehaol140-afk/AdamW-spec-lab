@@ -1,0 +1,68 @@
+{
+ "muon_anchor": "B_muon_rms_lr1e-3",
+ "muon_scores": {
+  "B_muon_rms_lr3e-3": 6.5292539614595,
+  "B_muon_lr1e-2": 6.5646329558863075,
+  "B_muon_lr2e-2": 6.598916838733815,
+  "B_muon_lr5e-3": 6.522696352393019,
+  "B_muon_rms_lr1e-2": 6.568472790723322,
+  "B_muon_rms_lr1e-3": 6.4231062809189305
+ },
+ "pairs": {
+  "C_A_lam0p65_vs_B_muon_rms_lr1e-3": {
+   "mean_diff": 0.1370931789278984,
+   "ci95": [
+    0.11902058310806751,
+    0.15694178454577923
+   ],
+   "gate_ge_1e-3": false
+  },
+  "C_A_lam0p85_vs_B_muon_rms_lr1e-3": {
+   "mean_diff": 0.1321626789867878,
+   "ci95": [
+    0.11479442939162254,
+    0.15008983202278614
+   ],
+   "gate_ge_1e-3": false
+  },
+  "C_B_vs_B_muon_rms_lr1e-3": {
+   "mean_diff": 0.23313823156058788,
+   "ci95": [
+    0.21397419087588787,
+    0.2544734589755535
+   ],
+   "gate_ge_1e-3": false
+  },
+  "B_lowmu_0p8_vs_B_muon_rms_lr1e-3": {
+   "mean_diff": 0.162778589874506,
+   "ci95": [
+    0.14512675069272518,
+    0.1804275829344988
+   ]
+  },
+  "B_lowmu_0p9_vs_B_muon_rms_lr1e-3": {
+   "mean_diff": 0.13342295587062836,
+   "ci95": [
+    0.1178546454757452,
+    0.151450477540493
+   ]
+  },
+  "C_B_vs_C_A_lam0p65": {
+   "mean_diff": 0.09604505263268948,
+   "ci95": [
+    0.07650940865278244,
+    0.1153948400169611
+   ]
+  }
+ },
+ "same_wallclock_note": {
+  "min_total_wall_s": 886.9024621180724,
+  "method": "horizon-level approximation from run.json (per-step wall not recorded at eval points)"
+ },
+ "momentum_explained_check": {
+  "best_C_pair": null,
+  "best_lowmu_diff": 0.13342295587062836,
+  "explained": false,
+  "note": "frozen wording: low-mu must NOT reproduce same-magnitude gain; half-magnitude heuristic recorded, final call in decision doc"
+ }
+}

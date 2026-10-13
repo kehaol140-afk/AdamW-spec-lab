@@ -1,0 +1,21 @@
+measure: Traceback (most recent call last):
+  File "E:\大模型预训练\adamw_spectral_pilot\readiness_audit_v13\cli.py", line 188, in main
+    result = {"calibrate-local": calibrate_local,
+  File "E:\大模型预训练\adamw_spectral_pilot\readiness_audit_v13\engine.py", line 745, in measure
+    result = evaluate_four(model, optimizer, frozen, target, all_views[view],
+  File "E:\大模型预训练\adamw_spectral_pilot\readiness_audit_v13\engine.py", line 407, in evaluate_four
+    data = {state: evaluate_state(model, optimizer, frozen, target, state, rows, view,
+  File "E:\大模型预训练\adamw_spectral_pilot\readiness_audit_v13\engine.py", line 407, in <dictcomp>
+    data = {state: evaluate_state(model, optimizer, frozen, target, state, rows, view,
+  File "E:\大模型预训练\adamw_spectral_pilot\readiness_audit_v13\engine.py", line 377, in evaluate_state
+    loss, count = _loss_row(model, row, ledger, vram_limit)
+  File "E:\大模型预训练\adamw_spectral_pilot\readiness_audit_v13\engine.py", line 344, in _loss_row
+    ledger.forward(row["token_count"])
+  File "E:\大模型预训练\adamw_spectral_pilot\readiness_audit_v13\common.py", line 214, in forward
+    self.save()
+  File "E:\大模型预训练\adamw_spectral_pilot\readiness_audit_v13\common.py", line 207, in save
+    write_json(self.path, self.data)
+  File "E:\大模型预训练\adamw_spectral_pilot\readiness_audit_v13\common.py", line 33, in write_json
+    os.replace(temporary, path)
+PermissionError: [WinError 5] 拒绝访问。: 'E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\budget_ledger.json.tmp' -> 'E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\budget_ledger.json'
+

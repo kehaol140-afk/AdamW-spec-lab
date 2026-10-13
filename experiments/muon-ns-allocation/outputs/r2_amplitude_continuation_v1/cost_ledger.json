@@ -1,0 +1,32 @@
+{
+ "gpu_seconds": {
+  "r1_repair_recompute_2runs": 140,
+  "r2_first_run_partial": 305,
+  "r2_second_run_partial": 240,
+  "r2_third_run": 164,
+  "s1536_MH_rerun_after_corruption": 88,
+  "endpoint_analysis_3_attempts": 240,
+  "verify_misc": 120
+ },
+ "gpu_seconds_total_approx": 1297,
+ "budget_gpu_seconds": 7200,
+ "stage_a_seconds": 140,
+ "stage_a_budget": 1800,
+ "updates": {
+  "main_6x256": 1536,
+  "native_repeat": 256,
+  "total": 1792,
+  "valid_targets_main": 50135040,
+  "valid_targets_total": 58490880
+ },
+ "failed_attempts": [
+  "global OOM kill #1 (external 123GB process)",
+  "global OOM kill #2 -> s1536_MH file truncated",
+  "endpoint analyze: tied lm_head strict load",
+  "analyze retry on corrupt file (recovered by rerun)"
+ ],
+ "output_bytes_total": 2615146592,
+ "output_budget": 4294967296,
+ "external_incident": "minimind-exp f3_5_mode_coupling.py (pid 74279/32756, ~78-123GB RSS) repeatedly triggered global OOM; NOT touched per task rules",
+ "confirm_access": 0
+}

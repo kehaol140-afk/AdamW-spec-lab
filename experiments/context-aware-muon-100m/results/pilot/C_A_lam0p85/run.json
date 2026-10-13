@@ -1,0 +1,23 @@
+{
+ "arm_id": "C_A_lam0p85",
+ "arm": {
+  "kind": "group_A",
+  "lam": 0.85,
+  "lr": "@B_muon_best",
+  "norm_match": true
+ },
+ "peak_lr": 0.005,
+ "seed": 3471,
+ "init_fingerprint": "33f93a0f546149a0",
+ "final_fingerprint": "67db0ecc54a1d4b8",
+ "wall_s": 1320.4882236099802,
+ "throughput_tok_s": 25410.62570650433,
+ "vram_peak_gib": 2.9921875,
+ "tokens_consumed": 33685504,
+ "dev_nll_by_horizon": {
+  "1024": 6.174425912810494,
+  "2048": 6.5858779994477175,
+  "4096": 6.559775891711955
+ },
+ "steps": 4096
+}

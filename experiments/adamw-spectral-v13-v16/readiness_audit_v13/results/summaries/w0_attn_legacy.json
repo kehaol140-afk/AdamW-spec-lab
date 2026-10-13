@@ -1,0 +1,29 @@
+{
+  "tag": "w0",
+  "window_id": 0,
+  "target": "model.layers.1.self_attn.o_proj.weight",
+  "view": "legacy",
+  "identity": {
+    "F11_actual_max_abs": 1.1641532182693481e-10,
+    "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+    "rho_s_one_max_abs": 7.450580596923828e-09,
+    "formula_tolerance": 2.3740507125854495e-06
+  },
+  "nll": {
+    "F00": 6.160643441631306,
+    "F10": 6.160638548665541,
+    "F01": 6.157538531888715,
+    "F11": 6.157594832981926
+  },
+  "I_before": 4.8929657650020886e-06,
+  "I_after": -5.630109321064225e-05,
+  "interaction": 6.119405897564434e-05,
+  "documents": 80,
+  "target_tokens": 14788,
+  "raw_paths": {
+    "F00": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_legacy_F00.jsonl",
+    "F10": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_legacy_F10.jsonl",
+    "F01": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_legacy_F01.jsonl",
+    "F11": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_legacy_F11.jsonl"
+  }
+}

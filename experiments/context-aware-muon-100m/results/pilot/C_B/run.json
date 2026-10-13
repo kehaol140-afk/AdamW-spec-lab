@@ -1,0 +1,22 @@
+{
+ "arm_id": "C_B",
+ "arm": {
+  "kind": "group_B",
+  "lam": 0.85,
+  "lr": "@B_muon_best"
+ },
+ "peak_lr": 0.005,
+ "seed": 3471,
+ "init_fingerprint": "33f93a0f546149a0",
+ "final_fingerprint": "21bcc4425ca056fa",
+ "wall_s": 1411.9525425720494,
+ "throughput_tok_s": 23764.560768364336,
+ "vram_peak_gib": 2.9921875,
+ "tokens_consumed": 33685504,
+ "dev_nll_by_horizon": {
+  "1024": 6.189119552165984,
+  "2048": 6.6520630272084444,
+  "4096": 6.659515909732293
+ },
+ "steps": 4096
+}

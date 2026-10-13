@@ -1,0 +1,4 @@
+[1790742622] s512_AH_to_N_corrected COMPLETE loss=2.8632
+[1790742673] s512_AH_to_AH_corrected COMPLETE loss=2.7827
+[1790742727] s1536_AH_to_N_corrected COMPLETE loss=2.2246
+[1790742782] s1536_AH_to_AH_corrected COMPLETE loss=2.2223

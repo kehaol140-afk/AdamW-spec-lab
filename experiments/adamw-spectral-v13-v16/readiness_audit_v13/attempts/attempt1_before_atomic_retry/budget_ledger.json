@@ -1,0 +1,10 @@
+{
+  "run_manifest_sha256": "b2aa63866af7eb5cd628b0d97f59f9a7d933617a6e75e1c2f131208f17a7fb29",
+  "token_forward_equivalents": 67637,
+  "forward_attempts": 393,
+  "backward_attempts": 12,
+  "gpu_optimizer_step_attempts": 3,
+  "gpu_optimizer_steps_completed": 3,
+  "elapsed_seconds": 0.0,
+  "attempts": []
+}

@@ -1,0 +1,58 @@
+"""Zero-GPU-cost check: does optimizer state_dict byte representation differ between
+first load (empty optimizer) and second load (existing state)? No optimizer.step()."""
+import os, sys, json, hashlib
+os.environ["USE_TF"] = "0"
+sys.path.insert(0, r"E:\大模型预训练\adamw_spectral_pilot")
+
+import torch
+
+from replay_audit_v12.core import HERE, ROOT, read_json, sha_file
+from pilot_core import load_checkpoint, model_and_optimizer
+
+cfg = read_json(ROOT / "config" / "local_v1_lowmem.json")
+binding = read_json(ROOT / "bindings.local.json")
+child_cfg = read_json(HERE / "config.json")
+data = read_json(ROOT / "artifacts" / "data_manifest.json")
+checkpoint = ROOT / "artifacts" / "checkpoints" / "seed3407_lr0.003" / "step256.pt"
+
+payload = torch.load(checkpoint, map_location="cpu", weights_only=False)
+entry = payload["optimizer"]["state"][0]
+print("checkpoint state[0] fields:")
+for field, value in sorted(entry.items()):
+    print(f"  {field}: tensor(dtype={value.dtype}, device={value.device}, shape={tuple(value.shape)})" if torch.is_tensor(value) else f"  {field}: {value!r}")
+
+model, optimizer, aliases, _ = model_and_optimizer(cfg, binding, child_cfg["peak_lr"], "cpu")
+
+def state_digest():
+    state = optimizer.state_dict()
+    digest = hashlib.sha256()
+    digest.update(json.dumps(state["param_groups"], sort_keys=True).encode("utf-8"))
+    for key in sorted(state["state"]):
+        for field, value in sorted(state["state"][key].items()):
+            digest.update(f"{key}/{field}".encode("utf-8"))
+            digest.update(value.detach().cpu().contiguous().numpy().tobytes()
+                          if torch.is_tensor(value) else str(value).encode("utf-8"))
+    return digest.hexdigest(), state
+
+d1, s1 = state_digest()
+load_checkpoint(checkpoint, model, optimizer,
+                config_hash=sha_file(ROOT / "config" / "local_v1_lowmem.json"),
+                data_hash=data["data_hash"], aliases=aliases)
+d2, s2 = state_digest()
+load_checkpoint(checkpoint, model, optimizer,
+                config_hash=sha_file(ROOT / "config" / "local_v1_lowmem.json"),
+                data_hash=data["data_hash"], aliases=aliases)
+d3, s3 = state_digest()
+print(f"digest fresh-load      = {d1}")
+print(f"digest after load #1   = {d2}")
+print(f"digest after load #2   = {d3}")
+print("load#1 == load#2 representations:", d2 == d3)
+
+if d2 != d3:
+    for key in sorted(s2["state"]):
+        for field in sorted(s2["state"][key]):
+            v2, v3 = s2["state"][key][field], s3["state"][key][field]
+            same = torch.equal(v2, v3) if torch.is_tensor(v2) and torch.is_tensor(v3) else v2 == v3
+            if not same or (torch.is_tensor(v2) and (v2.dtype != v3.dtype or v2.device != v3.device)):
+                print(f"DIFF at state[{key}][{field}]: load1={v2.dtype}/{v2.device} load2={v3.dtype}/{v3.device} values_equal={same}")
+                break

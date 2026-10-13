@@ -1,0 +1,136 @@
+{
+ "roles": {
+  "512": {
+   "N": {
+    "id": "a1.0|b1.0|NS5",
+    "a": 1.0,
+    "b": 1.0,
+    "structure": "NS5"
+   },
+   "G": {
+    "id": "a0.5|b1.0|NS5",
+    "a": 0.5,
+    "b": 1.0,
+    "structure": "NS5",
+    "cal_V_mean": 3.16447577383004
+   },
+   "A": {
+    "id": "a0.5|b1.25|NS5",
+    "a": 0.5,
+    "b": 1.25,
+    "structure": "NS5",
+    "cal_V_mean": 3.164467336617264
+   },
+   "S_at_A": {
+    "id": "a0.5|b1.25|NS3_MATCHED",
+    "a": 0.5,
+    "b": 1.25,
+    "structure": "NS3_MATCHED",
+    "cal_V_mean": 3.164472288243911
+   },
+   "S": {
+    "id": "a0.5|b1.25|NS3_MATCHED",
+    "a": 0.5,
+    "b": 1.25,
+    "structure": "NS3_MATCHED",
+    "cal_V_mean": 3.164472288243911
+   },
+   "A_at_S": {
+    "id": "a0.5|b1.25|NS5",
+    "a": 0.5,
+    "b": 1.25,
+    "structure": "NS5",
+    "cal_V_mean": 3.164467336617264
+   },
+   "G_at_A": {
+    "id": "a0.5|b1.0|NS5",
+    "a": 0.5,
+    "b": 1.0,
+    "structure": "NS5",
+    "cal_V_mean": 3.16447577383004
+   },
+   "Z": {
+    "id": "Z_NO_MUON_DATA",
+    "kind": "Z"
+   },
+   "P": {
+    "id": "P_PRE_STATE",
+    "kind": "P"
+   }
+  },
+  "1536": {
+   "N": {
+    "id": "a1.0|b1.0|NS5",
+    "a": 1.0,
+    "b": 1.0,
+    "structure": "NS5"
+   },
+   "G": {
+    "id": "a0.5|b1.0|NS5",
+    "a": 0.5,
+    "b": 1.0,
+    "structure": "NS5",
+    "cal_V_mean": 2.6218793831619562
+   },
+   "A": {
+    "id": "a0.5|b1.0|NS5",
+    "a": 0.5,
+    "b": 1.0,
+    "structure": "NS5",
+    "cal_V_mean": 2.6218793831619562
+   },
+   "S_at_A": {
+    "id": "a0.5|b1.0|NS3_MATCHED",
+    "a": 0.5,
+    "b": 1.0,
+    "structure": "NS3_MATCHED",
+    "cal_V_mean": 2.621881372788373
+   },
+   "S": {
+    "id": "a0.5|b0.75|NS3_MATCHED",
+    "a": 0.5,
+    "b": 0.75,
+    "structure": "NS3_MATCHED",
+    "cal_V_mean": 2.621880639768114
+   },
+   "A_at_S": {
+    "id": "a0.5|b0.75|NS5",
+    "a": 0.5,
+    "b": 0.75,
+    "structure": "NS5",
+    "cal_V_mean": 2.6218794130811505
+   },
+   "G_at_A": {
+    "id": "a0.5|b1.0|NS5",
+    "a": 0.5,
+    "b": 1.0,
+    "structure": "NS5",
+    "cal_V_mean": 2.6218793831619562
+   },
+   "Z": {
+    "id": "Z_NO_MUON_DATA",
+    "kind": "Z"
+   },
+   "P": {
+    "id": "P_PRE_STATE",
+    "kind": "P"
+   }
+  }
+ },
+ "A_final": [
+  0.25,
+  0.5,
+  0.75,
+  1.0
+ ],
+ "B_final": [
+  0.5,
+  0.75,
+  1.0,
+  1.25,
+  1.5
+ ],
+ "note": "CORRECTED lock: replayed original near-best/tie rules on initial(161, retained, spot-verified) + recomputed extension(176, repaired aux baseline); produced AFTER viewing old check results (erratum, not a new pre-registration)",
+ "role_changes_vs_historical": [],
+ "spot_check_diffs": []
+}

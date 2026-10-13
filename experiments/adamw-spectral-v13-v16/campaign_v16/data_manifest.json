@@ -1,0 +1,19 @@
+{
+  "n_train_tokens": 8500000,
+  "scanned_bytes": 43853390,
+  "train_cache_sha256": "c91382dc2a72cdbcf79493e2f2a74ed952b74c067c6af093628a928813fcab2b",
+  "cache_tokens": 8500000,
+  "eval_sets_sha256": {
+    "development": "c2708a07ae8699e05a8a30c90982e194a11ca843ef343265e5e0bdfde0da139f",
+    "screen": "167b148b1e405c66c117f46ca8623d0dac7de8720dd092ecf2d862528317e941",
+    "final_holdout": "957dd446fb746f95278c7d4c760042591af2c1b8b4fb98135192ebdef3251b6e"
+  },
+  "counts": {
+    "development": 256,
+    "screen": 256,
+    "final_holdout": 1024
+  },
+  "dev_composition": "128 V12 dev + 128 fresh probe_select (scan order)",
+  "holdout_rule": "final_holdout_reserved role, scan order; sealed before any tuning",
+  "parent_prefix_verified": true
+}

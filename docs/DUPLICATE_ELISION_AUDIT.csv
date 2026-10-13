@@ -1,0 +1,14 @@
+zip,members,members_identical_in_staging,members_unique,action,unique_examples
+adamw_spectral_pilot/campaign_v16/v16_light.zip,291,291,0,ELIDED_all_members_present_identical,
+adamw_direction_validation/layer1_evidence.zip,46,45,1,KEPT_unique_members,SHA256SUMS.txt
+adamw_direction_scale30m/30M_DIRECTION_EVIDENCE.zip,70,70,0,ELIDED_all_members_present_identical,
+muon_spectral_allocation/R2_REVIEW_BUNDLE.zip,22,22,0,ELIDED_all_members_present_identical,
+muon_spectral_allocation/R2F_REVIEW_BUNDLE.zip,26,25,1,KEPT_unique_members,scripts/run_r2f.py
+muon_spectral_allocation/R0_R1_REVIEW_BUNDLE.zip,24,23,1,KEPT_unique_members,src/r1_probe.py
+muon_spectral_allocation/P0_P1_REVIEW_BUNDLE.zip,35,35,0,ELIDED_all_members_present_identical,
+muon_spectral_allocation/audit_recheck/P0_P1_REAUDIT_BUNDLE.zip,21,20,1,KEPT_unique_members,P0_P1_REVIEW_BUNDLE_original.zip
+muon_spectral_allocation/references_r2f/references/R2_REVIEW_BUNDLE.zip,22,22,0,ELIDED_all_members_present_identical,
+spectral_prior_muon_pilot/spectral_prior_muon_pilot_evidence_p0_20261010.zip,34,31,3,KEPT_unique_members,configs/pilot_frozen_v1.json;src/specmuon/spec_muon.py;audits/EXECUTION_LEDGER.md
+spectral_prior_muon_pilot/P1_EVIDENCE_BUNDLE.zip,81,81,0,ELIDED_all_members_present_identical,
+context_aware_muon/PILOT_100M_EVIDENCE_BUNDLE.zip,63,16,47,KEPT_unique_members,pilot_bundle/README_RECOMPUTE.md;pilot_bundle/SHA256SUMS.txt;pilot_bundle/metrics/B_adamw_lr1e-3.jsonl;pilot_bundle/metrics/B_adamw_lr3e-3.jsonl;pilot_bundle/metrics/B_adamw_lr3e-4.jsonl
+context_aware_muon/100M_PREFLIGHT_EVIDENCE_20261012.zip,19,17,2,KEPT_unique_members,pf_evidence/CODE_FREEZE_V1.json;pf_evidence/SHA256SUMS.txt

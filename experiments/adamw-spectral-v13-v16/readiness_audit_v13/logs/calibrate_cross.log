@@ -1,0 +1,19 @@
+{
+  "differences": {
+    "legacy": {
+      "I_before": 0.0,
+      "I_after": 2.7920930456559745e-08,
+      "interaction": 2.7920930456559745e-08
+    },
+    "natural_prefix": {
+      "I_before": 0.0,
+      "I_after": 8.376279314603607e-08,
+      "interaction": 8.376279314603607e-08
+    }
+  },
+  "observed_max": 8.376279314603607e-08,
+  "engineering_target": 2e-06,
+  "pass": true,
+  "scope": "FFN/window0/first8_old_probe_select_paired_labels",
+  "strict_mathematical_error_bound": false
+}

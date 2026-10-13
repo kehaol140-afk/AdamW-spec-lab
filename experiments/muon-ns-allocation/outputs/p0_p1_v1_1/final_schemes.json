@@ -1,0 +1,92 @@
+{
+ "512": [
+  {
+   "kind": "native"
+  },
+  {
+   "kind": "native",
+   "label": "no_op"
+  },
+  {
+   "kind": "joint",
+   "K_vector": {
+    "down": 3,
+    "up": 7
+   },
+   "probe": "raw",
+   "label": "geometry|down3|up7"
+  },
+  {
+   "kind": "joint",
+   "K_vector": {
+    "q": 3,
+    "o": 7
+   },
+   "probe": "raw",
+   "label": "fixed_random|q3|o7"
+  }
+ ],
+ "1536": [
+  {
+   "kind": "native"
+  },
+  {
+   "kind": "joint",
+   "K_vector": {
+    "q": 3,
+    "o": 7
+   },
+   "probe": "raw",
+   "label": "target_primary"
+  },
+  {
+   "kind": "joint",
+   "K_vector": {
+    "q": 3,
+    "o": 7
+   },
+   "probe": "gain_only_live",
+   "label": "target_gain_only_live"
+  },
+  {
+   "kind": "joint",
+   "K_vector": {
+    "q": 3,
+    "o": 7
+   },
+   "probe": "direction_only",
+   "label": "target_direction_only"
+  },
+  {
+   "kind": "joint",
+   "K_vector": {
+    "q": 3,
+    "o": 7
+   },
+   "probe": "gamma_const",
+   "gamma_const": {
+    "q": 0.7829809999165405,
+    "o": 1.0072669534695071
+   },
+   "label": "target_gamma_const"
+  },
+  {
+   "kind": "joint",
+   "K_vector": {
+    "down": 3,
+    "gate": 7
+   },
+   "probe": "raw",
+   "label": "geometry|down3|gate7"
+  },
+  {
+   "kind": "joint",
+   "K_vector": {
+    "up": 3,
+    "gate": 7
+   },
+   "probe": "raw",
+   "label": "fixed_random|up3|gate7"
+  }
+ ]
+}

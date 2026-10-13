@@ -1,0 +1,14 @@
+{
+  "tag": "w0",
+  "target": "model.layers.1.mlp.down_proj.weight",
+  "view": "new_probe_prefix",
+  "baseline": "F01",
+  "token_count": 23135,
+  "documents": 128,
+  "head_frobenius_energy_fraction": 0.1512930697780888,
+  "head_energy_per_token": 20652.522888754476,
+  "rest_energy_per_token": 61609.180653564385,
+  "cross_energy_per_token": -1.2459468070529555e-11,
+  "joint_energy_per_token": 82261.70354231882,
+  "raw_sha256": "9811e3469b13d4bc57aeba34507cfc619a61c494392aee028a2b5ceae6dd2d52"
+}

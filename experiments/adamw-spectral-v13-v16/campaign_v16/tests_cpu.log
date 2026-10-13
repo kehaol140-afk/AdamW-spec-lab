@@ -1,0 +1,18 @@
+﻿python.exe : test_apply_step_identity_and_q_override (campaign_v16.test_v16.V16CpuTests)
+At line:1 char:273
++ ... TEXITCODE"; & 'D:\pytorch\anaconda\envs\py39\python.exe' -m unittest  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_apply_step...16.V16CpuTests):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+S,a=b=1 with no q-override skips every correction (bit-native); q-override rescales ... ok
+test_eta_schedules (campaign_v16.test_v16.V16CpuTests) ... ok
+test_eval_origin_guard (campaign_v16.test_v16.V16CpuTests)
+A model that never loaded a state must not be labeled with checkpoint identity. ... ok
+test_ledger_single_writer (campaign_v16.test_v16.V16CpuTests) ... ok
+test_n_a_and_q_override_semantics (campaign_v16.test_v16.V16CpuTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.407s
+
+OK

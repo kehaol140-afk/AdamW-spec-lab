@@ -1,0 +1,19 @@
+experiment,capability,status,verification_path,notes
+spectral-v13-v16,R0 CPU 结果复算,PASS,recompute CK V16C_3seed/V16_A2 + interpretation docs,"8/8, point-exact"
+spectral-v13-v16,R1 parent ckpt 重放,BLOCKED_ASSET,needs train_tokens.u32(c91382dc)+parent step256(ed09a2c8)+GPU,cache on server only
+spectral-v13-v16,R2 从头训练,BLOCKED_ASSET,needs token cache (mint recipe in MIGRATION_INFO) + GPU,C-final holdout identity not regenerable (archived)
+direction-validation,R0,PASS,CK DV_LAYER1,point-exact
+direction-validation,R1,BLOCKED_ASSET,V16 cache read-only dep,server
+direction-validation,R2,BLOCKED_ASSET,same + GPU,layer-2 never run
+direction-30m,R0,PASS,CK S30M_T1,point-exact
+direction-30m,R1,BLOCKED_ASSET,s30m cache(6fe0bb53)+V16 prefix,server
+direction-30m,R2,BLOCKED_ASSET,corpus(4403b671)→mint→GPU,corpus upstream fetch
+muon-ns-allocation,R0,PASS,CK MSA_attribution + csv direct,point-exact
+muon-ns-allocation,R1,BLOCKED_ASSET,parent states 11.65G (AH_ASSET_INDEX),"server, NOT_YET_BACKED_UP"
+muon-ns-allocation,R2,UNVERIFIED,from-scratch m1 recipe replay needs GPU+bank; never re-run,-
+specmuon-pilot,R0,PASS,CK SPECMUON_P1,exact
+specmuon-pilot,R1,BLOCKED_ASSET,MSA parent states + V_Q pool,server
+specmuon-pilot,R2,BLOCKED_ASSET,same + GPU,P1 branch ckpts pruned by protocol
+context-aware-muon-100m,R0,PASS,CK CAM_100M (H4096 0-diff vs CSV),exact
+context-aware-muon-100m,R1,BLOCKED_ASSET,pilot cache f92715b4,"server, rebuildable"
+context-aware-muon-100m,R2,BLOCKED_ASSET,corpus→mint 33.7M→GPU 4.55h,-

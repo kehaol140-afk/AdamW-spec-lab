@@ -1,0 +1,55 @@
+{
+  "status": "VERIFIED",
+  "parent_protocol_id": "ADAMW_A_SPECTRAL_LOCAL_V1_1_LOWMEM_20261002",
+  "parent_fingerprints": {
+    "source_hash": "8cce6876b9eda43aa89ff559a4e5dd7a685f2848a7807680435b1acf3b9c0189",
+    "config_hash": "4c8a02e11be57f4faf0f51f3b4ffce372f7c10af6a1293e352a664c6c7cdb1fa",
+    "binding_hash": "d5ea8b7db0589c0a91fd965dabcbe6ce463b5eda9c6d3566769e66f543f53b53",
+    "data_hash": "fc70632eb2e76b975c0abaa86412cd3f3c35aa472d80e669733f7b65fa3ed23b"
+  },
+  "gate_verdict": "BASELINE_TUNING_UNRESOLVED",
+  "gate_next_action": "STOP",
+  "candidate_hash": "89b48737c3a875ca81f6998bb6f4462b61e286bdfb78a68a51ee4c34c3f0f610",
+  "checkpoint_rows": [
+    {
+      "peak_lr": 0.0003,
+      "step": 512,
+      "path": "E:\\大模型预训练\\adamw_spectral_pilot\\artifacts\\checkpoints\\seed3407_lr0.0003\\step512.pt",
+      "sha256": "7100c2d25198f9196d3a585b61becc1d73bb2614da9e6fd418a5a89d3a178546"
+    },
+    {
+      "peak_lr": 0.001,
+      "step": 512,
+      "path": "E:\\大模型预训练\\adamw_spectral_pilot\\artifacts\\checkpoints\\seed3407_lr0.001\\step512.pt",
+      "sha256": "55ed7bf1144e30d6140ec8dbb4ffd979dfe43009b19226a8d3c6f5c1fdb746a4"
+    },
+    {
+      "peak_lr": 0.003,
+      "step": 256,
+      "path": "E:\\大模型预训练\\adamw_spectral_pilot\\artifacts\\checkpoints\\seed3407_lr0.003\\step256.pt",
+      "sha256": "ed09a2c80f40aae1a8829a718913a4a40257cdc24fc0e7a2d29bc53a74383000"
+    },
+    {
+      "peak_lr": 0.003,
+      "step": 512,
+      "path": "E:\\大模型预训练\\adamw_spectral_pilot\\artifacts\\checkpoints\\seed3407_lr0.003\\step512.pt",
+      "sha256": "8ef66f4d731f19baa8b7d65d796065a3f14c6c6e32c1ac63e5aab17cce13d309"
+    }
+  ],
+  "parent_result_hashes": {
+    "baseline_runs.csv": "a33174c1d268acf22d181a9a1a8da14a69057be3cb971557662483d8ec011c6a",
+    "probe_grid.csv": "4c8bdd1e2ca1451f810363800a6680fccf6e9638b6b959bac63442dcb4e28467",
+    "probe_confirm.csv": "990537687ec3efca3ac569a478b3821aa4c9a587e374ea952c0cc441c0c69707",
+    "direction_signals.csv": "4b8211f1ae3cab6d9bdc8b78d2730073b2308725b30b29df0c1052754415282b",
+    "output_effects.csv": "900a4b97109a208562a7c4d2ec1f172202acc9cc2cffed3e06c74a53755d3b22",
+    "spectral_metrics.csv": "6240ab50cca9b47678ba9413d082e5c1c2aba0273c001c1948b6eea5c1bf0b6b",
+    "local_gate.json": "88992ee1d12fdba28903bde2913fdf781d7eef60f701fd814b3696e8350662f3",
+    "candidate_frozen.json": "f086b9ae4e287e092b40d416c4e75e87685514ffc0f919e4b3e0ec40ad632079"
+  },
+  "parent_review_sha256": "2132d54cadd81ac8773d76e2ce7ca933a74a15a5aa725a0fae47b8db93bd0836",
+  "source_window_bytes": 5429819,
+  "source_window_sha256": "2cb92156c151a54826974e57bbffaf0c508433f2e0fd35580d9394c8c5bdf2f7",
+  "child_protocol_id": "ADAMW_A_SPECTRAL_REPLAY_AUDIT_V1_2_20261002",
+  "child_source_hash": "4d8a9db353ed7671db0d6eade8952b54caec5c4d69810f1008956241e8037a97",
+  "child_config_hash": "d33a42d137e8215735fd099456cf353b079c8e17bc12aded273fbe5b3cf67c55"
+}

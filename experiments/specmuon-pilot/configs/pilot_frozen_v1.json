@@ -1,0 +1,58 @@
+{
+  "version": "pilot_frozen_v1",
+  "frozen_at": "2026-10-10",
+  "status": "FROZEN_BEFORE_ANY_P1_RUN",
+  "model": {
+    "source": "minimind_base MiniMindForCausalLM (read-only, sha 47f124f5...)",
+    "hidden_size": 512, "num_hidden_layers": 8, "vocab_size": 6400, "seq_len": 256,
+    "params": 30025216, "dtype": "fp32 master, bf16 autocast compute"
+  },
+  "parent": {
+    "project": "muon_spectral_allocation/outputs/p0_p1_v1_1/parent (read-only)",
+    "seed": 3101, "total_steps": 2048,
+    "recipe": "m1 template: Muon lr peak 0.01, wd 0.02, momentum 0.95, nesterov, NS5 (3.4445,-4.775,2.0315), eps 1e-7, adjust_lr original; aux AdamW lr 0.01 betas (0.9,0.95) eps 1e-8 wd 0.02; warmup 32 + cosine to 0.1x peak; grad clip 1.0; data p=0.5 manifest seed 3101",
+    "restore_points": [
+      {"step": 512, "file": "parent_state_step512.pt", "branch_steps": [513, 768]},
+      {"step": 1536, "file": "parent_state_step1536.pt", "branch_steps": [1537, 1792]}
+    ]
+  },
+  "branches": {
+    "steps_per_branch": 256,
+    "batch_stream": "same MixtureStream/build_step_manifest continuation as parent (p=0.5, manifest seed 3101); identical across arms",
+    "rng": "restored from parent checkpoint, advanced identically across arms",
+    "lr_schedule": "parent schedule evaluated at absolute step index; multipliers apply to the scheduled value",
+    "grad_clip": "1.0 global (unchanged)",
+    "eval": "m0 dev pools A_dev/B_dev (256-token windows); primary = v_q = 0.5*(NLL_A+NLL_B) at branch end"
+  },
+  "arms": [
+    {"name": "native_lr1.0", "optimizer": "SpecMuon(native_ns5)", "lr_mult": 1.0, "role": "native baseline + replay gate"},
+    {"name": "native_lr0.5", "optimizer": "SpecMuon(native_ns5)", "lr_mult": 0.5, "role": "LR-grid control"},
+    {"name": "native_lr2.0", "optimizer": "SpecMuon(native_ns5)", "lr_mult": 2.0, "role": "LR-grid control"},
+    {"name": "exact_polar", "optimizer": "SpecMuon(exact_polar)", "lr_mult": 1.0, "role": "equal-norm polar control"},
+    {"name": "head_lam0.25", "optimizer": "SpecMuon(head)", "lam": 0.25, "lr_mult": 1.0, "role": "candidate C"},
+    {"name": "bulk_lam0.25", "optimizer": "SpecMuon(bulk)", "lam": 0.25, "lr_mult": 1.0, "role": "candidate D"},
+    {"name": "muon_p0.5", "optimizer": "SpecMuon(muon_p)", "power": 0.5, "lr_mult": 1.0, "role": "non-authoritative p-power variant (SOURCE_BLOCKED label)"}
+  ],
+  "invariants": {
+    "update_norm": "every arm norm-matched per matrix to ||NS5(u)||_F (operator contract)",
+    "wd_momentum_routing": "unchanged (spec_muon tests t01-t07)",
+    "aux_adamw": "identical across arms, untouched"
+  },
+  "gates": {
+    "order": ["runner_smoke", "native_replay", "pilot"],
+    "runner_smoke": "2-step branch on CPU or idle GPU, asserts shapes/norm logs/eval path",
+    "native_replay": "restore parent step-512, execute step 513 with native arm, compare train loss to parent's recorded step-513 loss; must match to < 1e-12; else STOP and diagnose",
+    "gpu_gate": "V16 GPU tasks terminated + GPU0 shared-access approved + replay passed + this config frozen + estimate <= 1 GPU-hour"
+  },
+  "screening_thresholds": {
+    "both_restore_points": true,
+    "delta_nll_beats_native": 0.002,
+    "delta_nll_beats_lr_grid": 0.0,
+    "delta_nll_beats_exact_polar": 0.001,
+    "resolution_reference": "muon_spectral_allocation R2 256-step effects 3e-3..7e-2 nats; floor 1e-3"
+  },
+  "logging": {
+    "per_step": ["loss", "grad_norm", "native_update_norm_sum", "optimizer_extra_seconds"],
+    "per_branch": ["final_v_q_H256", "final_nll_A", "final_nll_B", "wall_seconds", "svd_overhead_seconds", "param_fingerprint"]
+  }
+}

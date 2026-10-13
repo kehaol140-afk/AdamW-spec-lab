@@ -1,0 +1,57 @@
+[
+  {
+    "path": "OPENCODE_R2F_TASK_CN.md",
+    "bytes": 5316,
+    "sha256": "ea9968fa07b98a07207197355a938f89c24777778d29a2db9ff17bbf12541331"
+  },
+  {
+    "path": "R2F_EXECUTION_PROTOCOL_v1_CN.md",
+    "bytes": 19410,
+    "sha256": "fc9297dc88eb5f30255a3d41f7b542dcdc3428e66c742d8fbfedb944dd581496"
+  },
+  {
+    "path": "README_CN.md",
+    "bytes": 674,
+    "sha256": "655a007feb638040a3c03b85d2830f2bc3e3b38aba54833af7e003c6eedb0534"
+  },
+  {
+    "path": "literature_sources.json",
+    "bytes": 1444,
+    "sha256": "f24d70b653e77fd6f310413f719c68791f36501ebda75c69ac4140852c54dc84"
+  },
+  {
+    "path": "plan_validation.json",
+    "bytes": 441,
+    "sha256": "daf55d784d8590b18ec298589f305c2870f1485892237ba39ef50fc52a28c058"
+  },
+  {
+    "path": "r2f_contract.json",
+    "bytes": 5907,
+    "sha256": "708b8aa15f22ff251e3cf557ed841114cacd9c0c89e509d25621047ae1a26af2"
+  },
+  {
+    "path": "references/R2_EXECUTION_PROTOCOL_CN.md",
+    "bytes": 16152,
+    "sha256": "9d3614f3d30186c25a466d4aa2992fb7b8fa020b5bd09e3cc90bd1ced0775377"
+  },
+  {
+    "path": "references/R2_INDEPENDENT_AUDIT_AND_NEXT_STEP_CN.md",
+    "bytes": 12028,
+    "sha256": "57838f3bdff73724d4a9fb0c0094a488eabd49e3907f8cf65c65f41c610daa53"
+  },
+  {
+    "path": "references/R2_REVIEW_BUNDLE.zip",
+    "bytes": 51051,
+    "sha256": "a830e46ab895ad830cc82a696c8e8469041a6f064ee90eebdd2eab8bf07e16cb"
+  },
+  {
+    "path": "references/effects_recomputed.csv",
+    "bytes": 1374,
+    "sha256": "b52577996f6a61fd4fed21335a7acbc5ee9eafc072fb329e449b70c46b4f78ac"
+  },
+  {
+    "path": "references/endpoint_table.csv",
+    "bytes": 665,
+    "sha256": "00aea126919379d075cfe44f8b4a9c0de5c44e5043d0d1a621348d085d607c51"
+  }
+]

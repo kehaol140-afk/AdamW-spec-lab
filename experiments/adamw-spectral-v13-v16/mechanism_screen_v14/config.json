@@ -1,0 +1,18 @@
+{
+  "protocol_id": "ADAMW_A_SPECTRAL_MECHANISM_SCREEN_V14_20261002",
+  "target": "model.layers.1.mlp.down_proj.weight",
+  "gammas": [0.5, 1.0],
+  "scales_scalar": [0.0, 0.5, 1.0, 2.0],
+  "scales_other": [0.5, 1.0, 2.0],
+  "rhos": [0.0, 0.5],
+  "development_view": "new_probe_prefix",
+  "confirmation_role": "probe_confirm",
+  "confirmation_documents": 128,
+  "bootstrap_seed": 340714,
+  "bootstrap_repetitions": 2000,
+  "screen_point_threshold_nats_per_token": 0.00001,
+  "numeric_resolution_nats_per_token": 0.000002,
+  "new_formal_pretraining_steps": 0,
+  "new_gpu_optimizer_steps": 0,
+  "max_token_forward_equivalents": 5000000
+}

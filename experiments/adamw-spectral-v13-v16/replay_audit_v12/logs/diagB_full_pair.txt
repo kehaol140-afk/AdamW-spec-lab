@@ -1,0 +1,43 @@
+"""Exact replication of the failed V12 repeat-build check, with digest localization.
+Uses the real build_update and the real Ledger so all budget accounting stays honest."""
+import os, sys, json
+os.environ["USE_TF"] = "0"
+sys.path.insert(0, r"E:\大模型预训练\adamw_spectral_pilot")
+
+import numpy as np
+import torch
+
+from replay_audit_v12.core import HERE, ROOT, read_json, sha_file, verify_parent
+from replay_audit_v12.replay import build_update, Ledger
+
+cfg = read_json(ROOT / "config" / "local_v1_lowmem.json")
+binding = read_json(ROOT / "bindings.local.json")
+child_cfg = read_json(HERE / "config.json")
+data = read_json(ROOT / "artifacts" / "data_manifest.json")
+manifest = read_json(HERE / "evaluation_manifest.json")
+window = manifest["train_build_windows"][0]
+checkpoint = ROOT / "artifacts" / "checkpoints" / "seed3407_lr0.003" / "step256.pt"
+
+torch.set_num_threads(cfg["runtime"]["cpu_threads"])
+torch.backends.cuda.matmul.allow_tf32 = False
+torch.backends.cudnn.allow_tf32 = False
+
+ledger = Ledger(sha_file(HERE / "evaluation_manifest.json"), verify_parent(deep_checkpoints=False)["child_source_hash"])
+free, _ = torch.cuda.mem_get_info(0)
+vram_limit = min(cfg["runtime"]["vram_soft_limit_gib"] * 2 ** 30,
+                 free - cfg["runtime"]["vram_free_reserve_gib"] * 2 ** 30)
+from pilot_core import model_and_optimizer
+model, optimizer, aliases, _ = model_and_optimizer(cfg, binding, child_cfg["peak_lr"], "cuda:0")
+mem = np.memmap(ROOT / "artifacts" / "train_tokens.u32", dtype=np.uint32, mode="r")
+
+first = build_update(model, optimizer, checkpoint, cfg, binding, data["data_hash"],
+                     aliases, mem, window, ledger, vram_limit)
+repeat = build_update(model, optimizer, checkpoint, cfg, binding, data["data_hash"],
+                      aliases, mem, window, ledger, vram_limit)
+print("gradient_sha256 first :", first["gradient_sha256"])
+print("gradient_sha256 repeat:", repeat["gradient_sha256"])
+print("optimizer_sha256 first :", first["optimizer_state_sha256"])
+print("optimizer_sha256 repeat:", repeat["optimizer_state_sha256"])
+repeat_error = max(float((first["updated"][n] - repeat["updated"][n]).abs().max()) for n in first["updated"])
+print("repeat_error:", repeat_error)
+print("parity first/repeat:", first["parity_max_abs"], repeat["parity_max_abs"])

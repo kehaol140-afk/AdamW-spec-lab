@@ -1,0 +1,54 @@
+30a31,32
+> CORR = ROOT / "outputs" / "r2f_corrected_v1"
+> CORR.mkdir(parents=True, exist_ok=True)
+32a35,52
+> 
+> 
+> def immutable_base_wds():
+>     """FIX (CONFIRMED_WRONG_DECAY): base WD binds to the OPTIMIZER IDENTITY from the
+>     immutable base_group_manifest (verified against the ORIGINAL parent checkpoints:
+>     muon wd = aux wd = 0.02). Source checkpoints restore STATE ONLY (model/buffers/
+>     moments/m/v/step/RNG/cursor) — their saved effective LR/WD are historical records
+>     of that branch's own recipe and must NEVER seed a new branch's base."""
+>     manifest = json.loads((OUT / "base_group_manifest.json").read_text())
+>     base = {g["group_id"]: g["base_wd"] for g in manifest["groups"]}
+>     for step in (512, 1536):
+>         b = torch.load(PARENT / f"parent_state_step{step}.pt", map_location="cpu", weights_only=False)
+>         for gi, key in ((0, "muon"), (1, "aux_adamw")):
+>             expected = base[key]
+>             for grp in b["optimizer_states"][gi]["param_groups"]:
+>                 assert abs(grp["weight_decay"] - expected) < 1e-15, \
+>                     f"base manifest disagrees with parent artifact p{step}:{key}"
+>     return {"muon": base["muon"], "aux": base["aux_adamw"]}
+59,61c79,81
+<     base_wds = (payload["optimizer_states"][0]["param_groups"][0]["weight_decay"],
+<                 payload["optimizer_states"][1]["param_groups"][0]["weight_decay"])
+<     return model, [muon_opt, aux_opt], base_wds, payload
+---
+>     # FIX: base WD NEVER comes from the source payload (AH sources save 0.04 as their
+>     # own historical effective value). Callers use immutable_base_wds().
+>     return model, [muon_opt, aux_opt], payload
+70c90,92
+<     model, opts, base_wds, payload = load_full(src_path)
+---
+>     model, opts, payload = load_full(src_path)
+>     _bw = immutable_base_wds()
+>     base_wds = (_bw["muon"], _bw["aux"])
+158c180,182
+<         model, opts, base_wds, _ = load_full(src)
+---
+>         model, opts, _pl = load_full(src)
+>         _bw = immutable_base_wds()
+>         base_wds = (_bw["muon"], _bw["aux"])
+184c208,210
+<         model, opts, base_wds2, _ = load_full(src)
+---
+>         model, opts, _pl2 = load_full(src)
+>         _bw2 = immutable_base_wds()
+>         base_wds2 = (_bw2["muon"], _bw2["aux"])
+211c237,239
+<             m2, o2, bw2, _ = load_full(src)
+---
+>             m2, o2, _pl3 = load_full(src)
+>             _bw3 = immutable_base_wds()
+>             bw2 = (_bw3["muon"], _bw3["aux"])

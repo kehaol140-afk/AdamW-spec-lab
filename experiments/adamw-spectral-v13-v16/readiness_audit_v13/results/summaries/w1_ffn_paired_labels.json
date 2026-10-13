@@ -1,0 +1,52 @@
+{
+  "tag": "w1",
+  "target": "model.layers.1.mlp.down_proj.weight",
+  "distinct_documents": 80,
+  "legacy": {
+    "nll": {
+      "F00": 6.160643441631306,
+      "F10": 6.160574496421164,
+      "F01": 6.159118943321469,
+      "F11": 6.159155414592649
+    },
+    "I_before": 6.894521014189081e-05,
+    "I_after": -3.647127118000526e-05,
+    "interaction": 0.00010541648132189607,
+    "documents": 80,
+    "target_tokens": 14788
+  },
+  "natural_prefix": {
+    "nll": {
+      "F00": 6.15710737307329,
+      "F10": 6.157038279278781,
+      "F01": 6.1555904360568166,
+      "F11": 6.155626899073309
+    },
+    "I_before": 6.909379450981135e-05,
+    "I_after": -3.646301649240513e-05,
+    "interaction": 0.00010555681100221648,
+    "documents": 80,
+    "target_tokens": 14788
+  },
+  "paired_natural_minus_legacy": {
+    "I_before": 1.4858436792053453e-07,
+    "I_after": 8.254687600128818e-09,
+    "interaction": 1.4032968032040571e-07
+  },
+  "paired_document_bootstrap_95": {
+    "I_before": [
+      -4.990546480954094e-07,
+      7.892528665065512e-07
+    ],
+    "I_after": [
+      -6.145087375619696e-07,
+      6.165678825942322e-07
+    ],
+    "interaction": [
+      5.847970445671535e-08,
+      2.2460778075217287e-07
+    ]
+  },
+  "bootstrap_repetitions": 2000,
+  "interpretation": "exploratory; old probe_confirm already used"
+}

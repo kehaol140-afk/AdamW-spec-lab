@@ -1,0 +1,16 @@
+{
+  "manifest_sha256": "236912dd823b93af6d1cd8e1345e00530e01df06929289992d43165f85d93d84",
+  "wall_started_at": 1790951509.5562284,
+  "optimizer_step_attempts": 0,
+  "optimizer_step_completions": 0,
+  "token_forward_equivalents": 0,
+  "forward_calls": 0,
+  "backward_attempts": 0,
+  "train_effective_tokens": 0,
+  "train_seconds": 0.0,
+  "direction_seconds": 0.0,
+  "eval_seconds": 0.0,
+  "device_task_seconds": 0.0,
+  "pause_seconds": 5400.0,
+  "anchor_svds": 0
+}

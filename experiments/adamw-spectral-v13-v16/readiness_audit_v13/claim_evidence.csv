@@ -1,0 +1,10 @@
+claim_id,claim,source_path_or_line,evidence_class,finding
+old_gate,Parent gate remains STOP/NO_LOCAL_SIGNAL,results/local_gate.json; replay_audit_v12/parent_reanalysis.json,direct+recomputed,CONFIRMED
+lr_rank,Natural labels preserve ranking among 3 old step512 checkpoints,replay_audit_v12/results/replay_losses.jsonl:1-192,recomputed,CONFIRMED_WITHIN_OLD_GRID
+label_treatment,Natural labels preserve step256 s=0 treatment effect,No V12 four-state rows,unmeasured,NOT_MEASURED
+diagA_C_sha,Different diagA/diagC whole digest proves numeric gradient change,replay_audit_v12/logs/diagA_repeat_builds.txt:71-77; diagC_causal.txt:65-76,refuted,DIGEST_ORDER_DIFFERS
+diagB,Two real builds differ by 8.19e-6 in weights,replay_audit_v12/logs/diagB_full_pair.txt:43-53; logs/diag_outputs.txt,direct-report-needs-stage-localization,REPORTED_NOT_CAUSALLY_LOCATED
+mismatch0,replay failure mismatch=0 means all state equal,replay_audit_v12/replay.py:467-475; results/replay_status.json,refuted,WEIGHTS_ONLY_ZERO_SHA_DIFFERED
+budget,V12 46104 token forwards includes every diagnostic,replay_audit_v12/budget_ledger.json; logs/diagA_repeat_builds.txt:67-78,refuted,DIAGA_6144_FORWARD_TOKENS_UNCOUNTED
+research,Old local NO_LOCAL_SIGNAL invalidates AdamW spectral research,results/local_gate.json; results/probe_confirm.csv,unsupported inference,NOT_ESTABLISHED
+packed,105 packed windows are independent documents,replay_audit_v12/evaluation_manifest.json,refuted,ONE_CONNECTED_SOURCE_CLUSTER

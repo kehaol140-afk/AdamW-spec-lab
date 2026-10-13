@@ -1,0 +1,71 @@
+name: cpu-ci
+on: [push, pull_request]
+jobs:
+  recompute:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: AST syntax check (all py)
+        run: |
+          python - <<'PY'
+          import ast, pathlib, sys
+          bad = []
+          n = 0
+          for p in pathlib.Path('.').rglob('*.py'):
+              if '__pycache__' in str(p):
+                  continue
+              n += 1
+              try:
+                  ast.parse(p.read_text(errors='replace'))
+              except SyntaxError as e:
+                  bad.append((str(p), str(e)))
+          print(f"AST: {n} files, errors={len(bad)}")
+          sys.exit(1 if bad else 0)
+          PY
+      - name: Manifest presence and README link check
+        run: |
+          python - <<'PY'
+          import pathlib, re, sys
+          roots = ["experiments/" + d for d in [
+              "adamw-spectral-v13-v16", "adamw-direction-validation",
+              "adamw-direction-30m", "muon-ns-allocation",
+              "specmuon-pilot", "context-aware-muon-100m"]]
+          bad = []
+          for r in roots:
+              for f in ["RESULTS.md", "RUN_INDEX.csv", "MANIFEST.sha256"]:
+                  if not (pathlib.Path(r) / f).exists():
+                      bad.append(r + "/" + f)
+          for md in pathlib.Path('.').rglob('*.md'):
+              for m in re.findall(r'\]\(([^)#\s][^)#]*[^)#\s])\)', md.read_text(errors='replace')):
+                  if m.startswith(('http', 'mailto')):
+                      continue
+                  t = (md.parent / m.split('#')[0]).resolve()
+                  if 'baselines/minimind-base-code' in str(md):
+                      continue  # upstream README images intentionally not vendored
+                  if not t.exists():
+                      bad.append(f"{md}: {m}")
+          print("doc/link check errors:", len(bad))
+          for b in bad[:20]:
+              print("  ", b)
+          sys.exit(1 if bad else 0)
+          PY
+      - name: Verify release SHA256 manifest (all archived evidence)
+        run: python3 tools/verify_release_integrity.py
+      - name: CPU recompute suite (expects 8/8 OK)
+        run: |
+          python3 recompute/run_recompute.py
+          python - <<'PY'
+          import json, sys
+          d = json.load(open('recompute/outputs/SUMMARY.json'))
+          bad = {k: v for k, v in d.items() if v != 'OK'}
+          print(f"recompute: {len(d)-len(bad)}/{len(d)} OK")
+          sys.exit(1 if bad else 0)
+          PY
+      - name: repro CLI smoke (dry-run only, no GPU, no sealed data)
+        run: |
+          python3 tools/repro.py list > /dev/null
+          python3 tools/repro.py recompute --all > /dev/null
+          python3 tools/repro.py smoke --experiment direction-validation > /dev/null || true

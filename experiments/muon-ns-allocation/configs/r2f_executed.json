@@ -1,0 +1,17 @@
+{
+  "format": "muon_spectral_allocation_r2f_v1",
+  "date_frozen": "2026-09-29",
+  "protocol": "references_r2f/R2F_EXECUTION_PROTOCOL_v1_CN.md",
+  "recipes": {"N": [1.0, 1.0], "AH": [0.5, 1.0], "L": [0.5, 0.5], "D": [1.0, 0.5]},
+  "rule": "eff_lr = r*base_lr; eff_wd = (d/r)*base_wd; rebuilt from base each step",
+  "origins": [512, 1536],
+  "branches": {
+    "L": ["s512_L256", "s1536_L256"],
+    "crossover": ["s{512,1536}_{N,AH}_to_{N,AH}"],
+    "D_conditional": ["s512_D256", "s1536_D256"]
+  },
+  "d_trigger": {"tau": 0.001, "rule": "both origins B_decay=V_L-V_AH strictly > tau"},
+  "targets": {"train_monitor": "Q_select (diagnostic only)",
+              "endpoint": "Q_P2_endpoint (developmental, historically exposed)"},
+  "budget": {"gpu_hours": 3, "new_output_bytes": 10737418240, "main_updates_max": 3072}
+}

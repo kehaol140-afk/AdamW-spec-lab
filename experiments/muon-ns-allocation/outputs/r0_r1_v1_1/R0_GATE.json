@@ -1,0 +1,70 @@
+{
+ "states": {
+  "512": {
+   "checkpoint_sha256": "7563daec7f080dff5a5fada29ab2407425bd60df46622edde4a68eb890860131",
+   "cursor_step": 512,
+   "meta_lr_used_last": 0.008798733423234218,
+   "checkpoint_saved_group_lr_muon": 0.008798733423234218,
+   "checkpoint_saved_group_lr_aux": 0.008798733423234218,
+   "lr_next_update_required": 0.008793959719687522,
+   "lr_at_saved_step_recomputed": 0.008798733423234218,
+   "clock_mismatch_in_old_round": {
+    "saved_equals_lr_at_s": true,
+    "relative_gap_s_vs_s1": 0.0005425444000940617,
+    "note": "P0/P1 native step consumed lr(s) from the restored groups while candidate u vectors used lr_at(s+1) -> unified only in R0 (erratum)"
+   },
+   "new_batches_disjoint_from_old_probes": true,
+   "new_batch_step_indices_0based": [
+    520,
+    527
+   ],
+   "unified_clock_manual_vs_step_maxdiff": 1.4901161193847656e-08,
+   "norm_match": {
+    "c_nu5_over_nu3": 1.3204321923057347,
+    "intended_rel_diff": 2.1724466135940683e-16,
+    "realized_rel_diff": 2.1518076787824495e-07,
+    "tolerances": {
+     "intended": 1e-06,
+     "realized": 0.0001
+    }
+   },
+   "A_B_A_identity": true,
+   "payload_lr_unchanged_after_all": true
+  },
+  "1536": {
+   "checkpoint_sha256": "014480c7f138b486d3fa6ae3cf6f8e81653790d5372e8d299487ef74def92e6a",
+   "cursor_step": 1536,
+   "meta_lr_used_last": 0.002357934318612673,
+   "checkpoint_saved_group_lr_muon": 0.002357934318612673,
+   "checkpoint_saved_group_lr_aux": 0.002357934318612673,
+   "lr_next_update_required": 0.002352918131184848,
+   "lr_at_saved_step_recomputed": 0.002357934318612673,
+   "clock_mismatch_in_old_round": {
+    "saved_equals_lr_at_s": true,
+    "relative_gap_s_vs_s1": 0.0021273652061590907,
+    "note": "P0/P1 native step consumed lr(s) from the restored groups while candidate u vectors used lr_at(s+1) -> unified only in R0 (erratum)"
+   },
+   "new_batches_disjoint_from_old_probes": true,
+   "new_batch_step_indices_0based": [
+    1544,
+    1551
+   ],
+   "unified_clock_manual_vs_step_maxdiff": 1.4901161193847656e-08,
+   "norm_match": {
+    "c_nu5_over_nu3": 1.2380847519025346,
+    "intended_rel_diff": 0.0,
+    "realized_rel_diff": 1.0896149071760586e-07,
+    "tolerances": {
+     "intended": 1e-06,
+     "realized": 0.0001
+    }
+   },
+   "A_B_A_identity": true,
+   "payload_lr_unchanged_after_all": true
+  }
+ },
+ "artifact_sha": {},
+ "installed_muon_sha256": "38e95918424bd26604f786195a4aa72afb60674b4ac9ccbde777974013cb1f52",
+ "gate_pass": true,
+ "wall_seconds": 24.235435962677002
+}

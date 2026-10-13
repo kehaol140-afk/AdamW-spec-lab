@@ -1,0 +1,32 @@
+[
+ {
+  "id": "dv_S1",
+  "wall_seconds": 180.55169439315796,
+  "tokens": 4194304,
+  "param_fingerprint": "e444220c7c87c9ee"
+ },
+ {
+  "id": "dv_S8",
+  "wall_seconds": 172.63222646713257,
+  "tokens": 4194304,
+  "param_fingerprint": "87223b39abce9ffe"
+ },
+ {
+  "id": "dv_F8",
+  "wall_seconds": 184.4420530796051,
+  "tokens": 4194304,
+  "param_fingerprint": "15e8e7f85b2ec319"
+ },
+ {
+  "id": "dv_P8",
+  "wall_seconds": 174.7454125881195,
+  "tokens": 4194304,
+  "param_fingerprint": "acce424d392ac012"
+ },
+ {
+  "id": "dv_S4",
+  "wall_seconds": 172.31579208374023,
+  "tokens": 4194304,
+  "param_fingerprint": "5d2fa02d52c17389"
+ }
+]

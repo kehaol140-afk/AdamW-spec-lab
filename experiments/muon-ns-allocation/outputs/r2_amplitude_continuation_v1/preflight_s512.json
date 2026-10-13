@@ -1,0 +1,11 @@
+{
+ "N_vs_independent_reference_maxdiff": 0.0,
+ "MH_data_delta_ratio": {
+  "muon": 0.49999998790471883,
+  "aux": 1.0
+ },
+ "AH_data_delta_ratio": {
+  "muon": 0.49999998790471883,
+  "aux": 0.5000000013479553
+ }
+}

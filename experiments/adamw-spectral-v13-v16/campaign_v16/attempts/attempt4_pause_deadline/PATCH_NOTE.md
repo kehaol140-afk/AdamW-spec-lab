@@ -1,0 +1,1 @@
+Pause loop ignored the runner's own max-seconds deadline and sat until the outer driver killed the process. Fix: wait_for_recovery(hard_deadline) returns 'deadline' -> task requeued pending, runner exits cleanly between episodes. The 2h per-episode STOP_RESOURCE cap is unchanged. Driver also catches TimeoutExpired. No training-semantics change.

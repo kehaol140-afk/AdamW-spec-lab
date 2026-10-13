@@ -1,0 +1,14 @@
+{
+  "tag": "w3",
+  "target": "model.layers.1.mlp.down_proj.weight",
+  "view": "new_probe_prefix",
+  "baseline": "F01",
+  "token_count": 23135,
+  "documents": 128,
+  "head_frobenius_energy_fraction": 0.15582046294762478,
+  "head_energy_per_token": 19616.57444189928,
+  "rest_energy_per_token": 72311.23171296029,
+  "cross_energy_per_token": 6.194121823768406e-12,
+  "joint_energy_per_token": 91927.80615485957,
+  "raw_sha256": "37db656a913c35acf70d1f410d4c1bb37db085bcef11a4f72ad5eb09bdd835b3"
+}

@@ -1,0 +1,29 @@
+{
+  "0.0003": {
+    "legacy": 6.572523351253729,
+    "natural_prefix": 6.570480384582996
+  },
+  "0.001": {
+    "legacy": 5.808333045629173,
+    "natural_prefix": 5.802857512019897
+  },
+  "0.003": {
+    "legacy": 5.627558841529343,
+    "natural_prefix": 5.620230594199121
+  },
+  "ranking": {
+    "legacy": [
+      0.003,
+      0.001,
+      0.0003
+    ],
+    "natural_prefix": [
+      0.003,
+      0.001,
+      0.0003
+    ]
+  },
+  "parent_lr_boundary_unresolved": true,
+  "gpu_optimizer_calls": 0,
+  "token_forward_equivalents_cumulative": 33816
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "source_hash": "8cce6876b9eda43aa89ff559a4e5dd7a685f2848a7807680435b1acf3b9c0189",
+  "config_hash": "4c8a02e11be57f4faf0f51f3b4ffce372f7c10af6a1293e352a664c6c7cdb1fa",
+  "binding_hash": "d5ea8b7db0589c0a91fd965dabcbe6ce463b5eda9c6d3566769e66f543f53b53",
+  "data_hash": "fc70632eb2e76b975c0abaa86412cd3f3c35aa472d80e669733f7b65fa3ed23b",
+  "parameter_count": 4655616,
+  "resource": {
+    "free_vram": 7443841024,
+    "total_vram": 8585216000,
+    "process_vram_limit": 5833228288.0,
+    "available_ram": 2797215744
+  },
+  "gpu_optimizer_updates": 12,
+  "replay_max_abs_error": 0.0,
+  "replay_optimizer_state_max_abs_error": 0.0,
+  "checkpoint_sha256": "433f16fd7970e233d1dc247303c55ea07bc2af5b593e6d751f474533fd6c8a98",
+  "optimizer_step": 8,
+  "effective_tokens": 16384
+}

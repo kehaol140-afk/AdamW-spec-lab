@@ -1,0 +1,83 @@
+"""Read-only diagnosis of the V1.2 repeat-build SHA mismatch. No optimizer.step() calls."""
+import os, sys, json, hashlib
+os.environ["USE_TF"] = "0"
+sys.path.insert(0, r"E:\大模型预训练\adamw_spectral_pilot")
+
+import numpy as np
+import torch
+
+from replay_audit_v12.core import HERE, ROOT, read_json, sha_file
+from pilot_core import load_checkpoint, model_and_optimizer, loss_sum_count, schedule_lr, training_batch
+
+cfg = read_json(ROOT / "config" / "local_v1_lowmem.json")
+binding = read_json(ROOT / "bindings.local.json")
+child_cfg = read_json(HERE / "config.json")
+data = read_json(ROOT / "artifacts" / "data_manifest.json")
+mem = np.memmap(ROOT / "artifacts" / "train_tokens.u32", dtype=np.uint32, mode="r")
+checkpoint = ROOT / "artifacts" / "checkpoints" / "seed3407_lr0.003" / "step256.pt"
+
+torch.set_num_threads(2)
+torch.backends.cuda.matmul.allow_tf32 = False
+torch.backends.cudnn.allow_tf32 = False
+
+model, optimizer, aliases, _ = model_and_optimizer(cfg, binding, child_cfg["peak_lr"], "cuda:0")
+
+def grad_build(window):
+    ck = load_checkpoint(checkpoint, model, optimizer,
+                         config_hash=sha_file(ROOT / "config" / "local_v1_lowmem.json"),
+                         data_hash=data["data_hash"], aliases=aliases)
+    eta = schedule_lr(child_cfg["peak_lr"], child_cfg["checkpoint_step"] + 1, cfg)
+    for group in optimizer.param_groups:
+        group["lr"] = eta
+    cursor = window["start_token"]
+    model.train()
+    optimizer.zero_grad(set_to_none=True)
+    valid_total = 0
+    precision = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float32
+    for _ in range(cfg["runtime"]["accumulation_steps"]):
+        ids, cursor = training_batch(mem, cursor, cfg["runtime"]["micro_batch_size"],
+                                     cfg["runtime"]["sequence_length"], "cuda:0")
+        lengths = torch.full((ids.shape[0],), ids.shape[1], device="cuda:0", dtype=torch.long)
+        with torch.autocast(device_type="cuda", dtype=precision, enabled=precision == torch.bfloat16):
+            logits = model(ids[:, :-1], use_cache=False).logits
+            loss_sum, count = loss_sum_count(logits, ids, lengths)
+        loss_sum.backward()
+        valid_total += count
+    for parameter in model.parameters():
+        if parameter.grad is not None:
+            parameter.grad.div_(valid_total)
+    torch.nn.utils.clip_grad_norm_(model.parameters(), cfg["baseline"]["global_grad_clip_norm"])
+    named = dict(model.named_parameters())
+    grads = {name: p.grad.detach().cpu().contiguous().clone() for name, p in named.items() if p.grad is not None}
+    optimizer.zero_grad(set_to_none=True)
+    return grads
+
+def digest(grads):
+    h = hashlib.sha256()
+    for name in sorted(grads):
+        h.update(name.encode("utf-8"))
+        h.update(grads[name].numpy().tobytes())
+    return h.hexdigest()
+
+window = read_json(HERE / "evaluation_manifest.json")["train_build_windows"][0]
+runs = []
+for attempt in range(3):
+    grads = grad_build(window)
+    runs.append((digest(grads), grads))
+    print(f"attempt {attempt}: sha256={runs[-1][0]}", flush=True)
+
+a, b = runs[0][1], runs[1][1]
+print("names identical:", sorted(a) == sorted(b))
+total_diff = 0
+worst = []
+for name in sorted(a):
+    if name in b:
+        d = (a[name] - b[name]).abs()
+        n = int((d > 0).sum())
+        if n:
+            total_diff += n
+            worst.append((n, name, float(d.max()), float(a[name].abs().max())))
+worst.sort(reverse=True)
+print("params with byte differences:", len(worst), "elements differing:", total_diff)
+for n, name, dmax, amax in worst[:8]:
+    print(f"  {name}: {n} elems, max|diff|={dmax:.3e}, max|grad|={amax:.3e}")

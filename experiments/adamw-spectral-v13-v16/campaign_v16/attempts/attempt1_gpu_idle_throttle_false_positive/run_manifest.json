@@ -1,0 +1,17 @@
+{
+  "protocol_id": "ADAMW_SPECTRAL_CAMPAIGN_V16_20261002",
+  "source_hash": "525d14a7b9a91c500d97b12ad8773cd27bc0129e13bb6c3624a290f1b1cbaff9",
+  "config_sha256": "f0cf25669c4ee991e5fc56c7676c6eb87fc9459a544ed8cc81a0fa51f6c20982",
+  "parent": {
+    "gate": [
+      "BASELINE_TUNING_UNRESOLVED",
+      "STOP"
+    ],
+    "step256_sha256": "ed09a2c80f40aae1a8829a718913a4a40257cdc24fc0e7a2d29bc53a74383000",
+    "step128_sha256": "6c839349663e56fa71da111cd388dd7152adcfb7907f9c9a5809752c4192d8f5",
+    "parent_data_sha256": "fc70632eb2e76b975c0abaa86412cd3f3c35aa472d80e669733f7b65fa3ed23b",
+    "v15_manifest_sha256": "2472baf1d36e48281d51f4ef2cfa63b3fd8ffe27baa9666ab47596dd9035e644"
+  },
+  "data_manifest_sha256": "7f487e1764e738c6cde228b52d683461a68542f49ffefa39c46201cd83c4f86b",
+  "created_at": 1790951509.5476031
+}

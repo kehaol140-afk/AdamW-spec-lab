@@ -1,0 +1,20 @@
+{
+  "A_norm": 98.24165884428676,
+  "head_norm": 43.48087280121502,
+  "fresh_gradient": {
+    "zero_norm_fallback": false,
+    "input_norm": 0.009596157549877013,
+    "A_norm": 98.24165884428676,
+    "matched_norm": 98.24165882125193
+  },
+  "fresh_preconditioned": {
+    "zero_norm_fallback": false,
+    "input_norm": 427.5140756930712,
+    "A_norm": 98.24165884428676,
+    "matched_norm": 98.2416588312321
+  },
+  "vhat_step": 257,
+  "eta": 0.0017823231394449074,
+  "scalar_formula_vs_frozen_updated_max_abs": 7.450580596923828e-09,
+  "formula_tolerance": 2.3725561261177065e-06
+}

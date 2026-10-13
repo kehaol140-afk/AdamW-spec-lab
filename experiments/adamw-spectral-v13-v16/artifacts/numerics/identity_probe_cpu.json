@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "data": "synthetic token IDs for CPU numerical test only",
+  "model_parameters": 4655616,
+  "actual_fp32_adamw_max_abs_error": 3.725290298461914e-09,
+  "repeat_logit_sum": [
+    -3543.30126953125,
+    -3543.30126953125,
+    -3543.30126953125
+  ],
+  "repeat_spread": 0.0,
+  "model_optimizer_rng_cursor_restored": true
+}

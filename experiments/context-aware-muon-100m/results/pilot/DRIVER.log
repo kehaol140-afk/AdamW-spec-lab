@@ -1,0 +1,2 @@
+{"event": "driver_start", "cap_gpu_s": 21600.0}
+{"event": "arm_start", "arm": "B_adamw_lr3e-4", "cumulative_s": 0}

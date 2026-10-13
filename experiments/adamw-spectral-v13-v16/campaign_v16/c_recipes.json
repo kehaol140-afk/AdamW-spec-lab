@@ -1,0 +1,30 @@
+{
+  "recipes": [
+    {
+      "name": "b_S1_plain_lr0.001",
+      "family": "S",
+      "a": 1,
+      "b": 1,
+      "lr": 0.001,
+      "target_beta1": null,
+      "all_beta1": null,
+      "wd_matrix": null
+    },
+    {
+      "name": "b_F1_a8_lr0.001",
+      "family": "F",
+      "a": 8,
+      "b": 1,
+      "lr": 0.001,
+      "target_beta1": null,
+      "all_beta1": null,
+      "wd_matrix": null
+    }
+  ],
+  "seeds": [
+    3408,
+    3409,
+    3410
+  ],
+  "frozen_at": 1791616309.7686524
+}

@@ -1,0 +1,142 @@
+{
+  "protocol_id": "ADAMW_DIRECTION_HORIZON_V15_20261002",
+  "source_hash": "0bc35503e9315ed023bdc45d0c3519ad9d5530859d3ecaef2217d234da3028c6",
+  "config_sha256": "7b31a8da9cf2c4f18cdab120b28f767ef2ed20680eac726804a20514e0aa3da7",
+  "parent_dependencies_sha256": "45c41fe1c8ee1867ae705913683c59e385a5c5639c1cfd228a53d62c4668a67a",
+  "confirm_views_sha256": "4d743844320eb3f5f932c7d8492083cd18b79001295c980cb2d04bcb3d902fe4",
+  "confirm_documents_sha256": "a3313c8617a8543fc05bb4c6a4b693b9fb64a5bd03a82ac54c99b16a83273557",
+  "confirm_ids_sha256": "1a1caee4856c9c1190796850a0f1220810e11114b4a9411b2524f77637272758",
+  "confirm_available_before_seal": 658,
+  "confirm_selection_rule": "first 128 lexicographic unused probe_confirm doc_ids after V1/V12/V13/V14 exclusion",
+  "confirm_seal": "dev and select phases never read confirm_views.jsonl or confirm eval rows",
+  "aux_checkpoint_available": true,
+  "aux_timepoint_preregistered": "step128 with frozen configs only; never re-tuned",
+  "branch_specs": [
+    {
+      "id": "S_a0_b0.5",
+      "family": "S",
+      "a": 0.0,
+      "b": 0.5
+    },
+    {
+      "id": "S_a0_b1",
+      "family": "S",
+      "a": 0.0,
+      "b": 1.0
+    },
+    {
+      "id": "S_a0.5_b0.5",
+      "family": "S",
+      "a": 0.5,
+      "b": 0.5
+    },
+    {
+      "id": "S_a0.5_b1",
+      "family": "S",
+      "a": 0.5,
+      "b": 1.0
+    },
+    {
+      "id": "S_a1_b0.5",
+      "family": "S",
+      "a": 1.0,
+      "b": 0.5
+    },
+    {
+      "id": "S_a1_b1",
+      "family": "S",
+      "a": 1.0,
+      "b": 1.0
+    },
+    {
+      "id": "S_a2_b0.5",
+      "family": "S",
+      "a": 2.0,
+      "b": 0.5
+    },
+    {
+      "id": "S_a2_b1",
+      "family": "S",
+      "a": 2.0,
+      "b": 1.0
+    },
+    {
+      "id": "F_a0.5_b0.5",
+      "family": "F",
+      "a": 0.5,
+      "b": 0.5
+    },
+    {
+      "id": "F_a0.5_b1",
+      "family": "F",
+      "a": 0.5,
+      "b": 1.0
+    },
+    {
+      "id": "F_a1_b0.5",
+      "family": "F",
+      "a": 1.0,
+      "b": 0.5
+    },
+    {
+      "id": "F_a1_b1",
+      "family": "F",
+      "a": 1.0,
+      "b": 1.0
+    },
+    {
+      "id": "F_a2_b0.5",
+      "family": "F",
+      "a": 2.0,
+      "b": 0.5
+    },
+    {
+      "id": "F_a2_b1",
+      "family": "F",
+      "a": 2.0,
+      "b": 1.0
+    },
+    {
+      "id": "P_a0.5_b0.5",
+      "family": "P",
+      "a": 0.5,
+      "b": 0.5
+    },
+    {
+      "id": "P_a0.5_b1",
+      "family": "P",
+      "a": 0.5,
+      "b": 1.0
+    },
+    {
+      "id": "P_a1_b0.5",
+      "family": "P",
+      "a": 1.0,
+      "b": 0.5
+    },
+    {
+      "id": "P_a1_b1",
+      "family": "P",
+      "a": 1.0,
+      "b": 1.0
+    },
+    {
+      "id": "P_a2_b0.5",
+      "family": "P",
+      "a": 2.0,
+      "b": 0.5
+    },
+    {
+      "id": "P_a2_b1",
+      "family": "P",
+      "a": 2.0,
+      "b": 1.0
+    }
+  ],
+  "disk_estimate_gb": 2.716,
+  "budget": {
+    "optimizer_step_attempts": 1792,
+    "token_forward_equivalents": 8000000
+  },
+  "created_at": 1790942963.2457666
+}

@@ -1,0 +1,20 @@
+{
+  "protocol_id": "ADAMW_A_SPECTRAL_READINESS_V13_20261002",
+  "parent_protocol_id": "ADAMW_A_SPECTRAL_LOCAL_V1_1_LOWMEM_20261002",
+  "seed": 3407,
+  "peak_lr": 0.003,
+  "checkpoint_step": 256,
+  "primary_target": "model.layers.1.mlp.down_proj.weight",
+  "diagnostic_target": "model.layers.1.self_attn.o_proj.weight",
+  "build_windows": [0, 1, 2, 3],
+  "new_formal_pretraining_steps": 0,
+  "max_gpu_optimizer_step_attempts": 16,
+  "max_token_forward_equivalents": 5000000,
+  "numeric_resolution_nats_per_token": 0.000002,
+  "finite_difference_unit_steps": [0.003, 0.001, 0.0003],
+  "calibration_old_probe_select_docs": 8,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 3407,
+  "generation_mode": "parent_bf16_autocast_else_fp32",
+  "evaluation_mode": "fp32_no_tf32"
+}

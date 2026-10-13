@@ -1,0 +1,20 @@
+{
+ "run_id": "s512_bulk_lam0.25",
+ "arm": "bulk_lam0.25",
+ "restore_step": 512,
+ "n_steps": 256,
+ "device": "cuda:0",
+ "lr_mult": 1.0,
+ "parent_ckpt_sha256": "7563daec7f080dff5a5fada29ab2407425bd60df46622edde4a68eb890860131",
+ "code_shas": {
+  "src/specmuon/run_pilot.py": "8770eb44fca6f9930ed5c715da1dfe9026722bf52d71e8eadc0e2a31df78ac87",
+  "src/specmuon/spec_muon.py": "a4793bbbb560474d2867ea1040ba28eed2d4efb09051ef9bf706bf3f4e15a2ab",
+  "src/specmuon/operators.py": "b33d85328fe2acebade33761352387250227b43d3cc68db53c91304cca47c460",
+  "src/specmuon/native_ns.py": "9cb4511f9693bdedc2f9a5793c2eff3bb5648a60ca1c6366be47c370d46857bd",
+  "src/specmuon/io_utils.py": "69397732f91b192f992584aa0f4a369e8d95a840b6e1bdc783de35b862f2bb9a"
+ },
+ "config_sha256": "25a441ef57d106b18423be41c307d04066c3a1924e8494e5397c2e36ac8d89e2",
+ "torch_version": "2.11.0",
+ "started_utc": "2026-10-11T12:10:11Z",
+ "param_fingerprint_restore": "307ef660dc6e9256f70ce45d0ceae56696aa0f78df4a183c435634a83b60b80c"
+}

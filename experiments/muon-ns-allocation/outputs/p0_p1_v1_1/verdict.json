@@ -1,0 +1,38 @@
+{
+ "delta_step": 1e-05,
+ "e_repeat": 0.0,
+ "states": {
+  "512": {
+   "target_pair": [
+    "q",
+    "o"
+   ],
+   "no_op": true,
+   "B_target_chk_mean": 0.0,
+   "B_target_sign_same": 0,
+   "B_gamma_const_chk_mean": null,
+   "B_geometry_chk_mean": -3.762338675705745e-05,
+   "cost_matched": true
+  },
+  "1536": {
+   "target_pair": [
+    "q",
+    "o"
+   ],
+   "no_op": false,
+   "B_target_chk_mean": -1.1668485755400582e-06,
+   "B_target_sign_same": 0,
+   "B_gamma_const_chk_mean": -1.047171798496116e-06,
+   "B_geometry_chk_mean": -1.2266869637844735e-06,
+   "cost_matched": true
+  }
+ },
+ "Q": {
+  "Q1": "NO_LOCAL_SUPPORT",
+  "Q2": [
+   "INSUFFICIENT",
+   "SCALAR_EXPLANATION_NOT_RULED_OUT"
+  ],
+  "Q3": "COMPARATOR_UNRESOLVED"
+ }
+}

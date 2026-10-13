@@ -1,0 +1,18 @@
+{
+  "version": "p0b_audit_v1",
+  "frozen_at": "2026-10-10",
+  "threads": 8,
+  "phase1_seeds": [2030, 2033],
+  "phase1_steps": [46, 64],
+  "all_seeds": [2030, 2031, 2032, 2033, 2034, 2035, 2036, 2037],
+  "all_steps": [46, 52, 58, 64, 70, 76, 82],
+  "adamw_semantics": {
+    "betas": [0.9, 0.999],
+    "eps": 1e-8,
+    "eps_placement": "outside_sqrt",
+    "bias_correction": true,
+    "weight_decay": 0.01,
+    "source": "native torch.optim.AdamW, torch 2.11.0"
+  },
+  "out_dir": "results/p0b"
+}

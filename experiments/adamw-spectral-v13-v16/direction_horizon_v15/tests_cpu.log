@@ -1,0 +1,27 @@
+﻿python.exe : test_a0_keeps_decay_drops_data_and_advances_moments (test_v15.V15CpuTests) ... ok
+At line:1 char:219
++ ... TEXITCODE"; & 'D:\pytorch\anaconda\envs\py39\python.exe' -m unittest  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_a0_keeps_d...puTests) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_a_and_b_semantics_against_manual_formula (test_v15.V15CpuTests) ... ok
+test_atomic_write_retries_then_succeeds (test_v15.V15CpuTests) ... ok
+test_budget_attempt_counted_before_failure (test_v15.V15CpuTests) ... ok
+test_budget_cap_enforced (test_v15.V15CpuTests) ... ok
+test_directions_evolve_naturally (test_v15.V15CpuTests) ... ok
+test_eval_does_not_mutate_state (test_v15.V15CpuTests) ... ok
+test_f_and_p_norm_match_and_clip_timing (test_v15.V15CpuTests) ... ok
+test_identity_branch_matches_native_adamw_bitwise (test_v15.V15CpuTests) ... ok
+test_ledger_helpers_read_modify_write_fresh_file (test_v15.V15CpuTests)
+Regression for the attempt-4 accounting race: helpers must always mutate the ... ok
+test_one_shot_family_schedule (test_v15.V15CpuTests) ... ok
+test_save_load_branch_state_roundtrip_cpu (test_v15.V15CpuTests) ... ok
+test_shared_parameter_single_update (test_v15.V15CpuTests) ... ok
+test_tie_break_prefers_identity_then_closeness (test_v15.V15CpuTests) ... ok
+test_zero_norm_fallback (test_v15.V15CpuTests) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.453s
+
+OK

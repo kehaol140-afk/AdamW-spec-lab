@@ -1,0 +1,22 @@
+{
+ "512": {
+  "source_sha": "4b0af2f753f2b1ddfe0e530f88d4b10b06ac70cafff76d6bba3999ee9ad7bcd0",
+  "cursor": 768,
+  "base_lr": 0.007344397799609312,
+  "eff_lr": 0.003672198899804656,
+  "eff_wd": 0.02,
+  "decay_product": 7.344397799609312e-05,
+  "decay_product_ratio_vs_base": 0.5,
+  "muon_data_delta_norm": 0.6909960508421055
+ },
+ "1536": {
+  "source_sha": "cab1370ea2e98a6d8ffe5bd42b7de684976a900649d6ba10a09a8e967e8e400c",
+  "cursor": 1792,
+  "base_lr": 0.0013506381898814484,
+  "eff_lr": 0.0006753190949407242,
+  "eff_wd": 0.02,
+  "decay_product": 1.3506381898814483e-05,
+  "decay_product_ratio_vs_base": 0.5,
+  "muon_data_delta_norm": 0.1279299383085905
+ }
+}

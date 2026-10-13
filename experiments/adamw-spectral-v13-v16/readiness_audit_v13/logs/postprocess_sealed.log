@@ -1,0 +1,53 @@
+{
+  "analysis_manifest_sha256": "d3fd76472b2edc05eb08f621e67633df6509c70ffa290e102a544faf15c6ff14",
+  "bootstrap_units": 24,
+  "direction_units": 16,
+  "same_frozen": {
+    "legacy": {
+      "F00": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F10": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F01": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F11": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      }
+    },
+    "natural_prefix": {
+      "F00": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F10": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F01": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      },
+      "F11": {
+        "documents": 8,
+        "loss_sum_max_abs": 0.0
+      }
+    }
+  },
+  "resources": {
+    "samples": 17532,
+    "minimum_available_ram_gib": 1.2729263305664062,
+    "maximum_rss_gib": 1.9662017822265625,
+    "maximum_cuda_reserved_gib": 0.25390625,
+    "warning_samples": 1817,
+    "blocked_samples": 0,
+    "paging": "NOT_MEASURED"
+  },
+  "bundle_sha256": "cd56d3b8d4780a8012fb1d47891fd4faa7f57cc825fe2b51e1895d4bc0f868f7"
+}

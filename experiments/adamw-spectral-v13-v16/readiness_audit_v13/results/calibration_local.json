@@ -1,0 +1,154 @@
+{
+  "comparison_path": "results/compare_w0_same_process.json",
+  "frozen_first_sha256": "86411856d47831557c4509213ac80257433b65fc4f83de6b0530854da5b57bc2",
+  "frozen_repeat_sha256": "8400bfd8ede41d67341120957806df67d515eb6d8ba9ddcb6e3808e71c55437b",
+  "first_effects": {
+    "legacy": {
+      "tag": "w0_cal_first",
+      "window_id": 0,
+      "target": "model.layers.1.mlp.down_proj.weight",
+      "view": "legacy",
+      "identity": {
+        "F11_actual_max_abs": 1.1641532182693481e-10,
+        "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+        "rho_s_one_max_abs": 7.450580596923828e-09,
+        "formula_tolerance": 2.3740507125854495e-06
+      },
+      "nll": {
+        "F00": 6.234342751324122,
+        "F10": 6.2343265292629235,
+        "F01": 6.237894098363878,
+        "F11": 6.237962225436728
+      },
+      "I_before": 1.622206119833436e-05,
+      "I_after": -6.812707285064334e-05,
+      "interaction": 8.43491340489777e-05,
+      "documents": 8,
+      "target_tokens": 1093,
+      "raw_paths": {
+        "F00": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_first_ffn_legacy_F00.jsonl",
+        "F10": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_first_ffn_legacy_F10.jsonl",
+        "F01": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_first_ffn_legacy_F01.jsonl",
+        "F11": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_first_ffn_legacy_F11.jsonl"
+      }
+    },
+    "natural_prefix": {
+      "tag": "w0_cal_first",
+      "window_id": 0,
+      "target": "model.layers.1.mlp.down_proj.weight",
+      "view": "natural_prefix",
+      "identity": {
+        "F11_actual_max_abs": 1.1641532182693481e-10,
+        "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+        "rho_s_one_max_abs": 7.450580596923828e-09,
+        "formula_tolerance": 2.3740507125854495e-06
+      },
+      "nll": {
+        "F00": 6.2312101344940105,
+        "F10": 6.2311925722281,
+        "F01": 6.234852727137895,
+        "F11": 6.234919625689758
+      },
+      "I_before": 1.7562265910875396e-05,
+      "I_after": -6.689855186348126e-05,
+      "interaction": 8.446081777435666e-05,
+      "documents": 8,
+      "target_tokens": 1093,
+      "raw_paths": {
+        "F00": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_first_ffn_natural_prefix_F00.jsonl",
+        "F10": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_first_ffn_natural_prefix_F10.jsonl",
+        "F01": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_first_ffn_natural_prefix_F01.jsonl",
+        "F11": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_first_ffn_natural_prefix_F11.jsonl"
+      }
+    }
+  },
+  "repeat_effects": {
+    "legacy": {
+      "tag": "w0_cal_repeat",
+      "window_id": 0,
+      "target": "model.layers.1.mlp.down_proj.weight",
+      "view": "legacy",
+      "identity": {
+        "F11_actual_max_abs": 1.1641532182693481e-10,
+        "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+        "rho_s_one_max_abs": 7.450580596923828e-09,
+        "formula_tolerance": 2.3740507125854495e-06
+      },
+      "nll": {
+        "F00": 6.234342751324122,
+        "F10": 6.2343265292629235,
+        "F01": 6.237894098363878,
+        "F11": 6.237962225436728
+      },
+      "I_before": 1.622206119833436e-05,
+      "I_after": -6.812707285064334e-05,
+      "interaction": 8.43491340489777e-05,
+      "documents": 8,
+      "target_tokens": 1093,
+      "raw_paths": {
+        "F00": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_repeat_ffn_legacy_F00.jsonl",
+        "F10": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_repeat_ffn_legacy_F10.jsonl",
+        "F01": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_repeat_ffn_legacy_F01.jsonl",
+        "F11": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_repeat_ffn_legacy_F11.jsonl"
+      }
+    },
+    "natural_prefix": {
+      "tag": "w0_cal_repeat",
+      "window_id": 0,
+      "target": "model.layers.1.mlp.down_proj.weight",
+      "view": "natural_prefix",
+      "identity": {
+        "F11_actual_max_abs": 1.1641532182693481e-10,
+        "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+        "rho_s_one_max_abs": 7.450580596923828e-09,
+        "formula_tolerance": 2.3740507125854495e-06
+      },
+      "nll": {
+        "F00": 6.2312101344940105,
+        "F10": 6.2311925722281,
+        "F01": 6.234852727137895,
+        "F11": 6.234919625689758
+      },
+      "I_before": 1.7562265910875396e-05,
+      "I_after": -6.689855186348126e-05,
+      "interaction": 8.446081777435666e-05,
+      "documents": 8,
+      "target_tokens": 1093,
+      "raw_paths": {
+        "F00": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_repeat_ffn_natural_prefix_F00.jsonl",
+        "F10": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_repeat_ffn_natural_prefix_F10.jsonl",
+        "F01": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_repeat_ffn_natural_prefix_F01.jsonl",
+        "F11": "E:\\大模型预训练\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_cal_repeat_ffn_natural_prefix_F11.jsonl"
+      }
+    }
+  },
+  "numeric_resolution": {
+    "differences": {
+      "legacy": {
+        "I_before": 0.0,
+        "I_after": 0.0,
+        "interaction": 0.0
+      },
+      "natural_prefix": {
+        "I_before": 0.0,
+        "I_after": 0.0,
+        "interaction": 0.0
+      }
+    },
+    "observed_max": 0.0,
+    "engineering_target": 2e-06,
+    "pass": true,
+    "scope": "FFN/window0/first8_old_probe_select_paired_labels",
+    "strict_mathematical_error_bound": false
+  },
+  "budget": {
+    "run_manifest_sha256": "b2aa63866af7eb5cd628b0d97f59f9a7d933617a6e75e1c2f131208f17a7fb29",
+    "token_forward_equivalents": 21584,
+    "forward_attempts": 136,
+    "backward_attempts": 8,
+    "gpu_optimizer_step_attempts": 2,
+    "gpu_optimizer_steps_completed": 2,
+    "elapsed_seconds": 0.0,
+    "attempts": []
+  }
+}

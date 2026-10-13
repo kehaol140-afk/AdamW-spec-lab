@@ -1,0 +1,626 @@
+[
+  {
+    "window_id": 0,
+    "target": "ffn",
+    "view": "legacy",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": 6.319375692065421e-05,
+    "I_after": -2.2611651576909253e-05,
+    "interaction": 8.580540849756346e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        2.80919707755789e-05,
+        0.00010035239529160295
+      ],
+      "I_after": [
+        -5.5952496026701046e-05,
+        1.2611003168117007e-05
+      ],
+      "interaction": [
+        7.845894051099478e-05,
+        9.384300946337908e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 0,
+    "target": "ffn",
+    "view": "natural_prefix",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": 6.356521783956737e-05,
+    "I_after": -2.237226565160455e-05,
+    "interaction": 8.593748349117192e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        2.918652798331589e-05,
+        9.782527504886834e-05
+      ],
+      "I_after": [
+        -5.547407259962611e-05,
+        1.1042515092229974e-05
+      ],
+      "interaction": [
+        7.830362565106608e-05,
+        9.382309582905979e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 0,
+    "target": "ffn",
+    "view": "new_probe_prefix",
+    "distinct_docs": 128,
+    "target_tokens": 23135,
+    "I_before": 6.025952037713722e-05,
+    "I_after": -2.675284209896489e-05,
+    "interaction": 8.701236247610211e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        3.477911366640551e-05,
+        8.645645789602252e-05
+      ],
+      "I_after": [
+        -5.263191127842237e-05,
+        -1.0665143079569056e-06
+      ],
+      "interaction": [
+        8.113553996882405e-05,
+        9.331556668248364e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 0,
+    "target": "attn",
+    "view": "legacy",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": 4.8929657650020886e-06,
+    "I_after": -5.630109321064225e-05,
+    "interaction": 6.119405897564434e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -7.391318567497862e-05,
+        8.069604874185731e-05
+      ],
+      "I_after": [
+        -0.000134968935399149,
+        2.1008102201203043e-05
+      ],
+      "interaction": [
+        4.3059816419077636e-05,
+        7.857634733341445e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 0,
+    "target": "attn",
+    "view": "natural_prefix",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": 5.5946141674922956e-06,
+    "I_after": -5.58388307352331e-05,
+    "interaction": 6.14334449027254e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -7.692326931545424e-05,
+        8.362999346309684e-05
+      ],
+      "I_after": [
+        -0.00013638942237685913,
+        1.7914593289702832e-05
+      ],
+      "interaction": [
+        4.3426646905952994e-05,
+        7.96927372750389e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 0,
+    "target": "attn",
+    "view": "new_probe_prefix",
+    "distinct_docs": 128,
+    "target_tokens": 23135,
+    "I_before": -0.00010952690854892921,
+    "I_after": -0.00017250906913535147,
+    "interaction": 6.298216058642225e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -0.00018236882345232797,
+        -4.419184936259599e-05
+      ],
+      "I_after": [
+        -0.00025020592352051894,
+        -0.00010502568535808447
+      ],
+      "interaction": [
+        5.033228722419736e-05,
+        7.681575904741055e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 1,
+    "target": "ffn",
+    "view": "legacy",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": 6.894521014189081e-05,
+    "I_after": -3.647127118000526e-05,
+    "interaction": 0.00010541648132189607,
+    "document_bootstrap_95": {
+      "I_before": [
+        3.12281771692513e-05,
+        0.00010557460472824239
+      ],
+      "I_after": [
+        -7.315079073177966e-05,
+        -1.2174141704069658e-06
+      ],
+      "interaction": [
+        9.896382862972786e-05,
+        0.0001116929904417585
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 1,
+    "target": "ffn",
+    "view": "natural_prefix",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": 6.909379450981135e-05,
+    "I_after": -3.646301649240513e-05,
+    "interaction": 0.00010555681100221648,
+    "document_bootstrap_95": {
+      "I_before": [
+        2.9639974554140914e-05,
+        0.00010565877641819373
+      ],
+      "I_after": [
+        -7.441530252343398e-05,
+        -1.8087138714539853e-06
+      ],
+      "interaction": [
+        9.945804911353218e-05,
+        0.00011229624310509223
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 1,
+    "target": "ffn",
+    "view": "new_probe_prefix",
+    "distinct_docs": 128,
+    "target_tokens": 23135,
+    "I_before": 8.333336850974149e-05,
+    "I_after": -1.7745968381888133e-05,
+    "interaction": 0.00010107933689162962,
+    "document_bootstrap_95": {
+      "I_before": [
+        5.698771638689149e-05,
+        0.00010861248142193247
+      ],
+      "I_after": [
+        -4.511601073817761e-05,
+        7.850676702658706e-06
+      ],
+      "interaction": [
+        9.559330486259565e-05,
+        0.00010689381839159572
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 1,
+    "target": "attn",
+    "view": "legacy",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": -1.851113577089336e-06,
+    "I_after": -7.009054797446623e-05,
+    "interaction": 6.82394343973769e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -6.498105846814983e-05,
+        5.6164154124571605e-05
+      ],
+      "I_after": [
+        -0.00013414608345705404,
+        -1.4134601087678614e-05
+      ],
+      "interaction": [
+        6.162319823441731e-05,
+        7.524764150972363e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 1,
+    "target": "attn",
+    "view": "natural_prefix",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": -1.5539448421364455e-06,
+    "I_after": -7.005752922584207e-05,
+    "interaction": 6.850358438370563e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -6.493920493988448e-05,
+        5.6686727864674314e-05
+      ],
+      "I_after": [
+        -0.000132955489883968,
+        -1.0147197849308422e-05
+      ],
+      "interaction": [
+        6.156326708033344e-05,
+        7.496754440565745e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 1,
+    "target": "attn",
+    "view": "new_probe_prefix",
+    "distinct_docs": 128,
+    "target_tokens": 23135,
+    "I_before": -1.849522208274834e-05,
+    "I_after": -8.075319203193487e-05,
+    "interaction": 6.225796994918653e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -6.256609751780218e-05,
+        2.4195491950029773e-05
+      ],
+      "I_after": [
+        -0.00012397335206950632,
+        -3.912856260799293e-05
+      ],
+      "interaction": [
+        5.702218541865367e-05,
+        6.745849908817991e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 2,
+    "target": "ffn",
+    "view": "legacy",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": 5.785916539746694e-05,
+    "I_after": -7.033406124268282e-05,
+    "interaction": 0.00012819322664014976,
+    "document_bootstrap_95": {
+      "I_before": [
+        9.089090383929132e-06,
+        0.00010134686241218824
+      ],
+      "I_after": [
+        -0.00011800992773294272,
+        -2.5538055907903278e-05
+      ],
+      "interaction": [
+        0.0001199511311584578,
+        0.00013709106614077094
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 2,
+    "target": "ffn",
+    "view": "natural_prefix",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": 5.849477630270883e-05,
+    "I_after": -6.996260032376966e-05,
+    "interaction": 0.0001284573766264785,
+    "document_bootstrap_95": {
+      "I_before": [
+        9.450713405390055e-06,
+        0.00010618388560093006
+      ],
+      "I_after": [
+        -0.00011894487858949976,
+        -2.211929589133193e-05
+      ],
+      "interaction": [
+        0.00012033832973885605,
+        0.0001374460490215945
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 2,
+    "target": "ffn",
+    "view": "new_probe_prefix",
+    "distinct_docs": 128,
+    "target_tokens": 23135,
+    "I_before": 6.251123880574028e-05,
+    "I_after": -6.125280917412823e-05,
+    "interaction": 0.0001237640479798685,
+    "document_bootstrap_95": {
+      "I_before": [
+        3.110715629195404e-05,
+        9.277861084378e-05
+      ],
+      "I_after": [
+        -9.438308875564516e-05,
+        -2.9298786530795937e-05
+      ],
+      "interaction": [
+        0.00011652874984315886,
+        0.0001308315843996599
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 2,
+    "target": "attn",
+    "view": "legacy",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": -5.746294041664157e-05,
+    "I_after": -0.00013736212031112416,
+    "interaction": 7.989917989448259e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -0.00013744829886164212,
+        1.6812212357497615e-05
+      ],
+      "I_after": [
+        -0.00021829234380119634,
+        -6.215934312427959e-05
+      ],
+      "interaction": [
+        7.053785813191383e-05,
+        8.949968680467268e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 2,
+    "target": "attn",
+    "view": "natural_prefix",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": -5.7314356049609216e-05,
+    "I_after": -0.00013822886245407062,
+    "interaction": 8.09145064044614e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -0.00013913673261132243,
+        1.5929078513487927e-05
+      ],
+      "I_after": [
+        -0.00022079119199569508,
+        -6.445451898011719e-05
+      ],
+      "interaction": [
+        7.198402253569825e-05,
+        9.047646772197825e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 2,
+    "target": "attn",
+    "view": "new_probe_prefix",
+    "distinct_docs": 128,
+    "target_tokens": 23135,
+    "I_before": -5.4918449538199354e-05,
+    "I_after": -0.0001352693134384353,
+    "interaction": 8.035086390023594e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -0.00011419649294277522,
+        1.3957105322370681e-06
+      ],
+      "I_after": [
+        -0.0001947887298492379,
+        -8.075849333071263e-05
+      ],
+      "interaction": [
+        7.289230758764643e-05,
+        8.839208534237031e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 3,
+    "target": "ffn",
+    "view": "legacy",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": 7.962883889245376e-05,
+    "I_after": -1.642889095609945e-05,
+    "interaction": 9.605772984855321e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        4.178649326809225e-05,
+        0.00011655928063676321
+      ],
+      "I_after": [
+        -5.2062597129709506e-05,
+        1.8052273152124843e-05
+      ],
+      "interaction": [
+        8.922726385112157e-05,
+        0.00010321773199604144
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 3,
+    "target": "ffn",
+    "view": "natural_prefix",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": 8.00333185591029e-05,
+    "I_after": -1.6098703472522402e-05,
+    "interaction": 9.61320220316253e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        4.081057696654344e-05,
+        0.00011808819615217736
+      ],
+      "I_after": [
+        -5.3030485577965083e-05,
+        2.0605319886191063e-05
+      ],
+      "interaction": [
+        8.900993693863323e-05,
+        0.00010304400236043064
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 3,
+    "target": "ffn",
+    "view": "new_probe_prefix",
+    "distinct_docs": 128,
+    "target_tokens": 23135,
+    "I_before": 9.441783831665163e-05,
+    "I_after": 3.1078199285161645e-06,
+    "interaction": 9.131001838813546e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        6.356384279027072e-05,
+        0.0001232734944934588
+      ],
+      "I_after": [
+        -2.7883565822417468e-05,
+        3.236500091745584e-05
+      ],
+      "interaction": [
+        8.545680030651593e-05,
+        9.731914203461311e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 3,
+    "target": "attn",
+    "view": "legacy",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": -4.58754234324843e-05,
+    "I_after": -9.936992303760661e-05,
+    "interaction": 5.3494499605122314e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -0.00013650667048041852,
+        4.40537170115717e-05
+      ],
+      "I_after": [
+        -0.00019026000687318855,
+        -9.708785037521169e-06
+      ],
+      "interaction": [
+        3.235675908421776e-05,
+        7.32828639147698e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 3,
+    "target": "attn",
+    "view": "natural_prefix",
+    "distinct_docs": 80,
+    "target_tokens": 14788,
+    "I_before": -4.524806721395436e-05,
+    "I_after": -9.941119647205454e-05,
+    "interaction": 5.4163129258100184e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -0.00014448764874668284,
+        4.149552070096262e-05
+      ],
+      "I_after": [
+        -0.00019451731282957852,
+        -1.3830739143672066e-05
+      ],
+      "interaction": [
+        3.379271769436976e-05,
+        7.446850609720277e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  },
+  {
+    "window_id": 3,
+    "target": "attn",
+    "view": "new_probe_prefix",
+    "distinct_docs": 128,
+    "target_tokens": 23135,
+    "I_before": -0.0001485026112018062,
+    "I_after": -0.00018775268844972715,
+    "interaction": 3.9250077247920956e-05,
+    "document_bootstrap_95": {
+      "I_before": [
+        -0.0002316088239894043,
+        -7.163769055980044e-05
+      ],
+      "I_after": [
+        -0.00026976169938306425,
+        -0.0001140633977063655
+      ],
+      "interaction": [
+        2.5318823162856496e-05,
+        5.265986336224768e-05
+      ]
+    },
+    "bootstrap_repetitions": 2000,
+    "window_is_independent_seed": false
+  }
+]

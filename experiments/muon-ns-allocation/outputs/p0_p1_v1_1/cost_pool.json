@@ -1,0 +1,238 @@
+{
+ "group_step_flops": {
+  "q": 6442450944.0,
+  "k": 1342177280.0,
+  "v": 1342177280.0,
+  "o": 6442450944.0,
+  "gate": 16106127360.0,
+  "down": 16106127360.0,
+  "up": 16106127360.0
+ },
+ "ref_benchmark_ms": 22.109800498583354,
+ "n_timing_blocks": 24,
+ "analytic_feasible": [
+  {
+   "pair": [
+    "q",
+    "o"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.398850000172388,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0130733654339195,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "k",
+    "v"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.113200000603683,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.000153755436217,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "v",
+    "k"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.125650000816677,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0007168541495586,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "o",
+    "q"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.333199998683995,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0101040938888144,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "gate",
+    "up"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.212000003491994,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0046223621472834,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "gate",
+    "down"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 21.769199996924726,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 0.9845950440990885,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "up",
+    "gate"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.026700498827267,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 0.9962414857718227,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "up",
+    "down"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.22925000023679,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0054025589991682,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "down",
+    "gate"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.36464999805321,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0115265399833067,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "down",
+    "up"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 21.928449994447874,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 0.9917977322252591,
+   "budget_ok": true
+  }
+ ],
+ "measured_pool": [
+  {
+   "pair": [
+    "q",
+    "o"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.398850000172388,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0130733654339195,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "k",
+    "v"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.113200000603683,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.000153755436217,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "v",
+    "k"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.125650000816677,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0007168541495586,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "o",
+    "q"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.333199998683995,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0101040938888144,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "gate",
+    "up"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.212000003491994,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0046223621472834,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "gate",
+    "down"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 21.769199996924726,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 0.9845950440990885,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "up",
+    "gate"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.026700498827267,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 0.9962414857718227,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "up",
+    "down"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.22925000023679,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0054025589991682,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "down",
+    "gate"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 22.36464999805321,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 1.0115265399833067,
+   "budget_ok": true
+  },
+  {
+   "pair": [
+    "down",
+    "up"
+   ],
+   "flops_ratio": 1.0,
+   "cand_ms": 21.928449994447874,
+   "ref_ms": 22.109800498583354,
+   "time_ratio_median": 0.9917977322252591,
+   "budget_ok": true
+  }
+ ],
+ "note": "pool = pairs with BOTH analytic FLOPs and measured median time within [0.98,1.02]"
+}

@@ -1,0 +1,18 @@
+{
+ "s512": {
+  "keys_match": true,
+  "param_maxdiff_vs_r2_step1": 0.0,
+  "first_step_loss": 2.97857004404068,
+  "first_step_preclip_norm": 0.42147204279899597,
+  "lr_used": 0.008793959719687522,
+  "bit_exact": true
+ },
+ "s1536": {
+  "keys_match": true,
+  "param_maxdiff_vs_r2_step1": 0.0,
+  "first_step_loss": 2.515048086643219,
+  "first_step_preclip_norm": 0.30495136976242065,
+  "lr_used": 0.002352918131184848,
+  "bit_exact": true
+ }
+}

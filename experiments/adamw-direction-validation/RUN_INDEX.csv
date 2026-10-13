@@ -1,0 +1,6 @@
+run_id,kind,stage,source_dir,validity,note
+dv_S1,train_2048_steps+dev_eval_3horizons+screen,layer1,raw/,VALID,"3 env interruptions, byte-identical deterministic replay verified (RUNNER_FIX_LOG.md)"
+dv_S4,train_2048_steps+dev_eval_3horizons+screen,layer1,raw/,VALID,"3 env interruptions, byte-identical deterministic replay verified (RUNNER_FIX_LOG.md)"
+dv_S8,train_2048_steps+dev_eval_3horizons+screen,layer1,raw/,VALID,"3 env interruptions, byte-identical deterministic replay verified (RUNNER_FIX_LOG.md)"
+dv_F8,train_2048_steps+dev_eval_3horizons+screen,layer1,raw/,VALID,"3 env interruptions, byte-identical deterministic replay verified (RUNNER_FIX_LOG.md)"
+dv_P8,train_2048_steps+dev_eval_3horizons+screen,layer1,raw/,VALID,"3 env interruptions, byte-identical deterministic replay verified (RUNNER_FIX_LOG.md)"

@@ -1,0 +1,20 @@
+{
+ "v1_prefix_ledger_reproduced": true,
+ "v1_docs": 7256,
+ "v2_full_docs": 1269983,
+ "v2_legacy_missing_from_ledger": 886,
+ "v2_legacy_located_in_full_corpus": 886,
+ "v4_tokenizer_chain_matches": 13,
+ "v4_checked": 16,
+ "v5_candidates": 1068,
+ "v5_missing": [],
+ "v5_token_seq_dup_of_eval": [],
+ "v6_cache_prefix_hits": 0,
+ "v6_checked": 1068,
+ "corpus": {
+  "path": "/home/b205/minimind-master/dataset/pretrain_t2t_mini.jsonl",
+  "bytes": 1241043656,
+  "prefix_sha256": "2cb92156c151a54826974e57bbffaf0c508433f2e0fd35580d9394c8c5bdf2f7",
+  "full_sha256": "6dd6716c84ab36897bdbfc7f88e04f4441c48c1ab7ecee88ce0b0e7d4685560c"
+ }
+}

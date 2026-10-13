@@ -1,0 +1,112 @@
+--- attempt1/common.py
++++ attempt2/common.py
+@@ -28,9 +28,16 @@
+ def write_json(path, value):
+     path = Path(path)
+     path.parent.mkdir(parents=True, exist_ok=True)
+-    temporary = path.with_name(path.name + ".tmp")
++    temporary = path.with_name(path.name + f".{os.getpid()}.{time.time_ns()}.tmp")
+     temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")
+-    os.replace(temporary, path)
++    for attempt in range(20):
++        try:
++            os.replace(temporary, path)
++            return
++        except PermissionError:
++            if attempt == 19:
++                raise
++            time.sleep(0.1 * (attempt + 1))
+ 
+ 
+ def append_jsonl(path, value):
+--- attempt1/audit.py
++++ attempt2/audit.py
+@@ -8,6 +8,9 @@
+ from replay_audit_v12.core import verify_parent, reanalyze_parent
+ 
+ from .common import HERE, ROOT, V12, read_json, sha_file, sha_object, source_hash, write_json
++
++SOURCE_NAMES = ("__init__.py", "common.py", "audit.py", "engine.py", "cli.py",
++                "tests_v13.py", "run_parent_tests_isolated.py", "config.json", "RUN_VERIFIED.ps1")
+ 
+ 
+ PROTECTED = (
+@@ -140,7 +143,29 @@
+     else:
+         run = read_json(run_path)
+         if run["source_hash"] != source_hash():
+-            raise RuntimeError("RUN_SOURCE_CHANGED_CREATE_NEW_ATTEMPT_MANIFEST")
++            archive = HERE / "attempts" / "attempt1_before_atomic_retry"
++            if (not archive.is_dir() or read_json(archive / "run_manifest.json") != run or
++                    read_json(archive / "budget_ledger.json") != read_json(HERE / "budget_ledger.json") or
++                    sha_object({name: sha_file(archive / name) for name in SOURCE_NAMES}) != run["source_hash"]):
++                raise RuntimeError("PRIOR_ATTEMPT_ARCHIVE_MISMATCH")
++            previous_manifest_sha = sha_file(run_path)
++            previous_ledger_sha = sha_file(HERE / "budget_ledger.json")
++            new_run = dict(run)
++            new_run.update({"source_hash": source_hash(),
++                            "attempt_id": 2,
++                            "previous_run_manifest_sha256": previous_manifest_sha,
++                            "accepted_previous_source_hashes": [run["source_hash"]],
++                            "previous_attempt_archive": str(archive.relative_to(HERE)),
++                            "patch_scope": "atomic child JSON replacement retry only; scientific generation/evaluation code unchanged"})
++            write_json(run_path, new_run)
++            ledger = read_json(HERE / "budget_ledger.json")
++            ledger["attempts"].append({"attempt_id": 1, "source_hash": run["source_hash"],
++                                        "run_manifest_sha256": previous_manifest_sha,
++                                        "budget_snapshot_sha256": previous_ledger_sha,
++                                        "archive": str(archive.relative_to(HERE)),
++                                        "reason": "WinError 5 during child budget atomic replacement; failed forward was not executed"})
++            ledger["run_manifest_sha256"] = sha_file(run_path)
++            write_json(HERE / "budget_ledger.json", ledger)
+     return {"parent": "VERIFIED", "v12": "VERIFIED", "old_gate": old["parent_gate_verdict"],
+             "v12_lr_rows": history["v12_lr_raw_rows"], "v12_four_state_rows": 0,
+             "history_known_minimum_token_forwards": history["historical_known_minimum_token_forwards"],
+--- attempt1/engine.py
++++ attempt2/engine.py
+@@ -9,6 +9,7 @@
+ import sys
+ import time
+ from collections import defaultdict
++from functools import lru_cache
+ from pathlib import Path
+ 
+ os.environ.setdefault("USE_TF", "0")
+@@ -41,6 +42,12 @@
+     if manifest["fixed_windows"] != v12["train_build_windows"]:
+         raise RuntimeError("V13_WINDOW_SELECTION_CHANGED")
+     return parent, v12, manifest, Ledger(sha_file(HERE / "run_manifest.json"))
++
++
++@lru_cache(maxsize=1)
++def accepted_source_hashes():
++    run = read_json(HERE / "run_manifest.json")
++    return {source_hash(), *run.get("accepted_previous_source_hashes", [])}
+ 
+ 
+ def views():
+@@ -127,7 +134,7 @@
+     meta_path = path.with_suffix(".json")
+     if path.exists() and meta_path.exists():
+         meta = read_json(meta_path)
+-        if meta["sha256"] != sha_file(path) or meta["source_hash"] != source_hash():
++        if meta["sha256"] != sha_file(path) or meta["source_hash"] not in accepted_source_hashes():
+             raise RuntimeError("FROZEN_UPDATE_IDENTITY_MISMATCH")
+         return torch.load(path, map_location="cpu", weights_only=False)
+     if path.exists() or meta_path.exists():
+@@ -361,13 +368,13 @@
+     if path.exists():
+         saved = [json.loads(line) for line in path.open(encoding="utf-8")]
+         if ([r["doc_id"] for r in saved] != expected or
+-                any(r["source_hash"] != source_hash() for r in saved)):
++                any(r["source_hash"] not in accepted_source_hashes() for r in saved)):
+             raise RuntimeError("COMPLETED_LOSS_UNIT_IDENTITY_MISMATCH:" + str(path))
+         return saved
+     partial = path.with_suffix(".partial")
+     saved = [json.loads(line) for line in partial.open(encoding="utf-8")] if partial.exists() else []
+     if ([r["doc_id"] for r in saved] != expected[:len(saved)] or
+-            any(r["source_hash"] != source_hash() for r in saved)):
++            any(r["source_hash"] not in accepted_source_hashes() for r in saved)):
+         raise RuntimeError("PARTIAL_LOSS_UNIT_IDENTITY_MISMATCH:" + str(partial))
+     path.parent.mkdir(parents=True, exist_ok=True)
+     with isolated_state(model, optimizer, {"cursor": frozen["window"]["start_token"]}):

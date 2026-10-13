@@ -1,0 +1,90 @@
+# V12 findings — ADAMW_A_SPECTRAL_REPLAY_AUDIT_V1_2_20261002
+
+生成：OpenCode（监督执行代理），2026-10-02。工作区 `E:\大模型预训练\adamw_spectral_pilot`。
+
+**总裁决：UNRESOLVED——本轮测量无法区分 s=0 现象的三种候选解释（评估目标差异 / 其他块共同更新后的条件效应 / 真实更新方向在独立数据上的下降信号不足）。阻断原因是工程层复现性门禁（详见 §6），不是任何科学证据。旧门禁保持 STOP，未修改任何父产物。**
+
+## 1. 旧门禁保持
+
+- `verify-parent`（含 4 份 checkpoint 深度 payload 指纹核验）在所有 GPU 动作前后均通过；父 `results/local_gate.json` 保持 `BASELINE_TUNING_UNRESOLVED / STOP / NO_LOCAL_SIGNAL`，父 source/config/binding/data 哈希（`8cce6876…`/`4c8a02e1…`/`d5ea8b7d…`/`fc70632e…`）未变。
+- 父 CSV/gate 复算与原值逐位一致（主差值 −2.1184083429659495e-6，CI [−9.484275987214908e-6, 5.698799896691752e-6]，1e-12 容差内）。
+- V1.2 全部写入仅在 `replay_audit_v12/` 内；未调用父 `prepare`/`pilot`；正式预训练步数 **0**。
+
+## 2. 旧评估口径复现（实测）
+
+三份 step512 checkpoint 在 32 个 lr_select 文档、旧 legacy 口径下的 token 加权 NLL：
+
+| peak LR | legacy（旧口径）| 与父值差 |
+|---|---|---|
+| 3e-4 | 6.572523351253729 | 0（逐位一致）|
+| 1e-3 | 5.808333045629173 | 0（逐位一致）|
+| 3e-3 | 5.627558841529343 | 0（逐位一致）|
+
+旧口径被精确复现，证明本轮 GPU 管线与父评估路径在 FP32、无 TF32、同 mask 下等价。
+
+## 3. 真实自然标签重评估（实测）
+
+同一 32 文档、自然前缀口径（长文不补人工 EOS、短文保留真实 EOS）：
+
+| peak LR | natural_prefix | legacy |
+|---|---|---|
+| 3e-4 | 6.570480384582996 | 6.572523351253729 |
+| 1e-3 | 5.802857512019897 | 5.808333045629173 |
+| 3e-3 | 5.620230594199121 | 5.627558841529343 |
+
+- 排序在两种口径下相同（3e-3 最优）；3e-3 仍在网格边界，`parent_lr_boundary_unresolved=true` 保持。
+- 人工 EOS 审计（原文重新 tokenize 与父缓存逐 ID 比对）：112 个旧 eval 文档中 **30 个确实被截断并补了人工 EOS**（lr_select 8、probe_select 5、probe_confirm 17）；其余短文两口径末目标一致。
+- **结论：评估目标差异不足以解释 LR 排序或 s=0 现象的方向**（自然口径下 NLL 略低 ~2e-3–7e-3 nats，但两种口径的相对结论不变）。这是零更新重评估的证据，不涉及四状态测量。
+
+## 4. F00/F10/F01/F11 反事实与两个目标块边际收益：**未测量（被阻断）**
+
+- delivered `replay --execute` 在窗口 0 的"重复构建一致性" P0 处停止（`P0_FAIL: repeated complete build mismatch=0.0`，权重逐位相同但梯度/优化器状态字节 SHA 不同），发生在任何四状态评估之前：`replay_losses.jsonl` 的 192 行全部来自 LR 重评估（build_window_id=-1），**四状态评估行数为 0**。
+- 因台账已标记 `replay_started`，CLI 按设计拒绝自动重跑/续跑；按合同（数值失败即停止，禁止删门槛/跳过校验/重训）未强行继续。
+- 因此：FFN down_proj 与 attn o_proj 的边际收益（I_before=F00−F10、I_after=F01−F11、交互项）、以及"条件效应 vs 独立更新"的判别——**无数据，UNRESOLVED**。
+
+## 5. M/A/当前梯度信号、参数谱与输入输出能量
+
+- **本轮新增测量：未执行**（`gradient_signals.jsonl`、`finite_difference.jsonl`、`output_energy_documents.jsonl`、`replay_summary.jsonl` 均不存在，因 §4 的阻断）。
+- 父侧复算（来自 `parent_reanalysis.json`，供上下文，非新证据）：主 cell token 加权 <G,A_H>=−0.0325、<G,A_R>=−0.0129（均为负）；四 cell head/rest 加权内积见该文件。父侧输出能量（REVIEW §7）：step256 FFN 头部 Frobenius 占比 17.3% vs 真实输入输出能量占比 26.1%。这些是旧数据复核，不能替代本轮设计的新 128 文档测量。
+
+## 6. 阻断根因诊断（OpenCode 受监督诊断，证据链完整）
+
+四组实验（脚本与输出存档于 `logs/`，摘要 `logs/opencode_diagnosis_summary.json`）：
+
+| 实验 | 设计 | 结果 |
+|---|---|---|
+| diagA | 3 次连续 load+梯度构建（无 step）| SHA 三次全同（0b949b26…），零差异元素 |
+| diagB | 真实 build_update×2（各含 step）| 复现 P0：梯度 SHA 8a68694a≠b2b40a53，权重差 8.19e-6，**单次构建公式奇偶 2.98e-8 达标** |
+| diagC | h0 → 1 次 step → h1 | h0==h1（8d3a0dcb…），但 ≠ diagA 的 0b949b26（跨进程不同）|
+| diagD | 纯二次 load 的状态字节摘要 | 完全一致（非装载表示问题）|
+
+**结论：梯度构建字节在本 GPU 栈（RTX 4060 Laptop / torch 2.6.0+cu124 / BF16 autocast / SDPA）上跨进程必然不同、进程内偶发不同（内核级机制 NOT_IDENTIFIED，原子类非确定性为 plausible 但未证实）；子协议的 SHA 级重复构建门禁严于父协议容差级 P0（1e-7+rtol，每次构建均满足），在本栈上实际不可达成。** 每次构建本身都是有效的真实 AdamW 下一步（奇偶 3e-8）。
+
+## 7. 预算与资源账目（全部实际计数）
+
+- 隔离虚拟 GPU `optimizer.step`：**5/8**（交付 replay 2 + OpenCode 诊断 3：diagB 两次、diagC 一次；均入 `budget_ledger.json` 真实台账）。
+- 累计评估 token-forward-equivalents：**46,104/5,000,000**（reeval-lr 33,816 + replay 构建 4,096 + 诊断 8,192）。
+- 正式预训练步数：**0**；LR 重评估：零更新。
+- 资源（`logs/resources.jsonl`，209 样本）：min 可用 RAM **1.032 GiB**（未破 1.0 硬线；202 次 WARNING 低于 1.5 告警线、0 次 RESOURCE_BLOCKED）；max RSS 1.480 GiB；峰值 CUDA reserved 0.207 GiB。低内存门禁按设计工作。
+- Windows 换页：**NOT_MEASURED**。
+
+## 8. 测量局限
+
+1. 四状态反事实、新 128 文档上的梯度/几何/有限差分**全部未测量**——本文件不含任何关于条件效应或下降信号的正/负科学结论。
+2. 新 128 probe_select 文档与两种视图（自然前缀、自然拼接）是**探索性诊断**：拼接视图共享来源文档连通后仅 1 簇，不能估计独立样本不确定性；两者都**不构成独立 seed 确认**。
+3. LR 重评估只在同一 seed 的 3 份既有 checkpoint 上、32 个 lr_select 文档；不改变 BASELINE_TUNING_UNRESOLVED。
+4. 复现性诊断限定在本机栈；未做内核级溯源；"跨进程梯度字节不同"的机制标注 NOT_IDENTIFIED。
+5. 人工 EOS 审计只覆盖父消费窗口内 112 个旧 eval 文档的原文核对。
+
+## 9. 交付物清单
+
+- `reports/V12_FINDINGS.md`（本文件；`replay_audit_v12/logs/V12_FINDINGS.txt` 为入包副本）
+- 原始逐文档结果：`replay_audit_v12/results/lr_reeval.json`、`replay_losses.jsonl`（192 行）、`replay_status.json`；数据审计 `legacy_truncation_audit.csv`、`selected_probe_docs.csv`、`eval_views.jsonl`
+- 计数与资源：`budget_ledger.json`、`logs/resources.jsonl`、`parent_dependencies.json`、`evaluation_manifest.json`、`parent_reanalysis.json`
+- 数值检查日志：`logs/opencode_diagnosis_summary.json` + diagA–D 脚本/输出（`.txt`）
+- 轻量包：`replay_audit_v12/v12_light.zip`
+
+## 10. 状态与停止
+
+- V1.2 GPU 测量状态：`FAILED`（P0 复现性门禁）；科学问题 **UNRESOLVED**。
+- 已停止，等待研究裁决。不自动训练、不自动修复门禁、不重跑 replay。若需继续，须由用户/Codex 决定：将子协议重复构建校验从 SHA 级放宽为父协议式容差级（新子源码哈希、新台账、显式重授权），或在位级可复现的环境（如 FP32 无 SDPA/固定算法回退）重设计——两者都超出本轮 OpenCode 权限。

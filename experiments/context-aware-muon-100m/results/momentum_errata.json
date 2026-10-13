@@ -1,0 +1,58 @@
+{
+ "E1_analytic_fp64": {
+  "(2432, 768)": {
+   "rel_err_B_vs_1m1C": 3.691062156179161e-17,
+   "rel_err_XK_vs_1m1XM": 3.5115519668434215e-17
+  },
+  "(768, 2432)": {
+   "rel_err_B_vs_1m1C": 3.891316390444243e-17,
+   "rel_err_XK_vs_1m1XM": 3.972493690323444e-17
+  },
+  "(512, 512)": {
+   "rel_err_B_vs_1m1C": 3.81422803691349e-17,
+   "rel_err_XK_vs_1m1XM": 3.7462483399562606e-17
+  }
+ },
+ "E2_ns5_outputs": {
+  "(2432, 768)": {
+   "cos_torchK_vs_mirrorM_min": 0.9996431343636776,
+   "norm_ratio_torchK_vs_mirrorM_mean": 0.9895364827774159,
+   "cos_torchK_vs_ns5M_min": 0.9998851518622071,
+   "norm_ratio_torchK_vs_ns5M_mean": 1.0000505835031697
+  },
+  "(768, 2432)": {
+   "cos_torchK_vs_mirrorM_min": 0.9996419521520749,
+   "norm_ratio_torchK_vs_mirrorM_mean": 0.9898299186835927,
+   "cos_torchK_vs_ns5M_min": 0.9998832823517463,
+   "norm_ratio_torchK_vs_ns5M_mean": 1.000043864495882
+  },
+  "(512, 512)": {
+   "cos_torchK_vs_mirrorM_min": 0.9996394232077579,
+   "norm_ratio_torchK_vs_mirrorM_mean": 1.0004785327834935,
+   "cos_torchK_vs_ns5M_min": 0.9998713789150023,
+   "norm_ratio_torchK_vs_ns5M_mean": 0.9998532166767843
+  }
+ },
+ "E3_optimizer_matrix_trajectory": {
+  "(2432, 768)": {
+   "final_rel_param_diff": 0.0002620694867800921,
+   "max_rel_param_diff": 0.0002620694867800921
+  },
+  "(768, 2432)": {
+   "final_rel_param_diff": 0.00026233014068566263,
+   "max_rel_param_diff": 0.00026233014068566263
+  }
+ },
+ "E4_training_trajectory_tiny_cpu": {
+  "loss_torch_first_last": [
+   8.80683422088623,
+   8.816306114196777
+  ],
+  "loss_mirror_first_last": [
+   8.80683422088623,
+   8.816206932067871
+  ],
+  "max_abs_loss_diff_after_step1": 0.00096893310546875,
+  "final_rel_param_diff_muon_matrices_max": 0.014398125931620598
+ }
+}

@@ -1,0 +1,14 @@
+{
+  "tag": "w1",
+  "target": "model.layers.1.self_attn.o_proj.weight",
+  "view": "new_probe_prefix",
+  "baseline": "F01",
+  "token_count": 23135,
+  "documents": 128,
+  "head_frobenius_energy_fraction": 0.4574341836854644,
+  "head_energy_per_token": 266815.4483070794,
+  "rest_energy_per_token": 36413.59588956226,
+  "cross_energy_per_token": 4.750383211736454e-10,
+  "joint_energy_per_token": 303229.0441966429,
+  "raw_sha256": "4c5463eff2a92786fa2990dfa7157bd0cba124219ad2ab77d872270f95e57d84"
+}

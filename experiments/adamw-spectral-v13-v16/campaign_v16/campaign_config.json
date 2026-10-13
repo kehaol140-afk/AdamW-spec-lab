@@ -1,0 +1,97 @@
+{
+  "protocol_id": "ADAMW_SPECTRAL_CAMPAIGN_V16_20261002",
+  "parent_protocols": ["ADAMW_A_SPECTRAL_LOCAL_V1_1_LOWMEM_20261002", "ADAMW_DIRECTION_HORIZON_V15_20261002"],
+  "binding_python": "D:\\pytorch\\anaconda\\envs\\py39\\python.exe",
+  "target": "model.layers.1.mlp.down_proj.weight",
+  "adjacent_ffn": "model.layers.2.mlp.down_proj.weight",
+  "attention_output": "model.layers.1.self_attn.o_proj.weight",
+  "hard_budget": {
+    "wall_clock_hours": 72,
+    "device_task_hours": 24,
+    "max_optimizer_step_attempts": 120000,
+    "max_token_forward_equivalents": 400000000,
+    "ram_start_min_gib": 1.5,
+    "ram_warning_gib": 1.5,
+    "ram_hard_gib": 1.0,
+    "rss_limit_gib": 4.0,
+    "vram_admission_min_free_gib": 1.0,
+    "vram_own_reserved_cap_gib": 4.0,
+    "vram_min_reserve_gib": 0.2,
+    "gpu_temp_pause_c": 85,
+    "pause_recheck_seconds": 300,
+    "pause_total_limit_hours": 2.0,
+    "disk_soft_gib": 3.0,
+    "disk_hard_gib": 4.0,
+    "disk_free_min_gib": 5.0,
+    "full_checkpoints_max": 8,
+    "weights_only_max": 12
+  },
+  "a0": {
+    "max_new_optimizer_attempts": 32,
+    "h0_recheck_splits": ["dev", "confirm"]
+  },
+  "a1": {
+    "start_checkpoint_step": 256,
+    "horizon": 256,
+    "a_grid": [1, 2, 4, 8],
+    "b_grid": [0.5, 1, 2],
+    "families": ["S", "F", "P"],
+    "eval_horizons": [64, 256],
+    "eval_split": "development",
+    "max_updates": 9216
+  },
+  "a2": {
+    "horizon": 256,
+    "eval_horizons": [64, 256],
+    "max_updates": 1024
+  },
+  "data": {
+    "train_tokens_needed": 8500000,
+    "cache_max_tokens": 20000000,
+    "scan_chunk_bytes": 104857600,
+    "development": {"role": "probe_select", "count": 256, "include_v12_dev_128": true},
+    "screen": {"role": "probe_select", "count": 256},
+    "final_holdout": {"primary_role": "final_holdout_reserved", "pad_role": "probe_confirm", "count": 1024, "min_count": 512},
+    "sequence_length": 256
+  },
+  "b": {
+    "T": 2048, "warmup": 128, "final_lr_ratio": 0.1, "seed": 3407,
+    "lr_grid": [0.001, 0.003, 0.006],
+    "s_family_cap": 8, "f_family_cap": 5, "p_family_cap": 5,
+    "eval_horizons": [512, 1024, 2048],
+    "eval_split_during_training": "development",
+    "screen_eval_after_freeze": true,
+    "low_beta1_amplitudes": "A1 selected (a_S, b_S)",
+    "s8_rule": "best LR at upper boundary -> S(a=1,b=1)@0.01; at lower -> @0.0003; middle -> S(a=1,b=1) WD_matrix=0.2",
+    "fp_slot4_rule": "own LR boundary (0.01/0.0003) if at boundary, else single-side a-neighbor",
+    "fp_slot5_rule": "the remaining of LR-boundary/a-neighbor; a-neighbor side by A1 development NLL slope; capped to [0.5,8]",
+    "anchor_fractions": [0.1, 0.25, 0.5, 0.75],
+    "anchor_matrices": 3,
+    "max_anchor_svds": 48
+  },
+  "c": {
+    "T": 4096, "warmup": 256, "final_lr_ratio": 0.1,
+    "seeds": [3408, 3409, 3410],
+    "max_recipes": 4,
+    "eval_horizons_during_training": [512, 1024, 2048, 4096],
+    "holdout_eval_horizon": 4096
+  },
+  "d": {
+    "max_new_updates": 8192,
+    "predictor_policy": "at most one simple threshold/linear rule; else PREDICTOR_NOT_VALIDATED"
+  },
+  "stats": {
+    "bootstrap_seed": 340716,
+    "bootstrap_repetitions": 5000,
+    "numeric_resolution_nats": 2e-6,
+    "delta_short": 1e-4,
+    "delta_long": 1e-3
+  },
+  "schedule_from_scratch": "eta_k = peak*(k/warmup) for k<=warmup else peak*(ratio + (1-ratio)*(1+cos(pi*(k-warmup)/(T-warmup)))/2)",
+  "schedule_parent_continuation": "parent 512-step schedule at global step k",
+  "storage": {
+    "resource_log_interval_seconds": 10,
+    "train_metric_every_steps": 16,
+    "log_rotate_mb": 20
+  }
+}

@@ -1,0 +1,83 @@
+{
+ "timestamp": "2026-09-30T14:21:08",
+ "network_diagnosis": {
+  "icmp_out": "OK (ping 8.8.8.8 works)",
+  "https_arxiv_github_hf": "blocked by gateway (000)",
+  "https_tuna_gitee": "OK (200)",
+  "gitee_mirror_search": "no modded-nanogpt/hyperball mirrors found"
+ },
+ "sources": [
+  {
+   "source": "A_paper_abs",
+   "url": "https://arxiv.org/abs/2606.16899",
+   "attempts": [
+    "000",
+    "000"
+   ],
+   "status": "SOURCE_BLOCKED"
+  },
+  {
+   "source": "B_track3_readme_raw",
+   "url": "https://raw.githubusercontent.com/KellerJordan/modded-nanogpt/master/records/track_3_optimization/README.md",
+   "attempts": [
+    "000",
+    "000"
+   ],
+   "status": "SOURCE_BLOCKED"
+  },
+  {
+   "source": "B_track3_readme_web",
+   "url": "https://github.com/KellerJordan/modded-nanogpt/blob/master/records/track_3_optimization/README.md",
+   "attempts": [
+    "000",
+    "000"
+   ],
+   "status": "SOURCE_BLOCKED"
+  },
+  {
+   "source": "C_pr267",
+   "url": "https://github.com/KellerJordan/modded-nanogpt/pull/267",
+   "attempts": [
+    "000",
+    "000"
+   ],
+   "status": "SOURCE_BLOCKED"
+  },
+  {
+   "source": "C_pr267_api",
+   "url": "https://api.github.com/repos/KellerJordan/modded-nanogpt/pulls/267",
+   "attempts": [
+    "000",
+    "000"
+   ],
+   "status": "SOURCE_BLOCKED"
+  },
+  {
+   "source": "D_muonh_log",
+   "url": "https://raw.githubusercontent.com/KellerJordan/modded-nanogpt/master/records/track_3_optimization/results/20260430_muonh/9319c798-6643-464a-b407-b05468e468f5.txt",
+   "attempts": [
+    "000",
+    "000"
+   ],
+   "status": "SOURCE_BLOCKED"
+  },
+  {
+   "source": "F_tunedaux",
+   "url": "https://github.com/KellerJordan/modded-nanogpt/tree/master/records/track_3_optimization/results",
+   "attempts": [
+    "000",
+    "000"
+   ],
+   "status": "SOURCE_BLOCKED"
+  },
+  {
+   "source": "G_nvidia_eo",
+   "url": "https://github.com/NVIDIA/Emerging-Optimizers",
+   "attempts": [
+    "000",
+    "000"
+   ],
+   "status": "SOURCE_BLOCKED"
+  }
+ ]
+}

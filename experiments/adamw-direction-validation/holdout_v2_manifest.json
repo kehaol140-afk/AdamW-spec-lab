@@ -1,0 +1,13 @@
+{
+ "status": "MINTED_SEALED",
+ "created": "2026-10-11",
+ "selection_rule": "lexicographic natural prefix of verified untouched pool (1068 ids) -> first 1024; reserve 44 listed separately, NOT part of holdout, not for selection",
+ "pool_verification": "verification_out/corpus_verification.json (V1 ledger byte-reproduced; V5 zero content dup vs all 1536 frozen eval docs; V6 zero train-cache overlap)",
+ "file": "splits/holdout_v2.jsonl",
+ "sha256": "3e0f76536bfeab99c629dfbb4c01f361e9b37daac34f9d39910c61aed17801f1",
+ "docs": 1024,
+ "total_tokens": 203403,
+ "tokenizer": "minimind_repo/model/tokenizer.json sha 71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668 (chain verified 16/16 incl. 257-truncation semantics)",
+ "open_rule": "ONE-SHOT after all layer-2 endpoints identity-locked; never for selection; V16 final_holdout remains BURNED and unrelated",
+ "reserve_file": "splits/holdout_v2_reserve_ids.txt"
+}

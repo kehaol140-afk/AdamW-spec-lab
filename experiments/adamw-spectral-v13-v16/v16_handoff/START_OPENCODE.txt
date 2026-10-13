@@ -1,0 +1,13 @@
+读取 v16_handoff/PROMPT_OPENCODE_V16.md 及 v16_handoff/REVIEW.md，开始V16有限自主实验。
+
+用户离开几天，授权你在合同范围内自行完成：最小修复、测试、运行、阶段判读、合法条件分支和最后封包。不要只写计划，也不要每完成一条trial就等待用户；不得越过合同去设计/扩搜未授权的新优化器。
+
+先纠正V15 H0来源标签（不加载checkpoint就评估的问题），保留可信H64对比；随后按合同执行：尺度边界一次扩展→共同目标范数轨迹对照→更强AdamW/低beta1及2048步从头训练→冻结候选后3seed的4096步预算终点→少量谱/历史方向机制材料。正负结果都按规定路线处理。
+
+在campaign_v16/独立工作，父资料只读。上限72小时墙钟、24小时设备任务、120000次optimizer.step尝试、4亿前向token-equivalents；最先到达即停止。沿用RAM/VRAM保护，不并行GPU、不联网下载、不装环境、不修改系统电源，不自动加模型/seed/算法。
+
+严格少存大文件：本轮总磁盘软3GiB、硬4GiB，保留至少5GiB磁盘空闲；full checkpoint最多8份，weights-only最多12份；只删除已登记为可再生的V16自身文件，绝不删除旧实验/原始数据。每个试验只保留必要终点原始数字，不保存梯度/logits/激活/U/V。
+
+先实际冻结PLAN_FROZEN.md与campaign_config.json，再启动持久化串行runner。STATE/QUEUE/DECISIONS/STATUS写在磁盘；压缩上下文后从状态续跑，不重复已完成任务。最终holdout只在方法/超参/seed冻结且全部最终训练完成后打开一次。
+
+最终交付V16_FINDINGS.md、trial_registry、逐文档/逐seed原始结果、选择/确认身份、完整最终预算与删除日志、实际运行命令和v16_light.zip。已有答案时及时结束，不为用满几天而继续搜索；真实阻断要给具体原因和最小复现，不降低科学门槛求通过。

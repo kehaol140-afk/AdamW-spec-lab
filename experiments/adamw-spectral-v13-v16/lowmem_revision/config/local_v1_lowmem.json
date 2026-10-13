@@ -1,0 +1,223 @@
+{
+  "protocol_id": "ADAMW_A_SPECTRAL_LOCAL_V1_1_LOWMEM_20261002",
+  "status": "SPECIFICATION_NOT_EXECUTED",
+  "project": {
+    "workspace_name": "adamw_spectral_pilot",
+    "search_root": "E:\\大模型预训练",
+    "external_repo_read_only": true,
+    "offline_training": true,
+    "bindings_file": "bindings.local.json"
+  },
+  "model": {
+    "adapter": "local_minimind",
+    "random_initialization": true,
+    "hidden_size": 256,
+    "num_hidden_layers": 4,
+    "intermediate_size": 768,
+    "num_attention_heads": 8,
+    "num_key_value_heads": 2,
+    "head_dim": 32,
+    "dropout": 0.0,
+    "use_moe": false,
+    "use_cache": false,
+    "vocab_from_local_tokenizer": true,
+    "preserve_embedding_tying": true,
+    "max_parameters": 12000000
+  },
+  "runtime": {
+    "max_parallel_gpu_jobs": 1,
+    "sequence_length": 256,
+    "micro_batch_size": 2,
+    "accumulation_steps": 4,
+    "effective_batch_size": 8,
+    "smoke_only_fallback": {
+      "micro_batch_size": 1,
+      "accumulation_steps": 8
+    },
+    "parameter_dtype": "float32",
+    "optimizer_state_dtype": "float32",
+    "train_precision": "native_bfloat16_autocast_else_float32",
+    "probe_precision": "float32",
+    "tf32": false,
+    "num_workers": 0,
+    "pin_memory": false,
+    "compile": false,
+    "cpu_threads": 2,
+    "cpu_svd_dtype": "float64",
+    "vram_soft_limit_gib": 10,
+    "vram_free_reserve_gib": 1.5,
+    "process_rss_soft_limit_gib": 4,
+    "system_ram_free_reserve_gib": 1.0,
+    "automatic_download": false,
+    "automatic_dependency_upgrade": false,
+    "system_ram_start_min_gib": 1.5,
+    "system_ram_warning_gib": 1.5
+  },
+  "data": {
+    "max_train_target_tokens": 2097152,
+    "max_scan_bytes": 536870912,
+    "max_jsonl_line_bytes": 2097152,
+    "token_cache_dtype": "uint32",
+    "document_hash_partition": true,
+    "lr_select_blocks": 32,
+    "probe_select_blocks": 16,
+    "probe_confirm_blocks": 64,
+    "prefer_one_probe_block_per_document": true,
+    "eval_cross_document_packing": false,
+    "roles": [
+      "train",
+      "lr_select",
+      "probe_select",
+      "probe_confirm",
+      "branch_eval_reserved",
+      "final_holdout_reserved"
+    ],
+    "loss_reduction": "total_valid_token_loss_sum_div_total_valid_token_count"
+  },
+  "baseline": {
+    "discovery_seed": 3407,
+    "confirmation_seed": 3408,
+    "peak_lr_grid": [
+      0.0003,
+      0.001,
+      0.003
+    ],
+    "successful_optimizer_steps": 512,
+    "warmup_steps": 32,
+    "schedule": "linear_warmup_then_cosine_to_0.1_peak",
+    "final_lr_ratio": 0.1,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "matrix_weight_decay": 0.1,
+    "one_d_bias_norm_weight_decay": 0.0,
+    "global_grad_clip_norm": 1.0,
+    "foreach": false,
+    "fused": false,
+    "amsgrad": false,
+    "maximize": false,
+    "checkpoint_steps": [
+      0,
+      128,
+      256,
+      512
+    ],
+    "selection_split": "lr_select",
+    "selection_step": 512,
+    "confirmation_reuses_discovery_selected_lr": true,
+    "max_baseline_runs": 4,
+    "max_total_baseline_optimizer_steps": 2048
+  },
+  "probe": {
+    "head_rank": 1,
+    "primary": {
+      "block_index_zero_based": 1,
+      "module_role": "ffn_down_projection",
+      "checkpoint_step": 256
+    },
+    "diagnostic_module_roles": [
+      "ffn_down_projection",
+      "attention_output_projection"
+    ],
+    "diagnostic_checkpoint_steps": [
+      128,
+      256
+    ],
+    "gradient_build_replicates": 2,
+    "gradient_build_effective_batch_size": 8,
+    "rho_grid": [
+      0.5,
+      0.75,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "candidate_scale_grid": [
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "scalar_control_scale_grid": [
+      0.0,
+      0.125,
+      0.1767766952966369,
+      0.25,
+      0.3535533905932738,
+      0.5,
+      0.7071067811865476,
+      1.0,
+      1.4142135623730951,
+      2.0,
+      2.8284271247461903,
+      4.0,
+      5.656854249492381,
+      8.0
+    ],
+    "all_other_parameters": "same_ordinary_adamw_next_step",
+    "target_weight_decay": "fixed_eta_times_wd_no_scale_multiplier",
+    "diagnostic_nearest_neighbor": {
+      "name": "SPECTRA_POST_SOFT_SVD_DIAGNOSTIC",
+      "q_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "threshold_definition": "c=q*sigma_max(A)",
+      "filter": "sigma/sqrt(1+(sigma/c)^2)",
+      "pre_gradient_clipping": false,
+      "official_full_reproduction": false
+    },
+    "confirmation_spectral_coefficients": "freeze_rho_and_s_from_discovery",
+    "confirmation_scalar_scale": "reselect_only_on_probe_select",
+    "confirmation_data_used_for_selection": false
+  },
+  "numerics": {
+    "fp64_rtol": 1e-10,
+    "fp64_atol": 1e-12,
+    "fp32_rtol": 1e-05,
+    "fp32_atol": 1e-07,
+    "cpu_adamw_replay_steps": 256,
+    "real_data_smoke_steps": 8,
+    "max_total_gpu_smoke_replay_optimizer_steps": 20,
+    "null_repeats": 3,
+    "head_near_degeneracy_relative_gap_flag": 0.001,
+    "preserve_original_checkpoint_and_rng": true
+  },
+  "gate": {
+    "minimum_local_gain_nats_per_token": 1e-05,
+    "null_floor_multiplier": 5,
+    "paired_bootstrap_repetitions": 1000,
+    "paired_bootstrap_unit": "document_after_gradient_replicate_aggregation",
+    "bootstrap_seed": 9071,
+    "confidence_level": 0.95,
+    "require_lower_bound_above_zero": true,
+    "require_lr_and_scalar_range_resolved": true,
+    "discovery_pass_next_action": "RUN_CONFIRM",
+    "final_pass_verdict": "GO_SHORT_BRANCH_ONLY",
+    "final_pass_next_action": "STOP_FOR_REVIEW",
+    "auto_run_short_branches": false,
+    "auto_expand_grid": false,
+    "method_novelty": "NOT_ESTABLISHED",
+    "end_to_end_gain": "NOT_TESTED",
+    "deployment_cost": "NOT_TESTED"
+  },
+  "logging": {
+    "save_raw_loss_sum_and_token_count": true,
+    "save_per_document_paired_results": true,
+    "save_stage_costs_separately": true,
+    "project_lock_required": true,
+    "atomic_checkpoints": true,
+    "resume_requires_manifest_match": true,
+    "light_bundle_excludes": [
+      "raw_corpus",
+      "large_checkpoints",
+      "virtual_environments",
+      "credentials",
+      "external_repository"
+    ]
+  }
+}

@@ -1,0 +1,930 @@
+[
+  {
+    "tag": "w0",
+    "window_id": 0,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "legacy",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3740507125854495e-06
+    },
+    "nll": {
+      "F00": 6.160643441631306,
+      "F10": 6.160580247874385,
+      "F01": 6.157572221330349,
+      "F11": 6.157594832981926
+    },
+    "I_before": 6.319375692065421e-05,
+    "I_after": -2.2611651576909253e-05,
+    "interaction": 8.580540849756346e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_legacy_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_legacy_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_legacy_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_legacy_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w0",
+    "window_id": 0,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "natural_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3740507125854495e-06
+    },
+    "nll": {
+      "F00": 6.15710737307329,
+      "F10": 6.157043807855451,
+      "F01": 6.1540156811483815,
+      "F11": 6.154038053414033
+    },
+    "I_before": 6.356521783956737e-05,
+    "I_after": -2.237226565160455e-05,
+    "interaction": 8.593748349117192e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_natural_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_natural_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_natural_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_natural_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w0",
+    "window_id": 0,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "new_probe_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3740507125854495e-06
+    },
+    "nll": {
+      "F00": 5.997252261110483,
+      "F10": 5.997192001590106,
+      "F01": 5.9964875303078395,
+      "F11": 5.9965142831499385
+    },
+    "I_before": 6.025952037713722e-05,
+    "I_after": -2.675284209896489e-05,
+    "interaction": 8.701236247610211e-05,
+    "documents": 128,
+    "target_tokens": 23135,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_new_probe_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_new_probe_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_new_probe_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_new_probe_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w0",
+    "window_id": 0,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "new_probe_packed",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3740507125854495e-06
+    },
+    "nll": {
+      "F00": 5.978055127256491,
+      "F10": 5.9779980563036235,
+      "F01": 5.977584389776016,
+      "F11": 5.977619781482685
+    },
+    "I_before": 5.7070952867555036e-05,
+    "I_after": -3.5391706668441714e-05,
+    "interaction": 9.246265953599675e-05,
+    "documents": 105,
+    "target_tokens": 26638,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_new_probe_packed_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_new_probe_packed_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_new_probe_packed_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_ffn_new_probe_packed_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w0",
+    "window_id": 0,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "legacy",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3740507125854495e-06
+    },
+    "nll": {
+      "F00": 6.160643441631306,
+      "F10": 6.160638548665541,
+      "F01": 6.157538531888715,
+      "F11": 6.157594832981926
+    },
+    "I_before": 4.8929657650020886e-06,
+    "I_after": -5.630109321064225e-05,
+    "interaction": 6.119405897564434e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_legacy_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_legacy_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_legacy_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_legacy_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w0",
+    "window_id": 0,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "natural_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3740507125854495e-06
+    },
+    "nll": {
+      "F00": 6.15710737307329,
+      "F10": 6.157101778459123,
+      "F01": 6.153982214583298,
+      "F11": 6.154038053414033
+    },
+    "I_before": 5.5946141674922956e-06,
+    "I_after": -5.58388307352331e-05,
+    "interaction": 6.14334449027254e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_natural_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_natural_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_natural_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_natural_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w0",
+    "window_id": 0,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "new_probe_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3740507125854495e-06
+    },
+    "nll": {
+      "F00": 5.997252261110483,
+      "F10": 5.997361788019032,
+      "F01": 5.996341774080803,
+      "F11": 5.9965142831499385
+    },
+    "I_before": -0.00010952690854892921,
+    "I_after": -0.00017250906913535147,
+    "interaction": 6.298216058642225e-05,
+    "documents": 128,
+    "target_tokens": 23135,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w0",
+    "window_id": 0,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "new_probe_packed",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3740507125854495e-06
+    },
+    "nll": {
+      "F00": 5.978055127256491,
+      "F10": 5.978144107454576,
+      "F01": 5.977477541592075,
+      "F11": 5.977619781482685
+    },
+    "I_before": -8.898019808523117e-05,
+    "I_after": -0.0001422398906099076,
+    "interaction": 5.325969252467644e-05,
+    "documents": 105,
+    "target_tokens": 26638,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_packed_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_packed_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_packed_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w0_attn_new_probe_packed_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w1",
+    "window_id": 1,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "legacy",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3736252844333648e-06
+    },
+    "nll": {
+      "F00": 6.160643441631306,
+      "F10": 6.160574496421164,
+      "F01": 6.159118943321469,
+      "F11": 6.159155414592649
+    },
+    "I_before": 6.894521014189081e-05,
+    "I_after": -3.647127118000526e-05,
+    "interaction": 0.00010541648132189607,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_legacy_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_legacy_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_legacy_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_legacy_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w1",
+    "window_id": 1,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "natural_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3736252844333648e-06
+    },
+    "nll": {
+      "F00": 6.15710737307329,
+      "F10": 6.157038279278781,
+      "F01": 6.1555904360568166,
+      "F11": 6.155626899073309
+    },
+    "I_before": 6.909379450981135e-05,
+    "I_after": -3.646301649240513e-05,
+    "interaction": 0.00010555681100221648,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_natural_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_natural_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_natural_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_natural_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w1",
+    "window_id": 1,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "new_probe_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3736252844333648e-06
+    },
+    "nll": {
+      "F00": 5.997252261110483,
+      "F10": 5.997168927741973,
+      "F01": 5.995818243610027,
+      "F11": 5.995835989578409
+    },
+    "I_before": 8.333336850974149e-05,
+    "I_after": -1.7745968381888133e-05,
+    "interaction": 0.00010107933689162962,
+    "documents": 128,
+    "target_tokens": 23135,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_new_probe_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_new_probe_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_new_probe_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_new_probe_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w1",
+    "window_id": 1,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "new_probe_packed",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3736252844333648e-06
+    },
+    "nll": {
+      "F00": 5.978055127256491,
+      "F10": 5.977966653431614,
+      "F01": 5.975953375132326,
+      "F11": 5.975973579366068
+    },
+    "I_before": 8.847382487697786e-05,
+    "I_after": -2.0204233742049382e-05,
+    "interaction": 0.00010867805861902724,
+    "documents": 105,
+    "target_tokens": 26638,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_new_probe_packed_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_new_probe_packed_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_new_probe_packed_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_ffn_new_probe_packed_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w1",
+    "window_id": 1,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "legacy",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3736252844333648e-06
+    },
+    "nll": {
+      "F00": 6.160643441631306,
+      "F10": 6.160645292744883,
+      "F01": 6.159085324044675,
+      "F11": 6.159155414592649
+    },
+    "I_before": -1.851113577089336e-06,
+    "I_after": -7.009054797446623e-05,
+    "interaction": 6.82394343973769e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_legacy_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_legacy_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_legacy_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_legacy_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w1",
+    "window_id": 1,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "natural_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3736252844333648e-06
+    },
+    "nll": {
+      "F00": 6.15710737307329,
+      "F10": 6.1571089270181325,
+      "F01": 6.155556841544083,
+      "F11": 6.155626899073309
+    },
+    "I_before": -1.5539448421364455e-06,
+    "I_after": -7.005752922584207e-05,
+    "interaction": 6.850358438370563e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_natural_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_natural_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_natural_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_natural_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w1",
+    "window_id": 1,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "new_probe_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3736252844333648e-06
+    },
+    "nll": {
+      "F00": 5.997252261110483,
+      "F10": 5.997270756332566,
+      "F01": 5.995755236386377,
+      "F11": 5.995835989578409
+    },
+    "I_before": -1.849522208274834e-05,
+    "I_after": -8.075319203193487e-05,
+    "interaction": 6.225796994918653e-05,
+    "documents": 128,
+    "target_tokens": 23135,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_new_probe_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_new_probe_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_new_probe_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_new_probe_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w1",
+    "window_id": 1,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "new_probe_packed",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3736252844333648e-06
+    },
+    "nll": {
+      "F00": 5.978055127256491,
+      "F10": 5.978043637052654,
+      "F01": 5.975919075221286,
+      "F11": 5.975973579366068
+    },
+    "I_before": 1.1490203837283275e-05,
+    "I_after": -5.450414478147536e-05,
+    "interaction": 6.599434861875864e-05,
+    "documents": 105,
+    "target_tokens": 26638,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_new_probe_packed_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_new_probe_packed_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_new_probe_packed_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w1_attn_new_probe_packed_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w2",
+    "window_id": 2,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "legacy",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3725561261177065e-06
+    },
+    "nll": {
+      "F00": 6.160643441631306,
+      "F10": 6.160585582465909,
+      "F01": 6.160359808519656,
+      "F11": 6.160430142580899
+    },
+    "I_before": 5.785916539746694e-05,
+    "I_after": -7.033406124268282e-05,
+    "interaction": 0.00012819322664014976,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_legacy_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_legacy_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_legacy_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_legacy_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w2",
+    "window_id": 2,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "natural_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3725561261177065e-06
+    },
+    "nll": {
+      "F00": 6.15710737307329,
+      "F10": 6.157048878296988,
+      "F01": 6.156856288192786,
+      "F11": 6.15692625079311
+    },
+    "I_before": 5.849477630270883e-05,
+    "I_after": -6.996260032376966e-05,
+    "interaction": 0.0001284573766264785,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_natural_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_natural_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_natural_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_natural_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w2",
+    "window_id": 2,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "new_probe_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3725561261177065e-06
+    },
+    "nll": {
+      "F00": 5.997252261110483,
+      "F10": 5.997189749871677,
+      "F01": 5.998032665561851,
+      "F11": 5.998093918371025
+    },
+    "I_before": 6.251123880574028e-05,
+    "I_after": -6.125280917412823e-05,
+    "interaction": 0.0001237640479798685,
+    "documents": 128,
+    "target_tokens": 23135,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_new_probe_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_new_probe_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_new_probe_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_new_probe_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w2",
+    "window_id": 2,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "new_probe_packed",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3725561261177065e-06
+    },
+    "nll": {
+      "F00": 5.978055127256491,
+      "F10": 5.977989585435966,
+      "F01": 5.9787759180138424,
+      "F11": 5.978840625521496
+    },
+    "I_before": 6.554182052465052e-05,
+    "I_after": -6.470750765341649e-05,
+    "interaction": 0.000130249328178067,
+    "documents": 105,
+    "target_tokens": 26638,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_new_probe_packed_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_new_probe_packed_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_new_probe_packed_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_ffn_new_probe_packed_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w2",
+    "window_id": 2,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "legacy",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3725561261177065e-06
+    },
+    "nll": {
+      "F00": 6.160643441631306,
+      "F10": 6.160700904571723,
+      "F01": 6.160292780460588,
+      "F11": 6.160430142580899
+    },
+    "I_before": -5.746294041664157e-05,
+    "I_after": -0.00013736212031112416,
+    "interaction": 7.989917989448259e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_legacy_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_legacy_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_legacy_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_legacy_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w2",
+    "window_id": 2,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "natural_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3725561261177065e-06
+    },
+    "nll": {
+      "F00": 6.15710737307329,
+      "F10": 6.15716468742934,
+      "F01": 6.156788021930656,
+      "F11": 6.15692625079311
+    },
+    "I_before": -5.7314356049609216e-05,
+    "I_after": -0.00013822886245407062,
+    "interaction": 8.09145064044614e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_natural_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_natural_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_natural_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_natural_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w2",
+    "window_id": 2,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "new_probe_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3725561261177065e-06
+    },
+    "nll": {
+      "F00": 5.997252261110483,
+      "F10": 5.997307179560021,
+      "F01": 5.997958649057587,
+      "F11": 5.998093918371025
+    },
+    "I_before": -5.4918449538199354e-05,
+    "I_after": -0.0001352693134384353,
+    "interaction": 8.035086390023594e-05,
+    "documents": 128,
+    "target_tokens": 23135,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_new_probe_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_new_probe_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_new_probe_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_new_probe_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w2",
+    "window_id": 2,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "new_probe_packed",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.3725561261177065e-06
+    },
+    "nll": {
+      "F00": 5.978055127256491,
+      "F10": 5.978067645100074,
+      "F01": 5.978749646753133,
+      "F11": 5.978840625521496
+    },
+    "I_before": -1.2517843583026433e-05,
+    "I_after": -9.097876836250407e-05,
+    "interaction": 7.846092477947764e-05,
+    "documents": 105,
+    "target_tokens": 26638,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_new_probe_packed_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_new_probe_packed_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_new_probe_packed_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w2_attn_new_probe_packed_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w3",
+    "window_id": 3,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "legacy",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.374322062730789e-06
+    },
+    "nll": {
+      "F00": 6.160643441631306,
+      "F10": 6.160563812792414,
+      "F01": 6.15709237430687,
+      "F11": 6.1571088031978265
+    },
+    "I_before": 7.962883889245376e-05,
+    "I_after": -1.642889095609945e-05,
+    "interaction": 9.605772984855321e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_legacy_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_legacy_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_legacy_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_legacy_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w3",
+    "window_id": 3,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "natural_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.374322062730789e-06
+    },
+    "nll": {
+      "F00": 6.15710737307329,
+      "F10": 6.157027339754731,
+      "F01": 6.15356371845785,
+      "F11": 6.153579817161322
+    },
+    "I_before": 8.00333185591029e-05,
+    "I_after": -1.6098703472522402e-05,
+    "interaction": 9.61320220316253e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_natural_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_natural_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_natural_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_natural_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w3",
+    "window_id": 3,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "new_probe_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.374322062730789e-06
+    },
+    "nll": {
+      "F00": 5.997252261110483,
+      "F10": 5.997157843272166,
+      "F01": 5.995052105318477,
+      "F11": 5.995048997498548
+    },
+    "I_before": 9.441783831665163e-05,
+    "I_after": 3.1078199285161645e-06,
+    "interaction": 9.131001838813546e-05,
+    "documents": 128,
+    "target_tokens": 23135,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_new_probe_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_new_probe_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_new_probe_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_new_probe_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w3",
+    "window_id": 3,
+    "target": "model.layers.1.mlp.down_proj.weight",
+    "view": "new_probe_packed",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.374322062730789e-06
+    },
+    "nll": {
+      "F00": 5.978055127256491,
+      "F10": 5.977959742353828,
+      "F01": 5.976056472202063,
+      "F11": 5.976060496265174
+    },
+    "I_before": 9.538490266258748e-05,
+    "I_after": -4.024063111174314e-06,
+    "interaction": 9.940896577376179e-05,
+    "documents": 105,
+    "target_tokens": 26638,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_new_probe_packed_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_new_probe_packed_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_new_probe_packed_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_ffn_new_probe_packed_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w3",
+    "window_id": 3,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "legacy",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.374322062730789e-06
+    },
+    "nll": {
+      "F00": 6.160643441631306,
+      "F10": 6.1606893170547385,
+      "F01": 6.157009433274789,
+      "F11": 6.1571088031978265
+    },
+    "I_before": -4.58754234324843e-05,
+    "I_after": -9.936992303760661e-05,
+    "interaction": 5.3494499605122314e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_legacy_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_legacy_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_legacy_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_legacy_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w3",
+    "window_id": 3,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "natural_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.374322062730789e-06
+    },
+    "nll": {
+      "F00": 6.15710737307329,
+      "F10": 6.157152621140504,
+      "F01": 6.15348040596485,
+      "F11": 6.153579817161322
+    },
+    "I_before": -4.524806721395436e-05,
+    "I_after": -9.941119647205454e-05,
+    "interaction": 5.4163129258100184e-05,
+    "documents": 80,
+    "target_tokens": 14788,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_natural_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_natural_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_natural_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_natural_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w3",
+    "window_id": 3,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "new_probe_prefix",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.374322062730789e-06
+    },
+    "nll": {
+      "F00": 5.997252261110483,
+      "F10": 5.997400763721685,
+      "F01": 5.994861244810099,
+      "F11": 5.995048997498548
+    },
+    "I_before": -0.0001485026112018062,
+    "I_after": -0.00018775268844972715,
+    "interaction": 3.9250077247920956e-05,
+    "documents": 128,
+    "target_tokens": 23135,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_new_probe_prefix_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_new_probe_prefix_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_new_probe_prefix_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_new_probe_prefix_F11.jsonl"
+    }
+  },
+  {
+    "tag": "w3",
+    "window_id": 3,
+    "target": "model.layers.1.self_attn.o_proj.weight",
+    "view": "new_probe_packed",
+    "identity": {
+      "F11_actual_max_abs": 1.1641532182693481e-10,
+      "F01_original_conditional_max_abs": 1.1641532182693481e-10,
+      "rho_s_one_max_abs": 7.450580596923828e-09,
+      "formula_tolerance": 2.374322062730789e-06
+    },
+    "nll": {
+      "F00": 5.978055127256491,
+      "F10": 5.978194119828412,
+      "F01": 5.975884642988741,
+      "F11": 5.976060496265174
+    },
+    "I_before": -0.00013899257192129255,
+    "I_after": -0.00017585327643310222,
+    "interaction": 3.686070451180967e-05,
+    "documents": 105,
+    "target_tokens": 26638,
+    "raw_paths": {
+      "F00": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_new_probe_packed_F00.jsonl",
+      "F10": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_new_probe_packed_F10.jsonl",
+      "F01": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_new_probe_packed_F01.jsonl",
+      "F11": "E:\\��ģ��Ԥѵ��\\adamw_spectral_pilot\\readiness_audit_v13\\results\\losses\\w3_attn_new_probe_packed_F11.jsonl"
+    }
+  }
+]

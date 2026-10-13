@@ -1,0 +1,11 @@
+{
+  "manifest_sha256": "80e6c142b1e64a1b1044699e037c66034628f4d1c2f87c049b8e632bd4446f14",
+  "token_forward_equivalents": 0,
+  "forward_attempts": 0,
+  "backward_attempts": 0,
+  "svd_calls": 0,
+  "svd_seconds": 0.0,
+  "optimizer_step_attempts": 0,
+  "gpu_seconds": 0.0,
+  "started_at": 1790926797.2261837
+}

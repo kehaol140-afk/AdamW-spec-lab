@@ -1,0 +1,11 @@
+{
+ "F8_beats_S8": true,
+ "P8_beats_S8": true,
+ "pass": true,
+ "reversal_DIRECTION_AND_SCALE_CONFOUNDED": false,
+ "thresholds": {
+  "point": "-1e-3",
+  "ci95_upper": "0 (entirely below 0)"
+ },
+ "frozen_rule": "layer1 gate: at least one primary comparison passes (frozen_v1.json)"
+}

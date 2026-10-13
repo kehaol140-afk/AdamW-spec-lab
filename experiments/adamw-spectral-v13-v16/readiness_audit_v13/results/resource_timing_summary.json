@@ -1,0 +1,38 @@
+{
+  "resources": {
+    "samples": 17532,
+    "minimum_available_ram_gib": 1.2729263305664062,
+    "maximum_rss_gib": 1.9662017822265625,
+    "maximum_cuda_reserved_gib": 0.25390625,
+    "warning_samples": 1817,
+    "blocked_samples": 0,
+    "paging": "NOT_MEASURED"
+  },
+  "timing_by_pid": {
+    "40460": {
+      "first_time_unix": 1790918555.6888673,
+      "last_time_unix": 1790918579.5189307,
+      "observed_span_seconds": 23.830063343048096,
+      "samples": 145
+    },
+    "63916": {
+      "first_time_unix": 1790918602.1479385,
+      "last_time_unix": 1790918622.3235207,
+      "observed_span_seconds": 20.17558217048645,
+      "samples": 74
+    },
+    "11200": {
+      "first_time_unix": 1790918660.1568165,
+      "last_time_unix": 1790918681.0343685,
+      "observed_span_seconds": 20.877552032470703,
+      "samples": 194
+    },
+    "26836": {
+      "first_time_unix": 1790918812.9733856,
+      "last_time_unix": 1790919380.1870553,
+      "observed_span_seconds": 567.2136697769165,
+      "samples": 17119
+    }
+  },
+  "timing_scope": "sampled span, not full process wall-clock"
+}

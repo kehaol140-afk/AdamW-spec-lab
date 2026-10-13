@@ -1,0 +1,5 @@
+state,control,source,B_mean,B_sign_same
+512,global_x0.5,check,0.000342350380093448,3
+512,global_x2.0,check,-0.005117917528339455,0
+1536,global_x0.5,check,5.7534610523823915e-05,3
+1536,global_x2.0,check,-0.0004595289043354267,0

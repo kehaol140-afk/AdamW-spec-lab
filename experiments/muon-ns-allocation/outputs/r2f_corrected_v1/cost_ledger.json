@@ -1,0 +1,14 @@
+{
+ "gpu_seconds": {
+  "tests": 45,
+  "corrected_4x256": 216,
+  "analysis": 60
+ },
+ "gpu_seconds_total": 321,
+ "budget_gpu_seconds": 3600,
+ "main_updates": 1024,
+ "failed_attempts": [],
+ "output_bytes": 2456031792,
+ "output_budget": 4294967296,
+ "confirm_access": 0
+}

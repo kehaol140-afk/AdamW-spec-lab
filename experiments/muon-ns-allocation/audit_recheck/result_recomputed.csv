@@ -1,0 +1,19 @@
+check,n_rows_with_sums,max_abs_diff,note
+V=0.5*(sumA/cntA)+0.5*(sumB/cntB) recomputed vs stored,758,0.0,sums present in check/calibration rows
+delta_step recomputed,0.0,1e-05,e_repeat=0.0; matches verdict: True
+per-group raw B_chk mean (28 cells) vs group_probe_table,28,0,0 = all match; single-group negatives re-confirmed
+locked candidate B (check),512,0.0,"s512 no_op: mean=+0.0000e+00, sign=0/4"
+geometry joint B,512,-3.762338675705745e-05,"s512 geometry|down3|up7: mean=-3.7623e-05, sign=0/4"
+global amplitude B,512,0.000342350380093448,"s512 x0.5: mean=+3.4235e-04, sign=3/4"
+global amplitude B,512,-0.005117917528339455,"s512 x2.0: mean=-5.1179e-03, sign=0/4"
+locked candidate B (check),1536,-1.1668485755400582e-06,"s1536 target_primary: mean=-1.1668e-06, sign=0/4; paired target-gamma_const mean=+1.197e-07"
+locked candidate B (check),1536,-1.047171798496116e-06,"s1536 target_gamma_const: mean=-1.0472e-06, sign=1/4"
+locked candidate B (check),1536,-1.017252604262886e-06,"s1536 target_gain_only_live: mean=-1.0173e-06, sign=1/4"
+locked candidate B (check),1536,-5.684646905423918e-07,"s1536 target_direction_only: mean=-5.6846e-07, sign=2/4"
+geometry joint B,1536,-1.2266869637844735e-06,"s1536 geometry|down3|gate7: mean=-1.2267e-06, sign=1/4"
+global amplitude B,1536,5.7534610523823915e-05,"s1536 x0.5: mean=+5.7535e-05, sign=3/4"
+global amplitude B,1536,-0.0004595289043354267,"s1536 x2.0: mean=-4.5953e-04, sign=0/4"
+calibration selection replay,512,0,"proposals_match=True, geometry_match=True, no_op=True"
+calibration selection replay,1536,0,"proposals_match=True, geometry_match=True, no_op=False"
+interaction residual I = B(joint) - sum(B_g) [cal],1536,-2.7675254662407056e-06,joint=-1.4361e-06 sum=+1.3314e-06 I=-2.7675e-06
+"pool optimum over MEASURED K-reallocation candidates (no-op included as 0, amplitude refs excluded)",2,8.896472407315947e-05,"per-state best measured K-candidate benefit: [('512', '+8.896e-05'), ('1536', '+9.454e-06')]"

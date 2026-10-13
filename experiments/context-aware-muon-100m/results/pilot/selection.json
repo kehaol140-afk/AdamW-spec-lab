@@ -1,0 +1,14 @@
+{
+ "B_muon_scores": {
+  "B_muon_lr5e-3": 6.522696352393019,
+  "B_muon_lr1e-2": 6.5646329558863075,
+  "B_muon_lr2e-2": 6.598916838733815
+ },
+ "B_muon_best_lr": 0.005,
+ "B_muon_boundary": true,
+ "C_A_scores": {
+  "C_A_lam0p65": 6.5667222059294765,
+  "C_A_lam0p85": 6.559775891711955
+ },
+ "C_A_best_lam": 0.85
+}

@@ -1,0 +1,33 @@
+{
+  "protocol_id": "ADAMW_A_SPECTRAL_LOCAL_V1_1_LOWMEM_20261002",
+  "seed": 3407,
+  "peak_lr": 0.003,
+  "primary_step": 256,
+  "spectral": {
+    "kind": "spectral",
+    "rho": 0.5,
+    "scale": 0.25,
+    "q": null,
+    "select_nll": 6.213562171465669
+  },
+  "scalar": {
+    "kind": "scalar",
+    "rho": 1.0,
+    "scale": 0.0,
+    "q": null,
+    "select_nll": 6.213549184632791
+  },
+  "spectra_diagnostic": {
+    "kind": "spectra_diagnostic",
+    "rho": 1.0,
+    "scale": 0.25,
+    "q": 0.5,
+    "select_nll": 6.213558272457529
+  },
+  "epsilon_null": 0.0,
+  "source_hash": "8cce6876b9eda43aa89ff559a4e5dd7a685f2848a7807680435b1acf3b9c0189",
+  "config_hash": "4c8a02e11be57f4faf0f51f3b4ffce372f7c10af6a1293e352a664c6c7cdb1fa",
+  "binding_hash": "d5ea8b7db0589c0a91fd965dabcbe6ce463b5eda9c6d3566769e66f543f53b53",
+  "data_hash": "fc70632eb2e76b975c0abaa86412cd3f3c35aa472d80e669733f7b65fa3ed23b",
+  "candidate_hash": "89b48737c3a875ca81f6998bb6f4462b61e286bdfb78a68a51ee4c34c3f0f610"
+}

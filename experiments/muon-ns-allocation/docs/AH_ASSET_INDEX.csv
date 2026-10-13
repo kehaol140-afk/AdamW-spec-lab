@@ -1,0 +1,17 @@
+path,role,status,source_run,version,sha_or_evidence,missing
+outputs/p0_p1_v1_1/parent/parent_state_step512.pt,parent checkpoint s512,active,parent_seed3101,correct,7563daec7f080dff5a5fada29ab2407425bd60df46622edde4a68eb890860131,
+outputs/p0_p1_v1_1/parent/parent_state_step1536.pt,parent checkpoint s1536,active,parent_seed3101,correct,014480c7f138b486d3fa6ae3cf6f8e81653790d5372e8d299487ef74def92e6a,
+configs/p0_p1_v1_1.json + outputs/r2f_lrwd_retention_v1/base_group_manifest.json,"original recipe + immutable per-group base (muon/aux wd=0.02, shared lr clock)",active,-,correct,base_group_manifest.json (asset cert cross-checked vs parents),
+outputs/r2_amplitude_continuation_v1/s512_N_step256_full.pt,N mid-state (768),active,s512_N (R2),correct,4b0af2f753f2b1ddfe0e530f88d4b10b06ac70cafff76d6bba3999ee9ad7bcd0,
+outputs/r2_amplitude_continuation_v1/s1536_N_step256_full.pt,N mid-state (1792),active,s1536_N (R2),correct,cab1370ea2e98a6d8ffe5bd42b7de684976a900649d6ba10a09a8e967e8e400c,
+outputs/r2_amplitude_continuation_v1/s512_AH_step256_full.pt,AH mid-state (768),active,s512_AH (R2),correct (saved eff wd=0.04 is its own history),f50174b9948389b6227672eebd6d89342cc3bead9e84c5fad36968b5e61fc7b1,
+outputs/r2_amplitude_continuation_v1/s1536_AH_step256_full.pt,AH mid-state (1792),active,s1536_AH (R2),correct,281a9b7a00792fec5a8a64660902c2e29ce75bc158cda80e2f802c8f2cc035ff,
+"outputs/r2f_lrwd_retention_v1/{s512,s1536}_L256_step256_full.pt",L branches,active,R2F,correct (base from parent),run complete certs in same dir,
+"outputs/r2f_lrwd_retention_v1/s*_N_to_{N,AH}_step256_full.pt",N-source crossover,active,R2F,correct,evaluation_lock.json + complete certs,
+outputs/r2f_lrwd_retention_v1/s*_AH_to_*_step256_full.pt,AH-source crossover (WRONG decay 2x),superseded,R2F v1,OLD_WRONG,defect_archive/source_diff.patch; wrong_vs_corrected.csv,
+outputs/r2f_corrected_v1/s*_AH_to_*_corrected_step256_full.pt,corrected AH-source crossover,active,R2F corrected,correct,evaluation_lock_corrected.json + complete certs,
+outputs/r2f_nl_tail_v1/s*_N_to_L_step256_full.pt,N->L final contrast,active,R2F-NL,correct,evaluation_lock_nl.json + complete certs,
+scripts/run_r2f.py + src/r2f_recipe.py,fixed load chain / recipe module,active,-,correct (post-fix),defect_archive/run_r2f.py.WRONG_DECAY_VERSION + source_diff.patch,
+outputs/r0_r1_v1_1/* (calibration/check/cost/locks),R0/R1 spectra results,frozen-reference,R0/R1,correct (176 ext rows corrected in r0_r1_v1_1_corrected),R0_GATE.json; selection_lock.json,old per-step logs partially MISSING (registered in R0 docs)
+/tmp/opencode/p0p1_q_sets.pt,Q_select/Q_P1_check/Q_P2_endpoint group split + windows,active (tmp),P0/P1 build,correct,split rule sha256('P0P1_Q_v1|gid')%3; pool SHAs in evaluation locks,tmp file — copy to durable storage recommended before server cleanup
+outputs/*/cost_ledger.json,budget & failure ledgers (all rounds),active,-,correct,per-round ledgers,

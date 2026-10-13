@@ -1,0 +1,17 @@
+{
+  "_comment": "Copy to configs/paths.json and adjust. Every key can be overridden by env var ADAMWSPEC_<KEY>. All originals are read-only inputs; new outputs go to OUTPUT_ROOT only.",
+  "DATA_ROOT": "/path/to/large_data",
+  "CKPT_ROOT": "/path/to/checkpoints_and_banks",
+  "V16_ROOT": "/path/to/AdamW-spec-lab/experiments/adamw-spectral-v13-v16",
+  "MUON_TRANSITION_ROOT": "/path/to/muon_transition_experiment",
+  "MINIMIND_ROOT": "/path/to/AdamW-spec-lab/baselines/minimind-base-code",
+  "OUTPUT_ROOT": "/path/to/new_outputs",
+  "_derived": {
+    "corpus_jsonl": "DATA_ROOT/pretrain_t2t_mini.jsonl",
+    "v16_token_cache": "V16_ROOT/campaign_v16/cache/train_tokens.u32",
+    "s30m_token_cache": "CKPT_ROOT/scale30m/train_tokens_s30m.u32",
+    "pilot_token_cache": "CKPT_ROOT/context100m/pilot_train_tokens_33p7m.u32",
+    "specmuon_parent": "CKPT_ROOT/msa/outputs/p0_p1_v1_1/parent",
+    "muon_routing_report": "MUON_TRANSITION_ROOT/outputs/m0/routing_report.json"
+  }
+}

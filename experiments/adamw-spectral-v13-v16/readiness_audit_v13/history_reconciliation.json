@@ -1,0 +1,43 @@
+{
+  "v12_native_ledger": {
+    "eval_manifest_hash": "2abdd838a369eabe7bdde8532b998f10f716ee7d61d0f6e13126418cee06fb45",
+    "child_source_hash": "4d8a9db353ed7671db0d6eade8952b54caec5c4d69810f1008956241e8037a97",
+    "token_forward_equivalents": 46104,
+    "forward_calls": 216,
+    "backward_calls": 24,
+    "gpu_optimizer_calls": 5,
+    "gpu_optimizer_calls_attempted": 5,
+    "replay_started": true,
+    "lr_reeval_started": true
+  },
+  "v12_lr_raw_rows": 192,
+  "v12_lr_recomputed": {
+    "0.0003": {
+      "legacy": 6.572523351253729,
+      "natural_prefix": 6.570480384582996
+    },
+    "0.001": {
+      "legacy": 5.808333045629173,
+      "natural_prefix": 5.802857512019897
+    },
+    "0.003": {
+      "legacy": 5.627558841529343,
+      "natural_prefix": 5.620230594199121
+    }
+  },
+  "v12_four_state_raw_rows": 0,
+  "diagA_missing_from_native_ledger": {
+    "builds": 3,
+    "target_tokens_each": 2048,
+    "token_forward_equivalents_reconstructed": 6144,
+    "backward_calls_reconstructed": 12,
+    "source": "replay_audit_v12/logs/diagA_repeat_builds.txt",
+    "status": "INFERRED_FROM_SCRIPT_AND_LOG_NOT_ORIGINAL_COUNTER"
+  },
+  "historical_known_minimum_token_forwards": 52248,
+  "diagA_digest_order": "sorted parameter names",
+  "diagC_digest_order": "model.named_parameters traversal order",
+  "cross_process_sha_difference_is_numeric_evidence": false,
+  "diagB_weight_max_abs_reported": 8.191913366317749e-06,
+  "diagB_single_build_formula_parity_reported": 2.9802322387695312e-08
+}

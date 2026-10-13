@@ -1,0 +1,150 @@
+{
+ "val": {
+  "file": "fineweb_val_000000.bin",
+  "sha256_first4k": "fc0ac694646a6224",
+  "tokens": 100000000,
+  "bytes": 200001024
+ },
+ "train_shards": [
+  {
+   "file": "fineweb_train_000001.bin",
+   "sha256_first4k": "b9c3d3f08d0590a4",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000002.bin",
+   "sha256_first4k": "ee4132cd99d02c6a",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000003.bin",
+   "sha256_first4k": "a903b28b8f43ae31",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000004.bin",
+   "sha256_first4k": "8dfd7b3d5f0cb3c8",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000005.bin",
+   "sha256_first4k": "f04232285527106d",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000006.bin",
+   "sha256_first4k": "b4ff5bbc87ef5d4f",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000007.bin",
+   "sha256_first4k": "ddb68789db05807d",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000008.bin",
+   "sha256_first4k": "9d9d3ee306a30c58",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000009.bin",
+   "sha256_first4k": "5b7613144c825836",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000010.bin",
+   "sha256_first4k": "48fdf5944f12742b",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000011.bin",
+   "sha256_first4k": "a81b282d643fe20b",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000012.bin",
+   "sha256_first4k": "d8a19362c8ac8206",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000013.bin",
+   "sha256_first4k": "49c42f12662d36ee",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000014.bin",
+   "sha256_first4k": "0ee030be99a2e2ab",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000015.bin",
+   "sha256_first4k": "cc2cdf9e3545b9e7",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000016.bin",
+   "sha256_first4k": "659b5fedc3a9c2a7",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000017.bin",
+   "sha256_first4k": "a6d4c741c5e93f81",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000018.bin",
+   "sha256_first4k": "52a1f25b718f6983",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000019.bin",
+   "sha256_first4k": "e385bfed35b3e5da",
+   "tokens": 100000000,
+   "bytes": 200001024
+  },
+  {
+   "file": "fineweb_train_000020.bin",
+   "sha256_first4k": "dfc5b1a3f23cf839",
+   "tokens": 100000000,
+   "bytes": 200001024
+  }
+ ],
+ "notes": [],
+ "total_train_tokens": 2000000000,
+ "steps_needed_worst": 3325,
+ "tokens_needed_worst": 1743257600,
+ "sufficient": true,
+ "loader_glob_pattern": "fineweb_train_*.bin (sorted, sequential)",
+ "shard_numbering_starts_at": "000001 (confirmed: no 000000 train shard; cached_fineweb10B.py range(1, N+1))",
+ "val_shard": "fineweb_val_000000.bin (confirmed)",
+ "margin_tokens": 256742400,
+ "batch_math": {
+  "batch_size_is": "524288 TOKENS per step (= 512 sequences x 1024 tokens; confirmed by view(-1, seq_len) at line 52 of canonical dataloader)",
+  "ws2_local_seqs": 256,
+  "ws2_microbatches_per_gpu": 4,
+  "ws8_local_seqs": 64,
+  "ws8_microbatches_per_gpu": 1,
+  "tokens_needed_3250": 1703936000,
+  "tokens_available": 2000000000,
+  "sufficient": true,
+  "margin_tokens": 296064000
+ }
+}

@@ -1,0 +1,7 @@
+{
+  "artifact_only": true,
+  "remote_training_run": false,
+  "contract_count_checks": "PASS",
+  "positive_scale_decay_product_algebra_check": "PASS",
+  "note": "No numerical optimizer or GPU test was run in preparing this handoff."
+}

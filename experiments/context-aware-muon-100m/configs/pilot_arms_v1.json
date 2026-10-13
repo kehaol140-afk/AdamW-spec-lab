@@ -1,0 +1,47 @@
+{
+  "protocol_id": "CONTEXT_AWARE_MUON_100M_PILOT_V1",
+  "frozen_from": "configs/pilot_draft_v0.json + 2026-10-12 preflight amendments (see 100M_PILOT_EXECUTION_LOCK.md)",
+  "status": "FROZEN_PENDING_AUTHORIZATION (no structural change vs draft v0 15-run matrix; run-count identical)",
+  "common": {
+    "model": "MiniMind 100,784,000 h768/13L/12Q-6KV/FFN2432/seq256/tied (minimind_base)",
+    "seed": 3471,
+    "cache": "artifacts/pilot_train_tokens_33p7m.u32 sha256 f92715b4a66c2db140ab6785d8a055ccb808fd5c0fb854cb89cd11a0613a0d8e (V16 rule, prefix-verified vs campaign_v16 8.5M + s30m 17M)",
+    "tokenizer_sha256": "71f32c68cf63a15355a8fc171b7594b3d41870fe0ddb54fc6aefa55f73a4a668",
+    "corpus_sha256": "6dd6716c84ab36897bdbfc7f88e04f4441c48c1ab7ecee88ce0b0e7d4685560c",
+    "schedule": "warmup 128 + cosine -> 0.1*peak, T=4096",
+    "batch": "micro 8 x accum 4 x seq 256 = 8192 pred-tokens/step; window stream 8224/step; no wrap (cache sized exactly)",
+    "precision": "bf16 autocast, fp32 master/states; NO gradient clipping (uniform, disclosed)",
+    "wd": "0.02 all families; aux AdamW betas (0.9,0.95) eps 1e-8 same lr/schedule (M-line)",
+    "diag_every": "64 (fp64 cosines sampled; norm matching unconditional)",
+    "eval": "V16 development 256 docs, token-weighted NLL, dv loss_sum_count semantics, H in {1024,2048,4096}"
+  },
+  "arms": {
+    "B_adamw_lr3e-4": {"kind": "adamw", "lr": 0.0003},
+    "B_adamw_lr1e-3": {"kind": "adamw", "lr": 0.001},
+    "B_adamw_lr3e-3": {"kind": "adamw", "lr": 0.003},
+    "B_muon_lr5e-3": {"kind": "muon", "lr": 0.005},
+    "B_muon_lr1e-2": {"kind": "muon", "lr": 0.01},
+    "B_muon_lr2e-2": {"kind": "muon", "lr": 0.02},
+    "B_muon_rms_lr1e-3": {"kind": "muon", "adjust_lr_fn": "match_rms_adamw", "lr": 0.001},
+    "B_muon_rms_lr3e-3": {"kind": "muon", "adjust_lr_fn": "match_rms_adamw", "lr": 0.003},
+    "B_muon_rms_lr1e-2": {"kind": "muon", "adjust_lr_fn": "match_rms_adamw", "lr": 0.01},
+    "B_lowmu_0p9": {"kind": "muon", "momentum": 0.9, "lr": "@B_muon_best"},
+    "B_lowmu_0p8": {"kind": "muon", "momentum": 0.8, "lr": "@B_muon_best"},
+    "C_A_lam0p65": {"kind": "group_A", "lam": 0.65, "lr": "@B_muon_best", "norm_match": true},
+    "C_A_lam0p85": {"kind": "group_A", "lam": 0.85, "lr": "@B_muon_best", "norm_match": true},
+    "C_A_nat": {"kind": "group_A_nat", "lam": "@C_A_best_lam", "lr": "@B_muon_best"},
+    "C_B": {"kind": "group_B", "lam": "@C_A_best_lam", "lr": "@B_muon_best"}
+  },
+  "selection_rules": {
+    "B_muon_best_lr": "min dev H4096 NLL among B_muon_lr* ; ties within 1e-4 -> smaller lr (conservative end); best at grid edge -> RANGE_UNRESOLVED flag, single extension needs new authorization",
+    "C_A_best_lam": "min dev H4096 NLL among C_A_lam* ; ties within 1e-4 -> lam 0.65 (conservative, closer to anchor)",
+    "best_muon_anchor": "min dev H4096 NLL over {B_muon*, B_muon_rms*} (any convention)",
+    "interpretation_rule_rms": "if best_muon_anchor uses match_rms AND a C-arm passes the gate vs it, a confirm-layer C@match_rms variant is REQUIRED before any 'beats Muon-best-convention' claim (preregistered follow-up, not a pilot arm)"
+  },
+  "gates": {
+    "pilot_pass": "C_A or C_B beats best_muon_anchor by >= 1e-3 dev H4096 NLL with paired per-doc bootstrap CI95 (1000 reps, seed 9071) entirely negative AND low-mu arms do NOT reproduce the same-magnitude gain (else MOMENTUM_EXPLAINED)",
+    "pilot_fail": "NO_GAIN_OVER_STRONG_MUON | MOMENTUM_EXPLAINED | RANGE_UNRESOLVED (definitions in 100M_PILOT_PROTOCOL_DRAFT.md sec.4, unchanged)",
+    "short_budget_clause": "0.33 tok/param transient regime; no full-pretraining endpoint claims; confirm layer 100-300M tokens is decisive"
+  },
+  "t2_deviation_clause": "Frozen WITHOUT waiting for the 30M line T2 (authorized deviation, versioned here): T2 as proposed contains NO Muon arms; the Muon LR boundary question F-4 was already resolved by adamw_direction_scale30m/30M_VS_MUON.md (read-only): lr 1e-2 interior optimum at 30M/16.8M tokens/batch 8192, same grid therefore carried to 100M. The 30M gate chain (CROSS_SCALE_DECISION_GATE) governs the AdamW F/P line, not this Muon-geometry project."
+}

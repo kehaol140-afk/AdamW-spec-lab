@@ -1,0 +1,10 @@
+{
+ "run_id": "s1536_AH_to_N_corrected",
+ "recipe": "N",
+ "start_step": 1792,
+ "n_steps": 256,
+ "source_sha": "281a9b7a00792fec5a8a64660902c2e29ce75bc158cda80e2f802c8f2cc035ff",
+ "final_sha": "3eb866b284a456b770424a2cd12cbc89797cbe45aa870a62704df724adafc0d4",
+ "final_loss": 2.224644273519516,
+ "wall_s": 54.3127064704895
+}

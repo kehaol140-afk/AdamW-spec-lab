@@ -1,0 +1,32 @@
+{
+ "generated": "2026-10-11",
+ "protocol": "ADAMW_DIRECTION_VALIDATION_V1_20261011",
+ "endpoints": {
+  "dv_F8_endpoint.pt": {
+   "sha256": "71d716ec191d8bbebe9b8ea435130fc7dbd631dd67f11a334fa9486f8f9a2fbf",
+   "bytes": 18642821,
+   "param_fingerprint": "15e8e7f85b2ec319"
+  },
+  "dv_P8_endpoint.pt": {
+   "sha256": "79f3da45637d8b2973ea294e8a02e9d58331f2bd468abaf81bfe251a4063d0d1",
+   "bytes": 18642821,
+   "param_fingerprint": "acce424d392ac012"
+  },
+  "dv_S1_endpoint.pt": {
+   "sha256": "6542e665c515af42bda275575c79484a5bcd96bf89025b4cda7a9a77f131b8f6",
+   "bytes": 18642885,
+   "param_fingerprint": "e444220c7c87c9ee"
+  },
+  "dv_S4_endpoint.pt": {
+   "sha256": "048e7f225d1edcd94b049d94167cfd0b2725f4f48270d5aa245d2acf402fd925",
+   "bytes": 18642821,
+   "param_fingerprint": "5d2fa02d52c17389"
+  },
+  "dv_S8_endpoint.pt": {
+   "sha256": "1dbdfaa2a66b0f52384cef2add1c06e189e24bec823d372e793d12ee92252b69",
+   "bytes": 18642821,
+   "param_fingerprint": "87223b39abce9ffe"
+  }
+ },
+ "evidence_files": {}
+}

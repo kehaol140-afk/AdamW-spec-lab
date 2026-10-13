@@ -1,0 +1,8 @@
+{
+ "run_id": "s512_N_to_L",
+ "recipe": "L",
+ "n_steps": 256,
+ "source_sha": "4b0af2f753f2b1ddfe0e530f88d4b10b06ac70cafff76d6bba3999ee9ad7bcd0",
+ "final_sha": "2ad7d10009c457801a2f6fa5155599eac5dbe9ce191ddd3f25d320c6185ded28",
+ "wall_s": 121.96061587333679
+}

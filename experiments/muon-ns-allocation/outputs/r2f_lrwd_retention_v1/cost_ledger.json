@@ -1,0 +1,28 @@
+{
+ "gpu_seconds": {
+  "reuse_gate": 90,
+  "first_step_gates": 60,
+  "L_branches": 172,
+  "crossover_8": 590,
+  "endpoint_analysis": 150,
+  "misc": 30
+ },
+ "gpu_seconds_total_approx": 1092,
+ "budget_gpu_seconds": 10800,
+ "main_updates": {
+  "L": 512,
+  "crossover": 2048,
+  "D": 0,
+  "total": 2560,
+  "cap": 3072
+ },
+ "d_trigger": {
+  "required": false,
+  "reason": "B_decay negative at both origins (-1.24e-3 / -3.17e-5)"
+ },
+ "failed_attempts": [],
+ "output_bytes": 6139707818,
+ "output_budget": 10737418240,
+ "reused_prior_computation_note": "old R2 N/AH branches reused as crossover sources (zero re-training)",
+ "confirm_access": 0
+}

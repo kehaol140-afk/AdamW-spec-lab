@@ -1,0 +1,12 @@
+{
+  "REVIEW.md": "8712add9031444c539b2e72ba27090c1ffcd611827a79a8f4fc20151cd6e3d6a",
+  "PROMPT_OPENCODE_V16.md": "599bc664cdd99d471e3c063214f87705ed1c6773e64a89b11d5c5c57ff45ca51",
+  "LIMITS_SUMMARY.json": "483e66e4846db60463ede2b1edf53cd499ada6510c50664fc9e5e268aa66b2ed",
+  "START_OPENCODE.txt": "a9fd632ed699ad030d2becf8ecc0552ebacf99a95c09b06944e522cc943ecfea",
+  "recompute_v15.py": "5f16aa41576b3ae4789963d7c290347acb31c38611492669e4f0e279c6a91036",
+  "evidence/cpu_tests_unmodified.log": "dcac48e65c3864366a336a89dd197f3e80752949ff95df8fb69901db93c365ac",
+  "evidence/recomputed_v15.json": "a14ad1b7580e573509c68fe4249352f0e4343f7ebcf5ad955ce9d058f0a82a14",
+  "evidence/cpu_tests_sync_stub.log": "e0627504b3e1b211543d226b33def45ba1b686e369757c5f848f8d26e6a0450b",
+  "evidence/SOURCE_EVIDENCE.md": "d899b572cd14166377ef9f7cd16365877a6d0d0c3d0b21a13a20604fb04f65e7",
+  "evidence/recompute.log": "a14ad1b7580e573509c68fe4249352f0e4343f7ebcf5ad955ce9d058f0a82a14"
+}

@@ -1,0 +1,26 @@
+[
+ {
+  "run_id": "s1536_AH",
+  "restore_step": 1536,
+  "arm": "AH",
+  "steps": 256,
+  "status": "complete",
+  "final_loss": 2.434647262096405
+ },
+ {
+  "run_id": "s512_N_repeat",
+  "restore_step": 512,
+  "arm": "N",
+  "steps": 256,
+  "status": "complete",
+  "bitwise_equal_to_first_N": true
+ },
+ {
+  "run_id": "s1536_MH",
+  "restore_step": 1536,
+  "arm": "MH",
+  "steps": 256,
+  "status": "complete",
+  "final_loss": 2.436909109354019
+ }
+]

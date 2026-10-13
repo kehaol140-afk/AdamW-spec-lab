@@ -1,0 +1,32 @@
+# Local secrets, authentication, developer configuration
+.env
+.env.*
+!.env.example
+configs/paths.json
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Generated Python / editor / local environment files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.vscode/
+.idea/
+
+# Large assets restored separately; published small research evidence remains tracked
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.u32
+*.onnx
+*.bundle
+
+# Never blanket-ignore results, CSV, JSON, ZIP evidence or Markdown.

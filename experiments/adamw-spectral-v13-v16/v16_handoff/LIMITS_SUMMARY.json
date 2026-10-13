@@ -1,0 +1,32 @@
+{
+  "type": "planned autonomy limits, NOT executed code",
+  "wall_hours": 72,
+  "device_task_hours": 24,
+  "optimizer_attempt_cap": 120000,
+  "forward_token_cap": 400000000,
+  "phase_useful_update_caps": {
+    "A0": 32,
+    "A1": 9216,
+    "A2": 1024,
+    "B": 36864,
+    "C": 49152,
+    "D": 8192
+  },
+  "planned_max_useful_updates": 104480,
+  "new_disk_soft_gib": 3,
+  "new_disk_hard_gib": 4,
+  "min_disk_free_gib": 5,
+  "max_full_checkpoints": 8,
+  "max_weights_only_checkpoints": 12,
+  "ram_start_gib": 1.5,
+  "ram_warn_gib": 1.5,
+  "ram_stop_gib": 1.0,
+  "rss_limit_gib": 4,
+  "final_seed_plan": [
+    3408,
+    3409,
+    3410
+  ],
+  "short_threshold": 0.0001,
+  "long_threshold": 0.001
+}

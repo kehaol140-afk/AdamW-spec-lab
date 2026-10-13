@@ -1,0 +1,22 @@
+{
+ "arm_id": "C_A_nat",
+ "arm": {
+  "kind": "group_A_nat",
+  "lam": 0.85,
+  "lr": "@B_muon_best"
+ },
+ "peak_lr": 0.005,
+ "seed": 3471,
+ "init_fingerprint": "33f93a0f546149a0",
+ "final_fingerprint": "21fbc3536449ec39",
+ "wall_s": 1245.6864892470185,
+ "throughput_tok_s": 26936.498300051953,
+ "vram_peak_gib": 2.97265625,
+ "tokens_consumed": 33685504,
+ "dev_nll_by_horizon": {
+  "1024": 6.1781391923181666,
+  "2048": 6.557603741510113,
+  "4096": 6.567352080822306
+ },
+ "steps": 4096
+}

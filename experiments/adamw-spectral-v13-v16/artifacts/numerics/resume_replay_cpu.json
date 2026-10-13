@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "steps": "4+restore+4 vs continuous 8",
+  "max_parameter_abs_error": 0,
+  "max_optimizer_state_abs_error": 0,
+  "checkpoint_file_unchanged": true
+}

@@ -1,0 +1,52 @@
+{
+ "produced_by": "OpenCode supervised diagnostics 2026-10-02",
+ "purpose": "root-cause evidence for V1.2 replay P0_FAIL (repeated build digest mismatch)",
+ "constraint": "no parent artifacts touched; all opt calls counted in budget_ledger.json",
+ "experiments": [
+  {
+   "name": "diagA_gradient_repeatability_no_step",
+   "script": "logs/diagA_repeat_builds.txt",
+   "design": "3 consecutive load_checkpoint + gradient builds on window 0, no optimizer.step",
+   "gradient_sha256_all_three": "0b949b26ac1a4e92beb4613792ea6d9cd6663528952e2e4d13fe61d4be6c76e5",
+   "elements_differing": 0,
+   "conclusion": "bit-reproducible within process without intervening optimizer.step"
+  },
+  {
+   "name": "diagB_exact_replication_with_steps",
+   "script": "logs/diagB_full_pair.txt",
+   "design": "real replay.build_update twice (each includes optimizer.step), real Ledger accounting",
+   "gradient_sha256_first": "8a68694a78a839c3189851026dac43305d86e9540d976c57650aa5f31c846fe6",
+   "gradient_sha256_repeat": "b2b40a53e35564699de6be0da4c71e4774027a577f9f3c91fc0ffe773a804673",
+   "optimizer_state_sha256_first": "9c89ce7af4030fee092b8249357cfd9e103c524fe23e51c56dbc4c06d1719e5e",
+   "optimizer_state_sha256_repeat": "c35054354ab34b9b59561c419ebca5530c18ca76768dbf3595ddb98690b05381",
+   "repeat_weight_max_abs": 8.191913366317749e-06,
+   "formula_parity_each_build": 2.9802322387695312e-08,
+   "conclusion": "reproduces the P0 failure; each build individually a valid AdamW step"
+  },
+  {
+   "name": "diagC_causal_step_pollution_test",
+   "script": "logs/diagC_causal.txt",
+   "design": "h0=load+grads; one isolated optimizer.step; h1=load+grads (1 opt call, ledger-counted)",
+   "gradient_sha256_h0": "8d3a0dcbc65e95645918006235a0876b5338fc1322ca0c92e7f045ccecde018d",
+   "gradient_sha256_h1": "8d3a0dcbc65e95645918006235a0876b5338fc1322ca0c92e7f045ccecde018d",
+   "cross_process_reference_diagA": "0b949b26ac1a4e92beb4613792ea6d9cd6663528952e2e4d13fe61d4be6c76e5",
+   "conclusion": "step does not pollute; gradient bytes differ ACROSS processes (8d3a0dcb != 0b949b26) while stable within this process"
+  },
+  {
+   "name": "diagD_pure_load_state_representation",
+   "script": "logs/diagD_loadstate.txt",
+   "design": "zero GPU cost: optimizer state_dict byte digest after load#1 vs load#2 (CPU)",
+   "digest_after_load1": "a33d5c2aab30b609ae1cf4f09414f71ff03790558e34404d93c26508b131083b",
+   "digest_after_load2": "a33d5c2aab30b609ae1cf4f09414f71ff03790558e34404d93c26508b131083b",
+   "conclusion": "repeated loads give identical state representation; not the cause"
+  }
+ ],
+ "delivered_replay_failure": {
+  "reason": "P0_FAIL: repeated complete build mismatch=0.0",
+  "interpretation": "weights were bit-identical (0.0) but gradient/optimizer-state byte SHA differed; in diagB even weights differed (8.2e-6)",
+  "gpu_optimizer_calls_consumed_by_delivered_replay": 2
+ },
+ "root_cause_assessment": "gradient-build bytes on this GPU stack (RTX 4060 Laptop, torch 2.6.0+cu124, BF16 autocast, SDPA attention) are not bit-stable across processes and not guaranteed within a process across heavier allocation histories; kernel-level mechanism NOT_IDENTIFIED (atomics-class nondeterminism plausible but unproven)",
+ "implication": "child P0 demands SHA-equality repeatability, stricter than parent protocol tolerance-based P0 (fp32_atol=1e-7 + rtol), which each build satisfies (3e-8); the gate is effectively unachievable on this stack as written",
+ "verdict": "four-state counterfactual measurement blocked by engineering reproducibility gate; scientific question UNRESOLVED"
+}

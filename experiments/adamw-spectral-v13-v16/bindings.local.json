@@ -1,0 +1,11 @@
+{
+  "status": "READY",
+  "repo_root": "/home/b205/projects/training_dynamics_lab/adamw_spectral_pilot/minimind_repo",
+  "python_executable": "python3.9",
+  "tokenizer_path": "/home/b205/projects/training_dynamics_lab/adamw_spectral_pilot/minimind_repo/model",
+  "source_data_path": "/home/b205/projects/training_dynamics_lab/adamw_spectral_pilot/data/pretrain_t2t_mini.jsonl",
+  "source_format": "jsonl_text",
+  "source_fingerprint": "4403b6717352fcefe2b8ce50b47a29248085ac811eff6121e6114cf26e9c3d31",
+  "tokenizer_fingerprint": "f9478a8852174e4952bddc4143afa8958f6feee6e54c62839f9c5cbe128783fa",
+  "note": "Copy this file over bindings.local.json on the server AFTER verifying tokenizer.json SHA256 against MIGRATION_INFO/SHA256SUMS.txt. source_data_path is only needed if the train-token cache must be rebuilt; the shipped cache (campaign_v16/cache/train_tokens.u32) already seals data identity. Fields source_fingerprint/tokenizer_fingerprint are the values recorded by the original Windows binding."
+}

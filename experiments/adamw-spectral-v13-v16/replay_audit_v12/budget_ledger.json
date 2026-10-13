@@ -1,0 +1,11 @@
+{
+  "eval_manifest_hash": "2abdd838a369eabe7bdde8532b998f10f716ee7d61d0f6e13126418cee06fb45",
+  "child_source_hash": "4d8a9db353ed7671db0d6eade8952b54caec5c4d69810f1008956241e8037a97",
+  "token_forward_equivalents": 46104,
+  "forward_calls": 216,
+  "backward_calls": 24,
+  "gpu_optimizer_calls": 5,
+  "gpu_optimizer_calls_attempted": 5,
+  "replay_started": true,
+  "lr_reeval_started": true
+}

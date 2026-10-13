@@ -1,0 +1,18 @@
+run_id,kind,stage,source_dir,validity,note
+s512_native_lr1.0,branch_256steps_from_restore,P1,results/p1/branches/s512_native_lr1.0/,VALID,restore s512 wall=48s
+s512_native_lr0.5,branch_256steps_from_restore,P1,results/p1/branches/s512_native_lr0.5/,VALID,restore s512 wall=46s
+s512_native_lr2.0,branch_256steps_from_restore,P1,results/p1/branches/s512_native_lr2.0/,VALID,restore s512 wall=46s
+s512_exact_polar,branch_256steps_from_restore,P1,results/p1/branches/s512_exact_polar/,VALID,restore s512 wall=262s
+s512_head_lam0.25,branch_256steps_from_restore,P1,results/p1/branches/s512_head_lam0.25/,VALID,restore s512 wall=264s
+s512_bulk_lam0.25,branch_256steps_from_restore,P1,results/p1/branches/s512_bulk_lam0.25/,VALID,restore s512 wall=260s
+s512_muon_p0.5,branch_256steps_from_restore,P1,results/p1/branches/s512_muon_p0.5/,VALID,restore s512 wall=281s
+s1536_native_lr1.0,branch_256steps_from_restore,P1,results/p1/branches/s1536_native_lr1.0/,VALID,restore s1536 wall=49s
+s1536_native_lr0.5,branch_256steps_from_restore,P1,results/p1/branches/s1536_native_lr0.5/,VALID,restore s1536 wall=45s
+s1536_native_lr2.0,branch_256steps_from_restore,P1,results/p1/branches/s1536_native_lr2.0/,VALID,restore s1536 wall=45s
+s1536_exact_polar,branch_256steps_from_restore,P1,results/p1/branches/s1536_exact_polar/,VALID,restore s1536 wall=280s
+s1536_head_lam0.25,branch_256steps_from_restore,P1,results/p1/branches/s1536_head_lam0.25/,VALID,restore s1536 wall=279s
+s1536_bulk_lam0.25,branch_256steps_from_restore,P1,results/p1/branches/s1536_bulk_lam0.25/,VALID,restore s1536 wall=251s
+s1536_muon_p0.5,branch_256steps_from_restore,P1,results/p1/branches/s1536_muon_p0.5/,VALID,restore s1536 wall=254s
+p0a_336_matrices_6_runs,spectral_audit,P0-A,results/p0a/,VALID,wall=262.34907413390465s
+p0b_phase1_4states,spectral_audit,P0-B,results/p0b/,VALID,AdamW v07 bank phase 1
+p0b_phase2_56states_1624rows,spectral_audit,P0-B,results/p0b/,VALID,
